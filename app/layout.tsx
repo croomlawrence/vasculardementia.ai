@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VascuMind® | vasculardementia.ai",
+  title: "VascuMind® | vascumind.com",
   description: "Advanced diagnostics and emerging therapies for vascular dementia — one focused hub.",
 };
 

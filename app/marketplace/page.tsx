@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import MCIScreenCTA from '../components/MCIScreenCTA';
+import MCIScreenCTA from '../../components/MCIScreenCTA';
 
 export default function Marketplace() {
   return (

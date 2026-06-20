@@ -14,14 +14,24 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* === Strong Contrast Dark Mode (Caregiver Optimized) === */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #ffffff; /* Pure white for maximum readability */
+  }
+  
+  h1, h2, h3 {
+    color: #ffffff;
+  }
+  
+  .bg-white {
+    background-color: #111111;
+    color: #ffffff;
   }
 }
 
-/* === Senior-Friendly Typography (Caregiver Optimized) === */
+/* === Senior-Friendly Typography === */
 body {
   background: var(--background);
   color: var(--foreground);
@@ -31,43 +41,40 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Base body text - optimized for older readers */
+/* Base body text */
 p, li, .prose, .text-base {
-  font-size: 1.125rem;        /* 18px */
-  line-height: 1.7;           /* Excellent readability */
-}
-
-/* Slightly larger for important paragraphs */
-p.text-lg {
-  font-size: 1.25rem;         /* 20px */
+  font-size: 1.125rem;
   line-height: 1.75;
 }
 
-/* Headings - Clear hierarchy with good size */
+/* Headings */
 h1 {
-  font-size: 3rem;            /* 48px */
+  font-size: 3rem;
   line-height: 1.1;
   font-weight: 700;
-  color: #111827;
 }
 
 h2 {
-  font-size: 2.25rem;         /* 36px */
+  font-size: 2.25rem;
   line-height: 1.2;
   font-weight: 700;
-  color: #111827;
 }
 
 h3 {
-  font-size: 1.5rem;          /* 24px */
+  font-size: 1.5rem;
   line-height: 1.3;
   font-weight: 600;
-  color: #111827;
 }
 
-/* Stronger contrast for navigation and links */
+/* Strong contrast buttons */
+button, 
+a[class*="bg-black"],
+a[class*="bg-teal-800"] {
+  font-weight: 600;
+}
+
+/* Navigation contrast */
 nav a {
-  font-size: 1rem;
   color: #374151;
 }
 
@@ -75,33 +82,11 @@ nav a:hover {
   color: #111827;
 }
 
-/* High contrast buttons */
-button, 
-a[class*="bg-black"],
-a[class*="bg-teal-800"] {
-  font-size: 1.05rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
-}
-
-a[class*="bg-black"]:hover,
-a[class*="bg-teal-800"]:hover {
-  filter: brightness(0.9);
-}
-
-/* Improve readability in cards */
-.bg-white {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-/* Footer and small text - still readable */
-footer, .text-xs, .text-sm {
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-/* FAQ questions */
-.faq-question {
-  font-size: 1.1rem;
-  line-height: 1.5;
+@media (prefers-color-scheme: dark) {
+  nav a {
+    color: #d1d5db;
+  }
+  nav a:hover {
+    color: #ffffff;
+  }
 }

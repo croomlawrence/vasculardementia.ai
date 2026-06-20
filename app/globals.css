@@ -21,7 +21,7 @@
   }
 }
 
-/* === Improved Typography & Readability === */
+/* === Senior-Friendly Typography (Caregiver Optimized) === */
 body {
   background: var(--background);
   color: var(--foreground);
@@ -31,49 +31,77 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Better line height for readability */
-p, li, .prose {
-  line-height: 1.65;
+/* Base body text - optimized for older readers */
+p, li, .prose, .text-base {
+  font-size: 1.125rem;        /* 18px */
+  line-height: 1.7;           /* Excellent readability */
 }
 
-/* Headings - stronger contrast and tighter leading */
-h1, h2, h3 {
-  line-height: 1.15;
+/* Slightly larger for important paragraphs */
+p.text-lg {
+  font-size: 1.25rem;         /* 20px */
+  line-height: 1.75;
+}
+
+/* Headings - Clear hierarchy with good size */
+h1 {
+  font-size: 3rem;            /* 48px */
+  line-height: 1.1;
+  font-weight: 700;
+  color: #111827;
+}
+
+h2 {
+  font-size: 2.25rem;         /* 36px */
+  line-height: 1.2;
+  font-weight: 700;
+  color: #111827;
+}
+
+h3 {
+  font-size: 1.5rem;          /* 24px */
+  line-height: 1.3;
   font-weight: 600;
-  color: #111827; /* Stronger contrast than default */
+  color: #111827;
 }
 
-/* High contrast buttons and CTAs */
-button, 
-a[class*="bg-black"],
-a[class*="bg-teal-800"] {
-  transition: all 0.2s ease;
-}
-
-a[class*="bg-black"]:hover,
-a[class*="bg-teal-800"]:hover {
-  filter: brightness(0.92);
-}
-
-/* Improve contrast on light cards */
-.bg-white {
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-/* Better link contrast */
-a {
-  color: #0f766e;
-}
-
-a:hover {
-  color: #134e4b;
-}
-
-/* Ensure good contrast on navigation */
+/* Stronger contrast for navigation and links */
 nav a {
+  font-size: 1rem;
   color: #374151;
 }
 
 nav a:hover {
   color: #111827;
+}
+
+/* High contrast buttons */
+button, 
+a[class*="bg-black"],
+a[class*="bg-teal-800"] {
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+a[class*="bg-black"]:hover,
+a[class*="bg-teal-800"]:hover {
+  filter: brightness(0.9);
+}
+
+/* Improve readability in cards */
+.bg-white {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Footer and small text - still readable */
+footer, .text-xs, .text-sm {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* FAQ questions */
+.faq-question {
+  font-size: 1.1rem;
+  line-height: 1.5;
 }

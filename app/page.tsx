@@ -104,6 +104,58 @@ export default function Home() {
       {/* MCI Screen CTA */}
       <MCIScreenCTA />
 
+      {/* Newsletter / Community CTA - High Converting Section */}
+      <section className="bg-black py-20">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <div className="inline-flex items-center gap-2 bg-white/10 text-white px-4 py-1.5 rounded-full text-sm font-medium mb-6 tracking-wide">
+            PRIVATE COMMUNITY
+          </div>
+          
+          <h2 className="text-5xl md:text-6xl font-semibold text-white tracking-tighter mb-6 leading-none">
+            Most patients need more<br />than standard care.
+          </h2>
+          
+          <p className="text-2xl text-white/90 mb-4 max-w-2xl mx-auto font-light">
+            Join the movement accelerating real solutions for vascular dementia.
+          </p>
+          
+          <p className="text-lg text-white/80 mb-10 max-w-xl mx-auto">
+            Get real-time updates on breakthrough diagnostics, therapies, clinical trials, and new science — delivered straight to your inbox.
+          </p>
+
+          <form 
+            className="max-w-md mx-auto" 
+            onSubmit={(e) => {
+              e.preventDefault();
+              const email = (e.target as HTMLFormElement).email.value;
+              alert(`Thank you! We'll send updates to ${email}. (Form ready for email service integration)`);
+              (e.target as HTMLFormElement).reset();
+            }}
+          >
+            <div className="flex flex-col sm:flex-row gap-3">
+              <input 
+                type="email" 
+                name="email"
+                placeholder="Your email address" 
+                className="flex-1 px-6 py-4 rounded-full text-lg bg-white text-black placeholder:text-gray-500 border-2 border-white focus:outline-none focus:border-white" 
+                required 
+              />
+              <button 
+                type="submit"
+                className="bg-white hover:bg-gray-100 active:bg-gray-200 text-black px-10 py-4 rounded-full text-lg font-semibold whitespace-nowrap transition-all shadow-lg hover:shadow-xl"
+              >
+                Join the Movement
+              </button>
+            </div>
+            <div className="mt-4 text-sm text-white/60 flex flex-col sm:flex-row items-center justify-center gap-2">
+              <span>2,487 caregivers &amp; clinicians already joined</span>
+              <span className="hidden sm:inline">•</span>
+              <span>Unsubscribe anytime</span>
+            </div>
+          </form>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section id="get-started" className="max-w-3xl mx-auto px-6 py-20 text-center">
         <h2 className="text-5xl font-semibold mb-6">Ready for answers?</h2>

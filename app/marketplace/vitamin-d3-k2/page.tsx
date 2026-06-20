@@ -1,4 +1,4 @@
-import CompactMCIScreenCTA from '../../../components/CompactMCIScreenCTA';
+import CompactMCIScreenCTA from '@/components/CompactMCIScreenCTA';
 
 export default function VitaminD3K2Page() {
   return (

@@ -1,3 +1,5 @@
+import MCIScreenCTA from '../components/MCIScreenCTA';
+
 export default function Home() {
   return (
     <main>
@@ -18,7 +20,7 @@ export default function Home() {
       </section>
 
       {/* How It Works */}
-      <section className="bg-gray-50 py-16">
+      <section id="how-it-works" className="bg-gray-50 py-16">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-semibold text-center mb-12">3 Easy Steps</h2>
           
@@ -49,7 +51,7 @@ export default function Home() {
       </section>
 
       {/* What We Offer */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section id="what-we-offer" className="max-w-6xl mx-auto px-6 py-20">
         <h2 className="text-4xl font-semibold text-center mb-12">Focused care for vascular dementia</h2>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -96,6 +98,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* MCI Screen CTA - Prominent placement */}
+      <MCIScreenCTA />
 
       {/* Final CTA */}
       <section id="get-started" className="max-w-3xl mx-auto px-6 py-20 text-center">

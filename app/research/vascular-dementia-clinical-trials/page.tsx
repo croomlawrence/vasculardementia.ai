@@ -8,7 +8,7 @@ export default function VascularDementiaResearchPage() {
       </div>
 
       <h1 className="text-5xl font-semibold tracking-tight mb-4">Understanding Clinical Research in Vascular Dementia</h1>
-      <p className="text-xl text-gray-800 mb-12">A patient-friendly guide to the history and current landscape of clinical trials</p>
+      <p className="text-xl text-black mb-12">A patient-friendly guide to the history and current landscape of clinical trials</p>
 
       {/* Introduction */}
       <div className="prose prose-lg max-w-none mb-12">
@@ -23,19 +23,19 @@ export default function VascularDementiaResearchPage() {
         <div className="grid md:grid-cols-4 gap-6 text-center">
           <div>
             <div className="text-4xl font-bold text-teal-700">450+</div>
-            <div className="text-sm text-gray-800 mt-1">Total Studies</div>
+            <div className="text-sm text-black mt-1">Total Studies</div>
           </div>
           <div>
             <div className="text-4xl font-bold text-teal-700">94</div>
-            <div className="text-sm text-gray-800 mt-1">Currently Recruiting</div>
+            <div className="text-sm text-black mt-1">Currently Recruiting</div>
           </div>
           <div>
             <div className="text-4xl font-bold text-teal-700">197</div>
-            <div className="text-sm text-gray-800 mt-1">Completed Studies</div>
+            <div className="text-sm text-black mt-1">Completed Studies</div>
           </div>
           <div>
             <div className="text-4xl font-bold text-teal-700">27</div>
-            <div className="text-sm text-gray-800 mt-1">Phase 3 or 4 Trials</div>
+            <div className="text-sm text-black mt-1">Phase 3 or 4 Trials</div>
           </div>
         </div>
       </div>
@@ -47,22 +47,22 @@ export default function VascularDementiaResearchPage() {
         <div className="space-y-8">
           <div>
             <h3 className="text-xl font-semibold mb-2">1990s – Early Recognition</h3>
-            <p className="text-gray-700">Researchers began distinguishing vascular dementia from Alzheimer’s. Major trials like the <strong>Systolic Hypertension in the Elderly Program (SHEP)</strong> showed that treating high blood pressure significantly reduced the risk of developing vascular dementia.</p>
+            <p className="text-black">Researchers began distinguishing vascular dementia from Alzheimer’s. Major trials like the <strong>Systolic Hypertension in the Elderly Program (SHEP)</strong> showed that treating high blood pressure significantly reduced the risk of developing vascular dementia.</p>
           </div>
 
           <div>
             <h3 className="text-xl font-semibold mb-2">2000s – Focus on Prevention</h3>
-            <p className="text-gray-700">Large international trials such as <strong>PROGRESS</strong> (blood pressure lowering) and <strong>PRoFESS</strong> (antiplatelet therapy) confirmed that controlling vascular risk factors (blood pressure, cholesterol, diabetes, smoking) is one of the most effective ways to reduce risk.</p>
+            <p className="text-black">Large international trials such as <strong>PROGRESS</strong> (blood pressure lowering) and <strong>PRoFESS</strong> (antiplatelet therapy) confirmed that controlling vascular risk factors (blood pressure, cholesterol, diabetes, smoking) is one of the most effective ways to reduce risk.</p>
           </div>
 
           <div>
             <h3 className="text-xl font-semibold mb-2">2010s – Lifestyle & Multi-Domain Approaches</h3>
-            <p className="text-gray-700">Landmark studies like the <strong>FINGER trial</strong> (Finland) demonstrated that combining physical activity, healthy diet, cognitive training, and vascular risk management can slow cognitive decline — even in people at high risk.</p>
+            <p className="text-black">Landmark studies like the <strong>FINGER trial</strong> (Finland) demonstrated that combining physical activity, healthy diet, cognitive training, and vascular risk management can slow cognitive decline — even in people at high risk.</p>
           </div>
 
           <div>
             <h3 className="text-xl font-semibold mb-2">2020s – New Targets & Precision Medicine</h3>
-            <p className="text-gray-700">Current research is exploring inflammation, small vessel disease, and new medications. There is growing interest in combining vascular protection with emerging therapies originally developed for Alzheimer’s.</p>
+            <p className="text-black">Current research is exploring inflammation, small vessel disease, and new medications. There is growing interest in combining vascular protection with emerging therapies originally developed for Alzheimer’s.</p>
           </div>
         </div>
       </div>
@@ -71,7 +71,7 @@ export default function VascularDementiaResearchPage() {
       <div className="mb-12">
         <h2 className="text-3xl font-semibold mb-6">What Researchers Are Studying Now</h2>
         
-        <ul className="space-y-4 text-gray-700">
+        <ul className="space-y-4 text-black">
           <li className="flex gap-3"><span className="text-teal-600 font-bold">•</span> <strong>Blood pressure & lifestyle interventions</strong> — Still the most promising area for prevention.</li>
           <li className="flex gap-3"><span className="text-teal-600 font-bold">•</span> <strong>Anti-inflammatory and neuroprotective drugs</strong></li>
           <li className="flex gap-3"><span className="text-teal-600 font-bold">•</span> <strong>Exercise and cognitive training combinations</strong></li>
@@ -83,21 +83,21 @@ export default function VascularDementiaResearchPage() {
       {/* What This Means for Patients */}
       <div className="bg-teal-50 rounded-3xl p-8 mb-12">
         <h2 className="text-2xl font-semibold mb-4">What This Means for You</h2>
-        <p className="text-gray-700 mb-4">
+        <p className="text-black mb-4">
           While there is still no cure for vascular dementia, research has clearly shown that many cases are preventable or can be slowed significantly. The strongest evidence supports:
         </p>
-        <ul className="list-disc pl-6 text-gray-700 space-y-1">
+        <ul className="list-disc pl-6 text-black space-y-1">
           <li>Controlling blood pressure and other vascular risk factors</li>
           <li>Regular physical activity and mental stimulation</li>
           <li>Healthy diet (especially Mediterranean or MIND-style eating)</li>
           <li>Not smoking and limiting alcohol</li>
         </ul>
-        <p className="mt-4 text-sm text-gray-800">
+        <p className="mt-4 text-sm text-black">
           Many of these interventions are being tested in ongoing trials. You can find current studies at <a href="https://clinicaltrials.gov" target="_blank" className="text-teal-600 underline">ClinicalTrials.gov</a>.
         </p>
       </div>
 
-      <div className="text-center text-sm text-gray-700">
+      <div className="text-center text-sm text-black">
         Data sourced from ClinicalTrials.gov (as of June 2026). Always discuss clinical trial participation with your physician.
       </div>
     </div>

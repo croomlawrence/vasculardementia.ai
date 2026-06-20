@@ -49,8 +49,8 @@ export default function HachinskiPage() {
             <span className="font-semibold text-2xl tracking-tight">Vascumind</span>
           </Link>
           <div className="flex items-center gap-x-4 text-sm">
-            <Link href="/marketplace" className="text-slate-600 hover:text-slate-900">Marketplace</Link>
-            <Link href="/hachinski" className="text-slate-600 hover:text-slate-900 font-medium">Hachinski Score</Link>
+            <Link href="/marketplace" className="text-black hover:text-black">Marketplace</Link>
+            <Link href="/hachinski" className="text-black hover:text-black font-medium">Hachinski Score</Link>
             <Link href="#take-action" className="px-5 py-2.5 bg-teal-800 hover:bg-teal-900 text-white text-sm font-medium rounded-2xl transition-colors">
               Take the MCI Screen
             </Link>
@@ -65,18 +65,18 @@ export default function HachinskiPage() {
             <span>Classic Research, Modern Understanding</span>
           </div>
           
-          <h1 className="text-5xl leading-[1.05] tracking-tighter font-semibold text-slate-900">
+          <h1 className="text-5xl leading-[1.05] tracking-tighter font-semibold text-black">
             The Hachinski Ischemic Score:<br />
             A Simple Tool That Helps<br />
             Spot Vascular Dementia
           </h1>
           
-          <p className="mt-6 text-xl text-slate-600 max-w-lg">
+          <p className="mt-6 text-xl text-black max-w-lg">
             For over 50 years, doctors have used this 13-point checklist to tell the difference between vascular dementia and Alzheimer’s. Here’s what patients and families need to know.
           </p>
           
           <div className="flex items-center gap-x-4 mt-8">
-            <a href="#faqs" className="px-8 py-4 bg-white hover:bg-slate-50 border border-slate-300 text-slate-700 font-semibold rounded-3xl flex items-center gap-x-3 transition-all text-sm shadow-sm">
+            <a href="#faqs" className="px-8 py-4 bg-white hover:bg-slate-50 border border-slate-300 text-black font-semibold rounded-3xl flex items-center gap-x-3 transition-all text-sm shadow-sm">
               Read the FAQs
             </a>
             <a href="#score" className="px-8 py-4 bg-teal-800 hover:bg-teal-900 text-white font-semibold rounded-3xl flex items-center gap-x-3 transition-all text-sm">
@@ -91,16 +91,16 @@ export default function HachinskiPage() {
         <div className="bg-white rounded-3xl p-10 border border-slate-200 shadow-sm">
           <div className="grid md:grid-cols-12 gap-10 items-center">
             <div className="md:col-span-7">
-              <h2 className="text-3xl font-semibold tracking-tight text-slate-900">What is the Hachinski Ischemic Score?</h2>
-              <p className="mt-4 text-lg text-slate-600">
+              <h2 className="text-3xl font-semibold tracking-tight text-black">What is the Hachinski Ischemic Score?</h2>
+              <p className="mt-4 text-lg text-black">
                 The Hachinski Ischemic Score (HIS) is a quick bedside checklist that helps doctors determine whether memory or thinking problems are likely caused by problems with blood flow to the brain (vascular dementia) rather than Alzheimer’s disease.
               </p>
-              <p className="mt-4 text-slate-600">
+              <p className="mt-4 text-black">
                 First published in 1975 by Dr. Vladimir Hachinski, it was later validated in major reviews (including Pantoni et al., 1993) and remains one of the most practical tools in memory clinics today.
               </p>
             </div>
             <div className="md:col-span-5 bg-slate-50 rounded-2xl p-6">
-              <div className="text-sm font-medium text-gray-700 mb-3">Why it still matters</div>
+              <div className="text-sm font-medium text-black mb-3">Why it still matters</div>
               <ul className="space-y-3 text-sm">
                 <li className="flex gap-x-3"><span className="text-teal-600 mt-1">✓</span> <span>Fast — takes just a few minutes</span></li>
                 <li className="flex gap-x-3"><span className="text-teal-600 mt-1">✓</span> <span>No expensive equipment needed</span></li>
@@ -116,7 +116,7 @@ export default function HachinskiPage() {
         <div className="flex items-end justify-between mb-6">
           <div>
             <h2 className="text-3xl font-semibold tracking-tight">How the Score Works</h2>
-            <p className="text-slate-600 mt-1">Doctors add up points based on your symptoms and history</p>
+            <p className="text-black mt-1">Doctors add up points based on your symptoms and history</p>
           </div>
         </div>
 
@@ -129,7 +129,7 @@ export default function HachinskiPage() {
                 <div className="text-sm text-emerald-600">Likely Alzheimer’s</div>
               </div>
             </div>
-            <p className="text-sm text-slate-600 mt-4">Gradual onset, steady progression, fewer vascular risk factors.</p>
+            <p className="text-sm text-black mt-4">Gradual onset, steady progression, fewer vascular risk factors.</p>
           </div>
 
           <div className="bg-white border border-amber-200 rounded-3xl p-6">
@@ -140,7 +140,7 @@ export default function HachinskiPage() {
                 <div className="text-sm text-amber-600">Possible mixed dementia</div>
               </div>
             </div>
-            <p className="text-sm text-slate-600 mt-4">Features of both vascular damage and Alzheimer’s may be present.</p>
+            <p className="text-sm text-black mt-4">Features of both vascular damage and Alzheimer’s may be present.</p>
           </div>
 
           <div className="bg-white border border-red-200 rounded-3xl p-6">
@@ -151,7 +151,7 @@ export default function HachinskiPage() {
                 <div className="text-sm text-red-600">Likely vascular dementia</div>
               </div>
             </div>
-            <p className="text-sm text-slate-600 mt-4">Sudden or stepwise changes, history of stroke, high blood pressure, focal signs.</p>
+            <p className="text-sm text-black mt-4">Sudden or stepwise changes, history of stroke, high blood pressure, focal signs.</p>
           </div>
         </div>
       </div>
@@ -159,7 +159,7 @@ export default function HachinskiPage() {
       {/* The 13 Items */}
       <div className="max-w-5xl mx-auto px-6 py-8">
         <h2 className="text-3xl font-semibold tracking-tight mb-2">The 13 Questions Doctors Ask</h2>
-        <p className="text-slate-600 mb-6">Each item adds points. Higher scores point toward vascular causes.</p>
+        <p className="text-black mb-6">Each item adds points. Higher scores point toward vascular causes.</p>
 
         <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden">
           <div className="divide-y text-sm">
@@ -197,13 +197,13 @@ export default function HachinskiPage() {
             <div key={index} className="bg-white border border-slate-200 rounded-3xl overflow-hidden">
               <button 
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-8 py-5 text-left flex items-center justify-between font-medium text-slate-900 hover:bg-slate-50"
+                className="w-full px-8 py-5 text-left flex items-center justify-between font-medium text-black hover:bg-slate-50"
               >
                 <span>{faq.question}</span>
                 <span className={`transition-transform ${openFAQs.includes(index) ? 'rotate-180' : ''}`}>↓</span>
               </button>
               {openFAQs.includes(index) && (
-                <div className="px-8 pb-6 text-slate-600 text-[15px]">
+                <div className="px-8 pb-6 text-black text-[15px]">
                   {faq.answer}
                 </div>
               )}
@@ -220,18 +220,18 @@ export default function HachinskiPage() {
               BEFORE &amp; AFTER TRACKING
             </div>
             
-            <h2 className="text-4xl font-semibold tracking-tight text-slate-900 mb-4 leading-tight">
+            <h2 className="text-4xl font-semibold tracking-tight text-black mb-4 leading-tight">
               See exactly how your lifestyle changes and therapy are working.
             </h2>
             
-            <p className="text-xl text-slate-600 mb-8">
+            <p className="text-xl text-black mb-8">
               The MCI Screen is the most accurate tool available for detecting Mild Cognitive Impairment early — 
               long before dementia. Establish your baseline now, then re-test after 3–6 months of vascular health improvements.
             </p>
 
             <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 mb-8 text-left">
-              <div className="font-semibold text-slate-900 mb-3 text-sm tracking-wide">HOW THE MCI SCREEN WORKS</div>
-              <ul className="space-y-2 text-sm text-slate-600">
+              <div className="font-semibold text-black mb-3 text-sm tracking-wide">HOW THE MCI SCREEN WORKS</div>
+              <ul className="space-y-2 text-sm text-black">
                 <li className="flex gap-x-2"><span className="text-teal-600 font-bold">•</span> <strong>Memory Screen</strong> (quick self-report) — 94% accurate at identifying MCI</li>
                 <li className="flex gap-x-2"><span className="text-teal-600 font-bold">•</span> Full MCI Screen — detects the earliest reversible stage of cognitive decline</li>
                 <li className="flex gap-x-2"><span className="text-teal-600 font-bold">•</span> Personalized Action Plan + repeat testing to measure real progress</li>
@@ -249,7 +249,7 @@ export default function HachinskiPage() {
               <span className="group-hover:translate-x-0.5 transition-transform">→</span>
             </a>
 
-            <div className="mt-5 flex flex-wrap justify-center gap-x-6 text-xs text-gray-700">
+            <div className="mt-5 flex flex-wrap justify-center gap-x-6 text-xs text-black">
               <div>Trusted by Cleveland Clinic • Mayo Clinic • NIH</div>
               <div>Takes ~15 minutes</div>
               <div>Results in 24–48 hours</div>
@@ -258,7 +258,7 @@ export default function HachinskiPage() {
         </div>
       </div>
 
-      <footer className="border-t border-slate-200 py-8 text-center text-xs text-gray-700">
+      <footer className="border-t border-slate-200 py-8 text-center text-xs text-black">
         <p>Content based on the original Hachinski 1975 study and Pantoni 1993 review. For educational purposes only. Always consult your physician.</p>
         <p className="mt-1">Vascumind® — Advanced diagnostics and emerging therapies for vascular dementia.</p>
       </footer>

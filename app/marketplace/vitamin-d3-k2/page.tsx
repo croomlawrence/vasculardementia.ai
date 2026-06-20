@@ -1,3 +1,5 @@
+import CompactMCIScreenCTA from '../../components/CompactMCIScreenCTA';
+
 export default function VitaminD3K2Page() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
@@ -6,7 +8,7 @@ export default function VitaminD3K2Page() {
       </div>
 
       <h1 className="text-5xl font-semibold tracking-tight mb-4">Vitamin D3 + K2</h1>
-      <p className="text-xl text-gray-600 mb-8">5,000 IU D3 with 100 mcg K2 • 60 capsules</p>
+      <p className="text-xl text-gray-600 mb-8">Essential for calcium metabolism • 60 capsules</p>
 
       <div className="flex items-center gap-4 mb-12">
         <div className="text-4xl font-semibold">$22</div>
@@ -15,17 +17,12 @@ export default function VitaminD3K2Page() {
 
       <div className="prose prose-lg max-w-none">
         <h2>Product Details</h2>
-        <p>High-potency Vitamin D3 combined with K2 (MK-7) for optimal calcium utilization and overall wellness support.</p>
+        <p>Combined Vitamin D3 and K2 for optimal calcium absorption and vascular health support.</p>
+      </div>
 
-        <h3>Suggested Use</h3>
-        <p>Take 1 capsule daily with food.</p>
-
-        <div className="bg-gray-50 p-6 rounded-xl mt-8 text-sm">
-          <strong>Disclaimer:</strong> This product is sold as a dietary supplement for general wellness support. 
-          It is not intended to diagnose, treat, cure, or prevent vascular dementia or any medical condition. 
-          Consult your healthcare provider before use.
-        </div>
+      <div className="mt-16">
+        <CompactMCIScreenCTA />
       </div>
     </div>
-  )
+  );
 }

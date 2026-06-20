@@ -1,3 +1,5 @@
+import CompactMCIScreenCTA from '../../components/CompactMCIScreenCTA';
+
 export default function Omega3Page() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
@@ -18,21 +20,13 @@ export default function Omega3Page() {
         <p>Premium fish oil providing concentrated EPA and DHA from sustainably sourced, molecularly distilled fish oil. These essential fatty acids support cardiovascular health and overall wellness.</p>
 
         <h3>Suggested Use</h3>
-        <p>Take 2 softgels daily with food.</p>
+        <p>Take 2 softgels daily with a meal, or as directed by your healthcare provider.</p>
+      </div>
 
-        <h3>Key Ingredients (per 2 softgels)</h3>
-        <ul>
-          <li>Fish Oil Concentrate: 2,000 mg</li>
-          <li>EPA: 800 mg</li>
-          <li>DHA: 600 mg</li>
-        </ul>
-
-        <div className="bg-gray-50 p-6 rounded-xl mt-8 text-sm">
-          <strong>Disclaimer:</strong> This product is sold as a dietary supplement for general wellness support. 
-          It is not intended to diagnose, treat, cure, or prevent vascular dementia or any medical condition. 
-          Consult your healthcare provider before use.
-        </div>
+      {/* Compact CTA on product page */}
+      <div className="mt-16">
+        <CompactMCIScreenCTA />
       </div>
     </div>
-  )
+  );
 }

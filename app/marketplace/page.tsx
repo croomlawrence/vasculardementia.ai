@@ -18,7 +18,7 @@ export default function Marketplace() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Omega-3 */}
           <Link href="/marketplace/omega-3" className="group border rounded-2xl p-6 hover:shadow-lg transition">
             <div className="mb-4">
@@ -57,6 +57,16 @@ export default function Marketplace() {
             <h3 className="text-2xl font-semibold mb-2 group-hover:text-blue-600">Organic Beetroot Powder</h3>
             <p className="text-black mb-4">Natural nitric oxide support</p>
             <div className="text-lg font-medium">$26</div>
+          </Link>
+
+          {/* Percepta - NEW */}
+          <Link href="/marketplace/percepta" className="group border rounded-2xl p-6 hover:shadow-lg transition">
+            <div className="mb-4">
+              <div className="text-sm text-blue-600 font-medium">Beta-Amyloid Support</div>
+            </div>
+            <h3 className="text-2xl font-semibold mb-2 group-hover:text-blue-600">Percepta</h3>
+            <p className="text-black mb-4">Cat’s Claw + Oolong Tea Extract</p>
+            <div className="text-lg font-medium">$XX</div>
           </Link>
         </div>
 

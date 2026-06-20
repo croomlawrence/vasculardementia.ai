@@ -8,7 +8,7 @@ export default function VascularDementiaResearchPage() {
       </div>
 
       <h1 className="text-5xl font-semibold tracking-tight mb-4">Understanding Clinical Research in Vascular Dementia</h1>
-      <p className="text-xl text-gray-600 mb-12">A patient-friendly guide to the history and current landscape of clinical trials</p>
+      <p className="text-xl text-gray-800 mb-12">A patient-friendly guide to the history and current landscape of clinical trials</p>
 
       {/* Introduction */}
       <div className="prose prose-lg max-w-none mb-12">
@@ -23,19 +23,19 @@ export default function VascularDementiaResearchPage() {
         <div className="grid md:grid-cols-4 gap-6 text-center">
           <div>
             <div className="text-4xl font-bold text-teal-700">450+</div>
-            <div className="text-sm text-gray-600 mt-1">Total Studies</div>
+            <div className="text-sm text-gray-800 mt-1">Total Studies</div>
           </div>
           <div>
             <div className="text-4xl font-bold text-teal-700">94</div>
-            <div className="text-sm text-gray-600 mt-1">Currently Recruiting</div>
+            <div className="text-sm text-gray-800 mt-1">Currently Recruiting</div>
           </div>
           <div>
             <div className="text-4xl font-bold text-teal-700">197</div>
-            <div className="text-sm text-gray-600 mt-1">Completed Studies</div>
+            <div className="text-sm text-gray-800 mt-1">Completed Studies</div>
           </div>
           <div>
             <div className="text-4xl font-bold text-teal-700">27</div>
-            <div className="text-sm text-gray-600 mt-1">Phase 3 or 4 Trials</div>
+            <div className="text-sm text-gray-800 mt-1">Phase 3 or 4 Trials</div>
           </div>
         </div>
       </div>
@@ -92,12 +92,12 @@ export default function VascularDementiaResearchPage() {
           <li>Healthy diet (especially Mediterranean or MIND-style eating)</li>
           <li>Not smoking and limiting alcohol</li>
         </ul>
-        <p className="mt-4 text-sm text-gray-600">
+        <p className="mt-4 text-sm text-gray-800">
           Many of these interventions are being tested in ongoing trials. You can find current studies at <a href="https://clinicaltrials.gov" target="_blank" className="text-teal-600 underline">ClinicalTrials.gov</a>.
         </p>
       </div>
 
-      <div className="text-center text-sm text-gray-500">
+      <div className="text-center text-sm text-gray-700">
         Data sourced from ClinicalTrials.gov (as of June 2026). Always discuss clinical trial participation with your physician.
       </div>
     </div>

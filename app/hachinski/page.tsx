@@ -100,7 +100,7 @@ export default function HachinskiPage() {
               </p>
             </div>
             <div className="md:col-span-5 bg-slate-50 rounded-2xl p-6">
-              <div className="text-sm font-medium text-slate-500 mb-3">Why it still matters</div>
+              <div className="text-sm font-medium text-gray-700 mb-3">Why it still matters</div>
               <ul className="space-y-3 text-sm">
                 <li className="flex gap-x-3"><span className="text-teal-600 mt-1">✓</span> <span>Fast — takes just a few minutes</span></li>
                 <li className="flex gap-x-3"><span className="text-teal-600 mt-1">✓</span> <span>No expensive equipment needed</span></li>
@@ -249,7 +249,7 @@ export default function HachinskiPage() {
               <span className="group-hover:translate-x-0.5 transition-transform">→</span>
             </a>
 
-            <div className="mt-5 flex flex-wrap justify-center gap-x-6 text-xs text-slate-500">
+            <div className="mt-5 flex flex-wrap justify-center gap-x-6 text-xs text-gray-700">
               <div>Trusted by Cleveland Clinic • Mayo Clinic • NIH</div>
               <div>Takes ~15 minutes</div>
               <div>Results in 24–48 hours</div>
@@ -258,7 +258,7 @@ export default function HachinskiPage() {
         </div>
       </div>
 
-      <footer className="border-t border-slate-200 py-8 text-center text-xs text-slate-500">
+      <footer className="border-t border-slate-200 py-8 text-center text-xs text-gray-700">
         <p>Content based on the original Hachinski 1975 study and Pantoni 1993 review. For educational purposes only. Always consult your physician.</p>
         <p className="mt-1">Vascumind® — Advanced diagnostics and emerging therapies for vascular dementia.</p>
       </footer>

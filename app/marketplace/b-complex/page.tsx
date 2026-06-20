@@ -8,7 +8,7 @@ export default function BComplexPage() {
       </div>
 
       <h1 className="text-5xl font-semibold tracking-tight mb-4">Methylated B-Complex</h1>
-      <p className="text-xl text-gray-600 mb-8">Active forms for better absorption • 60 capsules</p>
+      <p className="text-xl text-gray-800 mb-8">Active forms for better absorption • 60 capsules</p>
 
       <div className="flex items-center gap-4 mb-12">
         <div className="text-4xl font-semibold">$28</div>

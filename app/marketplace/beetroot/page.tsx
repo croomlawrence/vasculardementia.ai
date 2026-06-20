@@ -8,7 +8,7 @@ export default function BeetrootPage() {
       </div>
 
       <h1 className="text-5xl font-semibold tracking-tight mb-4">Organic Beetroot Powder</h1>
-      <p className="text-xl text-gray-600 mb-8">Natural nitric oxide support • 30 servings</p>
+      <p className="text-xl text-gray-800 mb-8">Natural nitric oxide support • 30 servings</p>
 
       <div className="flex items-center gap-4 mb-12">
         <div className="text-4xl font-semibold">$26</div>

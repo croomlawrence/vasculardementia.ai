@@ -9,7 +9,7 @@ export default function Marketplace() {
           <h1 className="text-5xl font-semibold tracking-tight mb-4">
             Vascular & Cognitive Wellness Marketplace
           </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-800 max-w-2xl mx-auto">
             Curated supplements to support cardiovascular health, circulation, 
             and everyday cognitive wellness — as a complement to advanced diagnostics and therapies.
           </p>
@@ -25,7 +25,7 @@ export default function Marketplace() {
               <div className="text-sm text-blue-600 font-medium">Vascular Support</div>
             </div>
             <h3 className="text-2xl font-semibold mb-2 group-hover:text-blue-600">High-Potency Omega-3</h3>
-            <p className="text-gray-600 mb-4">1,400 mg EPA + DHA per serving</p>
+            <p className="text-gray-800 mb-4">1,400 mg EPA + DHA per serving</p>
             <div className="text-lg font-medium">$34</div>
           </Link>
 
@@ -35,7 +35,7 @@ export default function Marketplace() {
               <div className="text-sm text-blue-600 font-medium">Cognitive Support</div>
             </div>
             <h3 className="text-2xl font-semibold mb-2 group-hover:text-blue-600">Methylated B-Complex</h3>
-            <p className="text-gray-600 mb-4">Active forms for better absorption</p>
+            <p className="text-gray-800 mb-4">Active forms for better absorption</p>
             <div className="text-lg font-medium">$28</div>
           </Link>
 
@@ -45,7 +45,7 @@ export default function Marketplace() {
               <div className="text-sm text-blue-600 font-medium">Vascular + Bone</div>
             </div>
             <h3 className="text-2xl font-semibold mb-2 group-hover:text-blue-600">Vitamin D3 + K2</h3>
-            <p className="text-gray-600 mb-4">Essential for calcium metabolism</p>
+            <p className="text-gray-800 mb-4">Essential for calcium metabolism</p>
             <div className="text-lg font-medium">$22</div>
           </Link>
 
@@ -55,7 +55,7 @@ export default function Marketplace() {
               <div className="text-sm text-blue-600 font-medium">Circulation</div>
             </div>
             <h3 className="text-2xl font-semibold mb-2 group-hover:text-blue-600">Organic Beetroot Powder</h3>
-            <p className="text-gray-600 mb-4">Natural nitric oxide support</p>
+            <p className="text-gray-800 mb-4">Natural nitric oxide support</p>
             <div className="text-lg font-medium">$26</div>
           </Link>
         </div>

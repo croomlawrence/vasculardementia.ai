@@ -8,7 +8,7 @@ export default function VitaminD3K2Page() {
       </div>
 
       <h1 className="text-5xl font-semibold tracking-tight mb-4">Vitamin D3 + K2</h1>
-      <p className="text-xl text-gray-600 mb-8">Essential for calcium metabolism • 60 capsules</p>
+      <p className="text-xl text-gray-800 mb-8">Essential for calcium metabolism • 60 capsules</p>
 
       <div className="flex items-center gap-4 mb-12">
         <div className="text-4xl font-semibold">$22</div>

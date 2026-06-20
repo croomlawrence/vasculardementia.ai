@@ -8,7 +8,7 @@ export default function Omega3Page() {
       </div>
 
       <h1 className="text-5xl font-semibold tracking-tight mb-4">High-Potency Omega-3 Fish Oil</h1>
-      <p className="text-xl text-gray-600 mb-8">1,400 mg EPA + DHA per serving • 60 softgels</p>
+      <p className="text-xl text-gray-800 mb-8">1,400 mg EPA + DHA per serving • 60 softgels</p>
 
       <div className="flex items-center gap-4 mb-12">
         <div className="text-4xl font-semibold">$34</div>

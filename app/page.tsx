@@ -79,14 +79,15 @@ export default function Home() {
           <h2 className="text-4xl font-semibold text-center mb-4">Vascular & Cognitive Wellness Marketplace</h2>
           <p className="text-center text-black mb-10">Curated supplements to support vascular health and cognitive wellness.</p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {[
-              { name: "High-Potency Omega-3", price: "$34" },
-              { name: "Methylated B-Complex", price: "$28" },
-              { name: "Vitamin D3 + K2", price: "$22" },
-              { name: "Organic Beetroot Powder", price: "$26" }
+              { name: "High-Potency Omega-3", price: "$34", href: "/marketplace/omega-3" },
+              { name: "Methylated B-Complex", price: "$28", href: "/marketplace/b-complex" },
+              { name: "Vitamin D3 + K2", price: "$22", href: "/marketplace/vitamin-d3-k2" },
+              { name: "Organic Beetroot Powder", price: "$26", href: "/marketplace/beetroot" },
+              { name: "Percepta", price: "$49", href: "/marketplace/percepta" }
             ].map((product, index) => (
-              <a key={index} href="/marketplace" className="bg-white p-6 rounded-2xl border hover:shadow-md transition">
+              <a key={index} href={product.href} className="bg-white p-6 rounded-2xl border hover:shadow-md transition">
                 <h3 className="font-semibold mb-2">{product.name}</h3>
                 <div className="text-lg font-medium">{product.price}</div>
               </a>

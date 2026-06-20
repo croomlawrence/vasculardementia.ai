@@ -50,6 +50,44 @@ export default function RootLayout({
           </div>
         </nav>
         {children}
+
+        {/* Footer */}
+        <footer className="bg-black text-white py-12 mt-auto">
+          <div className="max-w-6xl mx-auto px-6">
+            <div className="grid md:grid-cols-4 gap-8 mb-10">
+              <div>
+                <div className="font-semibold text-xl mb-3">VascuMind®</div>
+                <p className="text-sm text-white/70">Accelerating solutions for vascular dementia.</p>
+              </div>
+              <div>
+                <div className="font-semibold mb-3 text-sm tracking-widest">EXPLORE</div>
+                <div className="space-y-2 text-sm">
+                  <Link href="/" className="block hover:text-white/80">Home</Link>
+                  <Link href="/hachinski" className="block hover:text-white/80">Diagnostics</Link>
+                  <Link href="/marketplace" className="block hover:text-white/80">Marketplace</Link>
+                </div>
+              </div>
+              <div>
+                <div className="font-semibold mb-3 text-sm tracking-widest">RESEARCH</div>
+                <div className="space-y-2 text-sm">
+                  <Link href="/research/vascular-dementia-clinical-trials" className="block hover:text-white/80">Clinical Trials</Link>
+                  <Link href="/research/clinical-evidence" className="block hover:text-white/80">Clinical Evidence</Link>
+                </div>
+              </div>
+              <div>
+                <div className="font-semibold mb-3 text-sm tracking-widest">LEGAL</div>
+                <div className="space-y-2 text-sm text-white/70">
+                  <div>© VascuMind 2026</div>
+                  <div>This site is for educational purposes only and does not constitute medical advice.</div>
+                  <div>Always consult your physician.</div>
+                </div>
+              </div>
+            </div>
+            <div className="border-t border-white/20 pt-6 text-xs text-white/50 text-center">
+              VascuMind® is not a substitute for professional medical care. All information is provided for educational purposes.
+            </div>
+          </div>
+        </footer>
       </body>
     </html>
   );

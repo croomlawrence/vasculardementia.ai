@@ -1,3 +1,5 @@
+"use client";
+
 import MCIScreenCTA from '../components/MCIScreenCTA';
 
 export default function Home() {

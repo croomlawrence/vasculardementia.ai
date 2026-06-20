@@ -3,20 +3,22 @@ import MCIScreenCTA from '../components/MCIScreenCTA';
 export default function Home() {
   return (
     <main>
-      {/* Hero Section */}
-      <section className="max-w-5xl mx-auto px-6 pt-20 pb-16 text-center">
-        <h1 className="text-6xl font-semibold tracking-tight mb-6">
-          Vascular Dementia Help.<br />Breakthrough tests & therapies. One hub.
-        </h1>
-        <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-          Advanced diagnostics and emerging treatment options — no traditional appointment required.
-        </p>
-        <a 
-          href="#get-started" 
-          className="inline-block bg-black text-white px-8 py-4 rounded-full text-lg hover:bg-gray-800"
-        >
-          Get Started
-        </a>
+      {/* Hero Section - High Contrast Black Background */}
+      <section className="bg-black py-20">
+        <div className="max-w-5xl mx-auto px-6 text-center">
+          <h1 className="text-6xl font-semibold tracking-tight mb-6 text-white">
+            Vascular Dementia Help.<br />Breakthrough tests & therapies. One hub.
+          </h1>
+          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+            Advanced diagnostics and emerging treatment options — no traditional appointment required.
+          </p>
+          <a 
+            href="#get-started" 
+            className="inline-block bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-200"
+          >
+            Get Started
+          </a>
+        </div>
       </section>
 
       {/* How It Works */}
@@ -99,7 +101,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* MCI Screen CTA - Prominent placement */}
+      {/* MCI Screen CTA */}
       <MCIScreenCTA />
 
       {/* Final CTA */}

@@ -38,7 +38,7 @@ export default function HachinskiPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
         <div className="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
@@ -49,8 +49,8 @@ export default function HachinskiPage() {
             <span className="font-semibold text-2xl tracking-tight">Vascumind</span>
           </Link>
           <div className="flex items-center gap-x-4 text-sm">
-            <Link href="/marketplace" className="text-black hover:text-black">Marketplace</Link>
-            <Link href="/hachinski" className="text-black hover:text-black font-medium">Hachinski Score</Link>
+            <Link href="/marketplace" className="text-black hover:text-teal-700">Marketplace</Link>
+            <Link href="/hachinski" className="text-black hover:text-teal-700 font-medium">Diagnostics</Link>
             <Link href="#take-action" className="px-5 py-2.5 bg-teal-800 hover:bg-teal-900 text-white text-sm font-medium rounded-2xl transition-colors">
               Take the MCI Screen
             </Link>
@@ -88,7 +88,7 @@ export default function HachinskiPage() {
 
       {/* What is it */}
       <div className="max-w-5xl mx-auto px-6 py-10">
-        <div className="bg-white rounded-3xl p-10 border border-slate-200 shadow-sm">
+        <div className="bg-white border border-slate-200 rounded-3xl p-10">
           <div className="grid md:grid-cols-12 gap-10 items-center">
             <div className="md:col-span-7">
               <h2 className="text-3xl font-semibold tracking-tight text-black">What is the Hachinski Ischemic Score?</h2>
@@ -101,7 +101,7 @@ export default function HachinskiPage() {
             </div>
             <div className="md:col-span-5 bg-slate-50 rounded-2xl p-6">
               <div className="text-sm font-medium text-black mb-3">Why it still matters</div>
-              <ul className="space-y-3 text-sm">
+              <ul className="space-y-3 text-sm text-black">
                 <li className="flex gap-x-3"><span className="text-teal-600 mt-1">✓</span> <span>Fast — takes just a few minutes</span></li>
                 <li className="flex gap-x-3"><span className="text-teal-600 mt-1">✓</span> <span>No expensive equipment needed</span></li>
                 <li className="flex gap-x-3"><span className="text-teal-600 mt-1">✓</span> <span>Helps guide next steps and treatment</span></li>
@@ -115,7 +115,7 @@ export default function HachinskiPage() {
       <div id="score" className="max-w-5xl mx-auto px-6 py-8">
         <div className="flex items-end justify-between mb-6">
           <div>
-            <h2 className="text-3xl font-semibold tracking-tight">How the Score Works</h2>
+            <h2 className="text-3xl font-semibold tracking-tight text-black">How the Score Works</h2>
             <p className="text-black mt-1">Doctors add up points based on your symptoms and history</p>
           </div>
         </div>
@@ -158,7 +158,7 @@ export default function HachinskiPage() {
 
       {/* The 13 Items */}
       <div className="max-w-5xl mx-auto px-6 py-8">
-        <h2 className="text-3xl font-semibold tracking-tight mb-2">The 13 Questions Doctors Ask</h2>
+        <h2 className="text-3xl font-semibold tracking-tight text-black mb-2">The 13 Questions Doctors Ask</h2>
         <p className="text-black mb-6">Each item adds points. Higher scores point toward vascular causes.</p>
 
         <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden">
@@ -180,7 +180,7 @@ export default function HachinskiPage() {
             ].map(([num, question, points], index) => (
               <div key={index} className="grid grid-cols-12 px-6 py-4 items-center hover:bg-slate-50">
                 <div className="col-span-1 font-mono text-teal-700">{num}</div>
-                <div className="col-span-8">{question}</div>
+                <div className="col-span-8 text-black">{question}</div>
                 <div className="col-span-3 text-right font-semibold text-teal-700">{points}</div>
               </div>
             ))}
@@ -190,7 +190,7 @@ export default function HachinskiPage() {
 
       {/* FAQs */}
       <div id="faqs" className="max-w-5xl mx-auto px-6 py-10">
-        <h2 className="text-3xl font-semibold tracking-tight mb-8">Frequently Asked Questions</h2>
+        <h2 className="text-3xl font-semibold tracking-tight text-black mb-8">Frequently Asked Questions</h2>
         
         <div className="space-y-3 max-w-4xl">
           {faqs.map((faq, index) => (
@@ -212,7 +212,36 @@ export default function HachinskiPage() {
         </div>
       </div>
 
-      {/* World-Class MCI Screen CTA - Best Practice Conversion Section */}
+      {/* Blood Testing Section - NEW */}
+      <div className="max-w-5xl mx-auto px-6 py-16 border-t">
+        <div className="max-w-3xl">
+          <div className="inline-flex items-center gap-x-2 bg-teal-100 text-teal-800 px-4 py-1 rounded-full text-xs font-semibold tracking-wider mb-4">
+            ADVANCED DIAGNOSTICS
+          </div>
+          
+          <h2 className="text-4xl font-semibold tracking-tight text-black mb-4">Blood Testing to Detect and Track Alzheimer’s Pathology</h2>
+          
+          <p className="text-xl text-black mb-8">
+            A major breakthrough in Alzheimer’s diagnostics is now available: a simple blood test that can detect Alzheimer’s pathology with high accuracy — even before symptoms appear.
+          </p>
+
+          <div className="bg-white border border-slate-200 rounded-3xl p-8">
+            <h3 className="font-semibold text-xl mb-4">Lucent Blood Test for AD Pathology</h3>
+            
+            <ul className="space-y-3 text-black mb-6">
+              <li className="flex gap-x-3"><span className="text-teal-600 font-bold">•</span> Approximately <strong>95% accurate</strong> in detecting Alzheimer’s pathology in people with normal cognitive function.</li>
+              <li className="flex gap-x-3"><span className="text-teal-600 font-bold">•</span> Sensitive enough to <strong>monitor changes in beta-amyloid levels</strong> over time — the first misfolded protein in Alzheimer’s.</li>
+              <li className="flex gap-x-3"><span className="text-teal-600 font-bold">•</span> Enables longitudinal tracking of disease progression and response to treatment.</li>
+            </ul>
+
+            <p className="text-sm text-black">
+              This represents a major step forward from traditional imaging or cerebrospinal fluid testing, making early detection far more accessible.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* World-Class MCI Screen CTA */}
       <div className="max-w-5xl mx-auto px-6 py-16">
         <div className="bg-white border border-slate-200 rounded-3xl p-10 md:p-14 text-center shadow-sm">
           <div className="max-w-2xl mx-auto">

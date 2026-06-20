@@ -7,18 +7,45 @@ export default function Home() {
       <section className="bg-black py-20">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h1 className="text-6xl font-semibold tracking-tight mb-6 text-white">
-            Vascular Dementia Help.<br />Breakthrough tests & therapies. One hub.
+            Start with the MCI Screen.<br />The clearest first step for vascular dementia.
           </h1>
           <p className="text-xl text-black mb-8 max-w-2xl mx-auto">
-            Advanced diagnostics and emerging treatment options — no traditional appointment required.
+            94% accuracy • 20+ years of research • Used by leading clinicians
           </p>
           <a 
-            href="#get-started" 
+            href="#mci-screen" 
             className="inline-block bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-200"
           >
-            Get Started
+            Take the MCI Screen
           </a>
         </div>
+      </section>
+
+      {/* MCI Screen Primary CTA Section */}
+      <section id="mci-screen" className="max-w-4xl mx-auto px-6 py-16 text-center">
+        <div className="mb-8">
+          <div className="inline-block bg-blue-100 text-blue-800 px-4 py-1 rounded-full text-sm font-medium mb-4">
+            RECOMMENDED FIRST STEP
+          </div>
+          <h2 className="text-5xl font-semibold tracking-tight mb-4">
+            Get objective answers in minutes
+          </h2>
+          <p className="text-xl text-black max-w-2xl mx-auto">
+            The MCI Screen is the most validated cognitive assessment for detecting early changes associated with vascular dementia and Alzheimer’s.
+          </p>
+        </div>
+        
+        <a 
+          href="https://www.acurist.ca" 
+          target="_blank"
+          className="inline-block bg-black text-white px-10 py-4 rounded-full text-xl font-semibold hover:bg-gray-800 transition"
+        >
+          Start the MCI Screen →
+        </a>
+        
+        <p className="text-sm text-black mt-4">
+          Takes ~15 minutes • Immediate results • Clinician-reviewed option available
+        </p>
       </section>
 
       {/* How It Works */}
@@ -29,24 +56,24 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-2xl">
               <div className="text-sm text-blue-600 font-medium mb-2">STEP 1</div>
-              <h3 className="text-2xl font-semibold mb-3">Complete Your Assessment</h3>
-              <p className="text-black">Answer a short questionnaire about symptoms and history.</p>
+              <h3 className="text-2xl font-semibold mb-3">Complete the MCI Screen</h3>
+              <p className="text-black">Take the validated 15-minute cognitive assessment online.</p>
             </div>
             <div className="bg-white p-8 rounded-2xl">
               <div className="text-sm text-blue-600 font-medium mb-2">STEP 2</div>
-              <h3 className="text-2xl font-semibold mb-3">Expert Review</h3>
-              <p className="text-black">A specialized clinician reviews your case.</p>
+              <h3 className="text-2xl font-semibold mb-3">Get Your Results</h3>
+              <p className="text-black">Receive an immediate score and interpretation.</p>
             </div>
             <div className="bg-white p-8 rounded-2xl">
               <div className="text-sm text-blue-600 font-medium mb-2">STEP 3</div>
-              <h3 className="text-2xl font-semibold mb-3">Personalized Plan</h3>
-              <p className="text-black">Receive access to testing, therapies, or clinical trials.</p>
+              <h3 className="text-2xl font-semibold mb-3">Next Steps</h3>
+              <p className="text-black">Access diagnostics, therapies, or clinical trials if needed.</p>
             </div>
           </div>
 
           <div className="text-center mt-10">
-            <a href="#get-started" className="inline-block bg-black text-white px-8 py-4 rounded-full text-lg hover:bg-gray-800">
-              Get Started
+            <a href="#mci-screen" className="inline-block bg-black text-white px-8 py-4 rounded-full text-lg hover:bg-gray-800">
+              Start the MCI Screen
             </a>
           </div>
         </div>
@@ -67,7 +94,7 @@ export default function Home() {
             <div key={index} className="border rounded-2xl p-8 hover:shadow-lg transition">
               <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
               <p className="text-black mb-6">{item.desc}</p>
-              <a href="#get-started" className="text-blue-600 font-medium hover:underline">Get Started →</a>
+              <a href="#mci-screen" className="text-blue-600 font-medium hover:underline">Start with MCI Screen →</a>
             </div>
           ))}
         </div>
@@ -77,7 +104,7 @@ export default function Home() {
       <section className="bg-gray-50 py-20">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-semibold text-center mb-4">Vascular & Cognitive Wellness Marketplace</h2>
-          <p className="text-center text-black mb-10">Curated supplements to support vascular health and cognitive wellness.</p>
+          <p className="text-center text-black mb-10">Evidence-based supplements commonly used to support vascular and cognitive health.</p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {[
@@ -159,12 +186,12 @@ export default function Home() {
 
       {/* Final CTA */}
       <section id="get-started" className="max-w-3xl mx-auto px-6 py-20 text-center">
-        <h2 className="text-5xl font-semibold mb-6">Ready for answers?</h2>
+        <h2 className="text-5xl font-semibold mb-6">Ready to take the first step?</h2>
         <a 
-          href="#get-started" 
+          href="#mci-screen" 
           className="inline-block bg-black text-white px-10 py-4 rounded-full text-xl hover:bg-gray-800"
         >
-          Get Started
+          Start the MCI Screen
         </a>
       </section>
     </main>

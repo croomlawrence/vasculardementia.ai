@@ -30,17 +30,17 @@ export default function Home() {
             <div className="bg-white p-8 rounded-2xl">
               <div className="text-sm text-blue-600 font-medium mb-2">STEP 1</div>
               <h3 className="text-2xl font-semibold mb-3">Complete Your Assessment</h3>
-              <p className="text-gray-600">Answer a short questionnaire about symptoms and history.</p>
+              <p className="text-gray-800">Answer a short questionnaire about symptoms and history.</p>
             </div>
             <div className="bg-white p-8 rounded-2xl">
               <div className="text-sm text-blue-600 font-medium mb-2">STEP 2</div>
               <h3 className="text-2xl font-semibold mb-3">Expert Review</h3>
-              <p className="text-gray-600">A specialized clinician reviews your case.</p>
+              <p className="text-gray-800">A specialized clinician reviews your case.</p>
             </div>
             <div className="bg-white p-8 rounded-2xl">
               <div className="text-sm text-blue-600 font-medium mb-2">STEP 3</div>
               <h3 className="text-2xl font-semibold mb-3">Personalized Plan</h3>
-              <p className="text-gray-600">Receive access to testing, therapies, or clinical trials.</p>
+              <p className="text-gray-800">Receive access to testing, therapies, or clinical trials.</p>
             </div>
           </div>
 
@@ -66,7 +66,7 @@ export default function Home() {
           ].map((item, index) => (
             <div key={index} className="border rounded-2xl p-8 hover:shadow-lg transition">
               <h3 className="text-2xl font-semibold mb-3">{item.title}</h3>
-              <p className="text-gray-600 mb-6">{item.desc}</p>
+              <p className="text-gray-800 mb-6">{item.desc}</p>
               <a href="#get-started" className="text-blue-600 font-medium hover:underline">Get Started →</a>
             </div>
           ))}
@@ -77,7 +77,7 @@ export default function Home() {
       <section className="bg-gray-50 py-20">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-semibold text-center mb-4">Vascular & Cognitive Wellness Marketplace</h2>
-          <p className="text-center text-gray-600 mb-10">Curated supplements to support vascular health and cognitive wellness.</p>
+          <p className="text-center text-gray-800 mb-10">Curated supplements to support vascular health and cognitive wellness.</p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[

@@ -36,6 +36,7 @@ export default function RootLayout({
               <div className="flex gap-6 text-sm">
                 <Link href="/marketplace" className="hover:text-blue-600">Marketplace</Link>
                 <Link href="/hachinski" className="hover:text-blue-600">Hachinski Score</Link>
+                <Link href="/research/vascular-dementia-clinical-trials" className="hover:text-blue-600">Research</Link>
                 <Link href="#how-it-works" className="hover:text-blue-600">How It Works</Link>
                 <Link href="#what-we-offer" className="hover:text-blue-600">What We Offer</Link>
               </div>

@@ -14,7 +14,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* === Strict High Contrast for Caregivers (Pure Black/White Only) === */
+/* High contrast base styles */
 body {
   background: var(--background);
   color: #000000;
@@ -26,49 +26,12 @@ body {
   line-height: 1.75;
 }
 
+/* Headings default to black, but can be overridden with text-white etc. */
 h1, h2, h3, h4 {
-  color: #000000;
   font-weight: 700;
 }
 
-p, li, a, span, div {
-  color: #000000;
-}
-
-/* Navigation - Pure black */
-nav a {
-  color: #000000;
-}
-
-nav a:hover {
-  color: #111827;
-}
-
-/* Dark mode - Pure white on black */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #000000;
-    --foreground: #ffffff;
-  }
-  
-  body {
-    color: #ffffff;
-  }
-  
-  h1, h2, h3, h4, p, li, a, span, div {
-    color: #ffffff;
-  }
-  
-  nav a {
-    color: #ffffff;
-  }
-  
-  nav a:hover {
-    color: #e5e7eb;
-  }
-}
-
-/* Form inputs - high contrast */
+/* Form inputs */
 input, button {
   color: #000000;
 }

@@ -4,7 +4,7 @@ export default function VascularDementiaResearchPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
       <div className="mb-8">
-        <Link href="/" className="text-teal-600 hover:underline">← Back to Vascumind</Link>
+        <Link href="/" className="text-black hover:underline">← Back to Vascumind</Link>
       </div>
 
       <h1 className="text-5xl font-semibold tracking-tight mb-4">Understanding Clinical Research in Vascular Dementia</h1>
@@ -22,19 +22,19 @@ export default function VascularDementiaResearchPage() {
         <h2 className="text-2xl font-semibold mb-4">Research Snapshot (ClinicalTrials.gov)</h2>
         <div className="grid md:grid-cols-4 gap-6 text-center">
           <div>
-            <div className="text-4xl font-bold text-teal-700">450+</div>
+            <div className="text-4xl font-bold text-black">450+</div>
             <div className="text-sm text-black mt-1">Total Studies</div>
           </div>
           <div>
-            <div className="text-4xl font-bold text-teal-700">94</div>
+            <div className="text-4xl font-bold text-black">94</div>
             <div className="text-sm text-black mt-1">Currently Recruiting</div>
           </div>
           <div>
-            <div className="text-4xl font-bold text-teal-700">197</div>
+            <div className="text-4xl font-bold text-black">197</div>
             <div className="text-sm text-black mt-1">Completed Studies</div>
           </div>
           <div>
-            <div className="text-4xl font-bold text-teal-700">27</div>
+            <div className="text-4xl font-bold text-black">27</div>
             <div className="text-sm text-black mt-1">Phase 3 or 4 Trials</div>
           </div>
         </div>
@@ -72,16 +72,16 @@ export default function VascularDementiaResearchPage() {
         <h2 className="text-3xl font-semibold mb-6">What Researchers Are Studying Now</h2>
         
         <ul className="space-y-4 text-black">
-          <li className="flex gap-3"><span className="text-teal-600 font-bold">•</span> <strong>Blood pressure & lifestyle interventions</strong> — Still the most promising area for prevention.</li>
-          <li className="flex gap-3"><span className="text-teal-600 font-bold">•</span> <strong>Anti-inflammatory and neuroprotective drugs</strong></li>
-          <li className="flex gap-3"><span className="text-teal-600 font-bold">•</span> <strong>Exercise and cognitive training combinations</strong></li>
-          <li className="flex gap-3"><span className="text-teal-600 font-bold">•</span> <strong>Advanced imaging</strong> to better understand small vessel disease</li>
-          <li className="flex gap-3"><span className="text-teal-600 font-bold">•</span> <strong>Multi-domain prevention trials</strong> (building on the FINGER model)</li>
+          <li className="flex gap-3"><span className="text-black font-bold">•</span> <strong>Blood pressure & lifestyle interventions</strong> — Still the most promising area for prevention.</li>
+          <li className="flex gap-3"><span className="text-black font-bold">•</span> <strong>Anti-inflammatory and neuroprotective drugs</strong></li>
+          <li className="flex gap-3"><span className="text-black font-bold">•</span> <strong>Exercise and cognitive training combinations</strong></li>
+          <li className="flex gap-3"><span className="text-black font-bold">•</span> <strong>Advanced imaging</strong> to better understand small vessel disease</li>
+          <li className="flex gap-3"><span className="text-black font-bold">•</span> <strong>Multi-domain prevention trials</strong> (building on the FINGER model)</li>
         </ul>
       </div>
 
       {/* What This Means for Patients */}
-      <div className="bg-teal-50 rounded-3xl p-8 mb-12">
+      <div className="bg-gray-50 rounded-3xl p-8 mb-12">
         <h2 className="text-2xl font-semibold mb-4">What This Means for You</h2>
         <p className="text-black mb-4">
           While there is still no cure for vascular dementia, research has clearly shown that many cases are preventable or can be slowed significantly. The strongest evidence supports:
@@ -93,7 +93,7 @@ export default function VascularDementiaResearchPage() {
           <li>Not smoking and limiting alcohol</li>
         </ul>
         <p className="mt-4 text-sm text-black">
-          Many of these interventions are being tested in ongoing trials. You can find current studies at <a href="https://clinicaltrials.gov" target="_blank" className="text-teal-600 underline">ClinicalTrials.gov</a>.
+          Many of these interventions are being tested in ongoing trials. You can find current studies at <a href="https://clinicaltrials.gov" target="_blank" className="text-black underline">ClinicalTrials.gov</a>.
         </p>
       </div>
 

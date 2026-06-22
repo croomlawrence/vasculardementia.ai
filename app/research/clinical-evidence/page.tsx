@@ -4,7 +4,7 @@ export default function ClinicalEvidencePage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
       <div className="mb-8">
-        <Link href="/" className="text-teal-600 hover:underline">← Back to Vascumind</Link>
+        <Link href="/" className="text-black hover:underline">← Back to Vascumind</Link>
       </div>
 
       <h1 className="text-5xl font-semibold tracking-tight mb-4">Clinical Evidence Behind Our Recommendations</h1>
@@ -32,7 +32,7 @@ export default function ClinicalEvidencePage() {
           <p className="text-black">
             <strong>Manson JE, et al.</strong> <em>Marine n-3 Fatty Acids and Prevention of Cardiovascular Disease and Cancer.</em> 
             <strong>NEJM</strong>. 2019;380:23-32. (VITAL Trial)<br />
-            <a href="https://pubmed.ncbi.nlm.nih.gov/30415637/" target="_blank" className="text-teal-600 underline">View Study →</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30415637/" target="_blank" className="text-black underline">View Study →</a>
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export default function ClinicalEvidencePage() {
           <p className="text-black">
             <strong>Smith AD, et al.</strong> <em>Homocysteine and B vitamins in cognitive impairment and dementia.</em> 
             <strong>J Intern Med</strong>. 2021 (VITACOG follow-up analysis).<br />
-            <a href="https://pubmed.ncbi.nlm.nih.gov/33150606/" target="_blank" className="text-teal-600 underline">View Study →</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/33150606/" target="_blank" className="text-black underline">View Study →</a>
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export default function ClinicalEvidencePage() {
           <p className="text-black">
             <strong>Manson JE, et al.</strong> <em>Vitamin D Supplements and Prevention of Cancer and Cardiovascular Disease.</em> 
             <strong>NEJM</strong>. 2019;380:33-44. (VITAL Trial)<br />
-            <a href="https://pubmed.ncbi.nlm.nih.gov/30415629/" target="_blank" className="text-teal-600 underline">View Study →</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/30415629/" target="_blank" className="text-black underline">View Study →</a>
           </p>
         </div>
 
@@ -111,7 +111,7 @@ export default function ClinicalEvidencePage() {
           <p className="text-black">
             <strong>Webb AJ, et al.</strong> <em>Acute blood pressure lowering, vasoprotective, and antiplatelet properties of dietary nitrate via bioconversion to nitrite.</em> 
             <strong>Hypertension</strong>. 2008;51(3):784-790.<br />
-            <a href="https://pubmed.ncbi.nlm.nih.gov/18250365/" target="_blank" className="text-teal-600 underline">View Study →</a>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/18250365/" target="_blank" className="text-black underline">View Study →</a>
           </p>
         </div>
 
@@ -137,7 +137,7 @@ export default function ClinicalEvidencePage() {
           <p className="text-black">
             <strong>Snow AD, et al. (ongoing observational data since 2020)</strong><br />
             Over 660 patients with normal cognition to mild dementia treated with Percepta.<br />
-            <a href="https://vascumind.com/marketplace/percepta" className="text-teal-600 underline">View full data on product page →</a>
+            <a href="https://vascumind.com/marketplace/percepta" className="text-black underline">View full data on product page →</a>
           </p>
         </div>
 

@@ -4,7 +4,7 @@ export default function BComplexPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
       <div className="mb-8">
-        <a href="/marketplace" className="text-teal-600 hover:underline">← Back to Marketplace</a>
+        <a href="/marketplace" className="text-black hover:underline">← Back to Marketplace</a>
       </div>
       <h1 className="text-5xl font-semibold tracking-tight mb-4">Methylated B-Complex</h1>
       <p className="text-xl text-black mb-8">Active forms for superior absorption • Cognitive Support</p>

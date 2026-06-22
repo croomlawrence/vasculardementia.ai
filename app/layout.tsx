@@ -44,7 +44,7 @@ export default function RootLayout({
             </div>
             <Link 
               href="#get-started" 
-              className="bg-black text-white px-5 py-2 rounded-full text-sm hover:bg-gray-800"
+              className="bg-black text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-900 transition"
             >
               Get Started
             </Link>

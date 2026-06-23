@@ -7,11 +7,12 @@ export default function BeetrootPage() {
         <a href="/marketplace" className="text-black hover:underline">← Back to Marketplace</a>
       </div>
       <h1 className="text-5xl font-semibold tracking-tight mb-4">Organic Beetroot Powder</h1>
+      <div className="green-divider w-16 mb-4"></div>
       <p className="text-xl text-black mb-8">Natural nitric oxide support • Circulation</p>
 
       <div className="flex items-center gap-4 mb-12">
         <div className="text-4xl font-semibold">$26</div>
-        <button className="bg-black text-white px-8 py-3 rounded-full text-lg hover:bg-gray-800">Add to Cart</button>
+        <button className="btn-green px-8 py-3 rounded-full text-lg">Add to Cart</button>
       </div>
 
       <div className="prose prose-lg max-w-none text-black">

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import MemoryScreenCTA from '../components/MemoryScreenCTA';
 
 export default function WhatWeOfferPage() {
   return (
@@ -40,9 +41,7 @@ export default function WhatWeOfferPage() {
         </div>
 
         <div className="mt-8">
-          <a href="#" className="inline-block bg-black text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-800 transition">
-            Start Your Screening
-          </a>
+          <MemoryScreenCTA />
         </div>
       </section>
 
@@ -70,9 +69,7 @@ export default function WhatWeOfferPage() {
         </div>
 
         <div className="mt-8">
-          <a href="/research/vascular-dementia-clinical-trials" className="inline-block bg-black text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-800 transition">
-            See If You Qualify
-          </a>
+          <MemoryScreenCTA />
         </div>
       </section>
 
@@ -136,9 +133,7 @@ export default function WhatWeOfferPage() {
         <p className="text-xl max-w-2xl mx-auto mb-8">
           Before it&apos;s Alzheimer&apos;s, it&apos;s often your blood vessels. The vascular cause of memory loss most families never hear about.
         </p>
-        <a href="#learn" className="inline-block bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-200 transition">
-          Protect the Brain by Protecting the Blood Flow That Feeds It
-        </a>
+        <MemoryScreenCTA />
       </section>
     </div>
   );

@@ -1,5 +1,7 @@
 "use client";
 
+import MemoryScreenCTA from './components/MemoryScreenCTA';
+
 export default function VascuMindHome() {
   return (
     <main>
@@ -14,16 +16,16 @@ export default function VascuMindHome() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="#learn" 
+              href="#get-started" 
               className="inline-block bg-white text-black px-10 py-4 rounded-full text-xl font-semibold hover:bg-gray-200 transition"
             >
-              Explore the Learning Center
+              Start Memory Screen
             </a>
             <a 
-              href="#marketplace" 
+              href="#learn" 
               className="inline-block bg-white text-black px-10 py-4 rounded-full text-xl font-semibold hover:bg-gray-200 transition border border-white"
             >
-              Browse Recommended Supplements
+              Learn More
             </a>
           </div>
         </div>
@@ -55,4 +57,11 @@ export default function VascuMindHome() {
             <p className="text-lg text-black">Curated supplements, lifestyle strategies, and information on emerging therapies and clinical trials focused on vascular cognitive impairment.</p>
           </div>
         </div>
+
+        <div className="text-center mt-12">
+          <MemoryScreenCTA />
+        </div>
       </section>
+    </main>
+  );
+}

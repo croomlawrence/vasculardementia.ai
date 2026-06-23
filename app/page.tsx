@@ -10,7 +10,7 @@ export default function VascuMindHome() {
             Know Your Vascular Cognitive Score in Minutes
           </h1>
           <p className="text-2xl text-white mb-10 max-w-3xl mx-auto">
-            A quick screening can reveal how your blood vessels may be affecting your memory — and what you can do about it.
+            Have you been diagnosed with Vascular Dementia? A quick screening can reveal how your blood vessels may be affecting your memory — and what you can do about it.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 

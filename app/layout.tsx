@@ -35,11 +35,10 @@ export default function RootLayout({
             <div className="flex items-center gap-8">
               <Link href="/" className="font-semibold text-xl">VascuMind®</Link>
               <div className="flex gap-6 text-sm">
-                <Link href="/marketplace" className="hover:text-blue-600">Marketplace</Link>
-                <Link href="/hachinski" className="hover:text-blue-600">Diagnostics</Link>
-                <Link href="/research/vascular-dementia-clinical-trials" className="hover:text-blue-600">Research</Link>
-                <Link href="#how-it-works" className="hover:text-blue-600">How It Works</Link>
-                <Link href="#what-we-offer" className="hover:text-blue-600">What We Offer</Link>
+                <Link href="/marketplace" className="hover:underline">Marketplace</Link>
+                <Link href="/hachinski" className="hover:underline">Diagnostics</Link>
+                <Link href="/research/vascular-dementia-clinical-trials" className="hover:underline">Research</Link>
+                <Link href="/what-we-offer" className="hover:underline">What We Offer</Link>
               </div>
             </div>
             <Link 
@@ -60,33 +59,34 @@ export default function RootLayout({
             <div className="grid md:grid-cols-4 gap-8 mb-10">
               <div>
                 <div className="font-semibold text-xl mb-3">VascuMind®</div>
-                <p className="text-sm text-white/70">Accelerating solutions for vascular dementia.</p>
+                <p className="text-sm">Accelerating solutions for vascular dementia.</p>
               </div>
               <div>
                 <div className="font-semibold mb-3 text-sm tracking-widest">EXPLORE</div>
                 <div className="space-y-2 text-sm">
-                  <Link href="/" className="block hover:text-white/80">Home</Link>
-                  <Link href="/hachinski" className="block hover:text-white/80">Diagnostics</Link>
-                  <Link href="/marketplace" className="block hover:text-white/80">Marketplace</Link>
+                  <Link href="/" className="block hover:underline">Home</Link>
+                  <Link href="/hachinski" className="block hover:underline">Diagnostics</Link>
+                  <Link href="/marketplace" className="block hover:underline">Marketplace</Link>
+                  <Link href="/what-we-offer" className="block hover:underline">What We Offer</Link>
                 </div>
               </div>
               <div>
                 <div className="font-semibold mb-3 text-sm tracking-widest">RESEARCH</div>
                 <div className="space-y-2 text-sm">
-                  <Link href="/research/vascular-dementia-clinical-trials" className="block hover:text-white/80">Clinical Trials</Link>
-                  <Link href="/research/clinical-evidence" className="block hover:text-white/80">Clinical Evidence</Link>
+                  <Link href="/research/vascular-dementia-clinical-trials" className="block hover:underline">Clinical Trials</Link>
+                  <Link href="/research/clinical-evidence" className="block hover:underline">Clinical Evidence</Link>
                 </div>
               </div>
               <div>
                 <div className="font-semibold mb-3 text-sm tracking-widest">LEGAL</div>
-                <div className="space-y-2 text-sm text-white/70">
+                <div className="space-y-2 text-sm">
                   <div>© VascuMind 2026</div>
                   <div>This site is for educational purposes only and does not constitute medical advice.</div>
                   <div>Always consult your physician.</div>
                 </div>
               </div>
             </div>
-            <div className="border-t border-white/20 pt-6 text-xs text-white/50 text-center">
+            <div className="border-t border-white/20 pt-6 text-xs text-center">
               VascuMind® is not a substitute for professional medical care. All information is provided for educational purposes.
             </div>
           </div>

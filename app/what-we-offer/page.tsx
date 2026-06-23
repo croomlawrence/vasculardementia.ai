@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import MemoryScreenCTA from '../components/MemoryScreenCTA';
 
 export default function WhatWeOfferPage() {
   return (
@@ -20,7 +19,7 @@ export default function WhatWeOfferPage() {
       {/* 1. Screening - Primary Revenue */}
       <section className="mb-20">
         <div className="mb-8">
-          <div className="text-sm font-medium tracking-widest text-black mb-2">PRIMARY OFFERING</div>
+          <div className="section-label mb-2">PRIMARY OFFERING</div>
           <h2 className="text-4xl font-semibold tracking-tight mb-4">
             Know Your Vascular Cognitive Risk in Minutes
           </h2>
@@ -41,14 +40,16 @@ export default function WhatWeOfferPage() {
         </div>
 
         <div className="mt-8">
-          <MemoryScreenCTA />
+          <a href="#get-started" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+            Start Memory Screen
+          </a>
         </div>
       </section>
 
       {/* 2. Clinical Trials - High Potential Revenue */}
-      <section className="mb-20 bg-gray-50 rounded-3xl p-12">
+      <section className="mb-20 green-wash rounded-3xl p-12">
         <div className="mb-8">
-          <div className="text-sm font-medium tracking-widest text-black mb-2">HIGH-POTENTIAL OFFERING</div>
+          <div className="section-label mb-2">HIGH-POTENTIAL OFFERING</div>
           <h2 className="text-4xl font-semibold tracking-tight mb-4">
             Emerging Vascular Dementia Therapies Are Being Studied Now — See If You Qualify
           </h2>
@@ -69,14 +70,16 @@ export default function WhatWeOfferPage() {
         </div>
 
         <div className="mt-8">
-          <MemoryScreenCTA />
+          <a href="#get-started" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+            Start Memory Screen
+          </a>
         </div>
       </section>
 
       {/* 3. Caregivers & Families - Strategic Core */}
       <section className="mb-20">
         <div className="mb-8">
-          <div className="text-sm font-medium tracking-widest text-black mb-2">STRATEGIC FOCUS</div>
+          <div className="section-label mb-2">STRATEGIC FOCUS</div>
           <h2 className="text-4xl font-semibold tracking-tight mb-4">
             When Someone You Love Starts Slipping, Start Here
           </h2>
@@ -104,7 +107,7 @@ export default function WhatWeOfferPage() {
       {/* 4. Early Action - Supporting */}
       <section className="mb-20">
         <div className="mb-8">
-          <div className="text-sm font-medium tracking-widest text-black mb-2">SUPPORTING RESOURCES</div>
+          <div className="section-label mb-2">SUPPORTING RESOURCES</div>
           <h2 className="text-4xl font-semibold tracking-tight mb-4">
             Much of What Drives Vascular Memory Loss Is Within Your Control
           </h2>
@@ -133,7 +136,9 @@ export default function WhatWeOfferPage() {
         <p className="text-xl max-w-2xl mx-auto mb-8">
           Before it&apos;s Alzheimer&apos;s, it&apos;s often your blood vessels. The vascular cause of memory loss most families never hear about.
         </p>
-        <MemoryScreenCTA />
+        <a href="#get-started" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+          Start Memory Screen
+        </a>
       </section>
     </div>
   );

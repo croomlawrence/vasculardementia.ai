@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import MemoryScreenCTA from '../../components/MemoryScreenCTA';
 
 export default function VascularDementiaResearchPage() {
   return (
@@ -9,24 +8,27 @@ export default function VascularDementiaResearchPage() {
       </div>
 
       <h1 className="text-5xl font-semibold tracking-tight mb-4">Emerging Vascular Dementia Therapies Are Being Studied Now — See If You Qualify</h1>
+      
+      <div className="green-divider w-24 mb-8"></div>
+
       <p className="text-xl text-black mb-12">A patient-friendly guide to the history and current landscape of clinical trials</p>
 
-      {/* How It Works - Moved from Homepage */}
+      {/* How It Works */}
       <div className="mb-16">
         <h2 className="text-3xl font-semibold tracking-tight mb-8 text-center">How It Works</h2>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="border border-gray-200 rounded-3xl p-10">
+          <div className="border border-gray-200 rounded-3xl p-10 green-card">
             <div className="text-sm font-medium tracking-widest text-black mb-3">STEP 1 — UNDERSTAND</div>
             <h3 className="text-3xl font-semibold mb-4">Learn how vascular health affects your brain</h3>
             <p className="text-lg text-black">Educational articles and doctor-reviewed explainers on how blood flow, small vessel disease, and cardiovascular issues contribute to memory loss and cognitive decline.</p>
           </div>
-          <div className="border border-gray-200 rounded-3xl p-10">
+          <div className="border border-gray-200 rounded-3xl p-10 green-card">
             <div className="text-sm font-medium tracking-widest text-black mb-3">STEP 2 — TRACK</div>
             <h3 className="text-3xl font-semibold mb-4">Identify and monitor your risk factors</h3>
             <p className="text-lg text-black">Simple self-assessment tools, checklists, and trackers to understand your personal vascular and cognitive risk profile over time.</p>
           </div>
-          <div className="border border-gray-200 rounded-3xl p-10">
+          <div className="border border-gray-200 rounded-3xl p-10 green-card">
             <div className="text-sm font-medium tracking-widest text-black mb-3">STEP 3 — ACT</div>
             <h3 className="text-3xl font-semibold mb-4">Access evidence-based solutions</h3>
             <p className="text-lg text-black">Curated supplements, lifestyle strategies, and information on emerging therapies and clinical trials focused on vascular cognitive impairment.</p>
@@ -35,7 +37,9 @@ export default function VascularDementiaResearchPage() {
       </div>
 
       <div className="text-center mb-12">
-        <MemoryScreenCTA />
+        <a href="#get-started" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+          Start Memory Screen
+        </a>
       </div>
 
       {/* Introduction */}
@@ -123,7 +127,9 @@ export default function VascularDementiaResearchPage() {
       </div>
 
       <div className="text-center mb-8">
-        <MemoryScreenCTA />
+        <a href="#get-started" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+          Start Memory Screen
+        </a>
       </div>
 
       <div className="text-center text-sm text-black">

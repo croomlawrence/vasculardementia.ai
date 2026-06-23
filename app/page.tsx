@@ -1,7 +1,5 @@
 "use client";
 
-import MemoryScreenCTA from './components/MemoryScreenCTA';
-
 export default function VascuMindHome() {
   return (
     <main>
@@ -17,7 +15,7 @@ export default function VascuMindHome() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="#get-started" 
-              className="inline-block bg-white text-black px-10 py-4 rounded-full text-xl font-semibold hover:bg-gray-200 transition"
+              className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold"
             >
               Start Memory Screen
             </a>
@@ -59,7 +57,12 @@ export default function VascuMindHome() {
         </div>
 
         <div className="text-center mt-12">
-          <MemoryScreenCTA />
+          <a 
+            href="#get-started" 
+            className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold"
+          >
+            Start Memory Screen
+          </a>
         </div>
       </section>
     </main>

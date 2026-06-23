@@ -5,6 +5,12 @@
   --foreground: #000000;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Ultra-modern Green System */
+  --green-primary: #0B4D3C;      /* Deep Emerald - Main accent */
+  --green-secondary: #10B981;    /* Vibrant Emerald - Hovers & highlights */
+  --green-dark: #0A3C3C;         /* Dark Teal - Subtle backgrounds */
+  --green-light: #E6F4F1;        /* Soft mint - Very subtle washes */
 }
 
 @theme inline {
@@ -26,7 +32,7 @@ body {
   line-height: 1.75;
 }
 
-/* Headings default to black, but can be overridden with text-white etc. */
+/* Headings default to black */
 h1, h2, h3, h4 {
   font-weight: 700;
 }
@@ -38,4 +44,74 @@ input, button {
 
 input::placeholder {
   color: #4b5563;
+}
+
+/* ========================================
+   ULTRA-MODERN GREEN DESIGN SYSTEM
+   ======================================== */
+
+/* Primary Green Button (Sexy & Modern) */
+.btn-green {
+  background-color: var(--green-primary);
+  color: white;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-green:hover {
+  background-color: var(--green-secondary);
+  transform: translateY(-1px);
+}
+
+/* Secondary Green Outline Button */
+.btn-green-outline {
+  background-color: transparent;
+  color: var(--green-primary);
+  border: 2px solid var(--green-primary);
+  transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.btn-green-outline:hover {
+  background-color: var(--green-primary);
+  color: white;
+}
+
+/* Green Accent Text (for small labels only) */
+.green-accent {
+  color: var(--green-primary);
+}
+
+/* Subtle Green Background Wash */
+.green-wash {
+  background-color: var(--green-light);
+}
+
+/* Green Divider / Accent Line */
+.green-divider {
+  height: 3px;
+  background: linear-gradient(to right, var(--green-primary), var(--green-secondary));
+  border-radius: 9999px;
+}
+
+/* Green Icon / Dot Accent */
+.green-dot {
+  background-color: var(--green-secondary);
+}
+
+/* Modern Card with Green Border */
+.green-card {
+  border: 1px solid #e5e7eb;
+  transition: border-color 0.2s ease;
+}
+
+.green-card:hover {
+  border-color: var(--green-primary);
+}
+
+/* Section Label with Green */
+.section-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green-primary);
 }

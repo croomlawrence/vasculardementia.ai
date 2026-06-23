@@ -7,8 +7,31 @@ export default function VascularDementiaResearchPage() {
         <Link href="/" className="text-black hover:underline">← Back to Vascumind</Link>
       </div>
 
-      <h1 className="text-5xl font-semibold tracking-tight mb-4">Understanding Clinical Research in Vascular Dementia</h1>
+      <h1 className="text-5xl font-semibold tracking-tight mb-4">Emerging Vascular Dementia Therapies Are Being Studied Now — See If You Qualify</h1>
       <p className="text-xl text-black mb-12">A patient-friendly guide to the history and current landscape of clinical trials</p>
+
+      {/* How It Works - Moved from Homepage */}
+      <div className="mb-16">
+        <h2 className="text-3xl font-semibold tracking-tight mb-8 text-center">How It Works</h2>
+        
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="border border-gray-200 rounded-3xl p-10">
+            <div className="text-sm font-medium tracking-widest text-black mb-3">STEP 1 — UNDERSTAND</div>
+            <h3 className="text-3xl font-semibold mb-4">Learn how vascular health affects your brain</h3>
+            <p className="text-lg text-black">Educational articles and doctor-reviewed explainers on how blood flow, small vessel disease, and cardiovascular issues contribute to memory loss and cognitive decline.</p>
+          </div>
+          <div className="border border-gray-200 rounded-3xl p-10">
+            <div className="text-sm font-medium tracking-widest text-black mb-3">STEP 2 — TRACK</div>
+            <h3 className="text-3xl font-semibold mb-4">Identify and monitor your risk factors</h3>
+            <p className="text-lg text-black">Simple self-assessment tools, checklists, and trackers to understand your personal vascular and cognitive risk profile over time.</p>
+          </div>
+          <div className="border border-gray-200 rounded-3xl p-10">
+            <div className="text-sm font-medium tracking-widest text-black mb-3">STEP 3 — ACT</div>
+            <h3 className="text-3xl font-semibold mb-4">Access evidence-based solutions</h3>
+            <p className="text-lg text-black">Curated supplements, lifestyle strategies, and information on emerging therapies and clinical trials focused on vascular cognitive impairment.</p>
+          </div>
+        </div>
+      </div>
 
       {/* Introduction */}
       <div className="prose prose-lg max-w-none mb-12">
@@ -49,17 +72,14 @@ export default function VascularDementiaResearchPage() {
             <h3 className="text-xl font-semibold mb-2">1990s – Early Recognition</h3>
             <p className="text-black">Researchers began distinguishing vascular dementia from Alzheimer’s. Major trials like the <strong>Systolic Hypertension in the Elderly Program (SHEP)</strong> showed that treating high blood pressure significantly reduced the risk of developing vascular dementia.</p>
           </div>
-
           <div>
             <h3 className="text-xl font-semibold mb-2">2000s – Focus on Prevention</h3>
             <p className="text-black">Large international trials such as <strong>PROGRESS</strong> (blood pressure lowering) and <strong>PRoFESS</strong> (antiplatelet therapy) confirmed that controlling vascular risk factors (blood pressure, cholesterol, diabetes, smoking) is one of the most effective ways to reduce risk.</p>
           </div>
-
           <div>
             <h3 className="text-xl font-semibold mb-2">2010s – Lifestyle & Multi-Domain Approaches</h3>
             <p className="text-black">Landmark studies like the <strong>FINGER trial</strong> (Finland) demonstrated that combining physical activity, healthy diet, cognitive training, and vascular risk management can slow cognitive decline — even in people at high risk.</p>
           </div>
-
           <div>
             <h3 className="text-xl font-semibold mb-2">2020s – New Targets & Precision Medicine</h3>
             <p className="text-black">Current research is exploring inflammation, small vessel disease, and new medications. There is growing interest in combining vascular protection with emerging therapies originally developed for Alzheimer’s.</p>

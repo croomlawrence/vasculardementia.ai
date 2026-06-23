@@ -7,7 +7,7 @@ export default function VascuMindHome() {
       <section className="bg-black py-20">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h1 className="text-6xl md:text-7xl font-semibold tracking-tighter mb-6 text-white leading-none">
-            Know Your Vascular Cognitive Risk in Minutes
+            Know Your Vascular Cognitive Score in Minutes
           </h1>
           <p className="text-2xl text-white mb-10 max-w-3xl mx-auto">
             A quick screening can reveal how your blood vessels may be affecting your memory — and what you can do about it.

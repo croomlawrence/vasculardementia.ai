@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import MCIScreenCTA from '../../components/MCIScreenCTA';
 
 export default function Marketplace() {
   return (
@@ -20,63 +19,62 @@ export default function Marketplace() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Omega-3 */}
-          <Link href="/marketplace/omega-3" className="group border rounded-2xl p-6 hover:shadow-lg transition">
+          <Link href="/marketplace/omega-3" className="group border rounded-2xl p-6 hover:shadow-lg transition green-card">
             <div className="mb-4">
-              <div className="text-sm text-blue-600 font-medium">Vascular Support</div>
+              <div className="section-label">Vascular Support</div>
             </div>
-            <h3 className="text-2xl font-semibold mb-2 group-hover:text-blue-600">High-Potency Omega-3</h3>
+            <h3 className="text-2xl font-semibold mb-2 group-hover:text-black">High-Potency Omega-3</h3>
             <p className="text-black mb-4">1,400 mg EPA + DHA per serving</p>
             <div className="text-lg font-medium">$34</div>
           </Link>
 
-          {/* B-Complex */}
-          <Link href="/marketplace/b-complex" className="group border rounded-2xl p-6 hover:shadow-lg transition">
-            <div className="mb-4">
-              <div className="text-sm text-blue-600 font-medium">Cognitive Support</div>
-            </div>
-            <h3 className="text-2xl font-semibold mb-2 group-hover:text-blue-600">Methylated B-Complex</h3>
-            <p className="text-black mb-4">Active forms for better absorption</p>
-            <div className="text-lg font-medium">$28</div>
-          </Link>
-
-          {/* Vitamin D3+K2 */}
-          <Link href="/marketplace/vitamin-d3-k2" className="group border rounded-2xl p-6 hover:shadow-lg transition">
-            <div className="mb-4">
-              <div className="text-sm text-blue-600 font-medium">Vascular + Bone</div>
-            </div>
-            <h3 className="text-2xl font-semibold mb-2 group-hover:text-blue-600">Vitamin D3 + K2</h3>
-            <p className="text-black mb-4">Essential for calcium metabolism</p>
-            <div className="text-lg font-medium">$22</div>
-          </Link>
-
           {/* Beetroot */}
-          <Link href="/marketplace/beetroot" className="group border rounded-2xl p-6 hover:shadow-lg transition">
+          <Link href="/marketplace/beetroot" className="group border rounded-2xl p-6 hover:shadow-lg transition green-card">
             <div className="mb-4">
-              <div className="text-sm text-blue-600 font-medium">Circulation</div>
+              <div className="section-label">Circulation</div>
             </div>
-            <h3 className="text-2xl font-semibold mb-2 group-hover:text-blue-600">Organic Beetroot Powder</h3>
+            <h3 className="text-2xl font-semibold mb-2 group-hover:text-black">Beetroot Powder</h3>
             <p className="text-black mb-4">Natural nitric oxide support</p>
-            <div className="text-lg font-medium">$26</div>
+            <div className="text-lg font-medium">$29</div>
           </Link>
 
-          {/* Percepta - NEW */}
-          <Link href="/marketplace/percepta" className="group border rounded-2xl p-6 hover:shadow-lg transition">
+          {/* B-Complex */}
+          <Link href="/marketplace/b-complex" className="group border rounded-2xl p-6 hover:shadow-lg transition green-card">
             <div className="mb-4">
-              <div className="text-sm text-blue-600 font-medium">Beta-Amyloid Support</div>
+              <div className="section-label">Cognitive Support</div>
             </div>
-            <h3 className="text-2xl font-semibold mb-2 group-hover:text-blue-600">Percepta</h3>
-            <p className="text-black mb-4">Cat’s Claw + Oolong Tea Extract</p>
-            <div className="text-lg font-medium">$XX</div>
+            <h3 className="text-2xl font-semibold mb-2 group-hover:text-black">Methylated B-Complex</h3>
+            <p className="text-black mb-4">Active forms of B vitamins</p>
+            <div className="text-lg font-medium">$32</div>
           </Link>
-        </div>
 
-        <div className="text-center mt-12">
-          <p className="text-sm text-black">All products third-party tested • Ships from Canada & USA</p>
+          {/* Vitamin D3 + K2 */}
+          <Link href="/marketplace/vitamin-d3-k2" className="group border rounded-2xl p-6 hover:shadow-lg transition green-card">
+            <div className="mb-4">
+              <div className="section-label">Bone & Brain</div>
+            </div>
+            <h3 className="text-2xl font-semibold mb-2 group-hover:text-black">Vitamin D3 + K2</h3>
+            <p className="text-black mb-4">High-potency with K2 for absorption</p>
+            <div className="text-lg font-medium">$27</div>
+          </Link>
+
+          {/* Percepta */}
+          <Link href="/marketplace/percepta" className="group border rounded-2xl p-6 hover:shadow-lg transition green-card">
+            <div className="mb-4">
+              <div className="section-label">Brain Health</div>
+            </div>
+            <h3 className="text-2xl font-semibold mb-2 group-hover:text-black">Percepta</h3>
+            <p className="text-black mb-4">Clinically studied brain formula</p>
+            <div className="text-lg font-medium">$59</div>
+          </Link>
         </div>
       </div>
 
-      {/* MCI Screen CTA */}
-      <MCIScreenCTA />
+      <div className="text-center pb-16">
+        <a href="#get-started" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+          Start Memory Screen
+        </a>
+      </div>
     </div>
   );
 }

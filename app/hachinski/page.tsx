@@ -38,172 +38,49 @@ export default function HachinskiPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="bg-white border-b border-slate-200 sticky top-0 z-50">
-        <div className="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-x-3">
-            <div className="w-9 h-9 bg-black rounded-xl flex items-center justify-center">
-              <span className="text-white font-bold text-xl">V</span>
-            </div>
-            <span className="font-semibold text-2xl tracking-tight">Vascumind</span>
-          </Link>
-          <div className="flex items-center gap-x-4 text-sm">
-            <Link href="/marketplace" className="text-black hover:text-black">Marketplace</Link>
-            <Link href="/hachinski" className="text-black hover:text-black font-medium">Diagnostics</Link>
-            <Link href="#take-action" className="px-5 py-2.5 bg-black hover:bg-black text-white text-sm font-medium rounded-2xl transition-colors">
-              Take the MCI Screen
-            </Link>
-          </div>
-        </div>
-      </header>
-
-      {/* Hero */}
-      <div className="max-w-5xl mx-auto px-6 pt-12 pb-8">
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-x-2 bg-gray-100 text-black px-4 py-1.5 rounded-3xl text-sm font-medium mb-6">
-            <span>Classic Research, Modern Understanding</span>
-          </div>
-          
-          <h1 className="text-5xl leading-[1.05] tracking-tighter font-semibold text-black">
-            The Hachinski Ischemic Score:<br />
-            A Simple Tool That Helps<br />
-            Spot Vascular Dementia
-          </h1>
-          
-          <p className="mt-6 text-xl text-black max-w-lg">
-            For over 50 years, doctors have used this 13-point checklist to tell the difference between vascular dementia and Alzheimer’s. Here’s what patients and families need to know.
-          </p>
-          
-          <div className="flex items-center gap-x-4 mt-8">
-            <a href="#faqs" className="px-8 py-4 bg-white hover:bg-slate-50 border border-slate-300 text-black font-semibold rounded-3xl flex items-center gap-x-3 transition-all text-sm shadow-sm">
-              Read the FAQs
-            </a>
-            <a href="#score" className="px-8 py-4 bg-black hover:bg-black text-white font-semibold rounded-3xl flex items-center gap-x-3 transition-all text-sm">
-              See the 13 Questions
-            </a>
-          </div>
-        </div>
+    <div className="max-w-4xl mx-auto px-6 py-16">
+      <div className="mb-8">
+        <Link href="/" className="text-black hover:underline">← Back to Vascumind</Link>
       </div>
 
-      {/* What is it */}
-      <div className="max-w-5xl mx-auto px-6 py-10">
-        <div className="bg-white border border-slate-200 rounded-3xl p-10">
-          <div className="grid md:grid-cols-12 gap-10 items-center">
-            <div className="md:col-span-7">
-              <h2 className="text-3xl font-semibold tracking-tight text-black">What is the Hachinski Ischemic Score?</h2>
-              <p className="mt-4 text-lg text-black">
-                The Hachinski Ischemic Score (HIS) is a quick bedside checklist that helps doctors determine whether memory or thinking problems are likely caused by problems with blood flow to the brain (vascular dementia) rather than Alzheimer’s disease.
-              </p>
-              <p className="mt-4 text-black">
-                First published in 1975 by Dr. Vladimir Hachinski, it was later validated in major reviews (including Pantoni et al., 1993) and remains one of the most practical tools in memory clinics today.
-              </p>
-            </div>
-            <div className="md:col-span-5 bg-slate-50 rounded-2xl p-6">
-              <div className="text-sm font-medium text-black mb-3">Why it still matters</div>
-              <ul className="space-y-3 text-sm text-black">
-                <li className="flex gap-x-3"><span className="text-black mt-1">✓</span> <span>Fast — takes just a few minutes</span></li>
-                <li className="flex gap-x-3"><span className="text-black mt-1">✓</span> <span>No expensive equipment needed</span></li>
-                <li className="flex gap-x-3"><span className="text-black mt-1">✓</span> <span>Helps guide next steps and treatment</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+      <h1 className="text-5xl font-semibold tracking-tight mb-4">The Hachinski Score</h1>
+      <div className="green-divider w-16 mb-8"></div>
+      <p className="text-xl text-black mb-12">
+        A classic clinical tool to help differentiate vascular dementia from Alzheimer’s.
+      </p>
+
+      {/* Intro */}
+      <div className="prose prose-lg max-w-none mb-12">
+        <p>
+          The Hachinski Ischemic Score is one of the oldest and most widely used clinical tools to help distinguish vascular dementia from Alzheimer’s disease. Developed in the 1970s, it remains relevant today when combined with modern imaging and cognitive screening.
+        </p>
       </div>
 
-      {/* Score Visual */}
-      <div id="score" className="max-w-5xl mx-auto px-6 py-8">
-        <div className="flex items-end justify-between mb-6">
-          <div>
-            <h2 className="text-3xl font-semibold tracking-tight text-black">How the Score Works</h2>
-            <p className="text-black mt-1">Doctors add up points based on your symptoms and history</p>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-4">
-          <div className="bg-white border border-emerald-200 rounded-3xl p-6">
-            <div className="flex items-center gap-x-3">
-              <div className="w-9 h-9 bg-emerald-100 rounded-2xl flex items-center justify-center">✓</div>
-              <div>
-                <div className="font-semibold text-emerald-700">Score 0–4</div>
-                <div className="text-sm text-emerald-600">Likely Alzheimer’s</div>
-              </div>
-            </div>
-            <p className="text-sm text-black mt-4">Gradual onset, steady progression, fewer vascular risk factors.</p>
-          </div>
-
-          <div className="bg-white border border-amber-200 rounded-3xl p-6">
-            <div className="flex items-center gap-x-3">
-              <div className="w-9 h-9 bg-amber-100 rounded-2xl flex items-center justify-center">?</div>
-              <div>
-                <div className="font-semibold text-amber-700">Score 4–7</div>
-                <div className="text-sm text-amber-600">Possible mixed dementia</div>
-              </div>
-            </div>
-            <p className="text-sm text-black mt-4">Features of both vascular damage and Alzheimer’s may be present.</p>
-          </div>
-
-          <div className="bg-white border border-red-200 rounded-3xl p-6">
-            <div className="flex items-center gap-x-3">
-              <div className="w-9 h-9 bg-red-100 rounded-2xl flex items-center justify-center">!</div>
-              <div>
-                <div className="font-semibold text-red-700">Score 7+</div>
-                <div className="text-sm text-red-600">Likely vascular dementia</div>
-              </div>
-            </div>
-            <p className="text-sm text-black mt-4">Sudden or stepwise changes, history of stroke, high blood pressure, focal signs.</p>
-          </div>
-        </div>
+      {/* CTA */}
+      <div className="mb-16 text-center">
+        <a href="#get-started" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+          Start Memory Screen
+        </a>
       </div>
 
-      {/* The 13 Items */}
-      <div className="max-w-5xl mx-auto px-6 py-8">
-        <h2 className="text-3xl font-semibold tracking-tight text-black mb-2">The 13 Questions Doctors Ask</h2>
-        <p className="text-black mb-6">Each item adds points. Higher scores point toward vascular causes.</p>
-
-        <div className="bg-white border border-slate-200 rounded-3xl overflow-hidden">
-          <div className="divide-y text-sm">
-            {[
-              ["1", "Did memory problems start suddenly?", "2 pts"],
-              ["2", "Did symptoms get worse in steps (not gradually)?", "1 pt"],
-              ["3", "Do symptoms come and go (fluctuate)?", "2 pts"],
-              ["4", "More confusion at night?", "1 pt"],
-              ["5", "Has your personality stayed mostly the same?", "1 pt"],
-              ["6", "Have you felt depressed?", "1 pt"],
-              ["7", "Many physical complaints (somatic symptoms)?", "1 pt"],
-              ["8", "Do you cry or laugh easily without reason?", "1 pt"],
-              ["9", "History of high blood pressure?", "1 pt"],
-              ["10", "Have you had any strokes?", "2 pts"],
-              ["11", "Evidence of atherosclerosis elsewhere?", "1 pt"],
-              ["12", "Focal neurological symptoms (one-sided weakness, speech issues)?", "2 pts"],
-              ["13", "Focal neurological signs found on physical exam?", "2 pts"],
-            ].map(([num, question, points], index) => (
-              <div key={index} className="grid grid-cols-12 px-6 py-4 items-center hover:bg-slate-50">
-                <div className="col-span-1 font-mono text-black">{num}</div>
-                <div className="col-span-8 text-black">{question}</div>
-                <div className="col-span-3 text-right font-semibold text-black">{points}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* FAQs */}
-      <div id="faqs" className="max-w-5xl mx-auto px-6 py-10">
-        <h2 className="text-3xl font-semibold tracking-tight text-black mb-8">Frequently Asked Questions</h2>
+      {/* FAQ Section */}
+      <div className="mb-16">
+        <h2 className="text-3xl font-semibold tracking-tight mb-8">Frequently Asked Questions</h2>
         
-        <div className="space-y-3 max-w-4xl">
+        <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-white border border-slate-200 rounded-3xl overflow-hidden">
-              <button 
+            <div key={index} className="border border-gray-200 rounded-2xl overflow-hidden green-card">
+              <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-8 py-5 text-left flex items-center justify-between font-medium text-black hover:bg-slate-50"
+                className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 transition"
               >
-                <span>{faq.question}</span>
-                <span className={`transition-transform ${openFAQs.includes(index) ? 'rotate-180' : ''}`}>↓</span>
+                <span className="font-semibold text-lg pr-4">{faq.question}</span>
+                <span className="text-2xl text-black font-light">
+                  {openFAQs.includes(index) ? '−' : '+'}
+                </span>
               </button>
               {openFAQs.includes(index) && (
-                <div className="px-8 pb-6 text-black text-[15px]">
+                <div className="px-8 pb-8 text-black">
                   {faq.answer}
                 </div>
               )}
@@ -212,85 +89,12 @@ export default function HachinskiPage() {
         </div>
       </div>
 
-      {/* Blood Testing Section - NEW */}
-      <div className="max-w-5xl mx-auto px-6 py-16 border-t">
-        <div className="max-w-3xl">
-          <div className="inline-flex items-center gap-x-2 bg-gray-100 text-black px-4 py-1 rounded-full text-xs font-semibold tracking-wider mb-4">
-            ADVANCED DIAGNOSTICS
-          </div>
-          
-          <h2 className="text-4xl font-semibold tracking-tight text-black mb-4">Blood Testing to Detect and Track Alzheimer’s Pathology</h2>
-          
-          <p className="text-xl text-black mb-8">
-            A major breakthrough in Alzheimer’s diagnostics is now available: a simple blood test that can detect Alzheimer’s pathology with high accuracy — even before symptoms appear.
-          </p>
-
-          <div className="bg-white border border-slate-200 rounded-3xl p-8">
-            <h3 className="font-semibold text-xl mb-4">Lucent Blood Test for AD Pathology</h3>
-            
-            <ul className="space-y-3 text-black mb-6">
-              <li className="flex gap-x-3"><span className="text-black font-bold">•</span> Approximately <strong>95% accurate</strong> in detecting Alzheimer’s pathology in people with normal cognitive function.</li>
-              <li className="flex gap-x-3"><span className="text-black font-bold">•</span> Sensitive enough to <strong>monitor changes in beta-amyloid levels</strong> over time — the first misfolded protein in Alzheimer’s.</li>
-              <li className="flex gap-x-3"><span className="text-black font-bold">•</span> Enables longitudinal tracking of disease progression and response to treatment.</li>
-            </ul>
-
-            <p className="text-sm text-black">
-              This represents a major step forward from traditional imaging or cerebrospinal fluid testing, making early detection far more accessible.
-            </p>
-          </div>
-        </div>
+      {/* Final CTA */}
+      <div className="text-center">
+        <a href="#get-started" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+          Start Memory Screen
+        </a>
       </div>
-
-      {/* World-Class MCI Screen CTA */}
-      <div className="max-w-5xl mx-auto px-6 py-16">
-        <div className="bg-white border border-slate-200 rounded-3xl p-10 md:p-14 text-center shadow-sm">
-          <div className="max-w-2xl mx-auto">
-            <div className="inline-flex items-center gap-x-2 bg-gray-100 text-black px-4 py-1 rounded-full text-xs font-semibold tracking-[1.5px] mb-4">
-              BEFORE &amp; AFTER TRACKING
-            </div>
-            
-            <h2 className="text-4xl font-semibold tracking-tight text-black mb-4 leading-tight">
-              See exactly how your lifestyle changes and therapy are working.
-            </h2>
-            
-            <p className="text-xl text-black mb-8">
-              The MCI Screen is the most accurate tool available for detecting Mild Cognitive Impairment early — 
-              long before dementia. Establish your baseline now, then re-test after 3–6 months of vascular health improvements.
-            </p>
-
-            <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 mb-8 text-left">
-              <div className="font-semibold text-black mb-3 text-sm tracking-wide">HOW THE MCI SCREEN WORKS</div>
-              <ul className="space-y-2 text-sm text-black">
-                <li className="flex gap-x-2"><span className="text-black font-bold">•</span> <strong>Memory Screen</strong> (quick self-report) — 94% accurate at identifying MCI</li>
-                <li className="flex gap-x-2"><span className="text-black font-bold">•</span> Full MCI Screen — detects the earliest reversible stage of cognitive decline</li>
-                <li className="flex gap-x-2"><span className="text-black font-bold">•</span> Personalized Action Plan + repeat testing to measure real progress</li>
-                <li className="flex gap-x-2"><span className="text-black font-bold">•</span> Backed by 20+ years of peer-reviewed research (Journal of Alzheimer’s Disease, 2007)</li>
-              </ul>
-            </div>
-
-            <a 
-              href="https://www.acurist.ca" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-x-3 bg-black hover:bg-black active:bg-black transition-all text-white font-semibold text-lg px-10 py-4.5 rounded-3xl shadow-sm hover:shadow-md"
-            >
-              Get Your MCI Screen Baseline
-              <span className="group-hover:translate-x-0.5 transition-transform">→</span>
-            </a>
-
-            <div className="mt-5 flex flex-wrap justify-center gap-x-6 text-xs text-black">
-              <div>Trusted by Cleveland Clinic • Mayo Clinic • NIH</div>
-              <div>Takes ~15 minutes</div>
-              <div>Results in 24–48 hours</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <footer className="border-t border-slate-200 py-8 text-center text-xs text-black">
-        <p>Content based on the original Hachinski 1975 study and Pantoni 1993 review. For educational purposes only. Always consult your physician.</p>
-        <p className="mt-1">Vascumind® — Advanced diagnostics and emerging therapies for vascular dementia.</p>
-      </footer>
     </div>
   );
 }

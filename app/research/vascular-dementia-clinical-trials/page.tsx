@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import MemoryScreenCTA from '../../components/MemoryScreenCTA';
 
 export default function VascularDementiaResearchPage() {
   return (
@@ -31,6 +32,10 @@ export default function VascularDementiaResearchPage() {
             <p className="text-lg text-black">Curated supplements, lifestyle strategies, and information on emerging therapies and clinical trials focused on vascular cognitive impairment.</p>
           </div>
         </div>
+      </div>
+
+      <div className="text-center mb-12">
+        <MemoryScreenCTA />
       </div>
 
       {/* Introduction */}
@@ -115,6 +120,10 @@ export default function VascularDementiaResearchPage() {
         <p className="mt-4 text-sm text-black">
           Many of these interventions are being tested in ongoing trials. You can find current studies at <a href="https://clinicaltrials.gov" target="_blank" className="text-black underline">ClinicalTrials.gov</a>.
         </p>
+      </div>
+
+      <div className="text-center mb-8">
+        <MemoryScreenCTA />
       </div>
 
       <div className="text-center text-sm text-black">

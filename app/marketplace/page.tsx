@@ -71,7 +71,7 @@ export default function Marketplace() {
       </div>
 
       <div className="text-center pb-16">
-        <a href="#get-started" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+        <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
           Start Memory Screen
         </a>
       </div>

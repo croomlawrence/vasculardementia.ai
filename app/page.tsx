@@ -14,7 +14,7 @@ export default function VascuMindHome() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="#get-started" 
+              href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" 
               className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold"
             >
               Start Memory Screen
@@ -58,7 +58,7 @@ export default function VascuMindHome() {
 
         <div className="text-center mt-12">
           <a 
-            href="#get-started" 
+            href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" 
             className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold"
           >
             Start Memory Screen

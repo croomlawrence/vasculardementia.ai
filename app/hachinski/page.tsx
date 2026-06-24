@@ -267,7 +267,7 @@ export default function HachinskiPage() {
 
       {/* CTA */}
       <div className="text-center mb-16">
-        <a href="/what-we-offer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+        <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
           Start Your Memory Screen
         </a>
         <p className="text-sm mt-3 text-black">Combine the Hachinski with modern cognitive testing for a clearer picture.</p>
@@ -301,7 +301,7 @@ export default function HachinskiPage() {
 
       {/* Final CTA */}
       <div className="text-center">
-        <a href="/what-we-offer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+        <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
           Start Your Memory Screen
         </a>
       </div>

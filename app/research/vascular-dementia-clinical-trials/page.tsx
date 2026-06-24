@@ -37,7 +37,7 @@ export default function VascularDementiaResearchPage() {
       </div>
 
       <div className="text-center mb-12">
-        <a href="#get-started" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+        <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
           Start Memory Screen
         </a>
       </div>
@@ -127,7 +127,7 @@ export default function VascularDementiaResearchPage() {
       </div>
 
       <div className="text-center mb-8">
-        <a href="#get-started" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+        <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
           Start Memory Screen
         </a>
       </div>

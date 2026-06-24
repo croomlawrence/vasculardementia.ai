@@ -40,7 +40,7 @@ export default function WhatWeOfferPage() {
         </div>
 
         <div className="mt-8">
-          <a href="#get-started" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+          <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
             Start Memory Screen
           </a>
         </div>
@@ -70,7 +70,7 @@ export default function WhatWeOfferPage() {
         </div>
 
         <div className="mt-8">
-          <a href="#get-started" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+          <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
             Start Memory Screen
           </a>
         </div>
@@ -136,7 +136,7 @@ export default function WhatWeOfferPage() {
         <p className="text-xl max-w-2xl mx-auto mb-8">
           Before it&apos;s Alzheimer&apos;s, it&apos;s often your blood vessels. The vascular cause of memory loss most families never hear about.
         </p>
-        <a href="#get-started" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+        <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
           Start Memory Screen
         </a>
       </section>

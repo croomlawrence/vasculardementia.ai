@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import React from 'react';
 
 interface MemoryScreenCTAProps {
   className?: string;
@@ -6,11 +6,13 @@ interface MemoryScreenCTAProps {
 
 export default function MemoryScreenCTA({ className = '' }: MemoryScreenCTAProps) {
   return (
-    <Link 
-      href="#get-started" 
+    <a 
+      href="https://www.acurist.ai" 
+      target="_blank"
+      rel="noopener noreferrer"
       className={`inline-block bg-black text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-800 transition ${className}`}
     >
       Start Memory Screen
-    </Link>
+    </a>
   );
 }

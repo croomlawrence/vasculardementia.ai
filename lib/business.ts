@@ -15,6 +15,8 @@ export const affiliateLinks = {
   bComplex: process.env.NEXT_PUBLIC_AFFILIATE_B_COMPLEX_URL || "https://www.acurist.ai",
   vitaminD3K2: process.env.NEXT_PUBLIC_AFFILIATE_VITAMIN_D3_K2_URL || "https://www.acurist.ai",
   percepta: process.env.NEXT_PUBLIC_AFFILIATE_PERCEPTA_URL || "https://www.acurist.ai",
+  citicoline: process.env.NEXT_PUBLIC_AFFILIATE_CITICOLINE_URL || "https://www.acurist.ai",
+  mctOil: process.env.NEXT_PUBLIC_AFFILIATE_MCT_OIL_URL || "https://www.acurist.ai",
 };
 
 export const croBenchmarks = {
@@ -26,5 +28,7 @@ export const clinicalEvidenceLinks = {
   omega3Perfusion: "https://pubmed.ncbi.nlm.nih.gov/28527220/",
   beetrootNitrate: "https://pubmed.ncbi.nlm.nih.gov/35268027/",
   citicolineMci: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9936398/",
+  omega3WhiteMatter: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11294966/",
+  mctBrainEnergy: "https://pubmed.ncbi.nlm.nih.gov/36633304/",
   truemed: "https://www.truemed.com/",
 };

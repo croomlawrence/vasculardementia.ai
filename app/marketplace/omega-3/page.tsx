@@ -1,6 +1,6 @@
 import CompactMCIScreenCTA from '@/components/CompactMCIScreenCTA';
 import TrackedLink from '@/components/TrackedLink';
-import { affiliateLinks } from '@/lib/business';
+import { affiliateLinks, clinicalEvidenceLinks } from '@/lib/business';
 
 export default function HighPotencyOmega3Page() {
   return (
@@ -26,7 +26,7 @@ export default function HighPotencyOmega3Page() {
           Protocol-ready products should have a current Certificate of Analysis covering EPA/DHA content, oxidation markers, heavy metals, and third-party purity documentation. VascuMind should request manufacturer COAs before promoting this as part of a bundled stack.
         </p>
         <p className="text-black">
-          Evidence context: <a href="https://pubmed.ncbi.nlm.nih.gov/28527220/" className="underline">review a supporting clinical-science source for Omega-3 EPA/DHA</a>. Evidence varies by population, dose, and outcome and does not make this product a disease treatment.
+          Evidence context: <a href={clinicalEvidenceLinks.omega3WhiteMatter} className="underline">review omega-3 research related to white-matter lesion accumulation</a>. Evidence varies by population, dose, and outcome and does not make this product a disease treatment.
         </p>
       </div>
 

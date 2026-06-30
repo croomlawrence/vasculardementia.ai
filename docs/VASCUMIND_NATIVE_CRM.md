@@ -36,9 +36,24 @@ VASCUMIND_LEAD_NOTIFY_EMAIL=<Croom notification email>
 
 `GOOGLE_LEADS_WEBHOOK_SECRET` should match `SHARED_SECRET` in the Google Apps Script file. Do not commit real values.
 
+## Google Sheet
+
+Created CRM sheet:
+
+```text
+VascuMind CRM
+https://docs.google.com/spreadsheets/d/1fmw8ZoTeNFh2onLEbEfq3hXudVQDmXH72IilQXvY_yg/edit
+```
+
+Spreadsheet ID:
+
+```text
+1fmw8ZoTeNFh2onLEbEfq3hXudVQDmXH72IilQXvY_yg
+```
+
 ## Google Sheet tabs
 
-The Apps Script creates/uses these tabs:
+The CRM sheet contains these tabs:
 
 | Tab | Purpose |
 |---|---|

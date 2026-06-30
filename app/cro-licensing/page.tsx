@@ -1,3 +1,4 @@
+import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import { croBenchmarks } from "@/lib/business";
 
@@ -63,6 +64,12 @@ export default function CROLicensingPage() {
           </ul>
         </div>
       </section>
+
+      <div className="mb-10 text-center">
+        <Link href="/cro-licensing/packet" className="inline-block bg-white text-black px-8 py-4 rounded-full text-lg font-semibold border border-black hover:bg-black hover:text-white">
+          Preview Licensing One-Pager
+        </Link>
+      </div>
 
       <LeadForm leadType="cro-licensing" title="Request CRO licensing packet" submitLabel="Request Licensing Packet" includeTrialFields />
     </main>

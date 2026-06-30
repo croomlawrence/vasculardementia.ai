@@ -56,7 +56,7 @@ export default function MemoryScreenPage() {
             >
               Continue to Checkout
             </TrackedLink>
-            <p className="text-sm text-black mt-3">If checkout is not yet connected, this routes to the current Acurist screening path.</p>
+            <p className="text-sm text-black mt-3">Stripe should redirect to /memory-screen/thank-you after payment. If checkout is not yet connected, this routes to the current Acurist screening path.</p>
           </div>
         </div>
       </section>
@@ -81,7 +81,9 @@ export default function MemoryScreenPage() {
         </div>
       </section>
 
-      <LeadForm leadType="memory-screen" title="Request memory screen follow-up" submitLabel="Request Follow-Up" />
+      <section id="follow-up">
+        <LeadForm leadType="memory-screen" title="Request memory screen follow-up" submitLabel="Request Follow-Up" />
+      </section>
     </main>
   );
 }

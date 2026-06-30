@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 const base = process.env.VASCUMIND_BASE_URL || 'https://www.vascumind.com';
-const routes = ['/', '/memory-screen', '/cro-licensing', '/hachinski', '/marketplace', '/marketplace/omega-3', '/marketplace/beetroot', '/marketplace/b-complex', '/marketplace/vitamin-d3-k2', '/marketplace/percepta', '/research/clinical-evidence', '/research/vascular-dementia-clinical-trials', '/affiliate-disclosure', '/privacy', '/terms'];
+const routes = ['/', '/memory-screen', '/memory-screen/thank-you', '/cro-licensing', '/cro-licensing/packet', '/hachinski', '/marketplace', '/marketplace/omega-3', '/marketplace/beetroot', '/marketplace/b-complex', '/marketplace/vitamin-d3-k2', '/marketplace/percepta', '/research/clinical-evidence', '/research/vascular-dementia-clinical-trials', '/affiliate-disclosure', '/privacy', '/terms'];
 const banned = ['acurist.ca', 'for Vascular Dementia?', 'clinically studied brain formula', 'slow brain atrophy', 'text-gray', 'text-slate', 'text-teal'];
 let failures = [];
 for (const route of routes) {

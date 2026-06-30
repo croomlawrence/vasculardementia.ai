@@ -6,13 +6,13 @@ export default function MemoryScreenPage() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-16">
       <section className="text-center mb-16">
-        <div className="section-label mb-3">COGNITIVE TEST SALES</div>
-        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Start Your Memory Screen</h1>
+        <div className="section-label mb-3">THE VASCUMIND PROTOCOL</div>
+        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Start with the Acurist-sourced MCI Screen</h1>
         <p className="text-2xl text-black max-w-4xl mx-auto mb-6">
-          Establish a cognitive baseline and receive a clinician-ready summary you can use to guide a conversation about memory, vascular risk, and next steps.
+          The MCI Screen is sourced from Acurist.AI. This test is a cognitive screening, benchmarking and tracking tool, not a diagnostic medical device. Results should be discussed with a qualified healthcare provider.
         </p>
         <p className="text-xl text-black max-w-3xl mx-auto">
-          Educational only — not a diagnosis. Designed for adults and caregivers who want a clearer starting point before a healthcare visit.
+          Use VascuMind to organize a baseline, then consider clinician discussion, trial matching, or compliant wellness support.
         </p>
       </section>
 

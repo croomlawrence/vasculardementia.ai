@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "qa:vascumind": "node scripts/vascumind-qa.mjs",
+    "score:lead": "node scripts/local-lead-scoring.mjs",
     "digest:funnel": "node scripts/funnel-digest.mjs"
   },
   "dependencies": {

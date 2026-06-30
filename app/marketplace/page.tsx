@@ -5,15 +5,18 @@ export default function Marketplace() {
     <div>
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="text-center mb-16">
+          <div className="section-label mb-3">STEP 4 OF THE VASCUMIND PROTOCOL</div>
           <h1 className="text-5xl font-semibold tracking-tight mb-4">
-            Vascular & Cognitive Wellness Marketplace
+            VascuMind Wellness Stack
           </h1>
           <p className="text-xl text-black max-w-2xl mx-auto">
-            Curated supplements to support cardiovascular health, circulation, 
-            and everyday cognitive wellness — as education alongside clinician-guided care.
+            A curated supplement stack for cardiovascular health, circulation, and everyday cognitive wellness — positioned after screening, benchmarking, and clinician discussion.
           </p>
           <p className="text-base text-black mt-4 max-w-3xl mx-auto">
             Dietary supplements are not intended to diagnose, treat, cure, or prevent vascular dementia, Alzheimer’s disease, MCI, stroke, or any other disease. VascuMind may earn commissions from qualifying purchases; see our affiliate disclosure.
+          </p>
+          <p className="text-base text-black mt-4 max-w-3xl mx-auto">
+            COA and ingredient-quality policy: each product page now has a Certificate of Analysis request track. Do not treat a supplement as protocol-ready until purity, dosage, and manufacturer documentation are reviewed.
           </p>
           <a href="/affiliate-disclosure" className="inline-block mt-3 text-black underline">Read affiliate disclosure</a>
         </div>

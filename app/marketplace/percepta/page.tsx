@@ -19,6 +19,17 @@ export default function PerceptaPage() {
         </p>
       </div>
 
+
+      <div className="border border-black rounded-2xl p-6 mb-12">
+        <h2 className="text-2xl font-semibold mb-3">Certificate of Analysis / quality track</h2>
+        <p className="text-black mb-3">
+          Protocol-ready products should have a current Certificate of Analysis covering identity, potency, contaminant screening, and ingredient-specific documentation. VascuMind should request manufacturer COAs before promoting this as part of a bundled stack.
+        </p>
+        <p className="text-black">
+          Evidence context: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9936398/" className="underline">review a supporting clinical-science source for Cognitive-aging formula</a>. Evidence varies by population, dose, and outcome and does not make this product a disease treatment.
+        </p>
+      </div>
+
       <div className="flex items-center gap-4 mb-12">
         <div className="text-4xl font-semibold">$59</div>
         <TrackedLink

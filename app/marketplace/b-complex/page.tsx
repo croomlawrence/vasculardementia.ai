@@ -19,6 +19,17 @@ export default function MethylatedBComplexPage() {
         </p>
       </div>
 
+
+      <div className="border border-black rounded-2xl p-6 mb-12">
+        <h2 className="text-2xl font-semibold mb-3">Certificate of Analysis / quality track</h2>
+        <p className="text-black mb-3">
+          Protocol-ready products should have a current Certificate of Analysis covering active B-vitamin forms, dosage verification, heavy metals, and allergen documentation. VascuMind should request manufacturer COAs before promoting this as part of a bundled stack.
+        </p>
+        <p className="text-black">
+          Evidence context: <a href="https://pubmed.ncbi.nlm.nih.gov/35646052/" className="underline">review a supporting clinical-science source for Methylated B vitamins</a>. Evidence varies by population, dose, and outcome and does not make this product a disease treatment.
+        </p>
+      </div>
+
       <div className="flex items-center gap-4 mb-12">
         <div className="text-4xl font-semibold">$32</div>
         <TrackedLink

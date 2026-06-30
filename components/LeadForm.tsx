@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { track } from "@vercel/analytics";
 
-type LeadType = "memory-screen" | "cro-licensing";
+type LeadType = "memory-screen" | "cro-licensing" | "clinical-trial-match";
 
 interface LeadFormProps {
   leadType: LeadType;
@@ -30,7 +30,7 @@ export default function LeadForm({ leadType, title, submitLabel, includeTrialFie
       });
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || "Submission failed");
-      track(leadType === "cro-licensing" ? "cro_inquiry_submit" : "memory_screen_lead_submit", { leadType });
+      track(leadType === "cro-licensing" || leadType === "clinical-trial-match" ? "cro_inquiry_submit" : "memory_screen_lead_submit", { leadType });
       setStatus("success");
       setMessage(result.message || "Received. We will follow up shortly.");
       form.reset();
@@ -87,6 +87,12 @@ export default function LeadForm({ leadType, title, submitLabel, includeTrialFie
         <span className="font-semibold">What are you trying to accomplish?</span>
         <textarea name="message" rows={5} className="mt-2 w-full border-2 border-black rounded-xl px-4 py-3 text-black" />
       </label>
+      {includeTrialFields && (
+        <label className="flex items-start gap-3">
+          <input name="trialDataConsent" type="checkbox" required className="mt-2 h-5 w-5" />
+          <span>I consent to VascuMind using the information I submit to evaluate whether a clinical-trial or CRO partner follow-up may be appropriate. I understand VascuMind will not share identifiable information with a trial sponsor or CRO without additional explicit consent.</span>
+        </label>
+      )}
       <label className="flex items-start gap-3">
         <input name="consent" type="checkbox" required className="mt-2 h-5 w-5" />
         <span>I understand this website is educational only and does not provide medical advice, diagnosis, or treatment. I consent to being contacted about this request.</span>

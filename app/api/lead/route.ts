@@ -12,6 +12,7 @@ type LeadPayload = {
   sites?: string;
   timeline?: string;
   consent?: string | boolean;
+  trialDataConsent?: string | boolean;
 };
 
 type CustomerRegistration = LeadPayload & {
@@ -58,10 +59,11 @@ const REGISTRATION_FIELDS: (keyof CustomerRegistration)[] = [
   "timeline",
   "message",
   "consent",
+  "trialDataConsent",
 ];
 
 function segmentFor(leadType = ""): CustomerRegistration["segment"] {
-  if (leadType === "cro-licensing") return "cro";
+  if (leadType === "cro-licensing" || leadType === "clinical-trial-match") return "cro";
   if (leadType === "memory-screen") return "consumer";
   if (leadType === "affiliate-interest") return "affiliate";
   return "unknown";

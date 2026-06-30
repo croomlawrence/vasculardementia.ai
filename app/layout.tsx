@@ -36,10 +36,10 @@ export default function RootLayout({
             <div className="flex items-center gap-8">
               <Link href="/" className="font-semibold text-xl">VascuMind®</Link>
               <div className="flex gap-6 text-base">
+                <Link href="/protocol" className="hover:underline">Protocol</Link>
                 <Link href="/memory-screen" className="hover:underline">Memory Screen</Link>
                 <Link href="/cro-licensing" className="hover:underline">CRO Licensing</Link>
                 <Link href="/marketplace" className="hover:underline">Marketplace</Link>
-                <Link href="/hachinski" className="hover:underline">Diagnostics</Link>
                 <Link href="/research/vascular-dementia-clinical-trials" className="hover:underline">Research</Link>
               </div>
             </div>
@@ -69,9 +69,13 @@ export default function RootLayout({
                 <div className="font-semibold mb-3 text-sm tracking-widest">EXPLORE</div>
                 <div className="space-y-2 text-base">
                   <Link href="/" className="block hover:underline">Home</Link>
+                  <Link href="/protocol" className="block hover:underline">VascuMind Protocol</Link>
                   <Link href="/memory-screen" className="block hover:underline">Memory Screen</Link>
+                  <Link href="/clinical-trial-matching" className="block hover:underline">Trial Matching</Link>
                   <Link href="/cro-licensing" className="block hover:underline">CRO Licensing</Link>
-                  <Link href="/hachinski" className="block hover:underline">Diagnostics</Link>
+                  <Link href="/cro-partner-deck" className="block hover:underline">CRO Partner Deck</Link>
+                  <Link href="/caregiver-triage" className="block hover:underline">Caregiver Triage</Link>
+                  <Link href="/hsa-fsa" className="block hover:underline">HSA/FSA Status</Link>
                   <Link href="/marketplace" className="block hover:underline">Marketplace</Link>
                   <Link href="/what-we-offer" className="block hover:underline">What We Offer</Link>
                 </div>

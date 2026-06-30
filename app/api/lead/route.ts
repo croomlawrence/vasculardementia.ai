@@ -2,6 +2,7 @@ type LeadPayload = {
   leadType?: string;
   name?: string;
   email?: string;
+  phone?: string;
   organization?: string;
   role?: string;
   message?: string;
@@ -10,43 +11,67 @@ type LeadPayload = {
   participantVolume?: string;
   sites?: string;
   timeline?: string;
+  consent?: string | boolean;
 };
 
-const HUBSPOT_TOKEN = process.env.HUBSPOT_PRIVATE_APP_TOKEN;
+type CustomerRegistration = LeadPayload & {
+  registrationId: string;
+  receivedAt: string;
+  segment: "consumer" | "cro" | "affiliate" | "unknown";
+  status: "new";
+  source: "vascumind.com";
+  notifyEmail?: string;
+};
 
-function splitName(name = "") {
-  const parts = name.trim().split(/\s+/).filter(Boolean);
-  return { firstname: parts[0] || "", lastname: parts.slice(1).join(" ") };
+const GOOGLE_LEADS_WEBHOOK_URL = process.env.GOOGLE_LEADS_WEBHOOK_URL;
+const GOOGLE_LEADS_WEBHOOK_SECRET = process.env.GOOGLE_LEADS_WEBHOOK_SECRET;
+const VASCUMIND_LEAD_NOTIFY_EMAIL = process.env.VASCUMIND_LEAD_NOTIFY_EMAIL;
+
+function segmentFor(leadType = ""): CustomerRegistration["segment"] {
+  if (leadType === "cro-licensing") return "cro";
+  if (leadType === "memory-screen") return "consumer";
+  if (leadType === "affiliate-interest") return "affiliate";
+  return "unknown";
 }
 
-async function createHubSpotContact(payload: LeadPayload) {
-  if (!HUBSPOT_TOKEN || !payload.email) return { configured: false };
-  const { firstname, lastname } = splitName(payload.name);
-  const response = await fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
+function createRegistration(payload: LeadPayload): CustomerRegistration {
+  const receivedAt = new Date().toISOString();
+  const registrationId = `VCRM-${receivedAt.slice(0, 10).replace(/-/g, "")}-${crypto.randomUUID().slice(0, 8).toUpperCase()}`;
+  return {
+    registrationId,
+    receivedAt,
+    status: "new",
+    source: "vascumind.com",
+    segment: segmentFor(payload.leadType),
+    notifyEmail: VASCUMIND_LEAD_NOTIFY_EMAIL,
+    ...payload,
+  };
+}
+
+async function sendToGoogleNativeCrm(registration: CustomerRegistration) {
+  if (!GOOGLE_LEADS_WEBHOOK_URL) {
+    return { configured: false, stored: false, destination: "server-log" };
+  }
+
+  const webhookUrl = new URL(GOOGLE_LEADS_WEBHOOK_URL);
+  if (GOOGLE_LEADS_WEBHOOK_SECRET) {
+    // Google Apps Script web apps do not reliably expose custom request headers,
+    // so use a query parameter shared secret for this lightweight CRM webhook.
+    webhookUrl.searchParams.set("secret", GOOGLE_LEADS_WEBHOOK_SECRET);
+  }
+
+  const response = await fetch(webhookUrl.toString(), {
     method: "POST",
-    headers: {
-      Authorization: `Bearer ${HUBSPOT_TOKEN}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      properties: {
-        email: payload.email,
-        firstname,
-        lastname,
-        company: payload.organization || "",
-        jobtitle: payload.role || "",
-        lifecyclestage: "lead",
-        hs_lead_status: payload.leadType === "cro-licensing" ? "OPEN" : "NEW",
-      },
-    }),
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(registration),
   });
 
-  if (response.status === 409) return { configured: true, duplicate: true };
+  const text = await response.text();
   if (!response.ok) {
-    const text = await response.text();
-    throw new Error(`HubSpot error ${response.status}: ${text}`);
+    throw new Error(`Google CRM webhook error ${response.status}: ${text}`);
   }
-  return { configured: true, duplicate: false };
+
+  return { configured: true, stored: true, destination: "google-sheets", response: text.slice(0, 500) };
 }
 
 export async function POST(request: Request) {
@@ -58,13 +83,16 @@ export async function POST(request: Request) {
     return Response.json({ error: "Enter a valid email address." }, { status: 400 });
   }
 
-  console.log("VascuMind lead", JSON.stringify({ ...payload, receivedAt: new Date().toISOString() }));
-  const hubspot = await createHubSpotContact(payload);
+  const registration = createRegistration(payload);
+  console.log("VascuMind customer registration", JSON.stringify(registration));
+  const crm = await sendToGoogleNativeCrm(registration);
+
   return Response.json({
     ok: true,
-    hubspot,
-    message: hubspot.configured
-      ? "Received and routed to the VascuMind pipeline."
-      : "Received. CRM routing is ready; add HUBSPOT_PRIVATE_APP_TOKEN to send directly to HubSpot.",
+    registrationId: registration.registrationId,
+    crm,
+    message: crm.stored
+      ? "Received and stored in the VascuMind customer database."
+      : "Received. Native Google CRM routing is ready; add GOOGLE_LEADS_WEBHOOK_URL to store registrations in Google Sheets.",
   });
 }

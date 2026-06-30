@@ -12,6 +12,6 @@ const digest = {
     'hachinski_completed'
   ],
   revenueStreams: ['Cognitive test sales', 'CRO licensing fees', 'Affiliate supplement sales'],
-  action: 'Connect Vercel Analytics/PostHog export plus HubSpot and Stripe webhooks, then replace this placeholder with real event counts.'
+  action: 'Connect Vercel Analytics/PostHog export plus Google Sheets CRM and Stripe webhooks, then replace this placeholder with real event counts.'
 };
 console.log(JSON.stringify(digest, null, 2));

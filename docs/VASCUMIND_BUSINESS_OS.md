@@ -28,7 +28,7 @@ MoCA CRO benchmark supplied by Croom: approximately $35,000 license plus $35 per
 ## Build Order
 
 1. `/memory-screen` revenue page
-2. Stripe/HubSpot plumbing
+2. Stripe/native Google CRM plumbing
 3. `/cro-licensing` page
 4. Analytics event tracking
 5. Affiliate disclosure and tracked supplement links

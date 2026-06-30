@@ -1,28 +1,36 @@
 import CompactMCIScreenCTA from '@/components/CompactMCIScreenCTA';
 
-export default function Omega3Page() {
+export default function HighPotencyOmega3Page() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
       <div className="mb-8">
-        <a href="/marketplace" className="text-black hover:underline">← Back to Marketplace</a>
+        <a href="/marketplace" className="text-black hover:underline focus:outline focus:outline-4 focus:outline-black">← Back to Marketplace</a>
       </div>
       <h1 className="text-5xl font-semibold tracking-tight mb-4">High-Potency Omega-3</h1>
       <div className="green-divider w-16 mb-4"></div>
-      <p className="text-xl text-black mb-8">1,400 mg EPA + DHA per serving • Vascular & Cognitive Support</p>
+      <p className="text-xl text-black mb-8">1,400 mg EPA + DHA per serving • Vascular & Cognitive Wellness</p>
+
+      <div className="border-4 border-black rounded-2xl p-6 mb-12">
+        <p className="font-semibold text-xl mb-2">Supplement safety notice</p>
+        <p className="text-black">
+          These products are dietary supplements and are not intended to diagnose, treat, cure, or prevent vascular dementia, Alzheimer’s disease, MCI, stroke, or any other disease. Always consult your healthcare professional before use, especially if you take medications or have a medical condition.
+        </p>
+      </div>
 
       <div className="flex items-center gap-4 mb-12">
         <div className="text-4xl font-semibold">$34</div>
-        <button className="btn-green px-8 py-3 rounded-full text-lg">Add to Cart</button>
+        <button type="button" className="btn-green px-8 py-3 rounded-full text-lg focus:outline focus:outline-4 focus:outline-black">Add to Cart</button>
       </div>
 
       <div className="prose prose-lg max-w-none text-black">
-        <h2>Why Omega-3 for Vascular Dementia?</h2>
-        <p>
-          EPA and DHA support vascular health, reduce inflammation, and are linked to slower cognitive decline in multiple large studies.
-        </p>
+        <h2>Omega-3, Circulation, and Brain Health</h2>
+        <p>EPA and DHA are fatty acids studied for cardiovascular wellness, inflammatory pathways, and healthy aging. They should be considered a wellness support option, not a treatment for dementia or any disease.</p>
 
-        <h2>Key Clinical Evidence</h2>
-        <p><strong>VITAL Trial (NEJM 2019)</strong> — Over 25,000 participants. Omega-3 reduced heart attack risk and supported vascular health. Higher doses show additional cognitive benefits in meta-analyses.</p>
+        <h2>Evidence Context</h2>
+        <p>VITAL and other large studies have evaluated omega-3 fatty acids in cardiovascular and healthy-aging contexts. Evidence varies by dose, population, and outcome; discuss supplement use with your clinician, especially if you take blood thinners or have a medical condition.</p>
+
+        <h2>What this does and does not mean</h2>
+        <p>Research can inform wellness decisions, but it does not make this product a disease treatment. Use supplements only as part of a broader clinician-guided plan that may include blood pressure control, exercise, nutrition, sleep, medication review, and formal cognitive evaluation.</p>
       </div>
 
       <div className="mt-16">

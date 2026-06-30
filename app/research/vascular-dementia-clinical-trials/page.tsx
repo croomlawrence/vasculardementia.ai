@@ -18,17 +18,17 @@ export default function VascularDementiaResearchPage() {
         <h2 className="text-3xl font-semibold tracking-tight mb-8 text-center">How It Works</h2>
         
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="border border-gray-200 rounded-3xl p-10 green-card">
+          <div className="border border-black rounded-3xl p-10 green-card">
             <div className="text-sm font-medium tracking-widest text-black mb-3">STEP 1 — UNDERSTAND</div>
             <h3 className="text-3xl font-semibold mb-4">Learn how vascular health affects your brain</h3>
             <p className="text-lg text-black">Educational articles and doctor-reviewed explainers on how blood flow, small vessel disease, and cardiovascular issues contribute to memory loss and cognitive decline.</p>
           </div>
-          <div className="border border-gray-200 rounded-3xl p-10 green-card">
+          <div className="border border-black rounded-3xl p-10 green-card">
             <div className="text-sm font-medium tracking-widest text-black mb-3">STEP 2 — TRACK</div>
             <h3 className="text-3xl font-semibold mb-4">Identify and monitor your risk factors</h3>
             <p className="text-lg text-black">Simple self-assessment tools, checklists, and trackers to understand your personal vascular and cognitive risk profile over time.</p>
           </div>
-          <div className="border border-gray-200 rounded-3xl p-10 green-card">
+          <div className="border border-black rounded-3xl p-10 green-card">
             <div className="text-sm font-medium tracking-widest text-black mb-3">STEP 3 — ACT</div>
             <h3 className="text-3xl font-semibold mb-4">Access evidence-based solutions</h3>
             <p className="text-lg text-black">Curated supplements, lifestyle strategies, and information on emerging therapies and clinical trials focused on vascular cognitive impairment.</p>
@@ -45,12 +45,12 @@ export default function VascularDementiaResearchPage() {
       {/* Introduction */}
       <div className="prose prose-lg max-w-none mb-12">
         <p>
-          Over the past 30 years, researchers around the world have conducted hundreds of clinical studies focused on vascular dementia — the second most common form of dementia after Alzheimer’s. These studies have helped us understand how to prevent, slow, and in some cases improve symptoms related to reduced blood flow in the brain.
+          Over the past 30 years, researchers around the world have conducted hundreds of clinical studies focused on vascular dementia — the second most common form of dementia after Alzheimer’s. These studies have helped researchers understand prevention, risk-factor management, and potential approaches related to reduced blood flow in the brain.
         </p>
       </div>
 
       {/* Key Statistics */}
-      <div className="bg-gray-50 rounded-3xl p-8 mb-12">
+      <div className="bg-white border border-black rounded-3xl p-8 mb-12">
         <h2 className="text-2xl font-semibold mb-4">Research Snapshot (ClinicalTrials.gov)</h2>
         <div className="grid md:grid-cols-4 gap-6 text-center">
           <div>
@@ -110,10 +110,10 @@ export default function VascularDementiaResearchPage() {
       </div>
 
       {/* What This Means for Patients */}
-      <div className="bg-gray-50 rounded-3xl p-8 mb-12">
+      <div className="bg-white border border-black rounded-3xl p-8 mb-12">
         <h2 className="text-2xl font-semibold mb-4">What This Means for You</h2>
         <p className="text-black mb-4">
-          While there is still no cure for vascular dementia, research has clearly shown that many cases are preventable or can be slowed significantly. The strongest evidence supports:
+          While there is still no cure for vascular dementia, research supports addressing modifiable vascular risk factors as part of prevention and management. The strongest evidence supports:
         </p>
         <ul className="list-disc pl-6 text-black space-y-1">
           <li>Controlling blood pressure and other vascular risk factors</li>
@@ -133,7 +133,7 @@ export default function VascularDementiaResearchPage() {
       </div>
 
       <div className="text-center text-sm text-black">
-        Data sourced from ClinicalTrials.gov (as of June 2026). Always discuss clinical trial participation with your physician.
+        ClinicalTrials.gov snapshot noted as of June 2026; counts change over time. Always discuss clinical trial participation with your physician.
       </div>
     </div>
   );

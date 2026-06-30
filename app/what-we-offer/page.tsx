@@ -29,11 +29,11 @@ export default function WhatWeOfferPage() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="border border-gray-200 rounded-3xl p-8">
-            <h3 className="text-2xl font-semibold mb-3">Don&apos;t Wait for Symptoms — Measure Your Risk Today</h3>
-            <p className="text-black">Early detection gives you the best chance to protect your brain health before significant decline occurs.</p>
+          <div className="border border-black rounded-3xl p-8">
+            <h3 className="text-2xl font-semibold mb-3">Concerned About Changes? Start With a Baseline</h3>
+            <p className="text-black">A baseline can help you understand whether memory changes deserve a deeper clinical conversation.</p>
           </div>
-          <div className="border border-gray-200 rounded-3xl p-8">
+          <div className="border border-black rounded-3xl p-8">
             <h3 className="text-2xl font-semibold mb-3">Catch Cognitive Risk Early Enough to Actually Act On It</h3>
             <p className="text-black">A clearer picture of your brain health starts with one screening. Know where you stand and what to do next.</p>
           </div>
@@ -89,15 +89,15 @@ export default function WhatWeOfferPage() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="border border-gray-200 rounded-3xl p-8">
+          <div className="border border-black rounded-3xl p-8">
             <h3 className="text-2xl font-semibold mb-3">You&apos;re the One Noticing the Changes</h3>
             <p className="text-black">Guidance and resources designed specifically for the people who care most.</p>
           </div>
-          <div className="border border-gray-200 rounded-3xl p-8">
+          <div className="border border-black rounded-3xl p-8">
             <h3 className="text-2xl font-semibold mb-3">Support That Understands Vascular Causes</h3>
             <p className="text-black">Practical information about circulation, small vessel disease, and what families can actually do.</p>
           </div>
-          <div className="border border-gray-200 rounded-3xl p-8">
+          <div className="border border-black rounded-3xl p-8">
             <h3 className="text-2xl font-semibold mb-3">You Don&apos;t Have to Navigate This Alone</h3>
             <p className="text-black">Clear next steps for caregivers who want to take meaningful action.</p>
           </div>
@@ -117,13 +117,13 @@ export default function WhatWeOfferPage() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="border border-gray-200 rounded-3xl p-8">
+          <div className="border border-black rounded-3xl p-8">
             <h3 className="text-2xl font-semibold mb-3">Small Vessels, Big Consequences — and Real Steps You Can Take</h3>
             <p className="text-black">Practical, evidence-based actions focused on blood flow and vascular health.</p>
           </div>
-          <div className="border border-gray-200 rounded-3xl p-8">
+          <div className="border border-black rounded-3xl p-8">
             <h3 className="text-2xl font-semibold mb-3">Memory Decline Isn&apos;t Always Inevitable</h3>
-            <p className="text-black">Sometimes it&apos;s preventable. Learn which risk factors are modifiable and how to address them.</p>
+            <p className="text-black">Many vascular risk factors are modifiable. Learn what to discuss with a qualified healthcare professional.</p>
           </div>
         </div>
       </section>
@@ -134,7 +134,7 @@ export default function WhatWeOfferPage() {
           Your Memory Has a Circulation Problem You Can&apos;t See
         </h2>
         <p className="text-xl max-w-2xl mx-auto mb-8">
-          Before it&apos;s Alzheimer&apos;s, it&apos;s often your blood vessels. The vascular cause of memory loss most families never hear about.
+          Memory changes can have vascular, Alzheimer’s, mixed, medication-related, mood-related, sleep-related, and other causes. Vascular risk is one important place to look.
         </p>
         <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
           Start Memory Screen

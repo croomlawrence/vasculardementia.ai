@@ -10,16 +10,16 @@ export default function Marketplace() {
           </h1>
           <p className="text-xl text-black max-w-2xl mx-auto">
             Curated supplements to support cardiovascular health, circulation, 
-            and everyday cognitive wellness — as a complement to advanced diagnostics and therapies.
+            and everyday cognitive wellness — as education alongside clinician-guided care.
           </p>
-          <p className="text-sm text-black mt-4">
-            These products are not intended to diagnose, treat, cure, or prevent any disease.
+          <p className="text-base text-black mt-4 max-w-3xl mx-auto">
+            Dietary supplements are not intended to diagnose, treat, cure, or prevent vascular dementia, Alzheimer’s disease, MCI, stroke, or any other disease.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Omega-3 */}
-          <Link href="/marketplace/omega-3" className="group border rounded-2xl p-6 hover:shadow-lg transition green-card">
+          <Link href="/marketplace/omega-3" className="group border border-black rounded-2xl p-6 hover:shadow-lg transition green-card">
             <div className="mb-4">
               <div className="section-label">Vascular Support</div>
             </div>
@@ -29,7 +29,7 @@ export default function Marketplace() {
           </Link>
 
           {/* Beetroot */}
-          <Link href="/marketplace/beetroot" className="group border rounded-2xl p-6 hover:shadow-lg transition green-card">
+          <Link href="/marketplace/beetroot" className="group border border-black rounded-2xl p-6 hover:shadow-lg transition green-card">
             <div className="mb-4">
               <div className="section-label">Circulation</div>
             </div>
@@ -39,7 +39,7 @@ export default function Marketplace() {
           </Link>
 
           {/* B-Complex */}
-          <Link href="/marketplace/b-complex" className="group border rounded-2xl p-6 hover:shadow-lg transition green-card">
+          <Link href="/marketplace/b-complex" className="group border border-black rounded-2xl p-6 hover:shadow-lg transition green-card">
             <div className="mb-4">
               <div className="section-label">Cognitive Support</div>
             </div>
@@ -49,7 +49,7 @@ export default function Marketplace() {
           </Link>
 
           {/* Vitamin D3 + K2 */}
-          <Link href="/marketplace/vitamin-d3-k2" className="group border rounded-2xl p-6 hover:shadow-lg transition green-card">
+          <Link href="/marketplace/vitamin-d3-k2" className="group border border-black rounded-2xl p-6 hover:shadow-lg transition green-card">
             <div className="mb-4">
               <div className="section-label">Bone & Brain</div>
             </div>
@@ -59,12 +59,12 @@ export default function Marketplace() {
           </Link>
 
           {/* Percepta */}
-          <Link href="/marketplace/percepta" className="group border rounded-2xl p-6 hover:shadow-lg transition green-card">
+          <Link href="/marketplace/percepta" className="group border border-black rounded-2xl p-6 hover:shadow-lg transition green-card">
             <div className="mb-4">
               <div className="section-label">Brain Health</div>
             </div>
             <h3 className="text-2xl font-semibold mb-2 group-hover:text-black">Percepta</h3>
-            <p className="text-black mb-4">Clinically studied brain formula</p>
+            <p className="text-black mb-4">Ingredients studied in cognitive-aging research</p>
             <div className="text-lg font-medium">$59</div>
           </Link>
         </div>

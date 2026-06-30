@@ -7,12 +7,11 @@ export default function ClinicalEvidencePage() {
         <Link href="/" className="text-black hover:underline">← Back to Vascumind</Link>
       </div>
 
-      <h1 className="text-5xl font-semibold tracking-tight mb-4">Clinical Evidence Behind Our Recommendations</h1>
+      <h1 className="text-5xl font-semibold tracking-tight mb-4">Evidence Context Behind Our Wellness Recommendations</h1>
       <div className="green-divider w-20 mb-8"></div>
       
       <p className="text-xl text-black mb-12">
-        We only recommend supplements when there is meaningful clinical research behind them. 
-        Below are the key studies that inform our choices.
+        We summarize research that may be relevant to vascular and cognitive wellness. This evidence does not mean any supplement diagnoses, treats, cures, or prevents disease.
       </p>
 
       {/* How We Select Evidence */}
@@ -20,7 +19,7 @@ export default function ClinicalEvidencePage() {
         <h2 className="text-2xl font-semibold mb-3">How We Select Evidence</h2>
         <p className="text-black">
           We prioritize large, well-designed randomized controlled trials (RCTs) and meta-analyses published in high-impact journals. 
-          All recommendations are reviewed for relevance to vascular and cognitive health.
+          Recommendations should be discussed with a qualified healthcare professional, especially when medications or medical conditions are involved.
         </p>
       </div>
 
@@ -36,21 +35,21 @@ export default function ClinicalEvidencePage() {
         <div>
           <h3 className="text-2xl font-semibold mb-3">Omega-3 & Vascular Health</h3>
           <p className="text-black">
-            Multiple large trials (REDUCE-IT, STRENGTH, VITAL) have demonstrated that high-dose EPA/DHA can reduce cardiovascular events and support brain health through anti-inflammatory mechanisms.
+            Multiple large trials (REDUCE-IT, STRENGTH, VITAL) have evaluated EPA/DHA in cardiovascular and healthy-aging contexts. Effects depend on dose, population, baseline risk, and outcome measured.
           </p>
         </div>
 
         <div>
           <h3 className="text-2xl font-semibold mb-3">Beetroot & Nitric Oxide</h3>
           <p className="text-black">
-            Research shows that dietary nitrates from beetroot significantly increase nitric oxide bioavailability, improving blood flow and endothelial function — key factors in vascular cognitive health.
+            Research has evaluated dietary nitrates from beetroot for nitric oxide bioavailability, blood pressure, and endothelial-function markers. These are wellness-related markers, not dementia treatment claims.
           </p>
         </div>
 
         <div>
           <h3 className="text-2xl font-semibold mb-3">B Vitamins & Cognitive Function</h3>
           <p className="text-black">
-            The VITACOG trial demonstrated that high-dose B vitamins (B6, B9, B12) can slow brain atrophy in older adults with elevated homocysteine levels.
+            The VITACOG trial studied high-dose B vitamins in older adults with mild cognitive impairment and elevated homocysteine. Testing, clinical context, and clinician guidance matter.
           </p>
         </div>
       </div>

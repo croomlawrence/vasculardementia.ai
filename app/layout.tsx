@@ -35,7 +35,7 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <div className="flex items-center gap-8">
               <Link href="/" className="font-semibold text-xl">VascuMind®</Link>
-              <div className="flex gap-6 text-sm">
+              <div className="flex gap-6 text-base">
                 <Link href="/marketplace" className="hover:underline">Marketplace</Link>
                 <Link href="/hachinski" className="hover:underline">Diagnostics</Link>
                 <Link href="/research/vascular-dementia-clinical-trials" className="hover:underline">Research</Link>
@@ -44,9 +44,9 @@ export default function RootLayout({
             </div>
             <Link 
               href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" 
-              className="bg-black text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-900 transition"
+              className="bg-black text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-white hover:text-black transition border border-black"
             >
-              Get Started
+              Start Memory Screen
             </Link>
           </div>
         </nav>
@@ -62,11 +62,11 @@ export default function RootLayout({
             <div className="grid md:grid-cols-4 gap-8 mb-10">
               <div>
                 <div className="font-semibold text-xl mb-3">VascuMind®</div>
-                <p className="text-sm">Accelerating solutions for vascular dementia.</p>
+                <p className="text-sm">Educational tools for vascular brain health.</p>
               </div>
               <div>
                 <div className="font-semibold mb-3 text-sm tracking-widest">EXPLORE</div>
-                <div className="space-y-2 text-sm">
+                <div className="space-y-2 text-base">
                   <Link href="/" className="block hover:underline">Home</Link>
                   <Link href="/hachinski" className="block hover:underline">Diagnostics</Link>
                   <Link href="/marketplace" className="block hover:underline">Marketplace</Link>
@@ -75,21 +75,21 @@ export default function RootLayout({
               </div>
               <div>
                 <div className="font-semibold mb-3 text-sm tracking-widest">RESEARCH</div>
-                <div className="space-y-2 text-sm">
+                <div className="space-y-2 text-base">
                   <Link href="/research/vascular-dementia-clinical-trials" className="block hover:underline">Clinical Trials</Link>
                   <Link href="/research/clinical-evidence" className="block hover:underline">Clinical Evidence</Link>
                 </div>
               </div>
               <div>
                 <div className="font-semibold mb-3 text-sm tracking-widest">LEGAL</div>
-                <div className="space-y-2 text-sm">
+                <div className="space-y-2 text-base">
                   <div>© VascuMind 2026</div>
                   <div>This site is for educational purposes only and does not constitute medical advice.</div>
                   <div>Always consult your physician.</div>
                 </div>
               </div>
             </div>
-            <div className="border-t border-white/20 pt-6 text-xs text-center">
+            <div className="border-t border-white pt-6 text-base text-center">
               VascuMind® is not a substitute for professional medical care. All information is provided for educational purposes.
             </div>
           </div>

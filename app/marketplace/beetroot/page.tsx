@@ -1,28 +1,36 @@
 import CompactMCIScreenCTA from '@/components/CompactMCIScreenCTA';
 
-export default function BeetrootPage() {
+export default function OrganicBeetrootPowderPage() {
   return (
     <div className="max-w-4xl mx-auto px-6 py-16">
       <div className="mb-8">
-        <a href="/marketplace" className="text-black hover:underline">← Back to Marketplace</a>
+        <a href="/marketplace" className="text-black hover:underline focus:outline focus:outline-4 focus:outline-black">← Back to Marketplace</a>
       </div>
       <h1 className="text-5xl font-semibold tracking-tight mb-4">Organic Beetroot Powder</h1>
       <div className="green-divider w-16 mb-4"></div>
       <p className="text-xl text-black mb-8">Natural nitric oxide support • Circulation</p>
 
+      <div className="border-4 border-black rounded-2xl p-6 mb-12">
+        <p className="font-semibold text-xl mb-2">Supplement safety notice</p>
+        <p className="text-black">
+          These products are dietary supplements and are not intended to diagnose, treat, cure, or prevent vascular dementia, Alzheimer’s disease, MCI, stroke, or any other disease. Always consult your healthcare professional before use, especially if you take medications or have a medical condition.
+        </p>
+      </div>
+
       <div className="flex items-center gap-4 mb-12">
         <div className="text-4xl font-semibold">$26</div>
-        <button className="btn-green px-8 py-3 rounded-full text-lg">Add to Cart</button>
+        <button type="button" className="btn-green px-8 py-3 rounded-full text-lg focus:outline focus:outline-4 focus:outline-black">Add to Cart</button>
       </div>
 
       <div className="prose prose-lg max-w-none text-black">
-        <h2>Why Beetroot for Vascular Dementia?</h2>
-        <p>
-          Rich in dietary nitrate that converts to nitric oxide, improving blood flow and endothelial function.
-        </p>
+        <h2>Beetroot, Nitric Oxide, and Circulation</h2>
+        <p>Beetroot contains dietary nitrates that the body can convert into nitric oxide, a molecule involved in blood-vessel function and circulation. This is wellness support, not treatment for dementia, stroke, or vascular disease.</p>
 
-        <h2>Key Clinical Evidence</h2>
-        <p><strong>Webb et al., Hypertension 2008</strong> — Beetroot juice significantly lowered blood pressure and improved endothelial function within hours via nitric oxide pathway. Multiple meta-analyses confirm benefits for circulation and blood pressure.</p>
+        <h2>Evidence Context</h2>
+        <p>Webb et al. and later studies evaluated beetroot or dietary nitrate in blood-pressure and endothelial-function contexts. Effects vary by person, dose, diet, and medication use; consult a healthcare professional if you have low blood pressure, kidney disease, or take nitrate-related medications.</p>
+
+        <h2>What this does and does not mean</h2>
+        <p>Research can inform wellness decisions, but it does not make this product a disease treatment. Use supplements only as part of a broader clinician-guided plan that may include blood pressure control, exercise, nutrition, sleep, medication review, and formal cognitive evaluation.</p>
       </div>
 
       <div className="mt-16">

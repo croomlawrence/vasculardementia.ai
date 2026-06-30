@@ -36,14 +36,15 @@ export default function RootLayout({
             <div className="flex items-center gap-8">
               <Link href="/" className="font-semibold text-xl">VascuMind®</Link>
               <div className="flex gap-6 text-base">
+                <Link href="/memory-screen" className="hover:underline">Memory Screen</Link>
+                <Link href="/cro-licensing" className="hover:underline">CRO Licensing</Link>
                 <Link href="/marketplace" className="hover:underline">Marketplace</Link>
                 <Link href="/hachinski" className="hover:underline">Diagnostics</Link>
                 <Link href="/research/vascular-dementia-clinical-trials" className="hover:underline">Research</Link>
-                <Link href="/what-we-offer" className="hover:underline">What We Offer</Link>
               </div>
             </div>
             <Link 
-              href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" 
+              href="/memory-screen"
               className="bg-black text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-white hover:text-black transition border border-black"
             >
               Start Memory Screen
@@ -68,6 +69,8 @@ export default function RootLayout({
                 <div className="font-semibold mb-3 text-sm tracking-widest">EXPLORE</div>
                 <div className="space-y-2 text-base">
                   <Link href="/" className="block hover:underline">Home</Link>
+                  <Link href="/memory-screen" className="block hover:underline">Memory Screen</Link>
+                  <Link href="/cro-licensing" className="block hover:underline">CRO Licensing</Link>
                   <Link href="/hachinski" className="block hover:underline">Diagnostics</Link>
                   <Link href="/marketplace" className="block hover:underline">Marketplace</Link>
                   <Link href="/what-we-offer" className="block hover:underline">What We Offer</Link>
@@ -84,8 +87,10 @@ export default function RootLayout({
                 <div className="font-semibold mb-3 text-sm tracking-widest">LEGAL</div>
                 <div className="space-y-2 text-base">
                   <div>© VascuMind 2026</div>
-                  <div>This site is for educational purposes only and does not constitute medical advice.</div>
-                  <div>Always consult your physician.</div>
+                  <Link href="/privacy" className="block hover:underline">Privacy</Link>
+                  <Link href="/terms" className="block hover:underline">Terms</Link>
+                  <Link href="/affiliate-disclosure" className="block hover:underline">Affiliate Disclosure</Link>
+                  <div>This site is educational only and does not constitute medical advice.</div>
                 </div>
               </div>
             </div>

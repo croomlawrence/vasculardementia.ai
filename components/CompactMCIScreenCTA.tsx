@@ -10,7 +10,7 @@ export default function CompactMCIScreenCTA() {
       <p className="text-base text-black mb-4">
         Establish a cognitive baseline and discuss results with a qualified healthcare professional. Educational only — not a diagnosis.
       </p>
-      <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="inline-block w-full text-center btn-green text-base font-semibold py-3 rounded-2xl transition-colors focus:outline focus:outline-4 focus:outline-black">
+      <a href="/memory-screen" className="inline-block w-full text-center btn-green text-base font-semibold py-3 rounded-2xl transition-colors focus:outline focus:outline-4 focus:outline-black">
         Start Memory Screen →
       </a>
       <p className="text-sm text-center text-black mt-2">Private next step • clinician conversation support</p>

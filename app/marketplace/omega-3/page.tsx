@@ -1,4 +1,6 @@
 import CompactMCIScreenCTA from '@/components/CompactMCIScreenCTA';
+import TrackedLink from '@/components/TrackedLink';
+import { affiliateLinks } from '@/lib/business';
 
 export default function HighPotencyOmega3Page() {
   return (
@@ -13,13 +15,22 @@ export default function HighPotencyOmega3Page() {
       <div className="border-4 border-black rounded-2xl p-6 mb-12">
         <p className="font-semibold text-xl mb-2">Supplement safety notice</p>
         <p className="text-black">
-          These products are dietary supplements and are not intended to diagnose, treat, cure, or prevent vascular dementia, Alzheimer’s disease, MCI, stroke, or any other disease. Always consult your healthcare professional before use, especially if you take medications or have a medical condition.
+          These products are dietary supplements and are not intended to diagnose, treat, cure, or prevent vascular dementia, Alzheimer’s disease, MCI, stroke, or any other disease. Always consult your healthcare professional before use, especially if you take medications or have a medical condition. VascuMind may earn a commission from qualifying purchases.
         </p>
       </div>
 
       <div className="flex items-center gap-4 mb-12">
         <div className="text-4xl font-semibold">$34</div>
-        <button type="button" className="btn-green px-8 py-3 rounded-full text-lg focus:outline focus:outline-4 focus:outline-black">Add to Cart</button>
+        <TrackedLink
+          href={affiliateLinks.omega3}
+          target="_blank"
+          rel="noopener noreferrer"
+          eventName="affiliate_product_click"
+          eventData={{ product: "High-Potency Omega-3" }}
+          className="btn-green px-8 py-3 rounded-full text-lg focus:outline focus:outline-4 focus:outline-black"
+        >
+          View Product
+        </TrackedLink>
       </div>
 
       <div className="prose prose-lg max-w-none text-black">

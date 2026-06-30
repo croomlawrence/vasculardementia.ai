@@ -27,7 +27,7 @@ export default function MCIScreenCTA() {
             </ul>
           </div>
 
-          <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="group inline-flex items-center justify-center gap-x-3 btn-green font-semibold text-lg px-10 py-4 rounded-3xl focus:outline focus:outline-4 focus:outline-black">
+          <a href="/memory-screen" className="group inline-flex items-center justify-center gap-x-3 btn-green font-semibold text-lg px-10 py-4 rounded-3xl focus:outline focus:outline-4 focus:outline-black">
             Start Memory Screen
             <span className="group-hover:translate-x-0.5 transition-transform">→</span>
           </a>

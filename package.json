@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "qa:vascumind": "node scripts/vascumind-qa.mjs",
+    "digest:funnel": "node scripts/funnel-digest.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

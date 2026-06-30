@@ -13,8 +13,9 @@ export default function Marketplace() {
             and everyday cognitive wellness — as education alongside clinician-guided care.
           </p>
           <p className="text-base text-black mt-4 max-w-3xl mx-auto">
-            Dietary supplements are not intended to diagnose, treat, cure, or prevent vascular dementia, Alzheimer’s disease, MCI, stroke, or any other disease.
+            Dietary supplements are not intended to diagnose, treat, cure, or prevent vascular dementia, Alzheimer’s disease, MCI, stroke, or any other disease. VascuMind may earn commissions from qualifying purchases; see our affiliate disclosure.
           </p>
+          <a href="/affiliate-disclosure" className="inline-block mt-3 text-black underline">Read affiliate disclosure</a>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
@@ -71,7 +72,7 @@ export default function Marketplace() {
       </div>
 
       <div className="text-center pb-16">
-        <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+        <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
           Start Memory Screen
         </a>
       </div>

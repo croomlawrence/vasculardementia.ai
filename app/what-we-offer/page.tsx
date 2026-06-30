@@ -40,7 +40,7 @@ export default function WhatWeOfferPage() {
         </div>
 
         <div className="mt-8">
-          <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+          <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
             Start Memory Screen
           </a>
         </div>
@@ -70,7 +70,7 @@ export default function WhatWeOfferPage() {
         </div>
 
         <div className="mt-8">
-          <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+          <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
             Start Memory Screen
           </a>
         </div>
@@ -136,7 +136,7 @@ export default function WhatWeOfferPage() {
         <p className="text-xl max-w-2xl mx-auto mb-8">
           Memory changes can have vascular, Alzheimer’s, mixed, medication-related, mood-related, sleep-related, and other causes. Vascular risk is one important place to look.
         </p>
-        <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+        <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
           Start Memory Screen
         </a>
       </section>

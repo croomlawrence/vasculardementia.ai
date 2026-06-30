@@ -25,7 +25,7 @@ export default function ClinicalEvidencePage() {
 
       {/* CTA */}
       <div className="text-center mb-16">
-        <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+        <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
           Start Memory Screen
         </a>
       </div>
@@ -55,7 +55,7 @@ export default function ClinicalEvidencePage() {
       </div>
 
       <div className="mt-16 text-center">
-        <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+        <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
           Start Memory Screen
         </a>
       </div>

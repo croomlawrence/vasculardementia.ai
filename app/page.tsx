@@ -15,7 +15,7 @@ export default function VascuMindHome() {
             Educational only — not a diagnosis. Private, secure, and designed to support a better next conversation about brain and vascular health.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold focus:outline focus:outline-4 focus:outline-white">
+            <a href="/memory-screen" className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold focus:outline focus:outline-4 focus:outline-white">
               Start Memory Screen
             </a>
             <a href="#learn" className="inline-block bg-white text-black px-10 py-4 rounded-full text-xl font-semibold hover:bg-black hover:text-white transition border border-white focus:outline focus:outline-4 focus:outline-white">
@@ -61,7 +61,7 @@ export default function VascuMindHome() {
         </div>
 
         <div className="text-center mt-12">
-          <a href="https://www.acurist.ai" target="_blank" rel="noopener noreferrer" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold focus:outline focus:outline-4 focus:outline-black">
+          <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold focus:outline focus:outline-4 focus:outline-black">
             Start Memory Screen
           </a>
           <p className="text-black mt-3">A few minutes. Educational only. Use results to guide a conversation with your clinician.</p>

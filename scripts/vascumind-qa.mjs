@@ -5,7 +5,14 @@ const banned = ['acurist.ca', 'Embic', 'for Vascular Dementia?', 'clinically stu
 let failures = [];
 for (const route of routes) {
   const url = `${base}${route}`;
-  const res = await fetch(url, { headers: { 'user-agent': 'VascuMind-QA-Agent/1.0' } });
+  const res = await fetch(url, {
+    cache: 'no-store',
+    headers: {
+      'user-agent': 'VascuMind-QA-Agent/1.0',
+      'cache-control': 'no-cache',
+      pragma: 'no-cache',
+    },
+  });
   const text = await res.text();
   if (!res.ok) failures.push(`${route} returned ${res.status}`);
   for (const token of banned) {

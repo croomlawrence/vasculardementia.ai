@@ -41,7 +41,7 @@ export default function VascuMindHome() {
               The consumer front door for vascular cognitive health
             </div>
             <h1 className="text-5xl md:text-7xl font-semibold tracking-tighter mb-6 text-white leading-none">
-              Build the Hims/Hers of vascular dementia — starting with screening.
+              Build the consumer front door for vascular dementia — starting with screening.
             </h1>
             <p className="text-2xl text-white mb-6 max-w-3xl">
               VascuMind turns vascular cognitive concern into a clear commercial journey: screen, understand, track, and then route to research or compliant wellness support.
@@ -89,7 +89,7 @@ export default function VascuMindHome() {
           <div className="section-label mb-3">CONSUMER JOURNEY</div>
           <h2 className="text-5xl font-semibold tracking-tight mb-4">A simple path from concern to action.</h2>
           <p className="text-xl text-black max-w-3xl mx-auto">
-            Hims and Hers won by making a stigmatized health concern easy to start. VascuMind does the same for families worried that vascular health may be affecting memory — with stricter medical and supplement compliance.
+            Modern consumer health brands won by making stigmatized health concerns easy to start. VascuMind does the same for families worried that vascular health may be affecting memory — with stricter medical and supplement compliance.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 mb-12">

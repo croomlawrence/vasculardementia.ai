@@ -49,7 +49,7 @@ export default function MemoryScreenPage() {
               {deliverables.map((item) => <li key={item}>{item}</li>)}
             </ul>
             <p className="text-base text-black mt-6">
-              Accuracy and database claims should remain supported by Acurist.AI source materials. The screen is still a screening and tracking tool, not a diagnostic medical device.
+              As with any screening performance claim, ask for source documentation and discuss results with a qualified healthcare professional. The screen is still a screening and tracking tool, not a diagnostic medical device.
             </p>
           </div>
           <div className="border border-black rounded-3xl p-6 text-center">

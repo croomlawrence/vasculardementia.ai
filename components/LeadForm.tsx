@@ -10,6 +10,7 @@ interface LeadFormProps {
   title: string;
   submitLabel: string;
   includeTrialFields?: boolean;
+  patientResearchFields?: boolean;
 }
 
 function eventForLeadType(leadType: LeadType) {
@@ -18,7 +19,7 @@ function eventForLeadType(leadType: LeadType) {
   return "memory_screen_lead_submit";
 }
 
-export default function LeadForm({ leadType, title, submitLabel, includeTrialFields = false }: LeadFormProps) {
+export default function LeadForm({ leadType, title, submitLabel, includeTrialFields = false, patientResearchFields = false }: LeadFormProps) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
 
@@ -59,16 +60,50 @@ export default function LeadForm({ leadType, title, submitLabel, includeTrialFie
           <input name="email" type="email" required className="mt-2 w-full border-2 border-black rounded-xl px-4 py-3 text-black" />
         </label>
       </div>
-      <div className="grid md:grid-cols-2 gap-4">
-        <label className="block">
-          <span className="font-semibold">Organization</span>
-          <input name="organization" className="mt-2 w-full border-2 border-black rounded-xl px-4 py-3 text-black" />
-        </label>
-        <label className="block">
-          <span className="font-semibold">Role</span>
-          <input name="role" className="mt-2 w-full border-2 border-black rounded-xl px-4 py-3 text-black" />
-        </label>
-      </div>
+
+      {patientResearchFields ? (
+        <div className="grid md:grid-cols-2 gap-4">
+          <label className="block">
+            <span className="font-semibold">I am a...</span>
+            <select name="audience" required className="mt-2 w-full border-2 border-black rounded-xl px-4 py-3 text-black bg-white">
+              <option value="">Select one</option>
+              <option value="patient">Patient</option>
+              <option value="caregiver">Caregiver / family member</option>
+              <option value="clinician">Clinician</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          <label className="block">
+            <span className="font-semibold">General location</span>
+            <input name="location" placeholder="City/state or country" className="mt-2 w-full border-2 border-black rounded-xl px-4 py-3 text-black" />
+          </label>
+          <label className="block">
+            <span className="font-semibold">Diagnosis or concern</span>
+            <input name="diagnosisOrConcern" placeholder="Vascular dementia, post-stroke memory changes, etc." className="mt-2 w-full border-2 border-black rounded-xl px-4 py-3 text-black" />
+          </label>
+          <label className="block">
+            <span className="font-semibold">Stroke/TIA history?</span>
+            <select name="strokeHistory" className="mt-2 w-full border-2 border-black rounded-xl px-4 py-3 text-black bg-white">
+              <option value="">Select one</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+              <option value="not-sure">Not sure</option>
+            </select>
+          </label>
+        </div>
+      ) : (
+        <div className="grid md:grid-cols-2 gap-4">
+          <label className="block">
+            <span className="font-semibold">Organization</span>
+            <input name="organization" className="mt-2 w-full border-2 border-black rounded-xl px-4 py-3 text-black" />
+          </label>
+          <label className="block">
+            <span className="font-semibold">Role</span>
+            <input name="role" className="mt-2 w-full border-2 border-black rounded-xl px-4 py-3 text-black" />
+          </label>
+        </div>
+      )}
+
       {includeTrialFields && (
         <div className="grid md:grid-cols-2 gap-4">
           <label className="block">
@@ -93,15 +128,15 @@ export default function LeadForm({ leadType, title, submitLabel, includeTrialFie
         <span className="font-semibold">What are you trying to accomplish?</span>
         <textarea name="message" rows={5} className="mt-2 w-full border-2 border-black rounded-xl px-4 py-3 text-black" />
       </label>
-      {includeTrialFields && (
+      {(includeTrialFields || patientResearchFields) && (
         <label className="flex items-start gap-3">
           <input name="trialDataConsent" type="checkbox" required className="mt-2 h-5 w-5" />
-          <span>I consent to VascuMind using the information I submit to evaluate whether a clinical-trial or CRO partner follow-up may be appropriate. I understand VascuMind will not share identifiable information with a trial sponsor or CRO without additional explicit consent.</span>
+          <span>I consent to VascuMind using the information I submit to evaluate whether a clinical-trial or research follow-up may be appropriate. I understand VascuMind will not share identifiable information with a trial sponsor, CRO, or study partner without additional explicit consent.</span>
         </label>
       )}
       <label className="flex items-start gap-3">
         <input name="consent" type="checkbox" required className="mt-2 h-5 w-5" />
-        <span>I understand this website is educational only and does not provide medical advice or clinical guidance. I consent to being contacted about this request.</span>
+        <span>I understand this website is educational only and does not provide medical advice, diagnosis, treatment, emergency triage, or clinical guidance. I consent to being contacted about this request.</span>
       </label>
       <button type="submit" disabled={status === "submitting"} className="bg-black text-white px-8 py-4 rounded-full text-lg font-semibold border border-black hover:bg-white hover:text-black disabled:opacity-70">
         {status === "submitting" ? "Submitting..." : submitLabel}

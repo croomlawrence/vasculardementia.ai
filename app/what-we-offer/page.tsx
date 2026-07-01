@@ -1,143 +1,125 @@
+import type { Metadata } from "next";
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: "Help for Vascular Dementia, Stroke-Related Memory Changes & Caregivers | VascuMind",
+  description:
+    "Understand, track, and discuss vascular dementia, post-stroke cognitive changes, and vascular cognitive impairment with VascuMind patient and caregiver resources.",
+};
 
 export default function WhatWeOfferPage() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-16">
       <div className="mb-8">
-        <Link href="/" className="text-black hover:underline">← Back to Vascumind</Link>
+        <Link href="/" className="text-black hover:underline">← Back to VascuMind</Link>
       </div>
 
       <div className="text-center mb-16">
         <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">
-          What We Offer
+          Help for vascular dementia, stroke-related memory changes, and caregivers.
         </h1>
         <p className="text-2xl text-black max-w-3xl mx-auto">
-          Focused options to understand, track, and act on vascular cognitive risk.
+          A clearer path to understand the vascular pattern, benchmark cognition, and prepare better clinician conversations.
         </p>
       </div>
 
-      {/* 1. Screening - Primary Revenue */}
       <section className="mb-20">
         <div className="mb-8">
-          <div className="section-label mb-2">PRIMARY OFFERING</div>
+          <div className="section-label mb-2">START WITH CLARITY</div>
           <h2 className="text-4xl font-semibold tracking-tight mb-4">
-            Know Your Vascular Cognitive Risk in Minutes
+            Organize memory concerns and vascular clues before the next visit.
           </h2>
           <p className="text-xl text-black max-w-3xl">
-            A quick screening can reveal how your blood vessels may be affecting your memory — and what you can do about it.
+            A quick pattern check can help you organize memory concerns and vascular risk factors — stroke/TIA history, blood pressure, diabetes, PAD, heart disease, and stepwise change — so you know what to discuss with a clinician.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           <div className="border border-black rounded-3xl p-8">
-            <h3 className="text-2xl font-semibold mb-3">Concerned About Changes? Start With a Baseline</h3>
-            <p className="text-black">A baseline can help you understand whether memory changes deserve a deeper clinical conversation.</p>
+            <h3 className="text-2xl font-semibold mb-3">Concerned about changes? Start with the pattern.</h3>
+            <p className="text-black">The Hachinski check is a free, educational self-report tool that helps families notice whether symptoms may fit a vascular-pattern profile.</p>
           </div>
           <div className="border border-black rounded-3xl p-8">
-            <h3 className="text-2xl font-semibold mb-3">Catch Cognitive Risk Early Enough to Actually Act On It</h3>
-            <p className="text-black">A clearer picture of your brain health starts with one screening. Know where you stand and what to do next.</p>
+            <h3 className="text-2xl font-semibold mb-3">Then create an objective cognitive baseline.</h3>
+            <p className="text-black">The Acurist.AI MCI Screen gives families a structured benchmark to discuss with clinicians and track over time.</p>
           </div>
         </div>
 
-        <div className="mt-8">
-          <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
-            Start Memory Screen
+        <div className="mt-8 flex flex-col sm:flex-row gap-3">
+          <a href="/hachinski" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold text-center">
+            Start Free Pattern Check
+          </a>
+          <a href="/memory-screen" className="inline-block border-2 border-black px-8 py-4 rounded-full text-lg font-semibold text-center hover:bg-black hover:text-white">
+            Create Cognitive Baseline
           </a>
         </div>
       </section>
 
-      {/* 2. Clinical Trials - High Potential Revenue */}
       <section className="mb-20 green-wash rounded-3xl p-12">
         <div className="mb-8">
-          <div className="section-label mb-2">HIGH-POTENTIAL OFFERING</div>
+          <div className="section-label mb-2">WHAT MAY BE ACTIONABLE</div>
           <h2 className="text-4xl font-semibold tracking-tight mb-4">
-            Emerging Vascular Cognitive Research Is Recruiting Now — See If You Qualify
+            Vascular cognitive decline may have contributors worth discussing.
           </h2>
           <p className="text-xl text-black max-w-3xl">
-            Research is moving fast. Connect with trials investigating vascular cognitive decline.
+            VascuMind does not provide treatment. It helps families ask better questions about clinician-directed action areas such as blood pressure, diabetes, cholesterol, smoking, sleep, mood, medications, rehabilitation, repeat cognitive tracking, and research options.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <h3 className="text-2xl font-semibold mb-3">Beyond Supplements: Explore the Clinical Trials Shaping What&apos;s Next</h3>
-            <p className="text-black">Access information on active studies focused on vascular protection, inflammation, and new therapeutic approaches.</p>
+            <h3 className="text-2xl font-semibold mb-3">Care decisions belong with clinicians.</h3>
+            <p className="text-black">Use VascuMind to prepare for visits — not to diagnose, change medications, or replace medical care.</p>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold mb-3">Find Your Place in Vascular Cognitive Research</h3>
-            <p className="text-black">Many families want to contribute to advancing care. We help connect you with relevant opportunities.</p>
+            <h3 className="text-2xl font-semibold mb-3">Research is moving quickly.</h3>
+            <p className="text-black">Families may want to understand whether current or emerging vascular cognitive studies are worth discussing with physicians and study teams.</p>
           </div>
         </div>
 
         <div className="mt-8">
-          <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
-            Start Memory Screen
+          <a href="/research/clinical-evidence" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+            Learn What May Be Actionable
           </a>
         </div>
       </section>
 
-      {/* 3. Caregivers & Families - Strategic Core */}
       <section className="mb-20">
         <div className="mb-8">
-          <div className="section-label mb-2">STRATEGIC FOCUS</div>
+          <div className="section-label mb-2">CAREGIVERS AND FAMILIES</div>
           <h2 className="text-4xl font-semibold tracking-tight mb-4">
-            When Someone You Love Starts Slipping, Start Here
+            When someone you love starts slipping, start here.
           </h2>
           <p className="text-xl text-black max-w-3xl">
-            A trusted place for families noticing memory and circulation concerns.
+            A trusted place for families noticing memory changes after stroke, with vascular disease, or alongside circulation concerns.
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           <div className="border border-black rounded-3xl p-8">
-            <h3 className="text-2xl font-semibold mb-3">You&apos;re the One Noticing the Changes</h3>
-            <p className="text-black">Guidance and resources designed specifically for the people who care most.</p>
+            <h3 className="text-2xl font-semibold mb-3">You are the one noticing the changes.</h3>
+            <p className="text-black">Caregivers can answer based on observed changes and bring results to a clinician.</p>
           </div>
           <div className="border border-black rounded-3xl p-8">
-            <h3 className="text-2xl font-semibold mb-3">Support That Understands Vascular Causes</h3>
-            <p className="text-black">Practical information about circulation, small vessel disease, and what families can actually do.</p>
+            <h3 className="text-2xl font-semibold mb-3">Vascular causes deserve specific questions.</h3>
+            <p className="text-black">Stroke history, small vessel disease, blood pressure, diabetes, PAD, and heart disease can shape the conversation.</p>
           </div>
           <div className="border border-black rounded-3xl p-8">
-            <h3 className="text-2xl font-semibold mb-3">You Don&apos;t Have to Navigate This Alone</h3>
-            <p className="text-black">Clear next steps for caregivers who want to take meaningful action.</p>
+            <h3 className="text-2xl font-semibold mb-3">You do not have to navigate this alone.</h3>
+            <p className="text-black">VascuMind gives families a structured way to ask, track, and discuss next steps.</p>
           </div>
         </div>
       </section>
 
-      {/* 4. Early Action - Supporting */}
-      <section className="mb-20">
-        <div className="mb-8">
-          <div className="section-label mb-2">SUPPORTING RESOURCES</div>
-          <h2 className="text-4xl font-semibold tracking-tight mb-4">
-            Much of What Drives Vascular Memory Loss Is Within Your Control
-          </h2>
-          <p className="text-xl text-black max-w-3xl">
-            The best time to protect your brain was years ago. The second best time is now.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="border border-black rounded-3xl p-8">
-            <h3 className="text-2xl font-semibold mb-3">Small Vessels, Big Consequences — and Real Steps You Can Take</h3>
-            <p className="text-black">Practical, evidence-based actions focused on blood flow and vascular health.</p>
-          </div>
-          <div className="border border-black rounded-3xl p-8">
-            <h3 className="text-2xl font-semibold mb-3">Memory Decline Isn&apos;t Always Inevitable</h3>
-            <p className="text-black">Many vascular risk factors are modifiable. Learn what to discuss with a qualified healthcare professional.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Vascular-Brain Connection - Top of Funnel */}
       <section className="bg-black text-white rounded-3xl p-12 text-center">
-        <h2 className="text-3xl font-semibold tracking-tight mb-6">
-          Your Memory Has a Circulation Problem You Can&apos;t See
+        <h2 className="text-3xl font-semibold tracking-tight mb-6 text-white">
+          Start with the pattern. Then benchmark cognition.
         </h2>
         <p className="text-xl max-w-2xl mx-auto mb-8">
-          Memory changes can have vascular, non-vascular, medication-related, mood-related, sleep-related, and other causes. Vascular risk is one important place to look.
+          Memory changes can have vascular, non-vascular, medication-related, mood-related, sleep-related, and other causes. Vascular risk is one important place to look with a qualified clinician.
         </p>
-        <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
-          Start Memory Screen
+        <a href="/hachinski" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+          Start Free Pattern Check
         </a>
       </section>
     </div>

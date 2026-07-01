@@ -1,6 +1,13 @@
+import type { Metadata } from "next";
 import { SupplementDisclaimer } from '@/app/components/ComplianceNotices';
 import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
+
+export const metadata: Metadata = {
+  title: "Wellness Support for Vascular & Cognitive Health | VascuMind",
+  description:
+    "Review optional wellness-support products for vascular and cognitive wellness with supplement disclaimers, clinician-discussion framing, affiliate disclosure, and COA transparency.",
+};
 
 const coreStack = [
   {
@@ -14,7 +21,7 @@ const coreStack = [
     href: '/marketplace/omega-3',
     label: 'Vascular Function',
     name: 'High-EPA Omega-3',
-    description: 'Maintains normal vascular function in the brain',
+    description: 'Supports general vascular and cognitive wellness',
     price: '$34',
   },
   {
@@ -38,21 +45,21 @@ export default function Marketplace() {
     <main>
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="text-center mb-16">
-          <div className="section-label mb-3">JOURNEY A · DTC PROTOCOL STACK</div>
+          <div className="section-label mb-3">OPTIONAL WELLNESS SUPPORT</div>
           <h1 className="text-5xl font-semibold tracking-tight mb-4">
-            VascuMind Cerebrovascular Support Stack
+            Wellness support to review with your clinician.
           </h1>
           <p className="text-xl text-black max-w-3xl mx-auto">
-            This is the DTC branch of the VascuMind Protocol: after Hachinski pattern recognition and Acurist.AI benchmarking, families can review a compliant wellness-support bundle with affiliate disclosure and COA transparency.
+            If you or a loved one has vascular dementia, stroke-related cognitive impairment, or vascular disease, medical care comes first. Supplements and wellness products should only be considered as optional support and reviewed with a qualified healthcare professional, especially when medications are involved.
           </p>
           <div className="mt-6 max-w-3xl mx-auto text-left">
             <SupplementDisclaimer compact />
           </div>
           <p className="text-base text-black mt-4 max-w-3xl mx-auto">
-            VascuMind may earn commissions from qualifying purchases; see our affiliate disclosure. Product pages are for general wellness education and should be reviewed with a qualified healthcare professional.
+            VascuMind may earn commissions from qualifying purchases; see our affiliate disclosure. Product pages are for general wellness education and should not be interpreted as treatment for vascular dementia, stroke, MCI, Alzheimer’s disease, or any medical condition.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mt-5">
-            <Link href="/memory-screen" className="btn-green inline-block px-7 py-3 rounded-full font-semibold">Benchmark First</Link>
+            <Link href="/memory-screen" className="btn-green inline-block px-7 py-3 rounded-full font-semibold">Create Baseline First</Link>
             <Link href="/protocol" className="text-black underline">See full Protocol</Link>
             <Link href="/transparency" className="text-black underline">View transparency / COA tracker</Link>
             <Link href="/affiliate-disclosure" className="text-black underline">Read affiliate disclosure</Link>
@@ -60,10 +67,10 @@ export default function Marketplace() {
         </div>
 
         <section className="border-4 border-black rounded-3xl p-8 mb-16">
-          <div className="section-label mb-3">Core Bundle</div>
-          <h2 className="text-4xl font-semibold mb-4">Cerebrovascular Support Stack</h2>
+          <div className="section-label mb-3">CORE WELLNESS BUNDLE</div>
+          <h2 className="text-4xl font-semibold mb-4">Cerebrovascular wellness-support bundle</h2>
           <p className="text-xl text-black mb-8">
-            The conversion offer should feel like a guided protocol, not a random shelf. The initial bundle centers on citicoline, high-EPA omega-3, and MCT oil because each maps to a general wellness-support role.
+            The VascuMind bundle centers on citicoline, high-EPA omega-3, and MCT oil because each maps to a general wellness-support role. This is not a disease-treatment protocol; it is an optional support layer to review after screening and clinician discussion.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {coreStack.map((product) => (
@@ -77,7 +84,7 @@ export default function Marketplace() {
           </div>
           <div className="text-center mt-8">
             <span className="inline-block border border-black rounded-full px-8 py-4 text-lg font-semibold">
-              Subscribe & Save 15% — pending payment/supplier setup
+              Bundle / subscription setup pending supplier and payment review
             </span>
           </div>
         </section>
@@ -98,7 +105,7 @@ export default function Marketplace() {
 
         <section className="grid md:grid-cols-3 gap-6 mb-16">
           <div className="border border-black rounded-3xl p-8">
-            <h2 className="text-2xl font-semibold mb-3">Screen first</h2>
+            <h2 className="text-2xl font-semibold mb-3">Medical care first</h2>
             <p>Product discovery should follow cognitive benchmarking and clinician conversation framing.</p>
           </div>
           <div className="border border-black rounded-3xl p-8">
@@ -111,7 +118,7 @@ export default function Marketplace() {
           </div>
         </section>
 
-        <LeadForm leadType="affiliate-interest" title="Request supplier or affiliate follow-up" submitLabel="Request Affiliate Follow-Up" />
+        <LeadForm leadType="affiliate-interest" title="Request wellness-support follow-up" submitLabel="Request Follow-Up" />
       </div>
     </main>
   );

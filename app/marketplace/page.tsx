@@ -1,5 +1,6 @@
 import { SupplementDisclaimer } from '@/app/components/ComplianceNotices';
 import Link from 'next/link';
+import LeadForm from '@/components/LeadForm';
 
 const coreStack = [
   {
@@ -34,26 +35,24 @@ const secondaryProducts = [
 
 export default function Marketplace() {
   return (
-    <div>
+    <main>
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="text-center mb-16">
-          <div className="section-label mb-3">JOURNEY A — CEREBROVASCULAR SUPPORT</div>
+          <div className="section-label mb-3">REVENUE STREAM 3 · DISCLOSED AFFILIATE SALES</div>
           <h1 className="text-5xl font-semibold tracking-tight mb-4">
-            VascuMind Protocol Stack
+            Cerebrovascular wellness marketplace
           </h1>
           <p className="text-xl text-black max-w-3xl mx-auto">
-            A caregiver-friendly wellness stack positioned after Hachinski pattern awareness and Acurist.AI cognitive benchmarking — not before.
+            VascuMind can monetize product discovery like a consumer health brand — but only after screening context, with clear affiliate disclosure and no disease-treatment claims.
           </p>
           <div className="mt-6 max-w-3xl mx-auto text-left">
             <SupplementDisclaimer compact />
           </div>
           <p className="text-base text-black mt-4 max-w-3xl mx-auto">
-            VascuMind may earn commissions from qualifying purchases; see our affiliate disclosure.
-          </p>
-          <p className="text-base text-black mt-4 max-w-3xl mx-auto">
-            COA policy: protocol-ready products should have manufacturer Certificates of Analysis for identity, potency, contaminants, and batch quality. COAs will be posted on the transparency page as supplier documents are received.
+            VascuMind may earn commissions from qualifying purchases; see our affiliate disclosure. Product pages are for general wellness education and should be reviewed with a qualified healthcare professional.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mt-5">
+            <Link href="/memory-screen" className="btn-green inline-block px-7 py-3 rounded-full font-semibold">Benchmark First</Link>
             <Link href="/transparency" className="text-black underline">View transparency / COA tracker</Link>
             <Link href="/affiliate-disclosure" className="text-black underline">Read affiliate disclosure</Link>
           </div>
@@ -63,7 +62,7 @@ export default function Marketplace() {
           <div className="section-label mb-3">Core Bundle</div>
           <h2 className="text-4xl font-semibold mb-4">Cerebrovascular Support Stack</h2>
           <p className="text-xl text-black mb-8">
-            The conversion offer should be a bundle, not a random shelf. The initial bundle centers on citicoline, high-EPA omega-3, and MCT oil because each maps to a clear wellness-support role.
+            The conversion offer should feel like a guided protocol, not a random shelf. The initial bundle centers on citicoline, high-EPA omega-3, and MCT oil because each maps to a general wellness-support role.
           </p>
           <div className="grid md:grid-cols-3 gap-8">
             {coreStack.map((product) => (
@@ -82,7 +81,7 @@ export default function Marketplace() {
           </div>
         </section>
 
-        <section>
+        <section className="mb-16">
           <h2 className="text-4xl font-semibold mb-6">Additional wellness-support options</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {secondaryProducts.map((product) => (
@@ -95,13 +94,24 @@ export default function Marketplace() {
             ))}
           </div>
         </section>
-      </div>
 
-      <div className="text-center pb-16">
-        <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
-          Benchmark First with Acurist.AI
-        </a>
+        <section className="grid md:grid-cols-3 gap-6 mb-16">
+          <div className="border border-black rounded-3xl p-8">
+            <h2 className="text-2xl font-semibold mb-3">Screen first</h2>
+            <p>Product discovery should follow cognitive benchmarking and clinician conversation framing.</p>
+          </div>
+          <div className="border border-black rounded-3xl p-8">
+            <h2 className="text-2xl font-semibold mb-3">Disclose clearly</h2>
+            <p>Affiliate compensation must be visible, plain, and linked before purchase decisions.</p>
+          </div>
+          <div className="border border-black rounded-3xl p-8">
+            <h2 className="text-2xl font-semibold mb-3">Avoid disease claims</h2>
+            <p>Products support general wellness only; they do not diagnose, treat, cure, or prevent disease.</p>
+          </div>
+        </section>
+
+        <LeadForm leadType="affiliate-interest" title="Request supplier or affiliate follow-up" submitLabel="Request Affiliate Follow-Up" />
       </div>
-    </div>
+    </main>
   );
 }

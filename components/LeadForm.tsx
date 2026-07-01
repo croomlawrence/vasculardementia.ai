@@ -3,13 +3,19 @@
 import React, { useState } from "react";
 import { track } from "@vercel/analytics";
 
-type LeadType = "memory-screen" | "cro-licensing" | "clinical-trial-match";
+type LeadType = "memory-screen" | "cro-licensing" | "clinical-trial-match" | "affiliate-interest";
 
 interface LeadFormProps {
   leadType: LeadType;
   title: string;
   submitLabel: string;
   includeTrialFields?: boolean;
+}
+
+function eventForLeadType(leadType: LeadType) {
+  if (leadType === "cro-licensing" || leadType === "clinical-trial-match") return "cro_inquiry_submit";
+  if (leadType === "affiliate-interest") return "affiliate_interest_submit";
+  return "memory_screen_lead_submit";
 }
 
 export default function LeadForm({ leadType, title, submitLabel, includeTrialFields = false }: LeadFormProps) {
@@ -30,7 +36,7 @@ export default function LeadForm({ leadType, title, submitLabel, includeTrialFie
       });
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || "Submission failed");
-      track(leadType === "cro-licensing" || leadType === "clinical-trial-match" ? "cro_inquiry_submit" : "memory_screen_lead_submit", { leadType });
+      track(eventForLeadType(leadType), { leadType });
       setStatus("success");
       setMessage(result.message || "Received. We will follow up shortly.");
       form.reset();

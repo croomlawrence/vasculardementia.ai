@@ -3,53 +3,48 @@ import LeadForm from "@/components/LeadForm";
 import TrackedLink from "@/components/TrackedLink";
 import { memoryScreenCheckoutUrl, memoryScreenPrice } from "@/lib/business";
 
+const deliverables = [
+  "A structured cognitive-screening baseline sourced from Acurist.AI",
+  "Plain-language next-step framing for a clinician conversation",
+  "Vascular risk context to organize blood pressure, stroke/TIA, PAD, diabetes, and circulation concerns",
+  "Routing to trial-readiness or wellness education when appropriate",
+];
+
+const upsellPaths = [
+  { title: "Clinical-trial awareness", copy: "If your pattern suggests research relevance, review vascular cognitive trial education and matching options.", href: "/clinical-trial-matching" },
+  { title: "Cerebrovascular wellness stack", copy: "After benchmarking, review disclosed supplement affiliate options for general vascular and cognitive wellness support.", href: "/marketplace" },
+  { title: "Repeat tracking", copy: "Use future screens to support trend discussions with qualified healthcare professionals.", href: "/memory-screen/thank-you" },
+];
+
 export default function MemoryScreenPage() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-16">
       <section className="text-center mb-16">
-        <div className="section-label mb-3">THE VASCUMIND PROTOCOL</div>
-        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Start with the Acurist-sourced MCI Screen</h1>
-        <div className="max-w-4xl mx-auto mb-6 text-left">
-          <AcuristScreenDisclaimer />
-        </div>
+        <div className="section-label mb-3">REVENUE STREAM 1 · COGNITIVE TEST SALES</div>
+        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">The front door: a paid vascular cognitive baseline</h1>
         <p className="text-2xl text-black max-w-4xl mx-auto mb-6">
-          The MCI Screen is sourced from Acurist.AI and is designed to support an informed clinician conversation.
+          Make the first step obvious for families: pay for a simple educational screen, understand the baseline, then decide what to discuss with a clinician.
         </p>
-        <p className="text-xl text-black max-w-3xl mx-auto">
-          Use VascuMind to organize a baseline, then consider clinician discussion, trial matching, or compliant wellness support.
-        </p>
-      </section>
-
-      <section className="grid md:grid-cols-3 gap-6 mb-16">
-        <div className="border border-black rounded-3xl p-8">
-          <h2 className="text-2xl font-semibold mb-3">1. Screen</h2>
-          <p>Complete a brief cognitive health screen and capture a structured baseline.</p>
-        </div>
-        <div className="border border-black rounded-3xl p-8">
-          <h2 className="text-2xl font-semibold mb-3">2. Understand</h2>
-          <p>Review a plain-language summary that helps organize what to discuss with your clinician.</p>
-        </div>
-        <div className="border border-black rounded-3xl p-8">
-          <h2 className="text-2xl font-semibold mb-3">3. Track</h2>
-          <p>Use repeat screening over time when appropriate to monitor change and support follow-up.</p>
+        <div className="max-w-4xl mx-auto text-left">
+          <AcuristScreenDisclaimer />
         </div>
       </section>
 
       <section className="border-4 border-black rounded-3xl p-8 md:p-12 mb-16">
-        <div className="grid md:grid-cols-[1fr_280px] gap-8 items-center">
+        <div className="grid md:grid-cols-[1fr_300px] gap-10 items-center">
           <div>
-            <h2 className="text-4xl font-semibold mb-4">Memory Screen Baseline</h2>
-            <p className="text-xl mb-4">A focused cognitive screening entry point for families, caregivers, and patients concerned about memory changes.</p>
+            <div className="section-label mb-3">MEMORY SCREEN BASELINE</div>
+            <h2 className="text-4xl font-semibold mb-4">Start with the Acurist-sourced MCI Screen</h2>
+            <p className="text-xl text-black mb-6">
+              A focused screening entry point for patients, caregivers, and adult children concerned that vascular health may be affecting memory.
+            </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>Clinician-conversation support</li>
-              <li>Privacy-first educational flow</li>
-              <li>Built to connect VascuMind education with Acurist cognitive testing</li>
-              <li>No emergency or diagnostic claims</li>
+              {deliverables.map((item) => <li key={item}>{item}</li>)}
             </ul>
           </div>
           <div className="border border-black rounded-3xl p-6 text-center">
             <div className="text-sm uppercase tracking-widest mb-2">Starting at</div>
-            <div className="text-5xl font-semibold mb-4">{memoryScreenPrice}</div>
+            <div className="text-6xl font-semibold mb-4">{memoryScreenPrice}</div>
             <TrackedLink
               href={memoryScreenCheckoutUrl}
               target="_blank"
@@ -60,8 +55,37 @@ export default function MemoryScreenPage() {
             >
               Continue to Checkout
             </TrackedLink>
-            <p className="text-sm text-black mt-3">Stripe should redirect to /memory-screen/thank-you after payment. If checkout is not yet connected, this routes to the current Acurist screening path.</p>
+            <p className="text-sm text-black mt-3">If Stripe is not connected yet, this routes to the current Acurist screening path.</p>
           </div>
+        </div>
+      </section>
+
+      <section className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="border border-black rounded-3xl p-8">
+          <h2 className="text-2xl font-semibold mb-3">1. Screen</h2>
+          <p>Complete a brief cognitive health screen and capture a structured baseline.</p>
+        </div>
+        <div className="border border-black rounded-3xl p-8">
+          <h2 className="text-2xl font-semibold mb-3">2. Understand</h2>
+          <p>Review plain-language context that helps organize what to discuss with a clinician.</p>
+        </div>
+        <div className="border border-black rounded-3xl p-8">
+          <h2 className="text-2xl font-semibold mb-3">3. Route</h2>
+          <p>Move to clinician follow-up, trial education, or compliant wellness support when appropriate.</p>
+        </div>
+      </section>
+
+      <section className="mb-16">
+        <div className="section-label mb-3">POST-SCREEN PATHWAYS</div>
+        <h2 className="text-4xl font-semibold mb-6">The screen is the beginning of the commercial journey.</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          {upsellPaths.map((path) => (
+            <a key={path.title} href={path.href} className="border border-black rounded-3xl p-8 hover:shadow-lg transition green-card">
+              <h3 className="text-2xl font-semibold mb-3">{path.title}</h3>
+              <p className="text-black mb-4">{path.copy}</p>
+              <span className="font-semibold underline">Continue</span>
+            </a>
+          ))}
         </div>
       </section>
 

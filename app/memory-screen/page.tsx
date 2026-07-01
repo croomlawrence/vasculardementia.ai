@@ -5,25 +5,25 @@ import { memoryScreenCheckoutUrl, memoryScreenPrice } from "@/lib/business";
 
 const deliverables = [
   "A structured cognitive-screening baseline sourced from Acurist.AI",
+  "Memory Performance Index-style framing for understanding baseline performance",
   "Plain-language next-step framing for a clinician conversation",
-  "Vascular risk context to organize blood pressure, stroke/TIA, PAD, diabetes, and circulation concerns",
-  "Routing to trial-readiness or wellness education when appropriate",
+  "Routing to the DTC Cerebrovascular Support Stack or consented trial matching when appropriate",
 ];
 
 const upsellPaths = [
-  { title: "Clinical-trial awareness", copy: "If your pattern suggests research relevance, review vascular cognitive trial education and matching options.", href: "/clinical-trial-matching" },
-  { title: "Cerebrovascular wellness stack", copy: "After benchmarking, review disclosed supplement affiliate options for general vascular and cognitive wellness support.", href: "/marketplace" },
-  { title: "Repeat tracking", copy: "Use future screens to support trend discussions with qualified healthcare professionals.", href: "/memory-screen/thank-you" },
+  { title: "Journey A · DTC Stack", copy: "If your benchmark shows changes worth discussing, review the Cerebrovascular Support Stack with COA transparency and clinician framing.", href: "/marketplace" },
+  { title: "Journey B · Trial Matching", copy: "If your pattern suggests research relevance, opt into vascular cognitive trial matching and CRO follow-up review.", href: "/clinical-trial-matching" },
+  { title: "See the Post-Screen Fork", copy: "Use the benchmark to decide between wellness support, clinical-trial awareness, repeat tracking, or clinician discussion.", href: "/memory-screen/thank-you" },
 ];
 
 export default function MemoryScreenPage() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-16">
       <section className="text-center mb-16">
-        <div className="section-label mb-3">REVENUE STREAM 1 · COGNITIVE TEST SALES</div>
-        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">The front door: a paid vascular cognitive baseline</h1>
+        <div className="section-label mb-3">STEP 2 · PAID / LOW-TICKET BENCHMARK</div>
+        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Hachinski shows a pattern? Benchmark it with Acurist.AI.</h1>
         <p className="text-2xl text-black max-w-4xl mx-auto mb-6">
-          Make the first step obvious for families: pay for a simple educational screen, understand the baseline, then decide what to discuss with a clinician.
+          This is the conversion bridge: turn a subjective vascular-pattern signal into an objective cognitive baseline, then route users into the right VascuMind Protocol pathway.
         </p>
         <div className="max-w-4xl mx-auto text-left">
           <AcuristScreenDisclaimer />
@@ -34,9 +34,9 @@ export default function MemoryScreenPage() {
         <div className="grid md:grid-cols-[1fr_300px] gap-10 items-center">
           <div>
             <div className="section-label mb-3">MEMORY SCREEN BASELINE</div>
-            <h2 className="text-4xl font-semibold mb-4">Start with the Acurist-sourced MCI Screen</h2>
+            <h2 className="text-4xl font-semibold mb-4">Purchase or request the Acurist.AI MCI Screen</h2>
             <p className="text-xl text-black mb-6">
-              A focused screening entry point for patients, caregivers, and adult children concerned that vascular health may be affecting memory.
+              Step 1 helped the user notice a possible pattern. Step 2 benchmarks cognition so the next conversation — clinician, caregiver, research, or wellness — starts from a clearer baseline.
             </p>
             <ul className="list-disc pl-6 space-y-2">
               {deliverables.map((item) => <li key={item}>{item}</li>)}

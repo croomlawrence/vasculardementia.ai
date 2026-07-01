@@ -7,7 +7,7 @@ export default function ClinicalTrialMatchingPage() {
         <div className="section-label mb-3">JOURNEY B — CONSENTED TRIAL MATCHING</div>
         <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">See if current vascular cognitive studies may fit</h1>
         <p className="text-2xl text-black max-w-4xl mx-auto">
-          Your Acurist.AI benchmark may help organize whether you should ask about clinical research investigating next-generation vascular cognitive impairment approaches.
+          After the Acurist.AI benchmark, users who want research options can opt in to VascuMind evaluating whether clinical studies investigating vascular cognitive impairment may be relevant.
         </p>
       </section>
 

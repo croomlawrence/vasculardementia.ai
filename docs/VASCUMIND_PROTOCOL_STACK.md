@@ -5,10 +5,10 @@
 VascuMind should be framed as **The VascuMind Protocol**, not a marketplace of random supplements.
 
 ```text
-Hachinski educational screen
-→ Acurist-sourced MCI Screen benchmarking
-→ Vascular Cognitive Risk Profile
-→ clinician discussion / clinical-trial matching / compliant wellness stack
+Hachinski educational screen (free subjective pattern recognition)
+→ Acurist.AI MCI Screen benchmarking (paid/low-ticket objective baseline)
+→ Post-screen fork
+→ DTC Cerebrovascular Support Stack / consented clinical-trial matching
 ```
 
 ## Activated Website Assets
@@ -23,6 +23,14 @@ Hachinski educational screen
 | CRO partner deck | `/cro-partner-deck` | Web pitch deck for CRO/sponsor conversation |
 
 ## Two User Journeys
+
+### Conversion Thesis
+
+The Protocol intentionally starts with a free subjective Hachinski pattern check because it bypasses denial and creates a natural bridge to the paid Acurist.AI benchmark. Public copy should follow:
+
+1. **Free:** “Take the Hachinski Assessment. Notice whether memory slips match vascular-pattern concerns.”
+2. **Paid/low-ticket:** “Hachinski shows a pattern? Let’s benchmark it with the Acurist.AI MCI Screen.”
+3. **Fork:** “After the benchmark, choose caregiver wellness support or consented clinical-trial matching.”
 
 ### Journey A — DTC caregiver
 

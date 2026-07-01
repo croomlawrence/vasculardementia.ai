@@ -304,10 +304,11 @@ export default function HachinskiPage() {
       </div>
 
       <div className="text-center mb-16 border-4 border-black rounded-3xl p-8">
-        <h2 className="text-3xl font-semibold mb-3">Pair this pattern score with a memory screen</h2>
-        <p className="text-black mb-6">Educational results only. No diagnosis. Takes a few minutes and helps prepare for a clinician conversation.</p>
+        <div className="section-label mb-3">STEP 2 · BENCHMARK IT</div>
+        <h2 className="text-3xl font-semibold mb-3">Hachinski shows a pattern? Let’s benchmark it.</h2>
+        <p className="text-black mb-6">Purchase or request the Acurist.AI MCI Screen to get a cognitive baseline for clinician discussion. Educational only; not a diagnosis.</p>
         <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold focus:outline focus:outline-4 focus:outline-black">
-          Start Memory Screen
+          Benchmark with Acurist.AI
         </a>
       </div>
 
@@ -338,7 +339,7 @@ export default function HachinskiPage() {
 
       <div className="text-center">
         <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold focus:outline focus:outline-4 focus:outline-black">
-          Start Memory Screen
+          Benchmark with Acurist.AI
         </a>
       </div>
     </div>

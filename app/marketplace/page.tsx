@@ -38,12 +38,12 @@ export default function Marketplace() {
     <main>
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="text-center mb-16">
-          <div className="section-label mb-3">REVENUE STREAM 3 · DISCLOSED AFFILIATE SALES</div>
+          <div className="section-label mb-3">JOURNEY A · DTC PROTOCOL STACK</div>
           <h1 className="text-5xl font-semibold tracking-tight mb-4">
-            Cerebrovascular wellness marketplace
+            VascuMind Cerebrovascular Support Stack
           </h1>
           <p className="text-xl text-black max-w-3xl mx-auto">
-            VascuMind can monetize product discovery like a consumer health brand — but only after screening context, with clear affiliate disclosure and no disease-treatment claims.
+            This is the DTC branch of the VascuMind Protocol: after Hachinski pattern recognition and Acurist.AI benchmarking, families can review a compliant wellness-support bundle with affiliate disclosure and COA transparency.
           </p>
           <div className="mt-6 max-w-3xl mx-auto text-left">
             <SupplementDisclaimer compact />
@@ -53,6 +53,7 @@ export default function Marketplace() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mt-5">
             <Link href="/memory-screen" className="btn-green inline-block px-7 py-3 rounded-full font-semibold">Benchmark First</Link>
+            <Link href="/protocol" className="text-black underline">See full Protocol</Link>
             <Link href="/transparency" className="text-black underline">View transparency / COA tracker</Link>
             <Link href="/affiliate-disclosure" className="text-black underline">Read affiliate disclosure</Link>
           </div>

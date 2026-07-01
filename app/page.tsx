@@ -3,32 +3,32 @@ import { memoryScreenPrice } from "@/lib/business";
 
 const revenuePillars = [
   {
-    label: "1 · Cognitive test sales",
-    title: "Start with a paid cognitive baseline",
-    copy: "Families get a simple, private way to benchmark memory concerns before the next clinician conversation.",
+    label: "1 · Paid benchmark",
+    title: "Acurist.AI MCI Screen",
+    copy: "The low-ticket conversion event: move from subjective concern to an objective cognitive baseline for clinician discussion.",
     href: "/memory-screen",
-    cta: "Start memory screen",
+    cta: "Benchmark with Acurist.AI",
   },
   {
-    label: "2 · CRO licensing",
-    title: "License the vascular cognition funnel",
-    copy: "CROs and sponsors can use VascuMind for trial-readiness, recruitment, and repeated cognitive monitoring workflows.",
-    href: "/cro-licensing",
-    cta: "View CRO licensing",
-  },
-  {
-    label: "3 · Affiliate wellness sales",
-    title: "Offer compliant vascular wellness support",
-    copy: "After screening, families can review disclosed supplement links for circulation and brain wellness — never disease treatment claims.",
+    label: "2 · DTC wellness",
+    title: "Cerebrovascular Support Stack",
+    copy: "After screening, offer a compliant bundle around citicoline, high-EPA omega-3, and MCT oil with COA transparency.",
     href: "/marketplace",
-    cta: "Explore marketplace",
+    cta: "View protocol stack",
+  },
+  {
+    label: "3 · CRO / trials",
+    title: "Consented Trial Matching",
+    copy: "Route qualified, consented users into trial-readiness follow-up and CRO licensing conversations.",
+    href: "/clinical-trial-matching",
+    cta: "Check trial matching",
   },
 ];
 
 const journeySteps = [
-  "Answer a few plain-language vascular and memory questions.",
-  "Complete an Acurist-sourced MCI Screen baseline when appropriate.",
-  "Use results to prepare for a clinician conversation, research pathway, or compliant wellness plan.",
+  "Free: take the Hachinski Assessment to notice whether memory slips match vascular-pattern concerns.",
+  "Paid/low-ticket: benchmark the pattern with the Acurist.AI MCI Screen and Memory Performance Index-style baseline.",
+  "Fork: choose the DTC Cerebrovascular Support Stack or consented clinical-trial matching pathway.",
 ];
 
 export default function VascuMindHome() {
@@ -38,23 +38,23 @@ export default function VascuMindHome() {
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
           <div>
             <div className="inline-block bg-white text-black rounded-full px-5 py-2 text-sm font-semibold mb-6">
-              The consumer front door for vascular cognitive health
+              The VascuMind Protocol
             </div>
             <h1 className="text-5xl md:text-7xl font-semibold tracking-tighter mb-6 text-white leading-none">
-              Build the consumer front door for vascular dementia — starting with screening.
+              Free Hachinski pattern check → Acurist.AI benchmark → two revenue paths.
             </h1>
             <p className="text-2xl text-white mb-6 max-w-3xl">
-              VascuMind turns vascular cognitive concern into a clear commercial journey: screen, understand, track, and then route to research or compliant wellness support.
+              VascuMind turns vascular cognitive concern into a protocolized funnel: notice the pattern, benchmark it objectively, then route to a compliant support stack or consented clinical-trial matching.
             </p>
             <p className="text-lg text-white mb-10 max-w-3xl">
               Educational only. Not a diagnosis, treatment plan, or emergency service. Designed to help families ask better questions and help CROs find better-fit cognitive trial participants.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/memory-screen" className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold focus:outline focus:outline-4 focus:outline-white text-center">
-                Start Memory Screen — {memoryScreenPrice}
+              <Link href="/protocol" className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold focus:outline focus:outline-4 focus:outline-white text-center">
+                See the VascuMind Protocol
               </Link>
-              <Link href="/cro-licensing" className="inline-block bg-white text-black px-10 py-4 rounded-full text-xl font-semibold hover:bg-black hover:text-white transition border border-white focus:outline focus:outline-4 focus:outline-white text-center">
-                License for Trials
+              <Link href="/hachinski" className="inline-block bg-white text-black px-10 py-4 rounded-full text-xl font-semibold hover:bg-black hover:text-white transition border border-white focus:outline focus:outline-4 focus:outline-white text-center">
+                Take Free Assessment
               </Link>
             </div>
           </div>
@@ -87,9 +87,9 @@ export default function VascuMindHome() {
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="text-center mb-16">
           <div className="section-label mb-3">CONSUMER JOURNEY</div>
-          <h2 className="text-5xl font-semibold tracking-tight mb-4">A simple path from concern to action.</h2>
+          <h2 className="text-5xl font-semibold tracking-tight mb-4">The conversion journey: subjective first, objective second.</h2>
           <p className="text-xl text-black max-w-3xl mx-auto">
-            Modern consumer health brands won by making stigmatized health concerns easy to start. VascuMind does the same for families worried that vascular health may be affecting memory — with stricter medical and supplement compliance.
+            People will often answer a free pattern quiz before they commit to a paid cognitive benchmark. The Protocol uses that natural sequence to create trust, then converts the right users into screening, DTC wellness support, or consented research matching.
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 mb-12">
@@ -117,12 +117,12 @@ export default function VascuMindHome() {
       <section className="bg-black text-white py-20">
         <div className="max-w-5xl mx-auto px-6 text-center">
           <div className="inline-block bg-white text-black rounded-full px-5 py-2 text-sm font-semibold mb-6">NEXT BEST STEP</div>
-          <h2 className="text-5xl font-semibold tracking-tight mb-6">Turn memory concern into a measurable baseline.</h2>
+          <h2 className="text-5xl font-semibold tracking-tight mb-6">Start the Protocol with a free Hachinski pattern check.</h2>
           <p className="text-xl text-white max-w-3xl mx-auto mb-8">
-            Start with the revenue event that also creates the clinical and commercial routing layer: an educational cognitive screen connected to Acurist.AI.
+            If the pattern resonates, benchmark it with the Acurist.AI MCI Screen ({memoryScreenPrice}), then choose the support-stack or trial-matching path.
           </p>
-          <Link href="/memory-screen" className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold focus:outline focus:outline-4 focus:outline-white">
-            Start Memory Screen
+          <Link href="/hachinski" className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold focus:outline focus:outline-4 focus:outline-white">
+            Take the Free Assessment
           </Link>
         </div>
       </section>

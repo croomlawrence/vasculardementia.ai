@@ -44,10 +44,10 @@ export default function RootLayout({
               </div>
             </div>
             <Link 
-              href="/memory-screen"
+              href="/protocol"
               className="bg-black text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-white hover:text-black transition border border-black"
             >
-              Start Memory Screen
+              Start Protocol
             </Link>
           </div>
         </nav>

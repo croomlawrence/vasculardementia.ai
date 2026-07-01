@@ -10,7 +10,7 @@ export default function MemoryScreenThankYouPage() {
           If your screening results show changes you want to understand, use them to guide a conversation with a qualified healthcare provider — then choose whether you want caregiver wellness support or clinical-trial matching.
         </p>
         <p className="text-xl text-black mb-8">
-          This is not a diagnosis, treatment plan, or emergency service. If symptoms are sudden or severe, call emergency services immediately.
+          This is not a diagnosis, care plan, or emergency service. If symptoms are sudden or severe, call emergency services immediately.
         </p>
       </section>
 

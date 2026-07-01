@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const slides = [
-  ["Problem", "CROs and sponsors need vascular-specific cognitive candidates, but recruitment often mixes Alzheimer’s, MCI, vascular impairment, and nonspecific memory complaints."],
+  ["Problem", "CROs and sponsors need vascular-specific cognitive candidates, but recruitment often mixes MCI, vascular-pattern impairment, non-vascular causes, and nonspecific memory complaints."],
   ["VascuMind pipeline", "A focused funnel educates users, routes them through screening and benchmarking, and captures consented trial-interest leads with vascular context."],
   ["Recruitment value", "A pre-screened, vascular-specific pipeline can reduce broad recruitment, site burden, and low-fit screening volume."],
   ["Data posture", "Share only consented data. Use de-identification or limited datasets where appropriate. Do not transfer direct identifiers without explicit consent and privacy review."],

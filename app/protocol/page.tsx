@@ -21,7 +21,7 @@ const steps = [
   },
   {
     title: "4. Support or match",
-    body: "DTC users can explore the Cerebrovascular Support stack. Trial-interested users can opt into matching for studies investigating next-generation vascular dementia approaches.",
+    body: "DTC users can explore the Cerebrovascular Support stack. Trial-interested users can opt into matching for studies investigating vascular cognitive impairment approaches.",
     href: "/marketplace",
     cta: "View Support Stack",
   },
@@ -55,7 +55,7 @@ export default function ProtocolPage() {
             <li>Take the free Hachinski Assessment.</li>
             <li>If the pattern fits, benchmark with the Acurist.AI MCI Screen.</li>
             <li>If changes are worth discussing, bring results to a qualified healthcare provider.</li>
-            <li>Consider the VascuMind Cerebrovascular Support stack as wellness support, not disease treatment.</li>
+            <li>Consider the VascuMind Cerebrovascular Support stack as wellness support, not disease-directed care.</li>
           </ol>
         </div>
         <div className="border-4 border-black rounded-3xl p-8">
@@ -72,7 +72,7 @@ export default function ProtocolPage() {
       <section className="border border-black rounded-3xl p-8">
         <h2 className="text-3xl font-semibold mb-4">Safety boundaries</h2>
         <p className="text-xl text-black">
-          VascuMind does not diagnose dementia, stroke, MCI, or any disease. Sudden weakness, facial drooping, speech difficulty, confusion, severe dizziness, or vision loss requires emergency medical attention.
+          VascuMind does not diagnose cognitive disease, stroke, MCI, or any disease. Sudden weakness, facial drooping, speech difficulty, confusion, severe dizziness, or vision loss requires emergency medical attention.
         </p>
       </section>
     </main>

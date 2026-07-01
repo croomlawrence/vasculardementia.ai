@@ -1,3 +1,4 @@
+import { AcuristScreenDisclaimer, SupplementDisclaimer } from '@/app/components/ComplianceNotices';
 import CompactMCIScreenCTA from '@/components/CompactMCIScreenCTA';
 import TrackedLink from '@/components/TrackedLink';
 import { affiliateLinks } from '@/lib/business';
@@ -12,11 +13,10 @@ export default function OrganicBeetrootPowderPage() {
       <div className="green-divider w-16 mb-4"></div>
       <p className="text-xl text-black mb-8">Natural nitric oxide support • Circulation</p>
 
-      <div className="border-4 border-black rounded-2xl p-6 mb-12">
-        <p className="font-semibold text-xl mb-2">Supplement safety notice</p>
-        <p className="text-black">
-          These products are dietary supplements and are not intended to diagnose, treat, cure, or prevent vascular dementia, Alzheimer’s disease, MCI, stroke, or any other disease. Always consult your healthcare professional before use, especially if you take medications or have a medical condition. VascuMind may earn a commission from qualifying purchases.
-        </p>
+      <div className="space-y-6 mb-12">
+        <AcuristScreenDisclaimer />
+        <SupplementDisclaimer />
+        <p className="text-black">Always consult your healthcare professional before use, especially if you take medications or have a medical condition. VascuMind may earn a commission from qualifying purchases.</p>
       </div>
 
 
@@ -26,7 +26,7 @@ export default function OrganicBeetrootPowderPage() {
           Protocol-ready products should have a current Certificate of Analysis covering dietary nitrate content, microbial testing, heavy metals, and batch purity documentation. VascuMind should request manufacturer COAs before promoting this as part of a bundled stack.
         </p>
         <p className="text-black">
-          Evidence context: <a href="https://pubmed.ncbi.nlm.nih.gov/35268027/" className="underline">review a supporting clinical-science source for Beetroot nitrate</a>. Evidence varies by population, dose, and outcome and does not make this product a disease treatment.
+          Evidence context: <a href="https://pubmed.ncbi.nlm.nih.gov/35268027/" className="underline">review a supporting clinical-science source for Beetroot nitrate</a>. Evidence varies by population, dose, and outcome and does not establish a disease-related benefit for this product.
         </p>
       </div>
 
@@ -46,13 +46,13 @@ export default function OrganicBeetrootPowderPage() {
 
       <div className="prose prose-lg max-w-none text-black">
         <h2>Beetroot, Nitric Oxide, and Circulation</h2>
-        <p>Beetroot contains dietary nitrates that the body can convert into nitric oxide, a molecule involved in blood-vessel function and circulation. This is wellness support, not treatment for dementia, stroke, or vascular disease.</p>
+        <p>Beetroot contains dietary nitrates that the body can convert into nitric oxide, a molecule involved in blood-vessel function and circulation. This is wellness support, not a disease-related claim for stroke, vascular disease, or cognitive conditions.</p>
 
         <h2>Evidence Context</h2>
         <p>Webb et al. and later studies evaluated beetroot or dietary nitrate in blood-pressure and endothelial-function contexts. Effects vary by person, dose, diet, and medication use; consult a healthcare professional if you have low blood pressure, kidney disease, or take nitrate-related medications.</p>
 
         <h2>What this does and does not mean</h2>
-        <p>Research can inform wellness decisions, but it does not make this product a disease treatment. Use supplements only as part of a broader clinician-guided plan that may include blood pressure control, exercise, nutrition, sleep, medication review, and formal cognitive evaluation.</p>
+        <p>Research can inform wellness decisions, but it does not establish disease-related benefits for this product. Discuss supplement use with a qualified healthcare professional as part of a broader plan for blood pressure, exercise, nutrition, sleep, medication review, and formal cognitive evaluation.</p>
       </div>
 
       <div className="mt-16">

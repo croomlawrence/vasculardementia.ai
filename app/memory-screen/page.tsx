@@ -1,3 +1,4 @@
+import { AcuristScreenDisclaimer } from '@/app/components/ComplianceNotices';
 import LeadForm from "@/components/LeadForm";
 import TrackedLink from "@/components/TrackedLink";
 import { memoryScreenCheckoutUrl, memoryScreenPrice } from "@/lib/business";
@@ -8,8 +9,11 @@ export default function MemoryScreenPage() {
       <section className="text-center mb-16">
         <div className="section-label mb-3">THE VASCUMIND PROTOCOL</div>
         <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Start with the Acurist-sourced MCI Screen</h1>
+        <div className="max-w-4xl mx-auto mb-6 text-left">
+          <AcuristScreenDisclaimer />
+        </div>
         <p className="text-2xl text-black max-w-4xl mx-auto mb-6">
-          The MCI Screen is sourced from Acurist.AI. This test is a cognitive screening, benchmarking and tracking tool, not a diagnostic medical device. Results should be discussed with a qualified healthcare provider.
+          The MCI Screen is sourced from Acurist.AI and is designed to support an informed clinician conversation.
         </p>
         <p className="text-xl text-black max-w-3xl mx-auto">
           Use VascuMind to organize a baseline, then consider clinician discussion, trial matching, or compliant wellness support.
@@ -74,9 +78,9 @@ export default function MemoryScreenPage() {
         <div className="border border-black rounded-3xl p-8">
           <h2 className="text-3xl font-semibold mb-4">What it does not do</h2>
           <ul className="list-disc pl-6 space-y-2">
-            <li>It does not diagnose Alzheimer’s disease, vascular dementia, MCI, stroke, or any disease.</li>
+            <li>It does not diagnose Alzheimer’s disease, vascular cognitive impairment, MCI, stroke, or any disease.</li>
             <li>It does not replace urgent care or a clinician evaluation.</li>
-            <li>It should not be used to change medications or treatment plans without medical advice.</li>
+            <li>It should not be used to change medications or care plans without medical advice.</li>
           </ul>
         </div>
       </section>

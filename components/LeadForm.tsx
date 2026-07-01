@@ -95,7 +95,7 @@ export default function LeadForm({ leadType, title, submitLabel, includeTrialFie
       )}
       <label className="flex items-start gap-3">
         <input name="consent" type="checkbox" required className="mt-2 h-5 w-5" />
-        <span>I understand this website is educational only and does not provide medical advice, diagnosis, or treatment. I consent to being contacted about this request.</span>
+        <span>I understand this website is educational only and does not provide medical advice or clinical guidance. I consent to being contacted about this request.</span>
       </label>
       <button type="submit" disabled={status === "submitting"} className="bg-black text-white px-8 py-4 rounded-full text-lg font-semibold border border-black hover:bg-white hover:text-black disabled:opacity-70">
         {status === "submitting" ? "Submitting..." : submitLabel}

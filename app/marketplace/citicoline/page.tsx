@@ -1,3 +1,4 @@
+import { AcuristScreenDisclaimer, SupplementDisclaimer } from '@/app/components/ComplianceNotices';
 import CompactMCIScreenCTA from '@/components/CompactMCIScreenCTA';
 import TrackedLink from '@/components/TrackedLink';
 import { affiliateLinks, clinicalEvidenceLinks } from '@/lib/business';
@@ -12,11 +13,10 @@ export default function CiticolinePage() {
       <div className="green-divider w-16 mb-4"></div>
       <p className="text-xl text-black mb-8">Brain energy and cerebrovascular wellness support</p>
 
-      <div className="border-4 border-black rounded-2xl p-6 mb-12">
-        <p className="font-semibold text-xl mb-2">Supplement safety notice</p>
-        <p className="text-black">
-          Citicoline is a dietary supplement ingredient in the United States and is not intended to diagnose, treat, cure, or prevent vascular dementia, Alzheimer’s disease, MCI, stroke, or any other disease. Always consult your healthcare professional before use.
-        </p>
+      <div className="space-y-6 mb-12">
+        <AcuristScreenDisclaimer />
+        <SupplementDisclaimer />
+        <p className="text-black">Always consult your healthcare professional before use, especially if you take medications or have a medical condition. VascuMind may earn a commission from qualifying purchases.</p>
       </div>
 
       <div className="border border-black rounded-2xl p-6 mb-12">
@@ -25,7 +25,7 @@ export default function CiticolinePage() {
           Protocol-ready citicoline should have batch COAs covering identity, potency, contaminants, and manufacturer quality documentation. Prefer branded or clinically characterized citicoline sources when commercially available.
         </p>
         <p className="text-black">
-          Evidence context: <a href={clinicalEvidenceLinks.citicolineMci} className="underline">review citicoline evidence in MCI / vascular-origin cognitive impairment</a>. Evidence informs wellness positioning but does not make this product a disease treatment.
+          Evidence context: <a href={clinicalEvidenceLinks.citicolineMci} className="underline">review citicoline evidence in MCI / vascular-origin cognitive impairment</a>. Evidence informs wellness positioning but does not establish a disease-related benefit for this product.
         </p>
       </div>
 
@@ -38,7 +38,7 @@ export default function CiticolinePage() {
 
       <div className="prose prose-lg max-w-none text-black">
         <h2>Citicoline and Brain Energy</h2>
-        <p>Citicoline is studied in cognitive-aging and vascular cognitive impairment contexts. VascuMind frames it as support for healthy brain energy and cognitive wellness, not as a therapy for dementia or stroke.</p>
+        <p>Citicoline is studied in cognitive-aging and vascular cognitive impairment contexts. VascuMind frames it as support for healthy brain energy and cognitive wellness, not as a disease-directed therapy.</p>
         <h2>Protocol role</h2>
         <p>Citicoline is the “brain energy” component of the Cerebrovascular Support stack and should be considered only after screening/benchmarking and clinician discussion.</p>
       </div>

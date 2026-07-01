@@ -13,7 +13,7 @@ export default function TransparencyPage() {
         <div className="section-label mb-3">TRANSPARENCY / COA TRACKER</div>
         <h1 className="text-5xl font-semibold tracking-tight mb-6">Certificates of Analysis and supplier documentation</h1>
         <p className="text-2xl text-black">
-          This page is the public tracker for batch-level Certificates of Analysis. Products should not be treated as protocol-ready until manufacturer documentation is received and reviewed.
+          This page is the public tracker for batch-level Certificates of Analysis. Products are not protocol-ready until manufacturer documentation is received and reviewed.
         </p>
       </section>
 
@@ -33,7 +33,7 @@ export default function TransparencyPage() {
       <section className="border border-black rounded-3xl p-8">
         <h2 className="text-3xl font-semibold mb-4">Compliance boundary</h2>
         <p className="text-xl text-black">
-          COAs support identity, purity, and quality documentation. They do not prove that a supplement diagnoses, treats, cures, or prevents any disease.
+          COAs support identity, purity, and quality documentation. They are quality documents only; the FDA-required supplement disclaimer appears on every page.
         </p>
       </section>
     </main>

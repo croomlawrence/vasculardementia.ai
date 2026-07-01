@@ -21,7 +21,7 @@ const hachinskiItems: HachinskiItem[] = [
     points: 2,
     category: "Symptom onset",
     question: "Did your memory or thinking problems start very suddenly — almost overnight or within just a few days?",
-    explanation: "Sudden changes can occur after vascular events such as strokes or mini-strokes, while Alzheimer’s disease more often begins gradually.",
+    explanation: "Sudden changes can occur after vascular events such as strokes or mini-strokes, while non-vascular cognitive conditions more often begin gradually.",
     emergencyNote: true,
   },
   {
@@ -43,28 +43,28 @@ const hachinskiItems: HachinskiItem[] = [
     points: 1,
     category: "Daily pattern",
     question: "Do you or your loved one experience periods of confusion that are worse at night?",
-    explanation: "Nighttime confusion can have many causes, including sleep disruption, medicines, infection, or dementia. New or worsening symptoms should be discussed with a clinician.",
+    explanation: "Nighttime confusion can have many causes, including sleep disruption, medicines, infection, or cognitive disorders. New or worsening symptoms should be discussed with a clinician.",
   },
   {
     id: 5,
     points: 1,
     category: "Behavior and mood",
     question: "Has your personality stayed relatively the same, even as memory has declined?",
-    explanation: "In vascular dementia, personality may be better preserved than memory or executive function, although every person is different.",
+    explanation: "In vascular-pattern cognitive impairment, personality may be better preserved than memory or executive function, although every person is different.",
   },
   {
     id: 6,
     points: 1,
     category: "Behavior and mood",
     question: "Have you experienced significant depression along with the memory changes?",
-    explanation: "Depression is common in older adults and may occur alongside vascular cognitive impairment. It is also treatable and worth raising with a clinician.",
+    explanation: "Depression is common in older adults and may occur alongside vascular cognitive impairment. It is also important to raise with a clinician.",
   },
   {
     id: 7,
     points: 1,
     category: "Physical symptoms",
     question: "Do you have frequent physical complaints — such as headaches, dizziness, fatigue, or unexplained discomfort — along with memory changes?",
-    explanation: "Physical complaints can accompany vascular brain changes, but they can also reflect many non-dementia causes.",
+    explanation: "Physical complaints can accompany vascular brain changes, but they can also reflect many non-cognitive causes.",
   },
   {
     id: 8,
@@ -116,8 +116,8 @@ const hachinskiItems: HachinskiItem[] = [
 
 const faqs = [
   {
-    question: "What is vascular dementia and how is it different from Alzheimer’s?",
-    answer: "Vascular dementia is related to reduced blood flow or blood-vessel injury in the brain. Alzheimer’s disease is associated with abnormal amyloid and tau proteins. Many people have mixed causes, so this tool should be paired with clinical evaluation, cognitive testing, and sometimes brain imaging.",
+    question: "Is this not Alzheimer’s?",
+    answer: "No. This tool is not Alzheimer’s diagnostic testing. It looks for patterns that may suggest a vascular contribution, while many people have mixed or non-vascular causes. Pair results with clinical evaluation, cognitive testing, and sometimes brain imaging.",
   },
   {
     question: "Is the Hachinski score still used today?",
@@ -133,7 +133,7 @@ const faqs = [
   },
   {
     question: "Are there limitations to the Hachinski score?",
-    answer: "Yes. It does not diagnose Alzheimer’s disease, vascular dementia, or mixed dementia. It is a pattern-recognition tool that can help prepare for a medical conversation.",
+    answer: "Yes. It does not diagnose Alzheimer’s disease, vascular cognitive impairment, or any mixed cognitive condition. It is a pattern-recognition tool that can help prepare for a medical conversation.",
   },
 ];
 
@@ -147,7 +147,7 @@ function getInterpretation(score: number, answeredCount: number) {
   if (score <= 4) {
     return {
       label: "Fewer vascular-pattern features reported",
-      description: "Lower scores report fewer classic vascular-pattern features. Alzheimer’s disease, vascular cognitive impairment, mixed dementia, medication effects, sleep problems, depression, infection, and other causes still require professional evaluation.",
+      description: "Lower scores report fewer classic vascular-pattern features. non-vascular cognitive conditions, vascular cognitive impairment, mixed causes, medication effects, sleep problems, depression, infection, and other factors still require professional evaluation.",
     };
   }
   if (score <= 6) {
@@ -197,9 +197,9 @@ export default function HachinskiPage() {
       </p>
 
       <div className="border-4 border-black p-6 mb-8 rounded-2xl bg-white">
-        <p className="font-semibold text-xl mb-2">Important: This tool cannot diagnose dementia</p>
+        <p className="font-semibold text-xl mb-2">Important: This tool cannot diagnose cognitive disease</p>
         <ul className="list-disc pl-6 text-black space-y-2">
-          <li>This is an educational self-reflection tool only — not medical advice, diagnosis, or treatment.</li>
+          <li>This is an educational self-reflection tool only — not medical advice, diagnosis, or clinical guidance.</li>
           <li>Several items require a clinician’s physical examination. Choose <strong>Not sure</strong> when you do not know.</li>
           <li>Share results with a qualified healthcare professional before making health decisions.</li>
         </ul>

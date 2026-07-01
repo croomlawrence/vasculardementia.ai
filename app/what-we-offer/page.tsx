@@ -51,7 +51,7 @@ export default function WhatWeOfferPage() {
         <div className="mb-8">
           <div className="section-label mb-2">HIGH-POTENTIAL OFFERING</div>
           <h2 className="text-4xl font-semibold tracking-tight mb-4">
-            Emerging Vascular Dementia Therapies Are Being Studied Now — See If You Qualify
+            Emerging Vascular Cognitive Research Is Recruiting Now — See If You Qualify
           </h2>
           <p className="text-xl text-black max-w-3xl">
             Research is moving fast. Connect with trials investigating vascular cognitive decline.
@@ -64,7 +64,7 @@ export default function WhatWeOfferPage() {
             <p className="text-black">Access information on active studies focused on vascular protection, inflammation, and new therapeutic approaches.</p>
           </div>
           <div>
-            <h3 className="text-2xl font-semibold mb-3">Find Your Place in Vascular Dementia Research</h3>
+            <h3 className="text-2xl font-semibold mb-3">Find Your Place in Vascular Cognitive Research</h3>
             <p className="text-black">Many families want to contribute to advancing care. We help connect you with relevant opportunities.</p>
           </div>
         </div>
@@ -84,7 +84,7 @@ export default function WhatWeOfferPage() {
             When Someone You Love Starts Slipping, Start Here
           </h2>
           <p className="text-xl text-black max-w-3xl">
-            A trusted place for families facing vascular memory loss.
+            A trusted place for families noticing memory and circulation concerns.
           </p>
         </div>
 
@@ -134,7 +134,7 @@ export default function WhatWeOfferPage() {
           Your Memory Has a Circulation Problem You Can&apos;t See
         </h2>
         <p className="text-xl max-w-2xl mx-auto mb-8">
-          Memory changes can have vascular, Alzheimer’s, mixed, medication-related, mood-related, sleep-related, and other causes. Vascular risk is one important place to look.
+          Memory changes can have vascular, non-vascular, medication-related, mood-related, sleep-related, and other causes. Vascular risk is one important place to look.
         </p>
         <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
           Start Memory Screen

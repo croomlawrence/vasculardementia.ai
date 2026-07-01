@@ -11,7 +11,7 @@ export default function ClinicalEvidencePage() {
       <div className="green-divider w-20 mb-8"></div>
       
       <p className="text-xl text-black mb-12">
-        We summarize research that may be relevant to vascular and cognitive wellness. This evidence does not mean any supplement diagnoses, treats, cures, or prevents disease.
+        We summarize research that may be relevant to vascular and cognitive wellness. This evidence is educational context only; the FDA-required supplement disclaimer appears on every page.
       </p>
 
       {/* How We Select Evidence */}
@@ -42,7 +42,7 @@ export default function ClinicalEvidencePage() {
         <div>
           <h3 className="text-2xl font-semibold mb-3">Beetroot & Nitric Oxide</h3>
           <p className="text-black">
-            Research has evaluated dietary nitrates from beetroot for nitric oxide bioavailability, blood pressure, and endothelial-function markers. These are wellness-related markers, not dementia treatment claims.
+            Research has evaluated dietary nitrates from beetroot for nitric oxide bioavailability, blood pressure, and endothelial-function markers. These are wellness-related markers, not disease-related claims.
           </p>
         </div>
 

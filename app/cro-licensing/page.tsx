@@ -13,7 +13,7 @@ export default function CROLicensingPage() {
     <main className="max-w-6xl mx-auto px-6 py-16">
       <section className="text-center mb-16">
         <div className="section-label mb-3">CRO LICENSING</div>
-        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Cognitive Screening Infrastructure for Vascular Dementia and MCI Trials</h1>
+        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Cognitive Screening Infrastructure for Vascular Cognitive Impairment and MCI Trials</h1>
         <p className="text-2xl text-black max-w-4xl mx-auto">
           License a more sensitive cognitive screening pathway for trial recruitment, baseline characterization, and longitudinal monitoring in vascular cognitive impairment and related programs.
         </p>
@@ -22,8 +22,8 @@ export default function CROLicensingPage() {
       <section className="border-4 border-black rounded-3xl p-8 md:p-12 mb-16">
         <h2 className="text-4xl font-semibold mb-4">Why CROs and sponsors need this</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="border border-black rounded-2xl p-6"><strong>Earlier signal:</strong><br />Trials need tools that can identify subtle cognitive impairment before late-stage dementia.</div>
-          <div className="border border-black rounded-2xl p-6"><strong>Better fit:</strong><br />Vascular dementia and mixed cognitive impairment require vascular-risk context, not generic memory screening alone.</div>
+          <div className="border border-black rounded-2xl p-6"><strong>Earlier signal:</strong><br />Trials need tools that can identify subtle cognitive impairment before late-stage cognitive disease.</div>
+          <div className="border border-black rounded-2xl p-6"><strong>Better fit:</strong><br />Vascular-pattern and mixed cognitive impairment require vascular-risk context, not generic memory screening alone.</div>
           <div className="border border-black rounded-2xl p-6"><strong>Operational leverage:</strong><br />A licensed screening workflow can support site qualification, recruitment funnels, and repeat testing.</div>
         </div>
       </section>
@@ -31,7 +31,7 @@ export default function CROLicensingPage() {
       <section className="mb-16">
         <h2 className="text-4xl font-semibold mb-6">Pricing architecture</h2>
         <p className="text-xl mb-6">
-          Benchmark: less accurate MoCA CRO licensing is understood at approximately {croBenchmarks.mocaLicense} plus {croBenchmarks.mocaPerTest}. VascuMind should anchor at parity or premium when paired with stronger cognitive screening science and vascular-dementia fit.
+          Benchmark: less accurate MoCA CRO licensing is understood at approximately {croBenchmarks.mocaLicense} plus {croBenchmarks.mocaPerTest}. VascuMind should anchor at parity or premium when paired with stronger cognitive screening science and vascular-pattern fit.
         </p>
         <div className="grid md:grid-cols-3 gap-6">
           {tiers.map((tier) => (

@@ -7,7 +7,7 @@ export default function VascularDementiaResearchPage() {
         <Link href="/" className="text-black hover:underline">← Back to Vascumind</Link>
       </div>
 
-      <h1 className="text-5xl font-semibold tracking-tight mb-4">Emerging Vascular Dementia Therapies Are Being Studied Now — See If You Qualify</h1>
+      <h1 className="text-5xl font-semibold tracking-tight mb-4">Emerging Vascular Cognitive Research Is Recruiting Now — See If You Qualify</h1>
       
       <div className="green-divider w-24 mb-8"></div>
 
@@ -45,7 +45,7 @@ export default function VascularDementiaResearchPage() {
       {/* Introduction */}
       <div className="prose prose-lg max-w-none mb-12">
         <p>
-          Over the past 30 years, researchers around the world have conducted hundreds of clinical studies focused on vascular dementia — the second most common form of dementia after Alzheimer’s. These studies have helped researchers understand prevention, risk-factor management, and potential approaches related to reduced blood flow in the brain.
+          Over the past 30 years, researchers around the world have conducted hundreds of clinical studies focused on vascular cognitive impairment and related syndromes. These studies have helped researchers understand risk-factor management and approaches related to reduced blood flow in the brain.
         </p>
       </div>
 
@@ -79,19 +79,19 @@ export default function VascularDementiaResearchPage() {
         <div className="space-y-8">
           <div>
             <h3 className="text-xl font-semibold mb-2">1990s – Early Recognition</h3>
-            <p className="text-black">Researchers began distinguishing vascular dementia from Alzheimer’s. Major trials like the <strong>Systolic Hypertension in the Elderly Program (SHEP)</strong> showed that treating high blood pressure significantly reduced the risk of developing vascular dementia.</p>
+            <p className="text-black">Researchers began distinguishing vascular-pattern cognitive impairment from non-vascular causes. Major studies such as the <strong>Systolic Hypertension in the Elderly Program (SHEP)</strong> helped clarify the relationship between blood-pressure management and cognitive outcomes.</p>
           </div>
           <div>
-            <h3 className="text-xl font-semibold mb-2">2000s – Focus on Prevention</h3>
-            <p className="text-black">Large international trials such as <strong>PROGRESS</strong> (blood pressure lowering) and <strong>PRoFESS</strong> (antiplatelet therapy) confirmed that controlling vascular risk factors (blood pressure, cholesterol, diabetes, smoking) is one of the most effective ways to reduce risk.</p>
+            <h3 className="text-xl font-semibold mb-2">2000s – Focus on Risk Reduction</h3>
+            <p className="text-black">Large international trials such as <strong>PROGRESS</strong> (blood pressure lowering) and <strong>PRoFESS</strong> (antiplatelet therapy) confirmed that controlling vascular risk factors (blood pressure, cholesterol, diabetes, smoking) is one of the most effective ways to lower risk markers.</p>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-2">2010s – Lifestyle & Multi-Domain Approaches</h3>
-            <p className="text-black">Landmark studies like the <strong>FINGER trial</strong> (Finland) demonstrated that combining physical activity, healthy diet, cognitive training, and vascular risk management can slow cognitive decline — even in people at high risk.</p>
+            <p className="text-black">Landmark studies like the <strong>FINGER trial</strong> (Finland) demonstrated that combining physical activity, healthy diet, cognitive training, and vascular risk management can support cognitive trajectories — even in people at high risk.</p>
           </div>
           <div>
             <h3 className="text-xl font-semibold mb-2">2020s – New Targets & Precision Medicine</h3>
-            <p className="text-black">Current research is exploring inflammation, small vessel disease, and new medications. There is growing interest in combining vascular protection with emerging therapies originally developed for Alzheimer’s.</p>
+            <p className="text-black">Current research is exploring inflammation, small vessel disease, and new medications. There is growing interest in combining vascular protection with emerging therapies originally developed for non-vascular cognitive conditions.</p>
           </div>
         </div>
       </div>
@@ -101,11 +101,11 @@ export default function VascularDementiaResearchPage() {
         <h2 className="text-3xl font-semibold mb-6">What Researchers Are Studying Now</h2>
         
         <ul className="space-y-4 text-black">
-          <li className="flex gap-3"><span className="text-black font-bold">•</span> <strong>Blood pressure & lifestyle interventions</strong> — Still the most promising area for prevention.</li>
+          <li className="flex gap-3"><span className="text-black font-bold">•</span> <strong>Blood pressure & lifestyle interventions</strong> — Still a major area of risk-factor research.</li>
           <li className="flex gap-3"><span className="text-black font-bold">•</span> <strong>Anti-inflammatory and neuroprotective drugs</strong></li>
           <li className="flex gap-3"><span className="text-black font-bold">•</span> <strong>Exercise and cognitive training combinations</strong></li>
           <li className="flex gap-3"><span className="text-black font-bold">•</span> <strong>Advanced imaging</strong> to better understand small vessel disease</li>
-          <li className="flex gap-3"><span className="text-black font-bold">•</span> <strong>Multi-domain prevention trials</strong> (building on the FINGER model)</li>
+          <li className="flex gap-3"><span className="text-black font-bold">•</span> <strong>Multi-domain risk-reduction trials</strong> (building on the FINGER model)</li>
         </ul>
       </div>
 
@@ -113,7 +113,7 @@ export default function VascularDementiaResearchPage() {
       <div className="bg-white border border-black rounded-3xl p-8 mb-12">
         <h2 className="text-2xl font-semibold mb-4">What This Means for You</h2>
         <p className="text-black mb-4">
-          While there is still no cure for vascular dementia, research supports addressing modifiable vascular risk factors as part of prevention and management. The strongest evidence supports:
+          Research supports discussing modifiable vascular risk factors with a qualified healthcare professional. The strongest evidence supports:
         </p>
         <ul className="list-disc pl-6 text-black space-y-1">
           <li>Controlling blood pressure and other vascular risk factors</li>

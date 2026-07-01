@@ -1,3 +1,4 @@
+import { SupplementDisclaimer } from '@/app/components/ComplianceNotices';
 import Link from 'next/link';
 
 const coreStack = [
@@ -43,8 +44,11 @@ export default function Marketplace() {
           <p className="text-xl text-black max-w-3xl mx-auto">
             A caregiver-friendly wellness stack positioned after Hachinski pattern awareness and Acurist.AI cognitive benchmarking — not before.
           </p>
+          <div className="mt-6 max-w-3xl mx-auto text-left">
+            <SupplementDisclaimer compact />
+          </div>
           <p className="text-base text-black mt-4 max-w-3xl mx-auto">
-            Dietary supplements are not intended to diagnose, treat, cure, or prevent vascular dementia, Alzheimer’s disease, MCI, stroke, or any other disease. VascuMind may earn commissions from qualifying purchases; see our affiliate disclosure.
+            VascuMind may earn commissions from qualifying purchases; see our affiliate disclosure.
           </p>
           <p className="text-base text-black mt-4 max-w-3xl mx-auto">
             COA policy: protocol-ready products should have manufacturer Certificates of Analysis for identity, potency, contaminants, and batch quality. COAs will be posted on the transparency page as supplier documents are received.

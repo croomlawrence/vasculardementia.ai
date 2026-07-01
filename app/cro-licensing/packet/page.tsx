@@ -4,7 +4,7 @@ import { croBenchmarks } from "@/lib/business";
 const sections = [
   {
     title: "Problem",
-    body: "Vascular cognitive impairment, mixed dementia, and MCI trial programs need earlier, more operationally useful cognitive screening than generic late-stage dementia tools can provide."
+    body: "Vascular cognitive impairment, mixed cognitive impairment, and MCI trial programs need earlier, more operationally useful cognitive screening than generic late-stage cognitive tools can provide."
   },
   {
     title: "VascuMind / Acurist fit",

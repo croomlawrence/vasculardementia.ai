@@ -1,3 +1,4 @@
+import { AcuristScreenDisclaimer, SupplementDisclaimer } from '@/app/components/ComplianceNotices';
 import CompactMCIScreenCTA from '@/components/CompactMCIScreenCTA';
 import TrackedLink from '@/components/TrackedLink';
 import { affiliateLinks, clinicalEvidenceLinks } from '@/lib/business';
@@ -12,11 +13,10 @@ export default function MctOilPage() {
       <div className="green-divider w-16 mb-4"></div>
       <p className="text-xl text-black mb-8">Alternative brain-energy support</p>
 
-      <div className="border-4 border-black rounded-2xl p-6 mb-12">
-        <p className="font-semibold text-xl mb-2">Supplement safety notice</p>
-        <p className="text-black">
-          MCT oil is a dietary supplement and is not intended to diagnose, treat, cure, or prevent vascular dementia, Alzheimer’s disease, MCI, stroke, or any other disease. Always consult your healthcare professional before use, especially if you have diabetes, lipid disorders, gastrointestinal issues, or medication questions.
-        </p>
+      <div className="space-y-6 mb-12">
+        <AcuristScreenDisclaimer />
+        <SupplementDisclaimer />
+        <p className="text-black">Always consult your healthcare professional before use, especially if you take medications or have a medical condition. VascuMind may earn a commission from qualifying purchases.</p>
       </div>
 
       <div className="border border-black rounded-2xl p-6 mb-12">
@@ -25,7 +25,7 @@ export default function MctOilPage() {
           Protocol-ready MCT oil should have batch COAs covering fatty-acid composition, identity, rancidity/oxidation markers where applicable, contaminants, and manufacturer quality documentation.
         </p>
         <p className="text-black">
-          Evidence context: <a href={clinicalEvidenceLinks.mctBrainEnergy} className="underline">review MCT / medium-chain fatty-acid evidence related to ketone production and brain energy metabolism</a>. Evidence varies by population and does not make this product a disease treatment.
+          Evidence context: <a href={clinicalEvidenceLinks.mctBrainEnergy} className="underline">review MCT / medium-chain fatty-acid evidence related to ketone production and brain energy metabolism</a>. Evidence varies by population and does not establish a disease-related benefit for this product.
         </p>
       </div>
 
@@ -38,7 +38,7 @@ export default function MctOilPage() {
 
       <div className="prose prose-lg max-w-none text-black">
         <h2>MCT Oil and Alternative Brain Energy</h2>
-        <p>MCT oil can increase circulating ketones, which are studied as an alternative energy substrate for the brain. VascuMind frames MCT oil as wellness support, not as a treatment for cognitive impairment.</p>
+        <p>MCT oil can increase circulating ketones, which are studied as an alternative energy substrate for the brain. VascuMind frames MCT oil as wellness support, not as a disease-directed therapy.</p>
         <h2>Protocol role</h2>
         <p>MCT oil is the “alternative brain energy” component of the Cerebrovascular Support stack and should be considered only after screening/benchmarking and clinician discussion.</p>
       </div>

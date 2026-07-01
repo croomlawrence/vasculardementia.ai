@@ -8,7 +8,7 @@ export default function PrivacyPage() {
         <p>Do not submit emergency symptoms or sensitive medical records through website forms. If symptoms are sudden or severe, call emergency services immediately.</p>
         <p>Information submitted through forms may be used to contact you about memory screening, clinical-trial matching, CRO licensing, or related VascuMind services. CRM routing is intended for business operations and follow-up.</p>
         <p>Clinical-trial matching requires explicit opt-in consent. VascuMind should not share direct identifiers with a CRO, sponsor, or trial partner without additional explicit consent and privacy review.</p>
-        <p>Local/on-prem lead scoring, when used, is for follow-up prioritization and operational triage only. It is not medical advice, diagnosis, or treatment.</p>
+        <p>Local/on-prem lead scoring, when used, is for follow-up prioritization and operational triage only. It is not medical advice or clinical guidance.</p>
         <p>This notice is a plain-language operational placeholder and should be reviewed by counsel before scaled collection of health-related data, paid testing workflows, clinical-trial matching, or partner data-sharing.</p>
       </div>
     </main>

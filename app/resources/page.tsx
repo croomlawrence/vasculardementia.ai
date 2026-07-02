@@ -6,10 +6,34 @@ export const metadata: Metadata = {
   description: 'Explore articles and resources on vascular cognitive health, brain wellness, and memory support.',
 };
 
-// Dummy data for now - this will be replaced with a dynamic system later
 const articles = [
   {
-    title: "A Patient\'s Guide to the Hachinski Score",
+    title: "What is Mild Cognitive Impairment (MCI)? A Complete Patient's Guide",
+    href: "/resources/what-is-mild-cognitive-impairment",
+    description: "A complete guide to understanding MCI, its symptoms, causes, and the importance of early, accurate detection."
+  },
+  {
+    title: "MCI vs. Normal Aging: How to Tell the Difference",
+    href: "/resources/mci-vs-normal-aging",
+    description: "Understand the key differences between Mild Cognitive Impairment (MCI) and the normal memory lapses that come with age."
+  },
+  {
+    title: "What to Do After an MCI Diagnosis: A 5-Step Plan",
+    href: "/resources/what-to-do-after-mci-diagnosis",
+    description: "A diagnosis of MCI can be overwhelming. Here is a 5-step plan to help you take control and move forward with hope."
+  },
+  {
+    title: "How is MCI Diagnosed? A Guide to Cognitive Testing",
+    href: "/resources/how-is-mci-diagnosed",
+    description: "Learn about the process of diagnosing MCI, from clinical interviews to objective tests like the MCI Screen."
+  },
+  {
+    title: "What is Vascular Cognitive Health? A Complete Guide",
+    href: "/resources/what-is-vascular-cognitive-health",
+    description: "A comprehensive guide to understanding vascular cognitive health, its importance, risk factors, and how you can support it."
+  },
+  {
+    title: "A Patient's Guide to the Hachinski Score",
     href: "/resources/guide-to-hachinski-score",
     description: "Demystify this important clinical tool and understand how it helps doctors assess the role of vascular factors in cognitive health."
   },

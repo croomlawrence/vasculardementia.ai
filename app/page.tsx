@@ -15,7 +15,7 @@ const pathwaySteps = [
     title: 'Start with Your Cognitive Pattern',
     copy:
       "Our free, 5-minute quiz, based on a trusted clinical questionnaire, helps organize your symptoms and health history into a clear, personal pattern.",
-    href: '/science#hachinski',
+    href: '/science',
     cta: 'Take the Free Quiz',
   },
   {

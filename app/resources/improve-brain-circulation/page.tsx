@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import EmailCapture from '@/components/EmailCapture';
 
 export const metadata: Metadata = {
   title: "5 Ways to Support Healthy Brain Circulation | VascuMind",
@@ -43,6 +44,9 @@ export default function BrainCirculationPage() {
         <h2>A Journey of a Thousand Miles...</h2>
         <p>Making lifestyle changes can feel daunting, but every small step counts. By focusing on your vascular health, you are taking a powerful, proactive role in your own cognitive wellness journey.</p>
         <p><strong>Learn more about the <Link href="/resources/heart-brain-connection">deep link between your circulation and your mind</Link>.</strong></p>
+
+        <EmailCapture />
+        
       </div>
     </main>
   );

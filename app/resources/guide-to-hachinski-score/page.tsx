@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import EmailCapture from '@/components/EmailCapture';
 
 export const metadata: Metadata = {
   title: "A Patient's Guide to the Hachinski Score | VascuMind",
@@ -45,6 +46,9 @@ export default function HachinskiGuidePage() {
             Take the Free Vascular Pattern Quiz
           </Link>
         </div>
+
+        <EmailCapture />
+        
       </div>
     </main>
   );

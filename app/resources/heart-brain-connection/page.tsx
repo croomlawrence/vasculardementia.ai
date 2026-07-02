@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import EmailCapture from '@/components/EmailCapture';
 
 export const metadata: Metadata = {
   title: "The Heart-Brain Connection | VascuMind",
@@ -44,6 +45,9 @@ export default function HeartBrainConnectionPage() {
             Take the Free Vascular Pattern Quiz
           </Link>
         </div>
+
+        <EmailCapture />
+
       </div>
     </main>
   );

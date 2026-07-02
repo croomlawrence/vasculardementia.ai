@@ -63,6 +63,7 @@ The CRM sheet contains these tabs:
 | `Affiliate Interest` | Future affiliate/marketplace partner leads |
 | `Follow-Ups` | Next actions and reminders |
 | `Email Log` | Future outbound/inbound email event log |
+| `Events` | Durable funnel event ledger for Hachinski, CTA, checkout, form, and affiliate signals |
 
 ## Core registration fields
 

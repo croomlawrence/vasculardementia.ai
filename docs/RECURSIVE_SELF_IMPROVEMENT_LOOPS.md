@@ -41,6 +41,7 @@ Tabs:
 - `Affiliate Interest`
 - `Follow-Ups`
 - `Email Log`
+- `Events`
 
 ## Guardrails
 

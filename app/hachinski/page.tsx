@@ -1,7 +1,9 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import TrackedLink from "@/components/TrackedLink";
+import { trackVascuMindEvent } from "@/lib/trackVascuMindEvent";
 
 interface HachinskiItem {
   id: number;
@@ -165,6 +167,8 @@ function getInterpretation(score: number, answeredCount: number) {
 export default function HachinskiPage() {
   const [openFAQs, setOpenFAQs] = useState<number[]>([]);
   const [answers, setAnswers] = useState<Record<number, Answer>>({});
+  const hachinskiStartedTracked = useRef(false);
+  const hachinskiCompletedTracked = useRef(false);
 
   const answeredCount = Object.keys(answers).length;
   const totalScore = useMemo(
@@ -175,10 +179,34 @@ export default function HachinskiPage() {
   const progressPercent = Math.round((answeredCount / hachinskiItems.length) * 100);
 
   const setAnswer = (id: number, answer: Answer) => {
+    if (!hachinskiStartedTracked.current) {
+      hachinskiStartedTracked.current = true;
+      trackVascuMindEvent("hachinski_started", {
+        eventData: {
+          firstQuestionId: id,
+          answer,
+        },
+      });
+    }
     setAnswers((prev) => ({ ...prev, [id]: answer }));
   };
 
-  const resetAnswers = () => setAnswers({});
+  useEffect(() => {
+    if (answeredCount !== hachinskiItems.length || hachinskiCompletedTracked.current) return;
+    hachinskiCompletedTracked.current = true;
+    trackVascuMindEvent("hachinski_completed", {
+      eventData: {
+        totalScore,
+        answeredCount,
+        riskBand: interpretation.label,
+      },
+    });
+  }, [answeredCount, interpretation.label, totalScore]);
+
+  const resetAnswers = () => {
+    hachinskiCompletedTracked.current = false;
+    setAnswers({});
+  };
 
   const toggleFAQ = (index: number) => {
     setOpenFAQs((prev) => (prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]));
@@ -307,9 +335,9 @@ export default function HachinskiPage() {
         <div className="section-label mb-3">STEP 2 · BENCHMARK IT</div>
         <h2 className="text-3xl font-semibold mb-3">Hachinski shows a pattern? Let’s benchmark it.</h2>
         <p className="text-black mb-6">Purchase or request the MCI Screen to get a cognitive baseline for clinician discussion. Educational only; not a diagnosis.</p>
-        <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold focus:outline focus:outline-4 focus:outline-black">
+        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/hachinski", ctaLabel: "Benchmark with MCI Screen" }} className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold focus:outline focus:outline-4 focus:outline-black">
           Benchmark with MCI Screen
-        </a>
+        </TrackedLink>
       </div>
 
       <div className="mb-16">
@@ -338,9 +366,9 @@ export default function HachinskiPage() {
       </div>
 
       <div className="text-center">
-        <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold focus:outline focus:outline-4 focus:outline-black">
+        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/hachinski", ctaLabel: "Benchmark with MCI Screen" }} className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold focus:outline focus:outline-4 focus:outline-black">
           Benchmark with MCI Screen
-        </a>
+        </TrackedLink>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { track } from "@vercel/analytics";
+import { trackVascuMindEvent } from "@/lib/trackVascuMindEvent";
 
 type LeadType = "memory-screen" | "cro-licensing" | "clinical-trial-match" | "affiliate-interest";
 
@@ -37,7 +37,13 @@ export default function LeadForm({ leadType, title, submitLabel, includeTrialFie
       });
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || "Submission failed");
-      track(eventForLeadType(leadType), { leadType });
+      trackVascuMindEvent(eventForLeadType(leadType), {
+        eventData: {
+          leadType,
+          registrationId: result.registrationId,
+          crmStored: Boolean(result.crm?.stored),
+        },
+      });
       setStatus("success");
       setMessage(result.message || "Received. We will follow up shortly.");
       form.reset();

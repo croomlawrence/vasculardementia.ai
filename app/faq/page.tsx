@@ -30,15 +30,20 @@ const faqs = [
 
 export default function FaqPage() {
   return (
-    <main className="max-w-4xl mx-auto px-6 py-20">
-      <h1 className="text-5xl font-semibold tracking-tight mb-12 text-center">Frequently Asked Questions</h1>
-      <div className="space-y-8">
-        {faqs.map((faq) => (
-          <div key={faq.question}>
-            <h2 className="text-2xl font-semibold mb-3">{faq.question}</h2>
-            <p className="text-lg text-gray-700">{faq.answer}</p>
-          </div>
-        ))}
+    <main className="py-24">
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 gradient-text">Frequently Asked Questions</h1>
+        </div>
+
+        <div className="space-y-10">
+          {faqs.map((faq) => (
+            <div key={faq.question} className="card">
+              <h2 className="text-2xl font-bold mb-3 text-foreground-primary">{faq.question}</h2>
+              <p className="text-lg text-foreground-secondary">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </main>
   );

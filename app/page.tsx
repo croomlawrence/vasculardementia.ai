@@ -46,46 +46,46 @@ const trustSignals = [
 export default function VascuMindHome() {
   return (
     <main>
-      <section className="bg-black py-20">
-        <div className="max-w-6xl mx-auto px-6 text-center">
-          <h1 className="text-5xl md:text-7xl font-semibold tracking-tighter mb-6 text-white leading-tight">
+      <section className="py-24 text-center">
+        <div className="max-w-4xl mx-auto px-6">
+          <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-6 leading-tight gradient-text">
             Better Circulation. Sharper Mind.
           </h1>
-          <p className="text-2xl text-white mb-10 max-w-3xl mx-auto">
+          <p className="text-xl text-foreground-secondary mb-10 max-w-3xl mx-auto">
             VascuMind provides a clear, 3-step journey to help you understand the vital link between your circulation and your cognitive health, empowering you to have more informed conversations with your doctor.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/science#hachinski" className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold focus:outline focus:outline-4 focus:outline-white text-center">
+            <Link href="/science" className="btn-primary">
               Start Your Free Quiz
             </Link>
-            <TrackedLink href="/protocol" eventName="cta_protocol_click" eventData={{ sourcePath: '/', ctaLabel: 'How It Works', location: 'hero' }} className="inline-block bg-white text-black px-10 py-4 rounded-full text-xl font-semibold hover:bg-black hover:text-white transition border border-white focus:outline focus:outline-4 focus:outline-white text-center">
+            <TrackedLink href="/protocol" eventName="cta_protocol_click" eventData={{ sourcePath: '/', ctaLabel: 'How It Works', location: 'hero' }} className="btn-secondary">
               See How It Works
             </TrackedLink>
           </div>
         </div>
       </section>
 
-      <section aria-label="Trust signals" className="border-b border-black">
+      <section aria-label="Trust signals" className="border-y border-[#2A2D40]">
         <div className="max-w-6xl mx-auto px-6 py-8 grid md:grid-cols-4 gap-6 text-center">
           {trustSignals.map(([title, copy]) => (
-            <div key={title}><strong>{title}</strong><br />{copy}</div>
+            <div key={title}><strong className="text-foreground-primary">{title}</strong><br />{copy}</div>
           ))}
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="max-w-6xl mx-auto px-6 py-24">
         <div className="text-center mb-16">
-          <div className="section-label mb-3">HOW IT WORKS</div>
-          <h2 className="text-5xl font-semibold tracking-tight mb-4">From Concern to Clarity in 3 Simple Steps.</h2>
+          <div className="section-label mb-4">HOW IT WORKS</div>
+          <h2 className="text-5xl font-bold tracking-tight">From Concern to Clarity in 3 Simple Steps.</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {pathwaySteps.map((step, index) => (
-            <div key={step.title} className="border border-black rounded-3xl p-8">
-              <div className="text-5xl font-semibold mb-4">{index + 1}</div>
+            <div key={step.title} className="card text-center">
+              <div className="text-6xl font-bold gradient-text mb-4">{index + 1}</div>
               <div className="section-label mb-3">{step.label}</div>
-              <h3 className="text-2xl font-semibold mb-3">{step.title}</h3>
-              <p className="text-xl text-black mb-6">{step.copy}</p>
-              <Link href={step.href} className="btn-green inline-block px-7 py-3 rounded-full font-semibold">
+              <h3 className="text-2xl font-bold mb-3 text-foreground-primary">{step.title}</h3>
+              <p className="text-foreground-secondary mb-6">{step.copy}</p>
+              <Link href={step.href} className="btn-primary">
                 {step.cta}
               </Link>
             </div>
@@ -93,26 +93,23 @@ export default function VascuMindHome() {
         </div>
       </section>
       
-      <section className="bg-gray-100 py-20">
+      <section className="bg-background-light py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
-           <div className="section-label mb-3">THE HEART-BRAIN CONNECTION</div>
-          <h2 className="text-5xl font-semibold tracking-tight mb-6">Your Brain Thinks Best When Your Blood Flows Freely.</h2>
-          <p className="text-xl text-black max-w-4xl mx-auto">
-            Your brain is a powerhouse, using 20% of your body's oxygen and blood flow. This vital fuel is delivered through a high-speed network of blood vessels. When it's running smoothly, your brain gets everything it needs for sharp memory, clear focus, and quick thinking.
-          </p>
-          <p className="text-xl text-black max-w-4xl mx-auto mt-4">
-            Factors like aging, high blood pressure, and diabetes can slow down this network. Supporting your circulation is one of the most important things you can do for your long-term cognitive wellness, and VascuMind is here to help you take the first step.
+           <div className="section-label mb-4">THE HEART-BRAIN CONNECTION</div>
+          <h2 className="text-5xl font-bold tracking-tight mb-6 text-foreground-primary">Your Brain Thinks Best When Your Blood Flows Freely.</h2>
+          <p className="text-xl text-foreground-secondary mx-auto">
+            Your brain is a powerhouse, using 20% of your body's oxygen and blood flow. This vital fuel is delivered through a high-speed network of blood vessels. Supporting your circulation is one of the most important things you can do for your long-term cognitive wellness, and VascuMind is here to help you take the first step.
           </p>
         </div>
       </section>
 
-      <section className="bg-black text-white py-20">
+      <section className="py-24">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-5xl font-semibold tracking-tight mb-6">Ready to Move from Concern to Clarity?</h2>
-          <p className="text-xl text-white max-w-3xl mx-auto mb-8">
+          <h2 className="text-5xl font-bold tracking-tight mb-6 text-foreground-primary">Ready to Move from Concern to Clarity?</h2>
+          <p className="text-xl text-foreground-secondary max-w-3xl mx-auto mb-8">
             Get your free, personalized pattern report in the next 5 minutes.
           </p>
-          <Link href="/science#hachinski" className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold focus:outline focus:outline-4 focus:outline-white">
+          <Link href="/science" className="btn-primary">
             Take the Free Quiz
           </Link>
         </div>

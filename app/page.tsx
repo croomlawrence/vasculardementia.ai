@@ -65,6 +65,26 @@ export default function VascuMindHome() {
         </div>
       </section>
 
+      <section className="py-16 bg-background-light">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-4xl font-bold mb-4 text-foreground-primary">
+            The Overlooked Connection in Brain Health
+          </h2>
+          <p className="text-6xl md:text-7xl font-bold tracking-tighter leading-tight gradient-text mb-4">
+            Up to 50%
+          </p>
+          <p className="text-xl text-foreground-secondary mb-6 max-w-2xl mx-auto">
+            of dementia cases show evidence of both Alzheimer's plaques and vascular damage, a condition known as "mixed dementia."¹
+          </p>
+          <p className="text-xl text-foreground-secondary max-w-2xl mx-auto">
+            This means that for millions, supporting healthy brain circulation isn't just a good idea—it's a critical and actionable part of any comprehensive cognitive health plan.
+          </p>
+          <p className="text-sm mt-4 text-gray-500">
+            ¹ Source: Alzheimer's Association
+          </p>
+        </div>
+      </section>
+
       <section aria-label="Trust signals" className="border-y border-[#2A2D40]">
         <div className="max-w-6xl mx-auto px-6 py-8 grid md:grid-cols-4 gap-6 text-center">
           {trustSignals.map(([title, copy]) => (

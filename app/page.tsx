@@ -4,88 +4,63 @@ import TrackedLink from "@/components/TrackedLink";
 import { memoryScreenPrice } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "VascuMind | Vascular Dementia & Post-Stroke Cognitive Support",
+  title: "VascuMind | Your Guide to Vascular & Cognitive Health",
   description:
-    "VascuMind helps patients and caregivers understand vascular dementia, post-stroke cognitive changes, and vascular cognitive impairment with education, pattern-check tools, cognitive baseline options, and clinician discussion support.",
+    "Concerned about memory, focus, or brain fog? VascuMind offers a clear path to understanding and supporting your vascular and cognitive health. Start your free assessment.",
 };
 
 const pathwaySteps = [
   {
-    label: "1 · Self-report pattern check",
-    title: "Start with the Hachinski pattern",
+    label: "Step 1: Discover Your Pattern (Free)",
+    title: "Start with Your Vascular Pattern",
     copy:
-      "Use a patient-friendly Hachinski self-report check to organize observations about sudden onset, stepwise change, stroke/TIA history, blood pressure, PAD, diabetes, and other vascular clues.",
+      "Our free, 5-minute quiz, based on the trusted Hachinski questionnaire, helps you organize your symptoms and history into a clear pattern. This is your personal starting point.",
     href: "/hachinski",
-    cta: "Start Free Pattern Check",
+    cta: "Start My Free Pattern Check",
   },
   {
-    label: "2 · Objective cognitive baseline",
-    title: "Benchmark cognition with MCI Screen",
+    label: `Step 2: Establish Your Cognitive Baseline (${memoryScreenPrice})`,
+    title: "Get Your Objective Baseline",
     copy:
-      "Move from subjective concern to a structured MCI Screen baseline for clinician discussion and before/after tracking. MCI Screen materials describe published validation and high accuracy for detecting memory changes versus normal aging; results are still screening information, not a diagnosis.",
+      "Free online quizzes can be unreliable. The MCI Screen provides an objective, accurate, and repeatable benchmark of your cognitive function. It moves you from subjective worry to a concrete baseline you can use to track changes and facilitate a high-quality discussion with your healthcare provider.",
     href: "/memory-screen",
-    cta: "Create a Cognitive Baseline",
+    cta: "Schedule My Baseline Assessment",
   },
   {
-    label: "3 · Support and research pathways",
-    title: "Choose the right next step",
+    label: "Step 3: Explore Your Next Steps",
+    title: "Choose Your Path",
     copy:
-      "After screening, families can review clinician-discussion topics, optional wellness-support bundles, and consented research pathways for investigational studies when appropriate.",
+      "Based on your journey, unlock a personalized dashboard with educational resources, wellness support options, and potential pathways to clinical research.",
     href: "/protocol",
-    cta: "See the Care Pathway",
+    cta: "See Your Personalized Pathways",
   },
 ];
 
 const trustSignals = [
-  ["For patients and caregivers", "Built for families facing vascular dementia, post-stroke cognitive change, or cognition affected by vascular disease."],
-  ["Educational, not diagnostic", "Tools organize observations and screening information for discussion with qualified clinicians."],
-  ["Vascular-focus first", "Blood pressure, stroke/TIA history, PAD, diabetes, circulation, and small-vessel context are central."],
-  ["Safety-aware", "Sudden neurologic symptoms require emergency care — not a website tool, supplement, or research form."],
+  ["Clinician-Guided", "Our protocol is designed by clinicians and based on validated scientific tools."],
+  ["100% Private & Secure", "Your data is yours. We never share it without your explicit consent."],
+  ["HSA/FSA Eligible", "The $99 fee for the MCI Screen can be paid for with your Health Savings or Flexible Spending Account."],
+  ["For Families & Caregivers", "A trusted resource for navigating the complexities of cognitive health."],
 ];
 
 export default function VascuMindHome() {
   return (
     <main>
       <section className="bg-black py-20">
-        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
-          <div>
-            <div className="inline-block bg-white text-black rounded-full px-5 py-2 text-sm font-semibold mb-6">
-              For vascular dementia, stroke-related memory change, and caregivers
-            </div>
-            <h1 className="text-5xl md:text-7xl font-semibold tracking-tighter mb-6 text-white leading-none">
-              A trusted starting point for vascular dementia and post-stroke cognitive decline.
-            </h1>
-            <p className="text-2xl text-white mb-6 max-w-3xl">
-              VascuMind helps patients and caregivers understand memory changes linked to stroke, vascular disease, and vascular dementia — then organize next steps for clinician discussion, cognitive screening, wellness support, and research options.
-            </p>
-            <p className="text-lg text-white mb-10 max-w-3xl">
-              Educational only. Not a diagnosis, treatment plan, or emergency service. Sudden neurologic symptoms require immediate emergency care.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/hachinski" className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold focus:outline focus:outline-4 focus:outline-white text-center">
-                Start Free Pattern Check
-              </Link>
-              <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/", ctaLabel: "Create Cognitive Baseline", location: "hero" }} className="inline-block bg-white text-black px-10 py-4 rounded-full text-xl font-semibold hover:bg-black hover:text-white transition border border-white focus:outline focus:outline-4 focus:outline-white text-center">
-                Create Cognitive Baseline
-              </TrackedLink>
-            </div>
-          </div>
-          <div className="bg-white text-black rounded-3xl p-8 border-4 border-white">
-            <div className="section-label mb-3">THE VASCUMIND PROTOCOL</div>
-            <h2 className="text-3xl font-semibold mb-4">From concern to clarity.</h2>
-            <p className="text-black mb-6">
-              The Protocol is a bundled care-navigation pathway: Hachinski self-report pattern check → MCI Screen objective cognitive benchmark → optional wellness-support bundles → consented research and investigational-study pathways when appropriate.
-            </p>
-            <div className="space-y-5">
-              {pathwaySteps.map((step) => (
-                <Link key={step.label} href={step.href} className="block border border-black rounded-2xl p-5 hover:shadow-lg transition green-card">
-                  <div className="text-sm font-semibold uppercase tracking-widest mb-2">{step.label}</div>
-                  <h3 className="text-2xl font-semibold mb-2">{step.title}</h3>
-                  <p className="text-black mb-3">{step.copy}</p>
-                  <span className="font-semibold underline">{step.cta}</span>
-                </Link>
-              ))}
-            </div>
+        <div className="max-w-6xl mx-auto px-6 text-center">
+          <h1 className="text-5xl md:text-7xl font-semibold tracking-tighter mb-6 text-white leading-tight">
+            Better Circulation. Sharper Mind.
+          </h1>
+          <p className="text-2xl text-white mb-10 max-w-3xl mx-auto">
+            VascuMind provides a clear, 3-step journey to help you understand the link between your circulation and your cognitive health, so you can have more informed conversations with your doctor and take meaningful action.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/hachinski" className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold focus:outline focus:outline-4 focus:outline-white text-center">
+              Find Your Starting Point
+            </Link>
+            <TrackedLink href="/protocol" eventName="cta_protocol_click" eventData={{ sourcePath: "/", ctaLabel: "How It Works", location: "hero" }} className="inline-block bg-white text-black px-10 py-4 rounded-full text-xl font-semibold hover:bg-black hover:text-white transition border border-white focus:outline focus:outline-4 focus:outline-white text-center">
+              How It Works
+            </TrackedLink>
           </div>
         </div>
       </section>
@@ -100,11 +75,8 @@ export default function VascuMindHome() {
 
       <section className="max-w-6xl mx-auto px-6 py-20">
         <div className="text-center mb-16">
-          <div className="section-label mb-3">WHY VASCULAR COGNITIVE HEALTH MATTERS</div>
-          <h2 className="text-5xl font-semibold tracking-tight mb-4">Vascular memory changes can be different — because some drivers may be actionable.</h2>
-          <p className="text-xl text-black max-w-4xl mx-auto">
-            Memory problems can have many causes. But when cognitive changes are linked to stroke, small vessel disease, blood pressure, diabetes, heart disease, PAD, or other vascular issues, families may have more concrete questions to ask and track with clinicians.
-          </p>
+          <div className="section-label mb-3">HOW IT WORKS</div>
+          <h2 className="text-5xl font-semibold tracking-tight mb-4">From Concern to Clarity in 3 Simple Steps.</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {pathwaySteps.map((step, index) => (
@@ -120,16 +92,28 @@ export default function VascuMindHome() {
           ))}
         </div>
       </section>
+      
+      <section className="bg-gray-100 py-20">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+           <div className="section-label mb-3">THE HEART-BRAIN CONNECTION</div>
+          <h2 className="text-5xl font-semibold tracking-tight mb-6">Your Brain Relies on a Superhighway of Blood Vessels.</h2>
+          <p className="text-xl text-black max-w-4xl mx-auto">
+            Think of it this way: your brain is only 2% of your body weight, but it uses 20% of your oxygen and blood flow. This delivery system is your vascular network. When it’s running smoothly, your brain gets the fuel it needs for memory, focus, and clarity.
+          </p>
+          <p className="text-xl text-black max-w-4xl mx-auto mt-4">
+            But factors like age, high blood pressure, diabetes, and even your history of strokes or TIAs can slow it down. This is what we call the "heart-brain connection," and it is the single most important—and often overlooked—factor in long-term cognitive wellness. VascuMind was built to put you back in the driver's seat.
+          </p>
+        </div>
+      </section>
 
       <section className="bg-black text-white py-20">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <div className="inline-block bg-white text-black rounded-full px-5 py-2 text-sm font-semibold mb-6">NEXT BEST STEP</div>
-          <h2 className="text-5xl font-semibold tracking-tight mb-6 text-white">Start with the vascular pattern.</h2>
+          <h2 className="text-5xl font-semibold tracking-tight mb-6 text-white">Ready to move from concern to clarity?</h2>
           <p className="text-xl text-white max-w-3xl mx-auto mb-8">
-            If memory changes followed a stroke, progressed in steps, or appeared alongside vascular risk factors, start with a free Hachinski pattern check. If the pattern resonates, create an MCI Screen cognitive baseline ({memoryScreenPrice}) for clinician discussion.
+            Get your free, personalized Vascular Pattern Report in the next 5 minutes.
           </p>
           <Link href="/hachinski" className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold focus:outline focus:outline-4 focus:outline-white">
-            Start Free Pattern Check
+            Start Free Check
           </Link>
         </div>
       </section>

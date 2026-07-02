@@ -41,7 +41,7 @@ export default function WhatWeOfferPage() {
           </div>
           <div className="border border-black rounded-3xl p-8">
             <h3 className="text-2xl font-semibold mb-3">Then create an objective cognitive baseline.</h3>
-            <p className="text-black">The Acurist.AI MCI Screen gives families a structured benchmark to discuss with clinicians and track over time.</p>
+            <p className="text-black">The MCI Screen gives families a structured benchmark to discuss with clinicians and track over time.</p>
           </div>
         </div>
 

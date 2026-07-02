@@ -23,7 +23,7 @@ The operating model is agent-driven: agents should monitor the site, detect issu
 
 ## Pricing Anchor
 
-MoCA CRO benchmark supplied by Croom: approximately $35,000 license plus $35 per test despite being less accurate. VascuMind should price at parity or premium when supported by Acurist/MCI Screen evidence and trial-fit positioning.
+MoCA CRO benchmark supplied by Croom: approximately $35,000 license plus $35 per test despite being less accurate. VascuMind should price at parity or premium when supported by MCI Screen evidence and trial-fit positioning.
 
 ## Build Order
 

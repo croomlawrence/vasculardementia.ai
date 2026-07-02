@@ -75,7 +75,7 @@ Generous white space (80px section padding) and clear left-aligned hierarchy. Ca
 
 **Do**
 - Use pure black text on white.
-- Place the full Acurist.AI + FDA disclaimer (via `<Disclaimer />` component) on every page.
+- Place the full MCI Screen + FDA disclaimer (via `<Disclaimer />` component) on every page.
 - Use emerald only for CTAs and section labels.
 - Keep body text ≥18px.
 
@@ -86,6 +86,6 @@ Generous white space (80px section padding) and clear left-aligned hierarchy. Ca
 - Use low-contrast accents on text.
 
 **Legal Guardrails Embedded in Design**
-All pages must render the global `Disclaimer` component (updated 2026-07-01) containing the exact Acurist.AI MCI Screen disclaimer and FDA supplement language provided by Croom. This is non-negotiable for FTC/DSHEA compliance.
+All pages must render the global `Disclaimer` component (updated 2026-07-01) containing the exact MCI Screen disclaimer and FDA supplement language provided by Croom. This is non-negotiable for FTC/DSHEA compliance.
 
 This DESIGN.md is the single source of truth for VascuMind visual and compliance design rules. It is enforced via the QA script and manual audits.

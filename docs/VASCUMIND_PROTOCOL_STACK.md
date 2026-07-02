@@ -6,7 +6,7 @@ VascuMind should be framed as **The VascuMind Protocol**, not a marketplace of r
 
 ```text
 Hachinski educational screen (free subjective pattern recognition)
-→ Acurist.AI MCI Screen benchmarking (paid/low-ticket objective baseline)
+→ MCI Screen benchmarking (paid/low-ticket objective baseline)
 → Post-screen fork
 → DTC Cerebrovascular Support Stack / consented clinical-trial matching
 ```
@@ -26,17 +26,17 @@ Hachinski educational screen (free subjective pattern recognition)
 
 ### Conversion Thesis
 
-The Protocol intentionally starts with a free subjective Hachinski pattern check because it bypasses denial and creates a natural bridge to the paid Acurist.AI benchmark. Public copy should follow:
+The Protocol intentionally starts with a free subjective Hachinski pattern check because it bypasses denial and creates a natural bridge to the paid MCI Screen benchmark. Public copy should follow:
 
 1. **Free:** “Take the Hachinski Assessment. Notice whether memory slips match vascular-pattern concerns.”
-2. **Paid/low-ticket:** “Hachinski shows a pattern? Let’s benchmark it with the Acurist.AI MCI Screen.”
+2. **Paid/low-ticket:** “Hachinski shows a pattern? Let’s benchmark it with the MCI Screen.”
 3. **Fork:** “After the benchmark, choose caregiver wellness support or consented clinical-trial matching.”
 
 ### Journey A — DTC caregiver
 
 1. Caregiver reads VascuMind Protocol.
 2. Caregiver uses Hachinski educational tool to organize subjective vascular-pattern concerns.
-3. Caregiver requests/purchases the Acurist-sourced MCI Screen to benchmark cognition.
+3. Caregiver requests/purchases the MCI Screen to benchmark cognition.
 4. Caregiver reviews clinician-discussion summary.
 5. Caregiver considers a compliant wellness stack only after screening and with clinician input.
 
@@ -50,9 +50,9 @@ The Protocol intentionally starts with a free subjective Hachinski pattern check
 
 ## Compliance Rules
 
-- Never use legacy non-Acurist source names for the MCI Screen.
-- MCI Screen is sourced from Acurist.AI.
-- Required disclaimer: "This test is a cognitive screening, benchmarking and tracking tool, not a diagnostic medical device. Results should be discussed with a qualified healthcare provider."
+- Never use legacy non-MCI Screen source names for the MCI Screen.
+- MCI Screen is sourced from MCI Screen / EMBIC materials.
+- Required disclaimer: "This test is a cognitive screening, benchmarking and tracking tool, not a standalone diagnosis or substitute for clinical evaluation. Results should be discussed with a qualified healthcare provider."
 - Supplements may use structure/function language only.
 - Do not imply supplements diagnose, treat, prevent, cure, or mitigate vascular dementia, Alzheimer’s disease, MCI, stroke, or any disease.
 - Counsel must review website copy, labels, checkout, email, HSA/FSA language, privacy, and CRO data-sharing workflows before scaled launch.

@@ -1,4 +1,4 @@
-import { ACURIST_MCI_DISCLAIMER, SUPPLEMENT_DISCLAIMER } from '../components/ComplianceNotices';
+import { MCI_SCREEN_DISCLAIMER, SUPPLEMENT_DISCLAIMER } from '../components/ComplianceNotices';
 
 export default function CompliancePage() {
   return (
@@ -13,8 +13,8 @@ export default function CompliancePage() {
         <h2 className="text-3xl font-semibold mb-6">Non-Negotiable Disclaimers</h2>
         <div className="space-y-8">
           <div>
-            <h3 className="font-semibold text-xl mb-2">1. Acurist.AI MCI Screen Disclaimer</h3>
-            <blockquote className="border-l-4 border-black pl-6 text-black">“{ACURIST_MCI_DISCLAIMER}”</blockquote>
+            <h3 className="font-semibold text-xl mb-2">1. MCI Screen Disclaimer</h3>
+            <blockquote className="border-l-4 border-black pl-6 text-black">“{MCI_SCREEN_DISCLAIMER}”</blockquote>
             <p className="text-sm mt-3 text-black">Displayed globally and at the top of the MCI Screen/product flow.</p>
           </div>
           <div>
@@ -31,15 +31,15 @@ export default function CompliancePage() {
           <ul className="list-disc pl-6 space-y-2 text-xl text-black">
             <li>No supplement copy may imply a disease-related benefit.</li>
             <li>Supplement pages use structure/function wellness language only.</li>
-            <li>Screening pages state that the Acurist.AI MCI Screen is not diagnostic.</li>
+            <li>Screening pages state that the MCI Screen is not diagnostic.</li>
             <li>Emergency neurologic symptoms route to emergency care, not screening or product conversion.</li>
           </ul>
         </div>
         <div className="border border-black rounded-3xl p-8">
           <h2 className="text-3xl font-semibold mb-4">Key Pages Audited & Updated</h2>
           <ul className="space-y-3 text-xl">
-            <li>✅ /memory-screen — top Acurist disclaimer</li>
-            <li>✅ /marketplace + all product pages — top Acurist disclaimer plus FDA supplement disclaimer</li>
+            <li>✅ /memory-screen — top MCI Screen disclaimer</li>
+            <li>✅ /marketplace + all product pages — top MCI Screen disclaimer plus FDA supplement disclaimer</li>
             <li>✅ /clinical-trial-matching — consent and non-diagnostic language</li>
             <li>✅ /transparency — COA language limited to quality documentation</li>
             <li>✅ Global layout + Disclaimer component — required text centralized</li>

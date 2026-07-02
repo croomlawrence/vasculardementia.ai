@@ -7,8 +7,8 @@ const sections = [
     body: "Vascular cognitive impairment, mixed cognitive impairment, and MCI trial programs need earlier, more operationally useful cognitive screening than generic late-stage cognitive tools can provide."
   },
   {
-    title: "VascuMind / Acurist fit",
-    body: "VascuMind acts as the vascular cognitive education and trial-readiness funnel, while Acurist/MCI Screen supports structured cognitive screening workflows."
+    title: "VascuMind / MCI Screen fit",
+    body: "VascuMind acts as the vascular cognitive education and trial-readiness funnel, while MCI Screen supports structured cognitive screening workflows."
   },
   {
     title: "Commercial model",

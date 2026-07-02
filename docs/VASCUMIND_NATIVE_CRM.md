@@ -97,5 +97,5 @@ The CRM sheet contains these tabs:
 
 - Do not collect detailed medical records or emergency symptoms in the website form.
 - Keep the website form educational and commercial-intake oriented.
-- If deeper health intake is needed, move it into a controlled Acurist workflow with appropriate privacy review.
+- If deeper health intake is needed, move it into a controlled MCI Screen workflow with appropriate privacy review.
 - Do not store API keys, OAuth tokens, or secrets in Obsidian, Google Docs, or public repos.

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { AcuristScreenDisclaimer } from '@/app/components/ComplianceNotices';
+import { MCIScreenDisclaimer } from '@/app/components/ComplianceNotices';
 import LeadForm from "@/components/LeadForm";
 import TrackedLink from "@/components/TrackedLink";
 import { memoryScreenCheckoutUrl, memoryScreenPrice } from "@/lib/business";
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 };
 
 const deliverables = [
-  "A structured Acurist.AI MCI Screen cognitive baseline for clinician discussion",
+  "A structured MCI Screen cognitive baseline for clinician discussion",
   "Objective benchmarking after a subjective Hachinski self-report pattern check",
-  "Acurist.AI-reported validation: 97% accuracy from a 2M-person database spanning all ancestries",
+  "MCI Screen published-validation context for detecting memory changes versus normal aging and tracking before/after change",
   "Plain-language next-step framing for caregivers, clinicians, wellness support, and research awareness",
 ];
 
@@ -33,14 +33,14 @@ export default function MemoryScreenPage() {
           For families facing vascular dementia, stroke-related memory changes, or vascular cognitive impairment, a structured screen can help organize what is changing and support a more informed clinical conversation.
         </p>
         <div className="max-w-4xl mx-auto text-left">
-          <AcuristScreenDisclaimer />
+          <MCIScreenDisclaimer />
         </div>
       </section>
 
       <section className="border-4 border-black rounded-3xl p-8 md:p-12 mb-16">
         <div className="grid md:grid-cols-[1fr_300px] gap-10 items-center">
           <div>
-            <div className="section-label mb-3">ACURIST.AI MCI SCREEN BASELINE</div>
+            <div className="section-label mb-3">MCI SCREEN BASELINE</div>
             <h2 className="text-4xl font-semibold mb-4">Move from concern to a structured benchmark</h2>
             <p className="text-xl text-black mb-6">
               Step 1 helps families notice a possible vascular pattern. Step 2 benchmarks cognition so the next conversation — clinician, caregiver, research, or wellness — starts from a clearer baseline.
@@ -49,7 +49,7 @@ export default function MemoryScreenPage() {
               {deliverables.map((item) => <li key={item}>{item}</li>)}
             </ul>
             <p className="text-base text-black mt-6">
-              As with any screening performance claim, ask for source documentation and discuss results with a qualified healthcare professional. The screen is still a screening and tracking tool, not a diagnostic medical device.
+              As with any screening performance claim, ask for source documentation and discuss results with a qualified healthcare professional. The screen is still a screening, benchmarking, and tracking tool, not a standalone diagnosis or substitute for clinical evaluation.
             </p>
           </div>
           <div className="border border-black rounded-3xl p-6 text-center">

@@ -19,9 +19,9 @@ const pathwaySteps = [
   },
   {
     label: "2 · Objective cognitive baseline",
-    title: "Benchmark cognition with Acurist.AI",
+    title: "Benchmark cognition with MCI Screen",
     copy:
-      "Move from subjective concern to a structured MCI Screen baseline for clinician discussion. Acurist.AI reports 97% accuracy from a 2M-person database spanning all ancestries; results are still screening information, not a diagnosis.",
+      "Move from subjective concern to a structured MCI Screen baseline for clinician discussion and before/after tracking. MCI Screen materials describe published validation and high accuracy for detecting memory changes versus normal aging; results are still screening information, not a diagnosis.",
     href: "/memory-screen",
     cta: "Create a Cognitive Baseline",
   },
@@ -73,7 +73,7 @@ export default function VascuMindHome() {
             <div className="section-label mb-3">THE VASCUMIND PROTOCOL</div>
             <h2 className="text-3xl font-semibold mb-4">From concern to clarity.</h2>
             <p className="text-black mb-6">
-              The Protocol is a bundled care-navigation pathway: Hachinski self-report pattern check → Acurist.AI objective MCI Screen benchmark → optional wellness-support bundles → consented research and investigational-study pathways when appropriate.
+              The Protocol is a bundled care-navigation pathway: Hachinski self-report pattern check → MCI Screen objective cognitive benchmark → optional wellness-support bundles → consented research and investigational-study pathways when appropriate.
             </p>
             <div className="space-y-5">
               {pathwaySteps.map((step) => (
@@ -125,7 +125,7 @@ export default function VascuMindHome() {
           <div className="inline-block bg-white text-black rounded-full px-5 py-2 text-sm font-semibold mb-6">NEXT BEST STEP</div>
           <h2 className="text-5xl font-semibold tracking-tight mb-6 text-white">Start with the vascular pattern.</h2>
           <p className="text-xl text-white max-w-3xl mx-auto mb-8">
-            If memory changes followed a stroke, progressed in steps, or appeared alongside vascular risk factors, start with a free Hachinski pattern check. If the pattern resonates, create an Acurist.AI cognitive baseline ({memoryScreenPrice}) for clinician discussion.
+            If memory changes followed a stroke, progressed in steps, or appeared alongside vascular risk factors, start with a free Hachinski pattern check. If the pattern resonates, create an MCI Screen cognitive baseline ({memoryScreenPrice}) for clinician discussion.
           </p>
           <Link href="/hachinski" className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold focus:outline focus:outline-4 focus:outline-white">
             Start Free Pattern Check

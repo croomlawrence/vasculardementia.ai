@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "The VascuMind Protocol | Vascular Cognitive Care Navigation",
   description:
-    "Follow the VascuMind Protocol from Hachinski self-report pattern check to Acurist.AI cognitive baseline, clinician discussion, wellness support, and consented research pathways.",
+    "Follow the VascuMind Protocol from Hachinski self-report pattern check to MCI Screen cognitive baseline, clinician discussion, wellness support, and consented research pathways.",
 };
 
 const pathwaySteps = [
@@ -20,11 +20,11 @@ const pathwaySteps = [
   },
   {
     label: "Step 2 · Objective benchmark",
-    title: "Create an Acurist.AI cognitive baseline",
+    title: "Create an MCI Screen cognitive baseline",
     body:
-      "If the vascular pattern resonates, the Acurist.AI MCI Screen provides an objective cognitive benchmark for clinician discussion and repeat tracking.",
+      "If the vascular pattern resonates, the MCI Screen provides an objective cognitive benchmark for clinician discussion and repeat tracking.",
     why:
-      "Acurist.AI reports 97% accuracy from a 2M-person database spanning all ancestries. The result is still screening and benchmarking information — not a diagnosis.",
+      "MCI Screen materials describe published validation and high accuracy for detecting memory changes versus normal aging. The result is still screening, benchmarking, and tracking information — not a diagnosis.",
     href: "/memory-screen",
     cta: "Create Cognitive Baseline",
   },
@@ -69,7 +69,7 @@ export default function ProtocolPage() {
           <div className="inline-block bg-white text-black rounded-full px-5 py-2 text-sm font-semibold mb-6">THE VASCUMIND PROTOCOL</div>
           <h1 className="text-5xl md:text-7xl font-semibold tracking-tight mb-6 text-white leading-none">From concern to clarity: a safer path for vascular memory changes.</h1>
           <p className="text-2xl text-white max-w-4xl mx-auto mb-8">
-            The VascuMind Protocol bundles a Hachinski self-report pattern check, an Acurist.AI objective MCI Screen benchmark, clinician-discussion support, optional wellness bundles, and consented research pathways for families facing vascular dementia, post-stroke cognitive impairment, or cognition affected by vascular disease.
+            The VascuMind Protocol bundles a Hachinski self-report pattern check, an MCI Screen objective cognitive benchmark, clinician-discussion support, optional wellness bundles, and consented research pathways for families facing vascular dementia, post-stroke cognitive impairment, or cognition affected by vascular disease.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/hachinski" className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold focus:outline focus:outline-4 focus:outline-white">Start Free Pattern Check</Link>
@@ -142,7 +142,7 @@ export default function ProtocolPage() {
         <section className="border border-black rounded-3xl p-8 mb-16">
           <h2 className="text-3xl font-semibold mb-4">Compliance boundaries that protect families</h2>
           <div className="grid md:grid-cols-3 gap-6 text-lg">
-            <div><strong>Screening:</strong> Acurist.AI MCI Screen is a cognitive screening, benchmarking, and tracking tool — not a diagnostic medical device.</div>
+            <div><strong>Screening:</strong> MCI Screen is a cognitive screening, benchmarking, and tracking tool — not a standalone diagnosis or substitute for clinical evaluation.</div>
             <div><strong>Supplements:</strong> Structure/function wellness language only; no diagnosis, treatment, cure, prevention, or disease-slowing claims.</div>
             <div><strong>Research:</strong> Matching is opt-in and informational only; sudden neurologic symptoms require emergency care.</div>
           </div>

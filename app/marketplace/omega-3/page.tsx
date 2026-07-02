@@ -1,4 +1,4 @@
-import { AcuristScreenDisclaimer, SupplementDisclaimer } from '@/app/components/ComplianceNotices';
+import { MCIScreenDisclaimer, SupplementDisclaimer } from '@/app/components/ComplianceNotices';
 import CompactMCIScreenCTA from '@/components/CompactMCIScreenCTA';
 import TrackedLink from '@/components/TrackedLink';
 import { affiliateLinks, clinicalEvidenceLinks } from '@/lib/business';
@@ -14,7 +14,7 @@ export default function HighPotencyOmega3Page() {
       <p className="text-xl text-black mb-8">1,400 mg EPA + DHA per serving • Vascular & Cognitive Wellness</p>
 
       <div className="space-y-6 mb-12">
-        <AcuristScreenDisclaimer />
+        <MCIScreenDisclaimer />
         <SupplementDisclaimer />
         <p className="text-black">Always consult your healthcare professional before use, especially if you take medications or have a medical condition. VascuMind may earn a commission from qualifying purchases.</p>
       </div>

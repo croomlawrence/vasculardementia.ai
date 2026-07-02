@@ -1,4 +1,4 @@
-# VascuMind Lead Funnel Tightening — Hachinski to Acurist Bridge
+# VascuMind Lead Funnel Tightening — Hachinski to MCI Screen Bridge
 
 ## Evaluation
 
@@ -10,7 +10,7 @@ Free subjective recognition
 → fork into DTC support or CRO/trial matching
 ```
 
-The free Hachinski assessment lets a caregiver notice a pattern without admitting a diagnosis. The paid Acurist.AI MCI Screen becomes the objective benchmark once the subjective pattern resonates.
+The free Hachinski assessment lets a caregiver notice a pattern without admitting a diagnosis. The paid MCI Screen becomes the objective benchmark once the subjective pattern resonates.
 
 ## Activated Funnel Copy
 
@@ -22,13 +22,13 @@ Compliance-adjusted site language uses “vascular-pattern concerns” and avoid
 
 ### Step 2 — Paid / Low Ticket
 
-> Hachinski shows a pattern? Let’s benchmark it. Purchase or request the Acurist.AI MCI Screen to get your cognitive baseline score.
+> Hachinski shows a pattern? Let’s benchmark it. Purchase or request the MCI Screen to get your cognitive baseline score.
 
 Compliance-adjusted copy says results should be discussed with a qualified healthcare provider.
 
 ### Step 3 — The Fork
 
-After Acurist.AI benchmarking, the site now presents two paths:
+After MCI Screen benchmarking, the site now presents two paths:
 
 - **Journey A — DTC**: caregiver wellness support via the VascuMind Cerebrovascular Support stack.
 - **Journey B — CRO / Research**: consented clinical-trial matching.

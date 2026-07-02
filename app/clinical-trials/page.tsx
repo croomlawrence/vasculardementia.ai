@@ -29,11 +29,24 @@ export default function ClinicalTrialsPage() {
             <p><strong>Your safety is the highest priority at every stage.</strong></p>
         </div>
       </div>
+      
+      <div className="text-center border-t pt-12 mt-12">
+        <h2 className="text-4xl font-semibold tracking-tight mb-6">Learn About Different Types of Research</h2>
+        <p className="text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
+          Not all clinical trials are the same. Explore the major categories of research being done to better understand and treat vascular cognitive conditions.
+        </p>
+        <Link 
+          href="/research/areas-of-study"
+          className="btn-secondary inline-block px-12 py-4 rounded-full text-xl font-semibold focus:outline focus:outline-4 focus:outline-white"
+        >
+          Explore Areas of Study
+        </Link>
+      </div>
 
-      <div className="text-center">
+      <div className="text-center border-t pt-12 mt-12">
         <h2 className="text-4xl font-semibold tracking-tight mb-6">Is a Clinical Trial Right for You?</h2>
         <p className="text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
-          Our goal is to connect interested and qualified individuals with our clinical research partners. The first step is a short, anonymous pre-screener to see if you may be a preliminary fit for any current or future studies.
+          If you're ready, the first step is a short, anonymous pre-screener to see if you may be a preliminary fit for any current or future studies.
         </p>
         
         <Link 

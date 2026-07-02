@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import TrackedLink from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "Caregiver Safety Guide for Vascular Dementia & Sudden Memory Changes | VascuMind",
@@ -45,7 +46,7 @@ export default function CaregiverTriagePage() {
 
       <div className="flex flex-col sm:flex-row gap-3">
         <Link href="/hachinski" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold text-center">Start Free Pattern Check</Link>
-        <Link href="/memory-screen" className="inline-block border-2 border-black px-8 py-4 rounded-full text-lg font-semibold text-center hover:bg-black hover:text-white">Create Cognitive Baseline</Link>
+        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/caregiver-triage", ctaLabel: "Create Cognitive Baseline" }} className="inline-block border-2 border-black px-8 py-4 rounded-full text-lg font-semibold text-center hover:bg-black hover:text-white">Create Cognitive Baseline</TrackedLink>
       </div>
     </main>
   );

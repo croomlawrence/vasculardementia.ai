@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import TrackedLink from "@/components/TrackedLink";
 import { memoryScreenPrice } from "@/lib/business";
 
 export const metadata: Metadata = {
@@ -64,9 +65,9 @@ export default function VascuMindHome() {
               <Link href="/hachinski" className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold focus:outline focus:outline-4 focus:outline-white text-center">
                 Start Free Pattern Check
               </Link>
-              <Link href="/memory-screen" className="inline-block bg-white text-black px-10 py-4 rounded-full text-xl font-semibold hover:bg-black hover:text-white transition border border-white focus:outline focus:outline-4 focus:outline-white text-center">
+              <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/", ctaLabel: "Create Cognitive Baseline", location: "hero" }} className="inline-block bg-white text-black px-10 py-4 rounded-full text-xl font-semibold hover:bg-black hover:text-white transition border border-white focus:outline focus:outline-4 focus:outline-white text-center">
                 Create Cognitive Baseline
-              </Link>
+              </TrackedLink>
             </div>
           </div>
           <div className="bg-white text-black rounded-3xl p-8 border-4 border-white">

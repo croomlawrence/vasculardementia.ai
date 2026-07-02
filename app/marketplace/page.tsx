@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { SupplementDisclaimer } from '@/app/components/ComplianceNotices';
 import Link from 'next/link';
 import LeadForm from '@/components/LeadForm';
+import TrackedLink from '@/components/TrackedLink';
 
 export const metadata: Metadata = {
   title: "Wellness Support for Vascular & Cognitive Health | VascuMind",
@@ -59,7 +60,7 @@ export default function Marketplace() {
             VascuMind may earn commissions from qualifying purchases; see our affiliate disclosure. Product pages are for general wellness education and should not be interpreted as treatment for vascular dementia, stroke, MCI, Alzheimer’s disease, or any medical condition.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center mt-5">
-            <Link href="/memory-screen" className="btn-green inline-block px-7 py-3 rounded-full font-semibold">Create Baseline First</Link>
+            <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/marketplace", ctaLabel: "Create Baseline First" }} className="btn-green inline-block px-7 py-3 rounded-full font-semibold">Create Baseline First</TrackedLink>
             <Link href="/protocol" className="text-black underline">See full Protocol</Link>
             <Link href="/transparency" className="text-black underline">View transparency / COA tracker</Link>
             <Link href="/affiliate-disclosure" className="text-black underline">Read affiliate disclosure</Link>

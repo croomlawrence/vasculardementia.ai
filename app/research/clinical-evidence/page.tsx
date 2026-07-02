@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from 'next/link';
+import TrackedLink from '@/components/TrackedLink';
 
 export const metadata: Metadata = {
   title: "What May Be Actionable in Vascular Dementia & Cognitive Decline | VascuMind",
@@ -40,9 +41,9 @@ export default function ClinicalEvidencePage() {
         <a href="/hachinski" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
           Start Free Pattern Check
         </a>
-        <a href="/memory-screen" className="inline-block border-2 border-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-black hover:text-white">
+        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/research/clinical-evidence", ctaLabel: "Create Cognitive Baseline", location: "top" }} className="inline-block border-2 border-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-black hover:text-white">
           Create Cognitive Baseline
-        </a>
+        </TrackedLink>
       </div>
 
       <div className="space-y-10 mb-16">
@@ -79,9 +80,9 @@ export default function ClinicalEvidencePage() {
       </section>
 
       <div className="mt-16 text-center">
-        <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/research/clinical-evidence", ctaLabel: "Create Cognitive Baseline", location: "bottom" }} className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
           Create Cognitive Baseline
-        </a>
+        </TrackedLink>
       </div>
     </div>
   );

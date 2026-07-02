@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from 'next/link';
+import TrackedLink from '@/components/TrackedLink';
 
 export const metadata: Metadata = {
   title: "Vascular Dementia Clinical Trials & Research Options | VascuMind",
@@ -42,9 +43,9 @@ export default function VascularDementiaResearchPage() {
       </div>
 
       <div className="text-center mb-12 flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="/memory-screen" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/research/vascular-dementia-clinical-trials", ctaLabel: "Create Cognitive Baseline" }} className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
           Create Cognitive Baseline
-        </a>
+        </TrackedLink>
         <a href="/clinical-trial-matching" className="inline-block border-2 border-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-black hover:text-white">
           Request Research Follow-Up
         </a>

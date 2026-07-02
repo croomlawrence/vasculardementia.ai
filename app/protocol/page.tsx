@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import TrackedLink from "@/components/TrackedLink";
 
 export const metadata: Metadata = {
   title: "The VascuMind Protocol | Vascular Cognitive Care Navigation",
@@ -73,7 +74,7 @@ export default function ProtocolPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/hachinski" className="btn-green inline-block px-10 py-4 rounded-full text-xl font-semibold focus:outline focus:outline-4 focus:outline-white">Start Free Pattern Check</Link>
-            <Link href="/memory-screen" className="inline-block bg-white text-black px-10 py-4 rounded-full text-xl font-semibold hover:bg-black hover:text-white border border-white focus:outline focus:outline-4 focus:outline-white">Create Cognitive Baseline</Link>
+            <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/protocol", ctaLabel: "Create Cognitive Baseline", location: "hero" }} className="inline-block bg-white text-black px-10 py-4 rounded-full text-xl font-semibold hover:bg-black hover:text-white border border-white focus:outline focus:outline-4 focus:outline-white">Create Cognitive Baseline</TrackedLink>
           </div>
         </div>
       </section>

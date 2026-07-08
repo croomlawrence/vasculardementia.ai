@@ -45,7 +45,7 @@ export default function FiveQuestionsGuide() {
 
         <hr className="my-10" />
 
-        <p className="text-sm text-gray-600"><em>Disclaimer: This guide is for informational purposes only and does not constitute medical advice. Always consult with a qualified healthcare professional for any health concerns or before making any decisions related to your health or treatment.</em></p>
+        <p className="text-sm text-black"><em>Disclaimer: This guide is for informational purposes only and does not constitute medical advice. Always consult with a qualified healthcare professional for any health concerns or before making any decisions related to your health or treatment.</em></p>
         <p className="text-center font-semibold">VascuMind.com</p>
       </div>
     </main>

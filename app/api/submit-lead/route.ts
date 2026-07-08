@@ -1,29 +1,29 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'POST') {
-    const { name, email, phone } = req.body;
+function escapeCsv(value: unknown) {
+  const text = String(value ?? '');
+  if (/[",\n\r]/.test(text)) return `"${text.replace(/"/g, '""')}"`;
+  return text;
+}
+
+export async function POST(request: Request) {
+  try {
+    const { name, email, phone } = await request.json();
 
     if (!name || !email) {
-      return res.status(400).json({ message: 'Name and Email are required.' });
+      return NextResponse.json({ message: 'Name and Email are required.' }, { status: 400 });
     }
 
     const timestamp = new Date().toISOString();
-    const csvRow = `\n${timestamp},${name},${email},${phone || ''}`;
-    
-    try {
-      const filePath = path.join(process.cwd(), 'cro_leads.csv');
-      fs.appendFileSync(filePath, csvRow);
-      return res.status(200).json({ message: 'Submission successful.' });
-    } catch (error) {
-      console.error('Error writing to CSV file:', error);
-      return res.status(500).json({ message: 'Internal Server Error.' });
-    }
+    const csvRow = `\n${[timestamp, name, email, phone || ''].map(escapeCsv).join(',')}`;
+    const filePath = path.join(process.cwd(), 'cro_leads.csv');
+    fs.appendFileSync(filePath, csvRow);
 
-  } else {
-    res.setHeader('Allow', 'POST');
-    res.status(405).end('Method Not Allowed');
+    return NextResponse.json({ message: 'Submission successful.' });
+  } catch (error) {
+    console.error('Error handling lead submission:', error);
+    return NextResponse.json({ message: 'Internal Server Error.' }, { status: 500 });
   }
 }

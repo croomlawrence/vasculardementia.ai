@@ -11,7 +11,7 @@ export default function ClinicalTrialsPage() {
     <main className="max-w-4xl mx-auto px-6 py-20">
       <div className="text-center">
         <h1 className="text-5xl font-semibold tracking-tight mb-6">Could You Help Advance the Science of Brain Health?</h1>
-        <p className="text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
+        <p className="text-xl text-black mb-10 max-w-3xl mx-auto">
           Clinical trials are research studies that explore whether a new medicine or treatment is safe and effective. They are a vital part of developing new therapies, and participants are the heroes who make it all possible.
         </p>
       </div>
@@ -32,7 +32,7 @@ export default function ClinicalTrialsPage() {
       
       <div className="text-center border-t pt-12 mt-12">
         <h2 className="text-4xl font-semibold tracking-tight mb-6">Learn About Different Types of Research</h2>
-        <p className="text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
+        <p className="text-xl text-black mb-10 max-w-3xl mx-auto">
           Not all clinical trials are the same. Explore the major categories of research being done to better understand and treat vascular cognitive conditions.
         </p>
         <Link 
@@ -45,7 +45,7 @@ export default function ClinicalTrialsPage() {
 
       <div className="text-center border-t pt-12 mt-12">
         <h2 className="text-4xl font-semibold tracking-tight mb-6">Is a Clinical Trial Right for You?</h2>
-        <p className="text-xl text-gray-700 mb-10 max-w-3xl mx-auto">
+        <p className="text-xl text-black mb-10 max-w-3xl mx-auto">
           If you're ready, the first step is a short, anonymous pre-screener to see if you may be a preliminary fit for any current or future studies.
         </p>
         
@@ -55,7 +55,7 @@ export default function ClinicalTrialsPage() {
         >
           Start the Pre-Screener
         </Link>
-        <p className="text-sm mt-4 text-gray-600">This is not a substitute for medical advice. Always consult with your doctor.</p>
+        <p className="text-sm mt-4 text-black">This is not a substitute for medical advice. Always consult with your doctor.</p>
       </div>
     </main>
   );

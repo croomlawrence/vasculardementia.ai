@@ -20,7 +20,7 @@ export default function EmailCapture() {
         Download The Guide
       </Link>
       
-      <p className="text-sm text-gray-600 mt-4">
+      <p className="text-sm text-black mt-4">
         We respect your privacy. No spam.
       </p>
     </div>

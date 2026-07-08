@@ -53,13 +53,13 @@ export default function ResourcesPage() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-20">
       <h1 className="text-5xl font-semibold tracking-tight mb-4 text-center">Resources</h1>
-      <p className="text-xl text-gray-700 mb-12 text-center">Your hub for understanding and supporting your vascular cognitive health.</p>
+      <p className="text-xl text-black mb-12 text-center">Your hub for understanding and supporting your vascular cognitive health.</p>
 
       <div className="space-y-10">
         {articles.map((article) => (
           <Link key={article.title} href={article.href} className="block border rounded-lg p-8 hover:shadow-lg">
             <h2 className="text-3xl font-semibold mb-3">{article.title}</h2>
-            <p className="text-lg text-gray-700">{article.description}</p>
+            <p className="text-lg text-black">{article.description}</p>
           </Link>
         ))}
       </div>

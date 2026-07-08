@@ -39,14 +39,14 @@ export default function AreasOfStudyPage() {
     <main className="max-w-4xl mx-auto px-6 py-20">
       <div className="text-center mb-12">
         <h1 className="text-5xl font-semibold tracking-tight mb-4">Major Areas of Vascular Cognitive Research</h1>
-        <p className="text-xl text-gray-700 max-w-3xl mx-auto">Learn about the different approaches scientists are taking to better understand, diagnose, and manage vascular cognitive health.</p>
+        <p className="text-xl text-black max-w-3xl mx-auto">Learn about the different approaches scientists are taking to better understand, diagnose, and manage vascular cognitive health.</p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
         {researchAreas.map((area) => (
           <div key={area.title} className="border-2 border-gray-200 rounded-3xl p-8 flex flex-col">
             <h2 className="text-3xl font-semibold mb-4">{area.title}</h2>
-            <p className="text-lg text-gray-700 mb-6 flex-grow">{area.description}</p>
+            <p className="text-lg text-black mb-6 flex-grow">{area.description}</p>
             <Link 
               href={area.href} 
               target="_blank" 
@@ -61,7 +61,7 @@ export default function AreasOfStudyPage() {
       
       <div className="mt-16 text-center border-t pt-10">
         <h2 className="text-4xl font-semibold tracking-tight mb-4">Ready to Take the Next Step?</h2>
-        <p className="text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+        <p className="text-xl text-black mb-8 max-w-3xl mx-auto">
             Our anonymous pre-screener can help you determine if you might be a preliminary fit for studies like these.
         </p>
         <Link 

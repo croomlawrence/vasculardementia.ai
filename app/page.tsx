@@ -79,7 +79,7 @@ export default function VascuMindHome() {
           <p className="text-xl text-foreground-secondary max-w-2xl mx-auto">
             This means that for millions, supporting healthy brain circulation isn't just a good idea—it's a critical and actionable part of any comprehensive cognitive health plan.
           </p>
-          <p className="text-sm mt-4 text-gray-500">
+          <p className="text-sm mt-4 text-black">
             ¹ Source: Alzheimer's Association
           </p>
         </div>

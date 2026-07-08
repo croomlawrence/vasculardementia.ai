@@ -13,7 +13,7 @@ export default function PreScreenerPage() {
     <main className="max-w-xl mx-auto px-6 py-20">
       <div className="text-center mb-12">
         <h1 className="text-4xl font-semibold tracking-tight">Clinical Trial Pre-Screener</h1>
-        <p className="text-lg text-gray-600 mt-2">Let's see if you might be a preliminary fit for a study.</p>
+        <p className="text-lg text-black mt-2">Let's see if you might be a preliminary fit for a study.</p>
       </div>
 
       <div className="bg-white rounded-3xl border shadow-lg p-8">

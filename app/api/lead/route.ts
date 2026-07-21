@@ -30,6 +30,7 @@ type CrmResult = {
   destination: string;
   notification?: "sent" | "not-configured" | "failed";
   response?: string;
+  error?: string;
 };
 
 const GOOGLE_LEADS_WEBHOOK_URL = process.env.GOOGLE_LEADS_WEBHOOK_URL;
@@ -253,14 +254,52 @@ async function sendToGoogleWebhook(registration: CustomerRegistration): Promise<
   return { configured: true, stored: true, destination: "google-apps-script", response: text.slice(0, 500) };
 }
 
+function sanitizeCrmError(error: unknown) {
+  const message = error instanceof Error ? error.message : String(error);
+  return message
+    .replace(/ya29\.[A-Za-z0-9._-]+/g, "[redacted-access-token]")
+    .replace(/1\/[A-Za-z0-9._-]+/g, "[redacted-refresh-token]")
+    .slice(0, 500);
+}
+
 async function sendToGoogleNativeCrm(registration: CustomerRegistration): Promise<CrmResult> {
-  const direct = await sendToGoogleSheetsDirect(registration);
-  if (direct) return direct;
+  let directError: string | undefined;
 
-  const webhook = await sendToGoogleWebhook(registration);
-  if (webhook) return webhook;
+  try {
+    const direct = await sendToGoogleSheetsDirect(registration);
+    if (direct) return direct;
+  } catch (error) {
+    directError = sanitizeCrmError(error);
+    console.error("VascuMind CRM direct Google Sheets failed; trying fallback", directError);
+  }
 
-  return { configured: false, stored: false, destination: "server-log" };
+  try {
+    const webhook = await sendToGoogleWebhook(registration);
+    if (webhook) {
+      return directError ? { ...webhook, error: `Direct Google Sheets failed: ${directError}` } : webhook;
+    }
+  } catch (error) {
+    const webhookError = sanitizeCrmError(error);
+    console.error("VascuMind CRM webhook fallback failed", webhookError);
+    return {
+      configured: true,
+      stored: false,
+      destination: "server-log",
+      error: directError
+        ? `Direct Google Sheets failed: ${directError}; webhook failed: ${webhookError}`
+        : `Google CRM webhook failed: ${webhookError}`,
+    };
+  }
+
+  return directError
+    ? { configured: true, stored: false, destination: "server-log", error: `Direct Google Sheets failed: ${directError}` }
+    : { configured: false, stored: false, destination: "server-log" };
+}
+
+function crmResponseMessage(crm: CrmResult) {
+  if (crm.stored) return "Received and stored in the VascuMind customer database.";
+  if (crm.configured) return "Received, but Google CRM storage needs operator attention. The registration was logged server-side.";
+  return "Received. Native Google CRM routing is ready; add Google CRM environment variables to store registrations in Google Sheets.";
 }
 
 export async function POST(request: Request) {
@@ -280,8 +319,6 @@ export async function POST(request: Request) {
     ok: true,
     registrationId: registration.registrationId,
     crm,
-    message: crm.stored
-      ? "Received and stored in the VascuMind customer database."
-      : "Received. Native Google CRM routing is ready; add Google CRM environment variables to store registrations in Google Sheets.",
+    message: crmResponseMessage(crm),
   });
 }

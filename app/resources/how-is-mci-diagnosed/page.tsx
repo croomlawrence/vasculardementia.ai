@@ -4,7 +4,7 @@ import EmailCapture from '@/components/EmailCapture';
 
 export const metadata: Metadata = {
   title: "How is MCI Diagnosed? A Guide to Cognitive Testing | VascuMind",
-  description: "Learn about the process of diagnosing Mild Cognitive Impairment (MCI), from clinical interviews to objective tests like the MCI Screen.",
+  description: "Learn how clinicians evaluate Mild Cognitive Impairment (MCI), from clinical interviews to structured cognitive screening tools like the MCI Screen.",
 };
 
 export default function HowMciIsDiagnosedPage() {
@@ -29,18 +29,18 @@ export default function HowMciIsDiagnosedPage() {
         <p>For many years, the standard in-office cognitive test has been the Mini-Mental State Exam (MMSE). While it is a useful tool, it has a significant limitation: **it was primarily designed to detect dementia, not the much earlier stage of MCI.**</p>
         <p>This means many people in the early stages of cognitive decline can "pass" the MMSE, leaving both the patient and doctor with a false sense of security while the window for early, effective intervention closes.</p>
 
-        <h2>The Modern Solution: High-Accuracy MCI Screening</h2>
-        <p>To solve this problem, a new generation of highly sensitive tools was developed. The most accurate of these is the **MCI Screen**.</p>
+        <h2>The Modern Solution: Structured MCI Screening</h2>
+        <p>To support earlier conversations, newer structured tools were developed. VascuMind references the <strong>MCI Screen</strong> as a cognitive screening, benchmarking, and tracking tool for clinician discussion.</p>
         
         <p>Here’s why it’s different:</p>
         <ul>
             <li><strong>Purpose-Built for MCI:</strong> The MCI Screen was scientifically designed and validated specifically to detect the subtle changes of Mild Cognitive Impairment.</li>
-            <li><strong>Superior Accuracy:</strong> With a published accuracy of 97.3%, it is the most reliable tool available to determine if your memory is normal for your age.</li>
-            <li><strong>Objective & Standardized:</strong> The test is administered over the phone by a trained proctor, ensuring every test is performed under the same controlled conditions. This removes the variability of a busy doctor's office and provides a score you can trust.</li>
+            <li><strong>Published-validation context:</strong> MCI Screen materials describe published validation for detecting memory changes versus normal aging. Ask for source documentation and discuss results with a qualified clinician.</li>
+            <li><strong>Objective & Standardized:</strong> The test is administered over the phone by a trained proctor to create a structured cognitive benchmark. It is not a diagnosis or a substitute for clinical evaluation.</li>
         </ul>
 
         <h2>Your Baseline is Your Power</h2>
-        <p>A diagnosis of MCI isn't just a label; it's a starting point. By getting a reliable, objective baseline of your cognitive health with a tool like the MCI Screen, you empower yourself and your doctor with the data needed to make informed decisions, track your progress, and take proactive control of your cognitive journey.</p>
+        <p>A diagnosis of MCI is not just a label; it can be a starting point for clearer clinician conversations. A structured cognitive baseline may help you and your doctor track change over time and decide what evaluation or support is appropriate.</p>
         <p><strong><Link href="/resources/mci-vs-normal-aging">Learn more about the difference between MCI and normal aging</Link>.</strong></p>
 
         <EmailCapture />

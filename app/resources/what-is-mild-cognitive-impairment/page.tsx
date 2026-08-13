@@ -4,7 +4,7 @@ import EmailCapture from '@/components/EmailCapture';
 
 export const metadata: Metadata = {
   title: "What is Mild Cognitive Impairment (MCI)? | VascuMind",
-  description: "A complete patient's guide to understanding Mild Cognitive Impairment (MCI), its symptoms, causes, and the importance of early, accurate detection.",
+  description: "A patient-friendly guide to understanding Mild Cognitive Impairment (MCI), symptoms, causes, and clinician-guided evaluation.",
 };
 
 export default function MciPillarPage() {
@@ -15,7 +15,7 @@ export default function MciPillarPage() {
         
         <p className="text-xl">You've noticed some changes. Maybe you're forgetting appointments more often, or struggling to find the right words in conversations. You're wondering if it's just a normal part of getting older, or if it could be something more. This is where understanding Mild Cognitive Impairment (MCI) becomes crucial.</p>
         
-        <p>MCI is the stage between the expected cognitive decline of normal aging and the more serious decline of dementia. It's a critical early warning sign, and identifying it provides a powerful opportunity to take proactive steps for your brain health.</p>
+        <p>MCI is often described as the stage between expected cognitive changes of normal aging and more serious decline. If you are concerned, the right next step is a clinician-guided evaluation and a clear baseline for discussion.</p>
 
         <h2>What Are the Symptoms of MCI?</h2>
         <p>A person with MCI is still able to function independently, but they and their family members can notice a clear "slip" in their mental sharpness. Symptoms can include:</p>
@@ -27,9 +27,9 @@ export default function MciPillarPage() {
         </ul>
         <p>The key is that these are not just occasional lapses. They are a consistent change from your previous abilities. <strong><Link href="/resources/mci-vs-normal-aging">Learn more about how MCI differs from normal aging</Link>.</strong></p>
 
-        <h2>How is MCI Diagnosed? The Importance of Accuracy</h2>
+        <h2>How is MCI Evaluated? The Importance of a Clear Baseline</h2>
         <p>Diagnosing MCI is a process. It starts with a conversation with your doctor about your symptoms and medical history. However, to get a clear picture, an objective cognitive test is needed.</p>
-        <p>The problem is that many traditional tests are not sensitive enough to detect the subtle changes of MCI. A modern, highly accurate tool is needed. The **MCI Screen** was purpose-built for this task, with a 97.3% accuracy rate in detecting MCI, making it the most reliable tool to determine if your memory is normal for your age.</p>
+        <p>Many brief cognitive tools are not designed to capture subtle changes. VascuMind presents the <strong>MCI Screen</strong> as a structured cognitive screening, benchmarking, and tracking tool to support clinician discussion. It is not a diagnosis or a substitute for clinical evaluation.</p>
         <p><strong><Link href="/resources/how-is-mci-diagnosed">Read our full guide on how MCI is diagnosed</Link>.</strong></p>
 
         <h2>What Causes MCI?</h2>
@@ -41,10 +41,10 @@ export default function MciPillarPage() {
             <li>Sleep disorders like sleep apnea</li>
             <li>Side effects from medications</li>
         </ul>
-        <p>This is why a timely and accurate diagnosis is so important: it gives you and your doctor the chance to investigate and potentially treat an underlying issue.</p>
+        <p>This is why timely clinician evaluation is important: it gives you and your doctor the chance to investigate contributors that may be worth addressing.</p>
         
         <h2>You've Received an MCI Diagnosis. What Now?</h2>
-        <p>Receiving an MCI diagnosis is not a passive event; it is the starting line for taking proactive control of your cognitive health. It's a call to action.</p>
+        <p>Receiving an MCI diagnosis can be a starting point for organized follow-up, clinician discussion, and support from family or caregivers.</p>
         <p>Your journey should include getting a reliable baseline to track your progress, working with your doctor to investigate reversible causes, and implementing powerful lifestyle changes related to diet, exercise, and sleep.</p>
         <p><strong><Link href="/resources/what-to-do-after-mci-diagnosis">Read our 5-Step Plan for What to Do After an MCI Diagnosis</Link>.</strong></p>
 

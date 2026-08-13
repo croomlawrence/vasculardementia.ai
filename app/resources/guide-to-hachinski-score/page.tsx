@@ -19,7 +19,7 @@ export default function HachinskiGuidePage() {
 
         <h2>What is the Hachinski Score?</h2>
         <p>The Hachinski Score is a short questionnaire designed to help doctors understand the likelihood that vascular (blood vessel) problems are contributing to cognitive symptoms.</p>
-        <p>It's not a final diagnosis, but a way to "point the flashlight" in the right direction. It helps suggest whether symptoms are more likely related to Alzheimer's disease or to vascular issues, like a series of small, unnoticed strokes or reduced blood flow to the brain.</p>
+        <p>It is not a diagnosis, but a way to "point the flashlight" toward questions to discuss with a clinician. A higher pattern may suggest that vascular issues, stroke/TIA history, or reduced blood flow deserve clinical attention.</p>
 
         <h2>What Kind of Questions Does It Ask?</h2>
         <p>The questionnaire focuses on the <em>nature</em> of the symptoms. Here are the kinds of things it covers, rephrased in simple terms:</p>
@@ -32,7 +32,7 @@ export default function HachinskiGuidePage() {
         <p>Each "yes" to a question adds points to the total score. A higher score suggests that vascular issues are more likely to be a significant factor.</p>
 
         <h2>Why It Matters: The Vascular Connection</h2>
-        <p>Understanding whether cognitive issues have a vascular cause is critical, because the approach to management can be different. When blood flow to the brain is compromised, it doesn't get the oxygen and nutrients it needs to function at its best. Identifying this early gives you and your doctor the opportunity to focus on supporting your cardiovascular health as a key part of supporting your cognitive wellness.</p>
+        <p>Understanding whether vascular factors may be involved can change what you discuss with your clinician. Blood pressure, diabetes, cholesterol, smoking, sleep, medications, stroke/TIA history, and cardiovascular health may all be relevant to cognitive wellness.</p>
         <p><strong>Learn more about the <Link href="/resources/heart-brain-connection">Heart-Brain Connection</Link>.</strong></p>
 
         <h2>How VascuMind Uses This Approach</h2>
@@ -42,7 +42,7 @@ export default function HachinskiGuidePage() {
         <h2>Take the First Step</h2>
         <p>Ready to understand your pattern? The quiz is free, takes about 5 minutes, and is completely private.</p>
         <div className="mt-8">
-          <Link href="/science#hachinski" className="btn-green inline-block px-8 py-3 rounded-full text-lg font-semibold">
+          <Link href="/hachinski" className="btn-green inline-block px-8 py-3 rounded-full text-lg font-semibold">
             Take the Free Vascular Pattern Quiz
           </Link>
         </div>

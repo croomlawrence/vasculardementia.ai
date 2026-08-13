@@ -18,8 +18,8 @@ export default function AfterMciDiagnosisPage() {
         <p>Here is a 5-step plan to help you move forward with confidence and clarity.</p>
 
         <h2>Step 1: Confirm and Baseline</h2>
-        <p>The first step is to ensure your diagnosis is based on objective, reliable data. Many screening tools are not sensitive enough to accurately detect MCI. If your diagnosis was based on a simple in-office questionnaire, consider getting a more robust baseline.</p>
-        <p>The **MCI Screen**, with its 97% accuracy rate, provides a trusted, objective benchmark of your cognitive function. This gives you a clear and reliable starting point to track any changes—either positive or negative—over time.</p>
+        <p>The first step is to understand what evaluation was used and whether you have a clear baseline for future comparison. If your diagnosis was based on a brief in-office questionnaire, ask your clinician whether a more structured cognitive benchmark would be useful.</p>
+        <p>The <strong>MCI Screen</strong> is presented by VascuMind as a cognitive screening, benchmarking, and tracking tool. It can support clinician discussion and repeat tracking, but it is not a standalone diagnosis or substitute for clinical evaluation.</p>
         <p><strong><Link href="/resources/how-is-mci-diagnosed">Learn more about the different types of cognitive tests available</Link>.</strong></p>
 
         <h2>Step 2: Investigate Reversible Causes</h2>
@@ -32,7 +32,7 @@ export default function AfterMciDiagnosisPage() {
         </ul>
 
         <h2>Step 3: Focus on Lifestyle Medicine</h2>
-        <p>What is good for your heart is good for your brain. This is the most empowering part of your new plan. Lifestyle changes have been proven to have a significant impact on cognitive health and can slow the progression of MCI.</p>
+        <p>What is good for your heart is often relevant to brain health. Work with your clinician on lifestyle factors that may support vascular and cognitive wellness.</p>
         <p>Focus on the "big five":</p>
         <ol>
             <li><strong>Regular Exercise:</strong> Aim for 150 minutes of moderate activity per week, like brisk walking.</li>
@@ -53,7 +53,7 @@ export default function AfterMciDiagnosisPage() {
         </ul>
 
         <h2>Step 5: Track Your Progress</h2>
-        <p>Once you have your trusted baseline from a tool like the MCI Screen and have started your lifestyle plan, it's crucial to track your progress. Regular, objective cognitive assessments can show you how your efforts are paying off and can help you and your doctor make informed decisions about your care plan. This transforms anxiety about the future into empowerment in the present.</p>
+        <p>Once you have a structured baseline from a tool like the MCI Screen and have discussed next steps with your clinician, repeat tracking can help organize future conversations and support informed decisions.</p>
 
         <EmailCapture />
 

@@ -40,12 +40,12 @@ export default function MciVsAgingPage() {
         </ul>
         <p>The most important distinction is that with MCI, the cognitive changes are a new and persistent problem, representing a decline from your previous level of ability.</p>
 
-        <h2>Why Early and Accurate Detection Matters</h2>
+        <h2>Why Early Clinician Discussion Matters</h2>
         <p>Most traditional cognitive tests, like the MMSE, were designed to detect full-blown dementia. By that point, the window for many of the most effective interventions has passed.</p>
-        <p>Identifying MCI is critical because it gives you time. It creates the opportunity to work with your doctor to look for reversible causes (like vitamin deficiencies or medication side effects), make impactful lifestyle changes, and consider new FDA-approved treatments that are most effective in the earliest stages.</p>
+        <p>Discussing possible MCI early gives you time to work with your doctor to look for contributors such as vitamin deficiencies, medication side effects, sleep problems, mood, vascular risk factors, or other issues that may deserve evaluation.</p>
 
-        <h2>How to Get a Clear Answer</h2>
-        <p>The only way to know for sure is through objective testing. While many tools exist, the **MCI Screen** was specifically designed to detect MCI, not just dementia, with a published accuracy of 97%. It answers the key question: "Is my memory normal for my age?"</p>
+        <h2>How to Get a Clearer Baseline</h2>
+        <p>A qualified clinician can help determine what evaluation is appropriate. VascuMind presents the <strong>MCI Screen</strong> as a structured cognitive screening, benchmarking, and tracking tool to support that conversation. It is not a diagnosis or a substitute for clinical evaluation.</p>
         <p><strong><Link href="/resources/how-is-mci-diagnosed">Learn more about how MCI is diagnosed</Link>.</strong></p>
 
         <EmailCapture />

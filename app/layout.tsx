@@ -4,93 +4,113 @@ import "./globals.css";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
 import Disclaimer from "./components/Disclaimer";
+import MarketingPixels from "./components/MarketingPixels";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const siteUrl = "https://www.vascumind.com";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.vascumind.com"),
-  title: "VascuMind | Vascular Dementia & Post-Stroke Cognitive Support",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "VascuMind | Free Vascular Cognitive Pattern Check",
+    template: "%s | VascuMind",
+  },
   description:
-    "VascuMind helps patients and caregivers understand vascular dementia, post-stroke cognitive changes, and vascular cognitive impairment with education, pattern-check tools, cognitive baseline options, and clinician discussion support.",
+    "Start with a free vascular cognitive pattern check for memory changes after stroke, TIA, blood pressure, diabetes, PAD, or other vascular risk factors, then create a $99 cognitive baseline for clinician discussion.",
+  alternates: { canonical: siteUrl },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "VascuMind",
+    title: "VascuMind | Free Vascular Cognitive Pattern Check",
+    description:
+      "A clearer first step for families worried about memory changes after stroke, TIA, or vascular risk factors. Educational only; not a diagnosis.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "VascuMind | Free Vascular Cognitive Pattern Check",
+    description:
+      "Start with a free vascular cognitive pattern check, then create a structured cognitive baseline for clinician discussion.",
+  },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+const navLinks = [
+  ["Start Here", "/what-we-offer"],
+  ["Free Pattern Check", "/hachinski"],
+  ["Cognitive Baseline", "/memory-screen"],
+  ["Science", "/science"],
+  ["Research Options", "/clinical-trial-matching"],
+  ["For Sponsors", "/cro-licensing"],
+];
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "VascuMind",
+    url: siteUrl,
+    description: "Educational vascular cognitive health tools and clinician conversation support.",
+  };
+
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col">
-        <nav className="border-b">
-          <div className="max-w-6xl mx-auto px-6 min-h-16 py-3 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-            <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-8">
+        <MarketingPixels />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
+        <nav className="border-b bg-white sticky top-0 z-40">
+          <div className="max-w-6xl mx-auto px-6 min-h-16 py-3 flex flex-col xl:flex-row xl:items-center justify-between gap-4">
+            <div className="flex flex-col xl:flex-row xl:items-center gap-4 xl:gap-8">
               <Link href="/" className="font-semibold text-xl">VascuMind®</Link>
-              <div className="flex flex-wrap gap-4 lg:gap-6 text-base">
-                <Link href="/what-we-offer" className="hover:underline">Start Here</Link>
-                <Link href="/hachinski" className="hover:underline">Free Pattern Check</Link>
-                <Link href="/memory-screen" className="hover:underline">Cognitive Baseline</Link>
-                <Link href="/research/clinical-evidence" className="hover:underline">What May Be Actionable</Link>
-                <Link href="/clinical-trial-matching" className="hover:underline">Research Options</Link>
-                <Link href="/marketplace" className="hover:underline">Wellness Support</Link>
+              <div className="flex flex-wrap gap-4 xl:gap-6 text-base">
+                {navLinks.map(([label, href]) => (
+                  <Link key={href} href={href} className="hover:underline">{label}</Link>
+                ))}
               </div>
             </div>
-            <Link 
-              href="/hachinski"
-              className="bg-black text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-white hover:text-black transition border border-black text-center"
-            >
+            <Link href="/hachinski" className="bg-black text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-white hover:text-black transition border border-black text-center">
               Start Free Check
             </Link>
           </div>
         </nav>
         {children}
-
         <Disclaimer />
-
         <Analytics />
         <footer className="bg-black text-white py-12 mt-auto">
           <div className="max-w-6xl mx-auto px-6">
             <div className="grid md:grid-cols-4 gap-8 mb-10">
               <div>
-                <div className="font-semibold text-xl mb-3">VascuMind®</div>
-                <p className="text-sm">Educational tools for vascular dementia, post-stroke cognitive changes, and caregiver navigation.</p>
+                <div className="font-semibold text-xl mb-3 text-white">VascuMind®</div>
+                <p className="text-sm text-white">Educational tools for vascular dementia, post-stroke cognitive changes, and caregiver navigation.</p>
               </div>
               <div>
-                <div className="font-semibold mb-3 text-sm tracking-widest">PATIENTS & CAREGIVERS</div>
+                <div className="font-semibold mb-3 text-sm tracking-widest text-white">PATIENTS & CAREGIVERS</div>
                 <div className="space-y-2 text-base">
                   <Link href="/" className="block hover:underline">Home</Link>
                   <Link href="/what-we-offer" className="block hover:underline">Start Here</Link>
                   <Link href="/protocol" className="block hover:underline">VascuMind Protocol</Link>
                   <Link href="/hachinski" className="block hover:underline">Free Pattern Check</Link>
                   <Link href="/memory-screen" className="block hover:underline">Cognitive Baseline</Link>
-                  <Link href="/caregiver-triage" className="block hover:underline">Caregiver Safety Guide</Link>
+                  <Link href="/memory-after-stroke" className="block hover:underline">Memory After Stroke</Link>
+                  <Link href="/caregiver-guide-memory-after-stroke" className="block hover:underline">Caregiver Guide</Link>
                   <Link href="/marketplace" className="block hover:underline">Wellness Support</Link>
                 </div>
               </div>
               <div>
-                <div className="font-semibold mb-3 text-sm tracking-widest">RESEARCH & PARTNERS</div>
+                <div className="font-semibold mb-3 text-sm tracking-widest text-white">RESEARCH & PARTNERS</div>
                 <div className="space-y-2 text-base">
+                  <Link href="/science" className="block hover:underline">Science & Validation</Link>
                   <Link href="/research/clinical-evidence" className="block hover:underline">What May Be Actionable</Link>
                   <Link href="/research/vascular-dementia-clinical-trials" className="block hover:underline">Clinical Trials</Link>
                   <Link href="/clinical-trial-matching" className="block hover:underline">Research Options</Link>
                   <Link href="/cro-licensing" className="block hover:underline">For Research Partners</Link>
-                  <Link href="/cro-partner-deck" className="block hover:underline">CRO Partner Deck</Link>
+                  <Link href="/cro-licensing/packet" className="block hover:underline">Licensing Packet</Link>
                   <Link href="/hsa-fsa" className="block hover:underline">HSA/FSA Status</Link>
                 </div>
               </div>
               <div>
-                <div className="font-semibold mb-3 text-sm tracking-widest">LEGAL</div>
+                <div className="font-semibold mb-3 text-sm tracking-widest text-white">LEGAL</div>
                 <div className="space-y-2 text-base">
                   <div>© VascuMind 2026</div>
                   <Link href="/privacy" className="block hover:underline">Privacy</Link>
@@ -101,7 +121,7 @@ export default function RootLayout({
                 </div>
               </div>
             </div>
-            <div className="border-t border-white pt-6 text-base text-center">
+            <div className="border-t border-white pt-6 text-base text-center text-white">
               VascuMind® is not a substitute for professional medical care. Call emergency services for sudden or severe neurologic symptoms.
             </div>
           </div>

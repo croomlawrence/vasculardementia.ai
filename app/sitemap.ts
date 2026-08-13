@@ -3,34 +3,34 @@ import type { MetadataRoute } from "next";
 const routes = [
   "",
   "/what-we-offer",
-  "/protocol",
   "/hachinski",
   "/memory-screen",
+  "/memory-screen/thank-you",
+  "/protocol",
+  "/science",
+  "/memory-after-stroke",
+  "/vascular-dementia-symptoms",
+  "/post-stroke-cognitive-impairment",
+  "/hachinski-ischemic-score",
+  "/vascular-cognitive-impairment",
+  "/high-blood-pressure-and-memory",
+  "/small-vessel-disease-memory",
+  "/caregiver-guide-memory-after-stroke",
+  "/cognitive-screening-for-clinical-trials",
   "/clinical-trial-matching",
+  "/cro-licensing",
+  "/cro-licensing/packet",
+  "/marketplace",
   "/research/clinical-evidence",
   "/research/vascular-dementia-clinical-trials",
-  "/caregiver-triage",
-  "/marketplace",
-  "/marketplace/citicoline",
-  "/marketplace/omega-3",
-  "/marketplace/mct-oil",
-  "/marketplace/beetroot",
-  "/marketplace/b-complex",
-  "/marketplace/vitamin-d3-k2",
-  "/marketplace/percepta",
-  "/transparency",
-  "/privacy",
-  "/terms",
-  "/affiliate-disclosure",
-  "/compliance",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.vascumind.com";
+  const now = new Date();
   return routes.map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
+    url: `https://www.vascumind.com${route}`,
+    lastModified: now,
     changeFrequency: route === "" ? "weekly" : "monthly",
-    priority: route === "" ? 1 : 0.7,
+    priority: route === "" ? 1 : route.includes("memory") || route.includes("hachinski") ? 0.9 : 0.7,
   }));
 }

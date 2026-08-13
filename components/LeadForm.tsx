@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import { trackVascuMindEvent } from "@/lib/trackVascuMindEvent";
 
-type LeadType = "memory-screen" | "cro-licensing" | "clinical-trial-match" | "affiliate-interest";
+type LeadType = "memory-screen" | "clinician-guide" | "cro-licensing" | "clinical-trial-match" | "affiliate-interest";
 
 interface LeadFormProps {
   leadType: LeadType;
@@ -11,6 +11,8 @@ interface LeadFormProps {
   submitLabel: string;
   includeTrialFields?: boolean;
   patientResearchFields?: boolean;
+  compact?: boolean;
+  context?: Record<string, string | number | boolean>;
 }
 
 function eventForLeadType(leadType: LeadType) {
@@ -19,7 +21,7 @@ function eventForLeadType(leadType: LeadType) {
   return "memory_screen_lead_submit";
 }
 
-export default function LeadForm({ leadType, title, submitLabel, includeTrialFields = false, patientResearchFields = false }: LeadFormProps) {
+export default function LeadForm({ leadType, title, submitLabel, includeTrialFields = false, patientResearchFields = false, compact = false, context = {} }: LeadFormProps) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
   const [started, setStarted] = useState(false);
@@ -51,13 +53,13 @@ export default function LeadForm({ leadType, title, submitLabel, includeTrialFie
     setMessage("");
     const form = event.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
-    const context = browserContext();
+    const attribution = browserContext();
     trackVascuMindEvent("lead_form_submit_attempt", { eventData: { leadType, formTitle: title } });
     try {
       const response = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ leadType, ...context, ...data }),
+        body: JSON.stringify({ leadType, ...attribution, ...context, ...data }),
       });
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || "Submission failed");
@@ -85,7 +87,7 @@ export default function LeadForm({ leadType, title, submitLabel, includeTrialFie
   }
 
   return (
-    <form onSubmit={onSubmit} onFocusCapture={onFormFocus} className="border-4 border-black rounded-3xl p-8 space-y-5" aria-label={title}>
+    <form onSubmit={onSubmit} onFocusCapture={onFormFocus} className={`${compact ? "border-2" : "border-4"} border-black rounded-3xl p-6 md:p-8 space-y-5`} aria-label={title}>
       <h2 className="text-3xl font-semibold">{title}</h2>
       <div className="grid md:grid-cols-2 gap-4">
         <label className="block">

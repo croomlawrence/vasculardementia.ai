@@ -65,7 +65,7 @@ const REGISTRATION_FIELDS: (keyof CustomerRegistration)[] = [
 
 function segmentFor(leadType = ""): CustomerRegistration["segment"] {
   if (leadType === "cro-licensing" || leadType === "clinical-trial-match") return "cro";
-  if (leadType === "memory-screen") return "consumer";
+  if (leadType === "memory-screen" || leadType === "clinician-guide") return "consumer";
   if (leadType === "affiliate-interest") return "affiliate";
   return "unknown";
 }

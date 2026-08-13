@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const trustBadges = [
@@ -9,59 +10,49 @@ const trustBadges = [
 
 const pathway = ["Concern", "Pattern", "Baseline", "Questions", "Options"];
 
+const imageMap = {
+  kitchen: {
+    src: "/images/brand/vascumind-hero-family.png",
+    alt: "Adult daughter and older father calmly reviewing a laptop together at a bright kitchen table.",
+    label: "The moment you notice",
+    caption: "From worry at the kitchen table to a safer first step.",
+  },
+  clinic: {
+    src: "/images/brand/vascumind-clinician-conversation.png",
+    alt: "Clinician, older adult, and caregiver reviewing a tablet together in a bright outpatient office.",
+    label: "Clinician conversation",
+    caption: "Bring clearer questions to the visit.",
+  },
+  tablet: {
+    src: "/images/brand/vascumind-closeup-checklist.png",
+    alt: "Hands near a tablet and notebook on a warm kitchen table while preparing cognitive-health questions.",
+    label: "Cognitive baseline",
+    caption: "Create a benchmark for discussion and repeat tracking.",
+  },
+};
+
 export function VascularPathwayArt({ tone = "consumer" }: { tone?: "consumer" | "clinical" | "dark" }) {
-  const dark = tone === "dark";
+  const src = tone === "clinical" ? "/images/brand/vascumind-cro-dashboard.png" : "/images/brand/vascumind-abstract-pathway.png";
+  const alt = tone === "clinical"
+    ? "Abstract VascuMind clinical research dashboard concept for sponsor screening workflows."
+    : "Abstract deep emerald pathway artwork representing guided vascular cognitive health navigation.";
   return (
-    <div className={`pathway-art ${dark ? "pathway-art-dark" : ""}`} aria-hidden="true">
-      <svg viewBox="0 0 640 420" role="img" aria-label="Abstract vascular cognitive pathway artwork">
-        <defs>
-          <linearGradient id={`pathGradient-${tone}`} x1="0" x2="1" y1="0" y2="1">
-            <stop offset="0%" stopColor={dark ? "#DDF2EF" : "#0B4D3C"} stopOpacity="0.92" />
-            <stop offset="100%" stopColor={dark ? "#10B981" : "#10B981"} stopOpacity="0.62" />
-          </linearGradient>
-          <radialGradient id={`halo-${tone}`} cx="50%" cy="45%" r="65%">
-            <stop offset="0%" stopColor={dark ? "#10B981" : "#EAF5F0"} stopOpacity="0.95" />
-            <stop offset="100%" stopColor={dark ? "#000000" : "#FFFFFF"} stopOpacity="0" />
-          </radialGradient>
-        </defs>
-        <rect width="640" height="420" rx="38" fill={dark ? "#071B16" : "#F8F4EA"} />
-        <circle cx="326" cy="192" r="192" fill={`url(#halo-${tone})`} />
-        <path d="M72 278 C156 184 226 334 319 218 C397 119 468 192 572 94" fill="none" stroke={`url(#pathGradient-${tone})`} strokeWidth="12" strokeLinecap="round" />
-        <path d="M112 150 C198 92 226 184 292 158 C369 128 416 60 522 46" fill="none" stroke={`url(#pathGradient-${tone})`} strokeWidth="5" strokeLinecap="round" opacity="0.55" />
-        <path d="M135 343 C236 296 253 381 354 305 C431 247 479 306 575 245" fill="none" stroke={`url(#pathGradient-${tone})`} strokeWidth="5" strokeLinecap="round" opacity="0.5" />
-        {[72, 190, 319, 454, 572].map((cx, index) => (
-          <g key={cx}>
-            <circle cx={cx} cy={[278, 235, 218, 157, 94][index]} r="22" fill={dark ? "#000000" : "#FFFFFF"} stroke={dark ? "#DDF2EF" : "#000000"} strokeWidth="3" />
-            <circle cx={cx} cy={[278, 235, 218, 157, 94][index]} r="8" fill={dark ? "#10B981" : "#0B4D3C"} />
-          </g>
-        ))}
-      </svg>
+    <div className={`pathway-art ${tone === "dark" ? "pathway-art-dark" : ""}`}>
+      <Image src={src} alt={alt} width={1024} height={576} className="brand-image" priority={tone !== "clinical"} />
     </div>
   );
 }
 
-export function HumanMomentCard({ variant = "kitchen" }: { variant?: "kitchen" | "clinic" | "tablet" }) {
-  const label = variant === "clinic" ? "Clinician conversation" : variant === "tablet" ? "Cognitive baseline" : "The moment you notice";
-  const caption = variant === "clinic" ? "Bring clearer questions to the visit." : variant === "tablet" ? "Create a benchmark for discussion and repeat tracking." : "From worry at the kitchen table to a safer first step.";
+export function HumanMomentCard({ variant = "kitchen", priority = false }: { variant?: "kitchen" | "clinic" | "tablet"; priority?: boolean }) {
+  const image = imageMap[variant];
   return (
-    <figure className="human-card" aria-label={`${label}: ${caption}`}>
-      <div className="human-card-scene">
-        <div className="sun-orb" />
-        <div className="window-panel window-left" />
-        <div className="window-panel window-right" />
-        <div className="person person-caregiver"><span /></div>
-        <div className="person person-parent"><span /></div>
-        <div className="table-surface" />
-        <div className="tablet-device">
-          <div className="tablet-line" />
-          <div className="tablet-line short" />
-          <div className="tablet-pill" />
-        </div>
-        <div className="path-overlay" />
+    <figure className="human-card" aria-label={`${image.label}: ${image.caption}`}>
+      <div className="human-card-photo">
+        <Image src={image.src} alt={image.alt} width={1024} height={576} className="brand-image" priority={priority} />
       </div>
       <figcaption className="human-card-copy">
-        <span className="section-label">{label}</span>
-        <strong>{caption}</strong>
+        <span className="section-label">{image.label}</span>
+        <strong>{image.caption}</strong>
       </figcaption>
     </figure>
   );

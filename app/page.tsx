@@ -71,7 +71,7 @@ export default function VascuMindHome() {
             </p>
           </div>
           <div className="space-y-8">
-            <HumanMomentCard />
+            <HumanMomentCard priority />
             <ResultPreviewCard />
           </div>
         </div>

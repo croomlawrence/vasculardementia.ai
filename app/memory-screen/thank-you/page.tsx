@@ -1,12 +1,22 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { memoryScreenPrice } from "@/lib/business";
+import { HumanMomentCard, PathwayLine } from "@/app/components/BrandVisuals";
+import PaidBaselineIntake from "@/app/components/PaidBaselineIntake";
 
 export const metadata: Metadata = {
   title: "After Your Cognitive Baseline",
-  description: "After the $99 MCI Screen cognitive baseline, use your result for clinician discussion, optional wellness-support review, and consent-aware research follow-up.",
+  description: "After the $99 MCI Screen cognitive baseline, complete intake and use your result for clinician discussion, optional wellness-support review, and consent-aware research follow-up.",
   alternates: { canonical: "/memory-screen/thank-you" },
+  robots: { index: false, follow: false },
 };
+
+const checklist = [
+  "Watch for Stripe confirmation by email.",
+  "Complete the intake form below so your request can be matched to the right screening workflow.",
+  "Do not enter emergency symptoms or sensitive medical records into this form.",
+  "Save your pattern-check summary and cognitive baseline for clinician discussion.",
+];
 
 const paths = [
   {
@@ -34,37 +44,53 @@ const paths = [
 
 export default function MemoryScreenThankYouPage() {
   return (
-    <main className="max-w-6xl mx-auto px-6 py-16">
-      <section className="border-4 border-black rounded-3xl p-8 md:p-12 text-center mb-12 green-wash">
-        <div className="section-label mb-3">After the {memoryScreenPrice} cognitive baseline</div>
-        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Your baseline is a starting point for better questions — not a diagnosis.</h1>
-        <p className="text-2xl text-black mb-6 max-w-4xl mx-auto">
-          Use your MCI Screen benchmark and vascular-pattern context to guide clinician discussion, repeat tracking, optional wellness-support review, or consent-aware research follow-up.
-        </p>
-        <p className="text-xl text-black">
-          If symptoms are sudden or severe — facial drooping, one-sided weakness, speech trouble, confusion, severe dizziness, or vision loss — call emergency services immediately.
-        </p>
-      </section>
-
-      <section className="grid lg:grid-cols-3 gap-8 mb-12">
-        {paths.map((path) => (
-          <div key={path.title} className="border-4 border-black rounded-3xl p-8 flex flex-col">
-            <div className="section-label mb-3">{path.label}</div>
-            <h2 className="text-3xl font-semibold mb-4">{path.title}</h2>
-            <p className="text-xl text-black mb-6 flex-1">{path.copy}</p>
-            <Link href={path.href} className="btn-primary text-center">
-              {path.cta}
+    <main>
+      <section className="max-w-6xl mx-auto px-6 py-16">
+        <div className="grid lg:grid-cols-[1fr_380px] gap-10 items-start mb-12">
+          <div className="border-4 border-black rounded-3xl p-8 md:p-12 green-wash">
+            <div className="section-label mb-3">After the {memoryScreenPrice} cognitive baseline</div>
+            <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Your baseline is a starting point for better questions — not a diagnosis.</h1>
+            <p className="text-2xl text-black mb-6 max-w-4xl">
+              Use your MCI Screen benchmark and vascular-pattern context to guide clinician discussion, repeat tracking, optional wellness-support review, or consent-aware research follow-up.
+            </p>
+            <p className="text-xl text-black mb-6">
+              If symptoms are sudden or severe — facial drooping, one-sided weakness, speech trouble, confusion, severe dizziness, or vision loss — call emergency services immediately.
+            </p>
+            <Link href="#paid-intake" className="btn-primary inline-flex justify-center text-center">
+              Complete Intake
             </Link>
           </div>
-        ))}
-      </section>
+          <aside className="space-y-6">
+            <HumanMomentCard variant="clinic" />
+            <div className="border-4 border-black rounded-3xl p-6 bg-white">
+              <h2 className="text-2xl font-semibold mb-4">What to do now</h2>
+              <ul className="list-disc pl-6 space-y-2">
+                {checklist.map((item) => <li key={item}>{item}</li>)}
+              </ul>
+            </div>
+          </aside>
+        </div>
 
-      <section className="border border-black rounded-3xl p-8">
-        <h2 className="text-2xl font-semibold mb-3">Still need to complete intake?</h2>
-        <p className="text-xl text-black mb-6">Use the follow-up form so the screening pathway can be routed correctly.</p>
-        <Link href="/memory-screen#follow-up" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
-          Complete Follow-Up Form
-        </Link>
+        <div className="mb-12">
+          <PaidBaselineIntake />
+        </div>
+
+        <section className="mb-12">
+          <PathwayLine cta={false} />
+        </section>
+
+        <section className="grid lg:grid-cols-3 gap-8 mb-12">
+          {paths.map((path) => (
+            <div key={path.title} className="border-4 border-black rounded-3xl p-8 flex flex-col">
+              <div className="section-label mb-3">{path.label}</div>
+              <h2 className="text-3xl font-semibold mb-4">{path.title}</h2>
+              <p className="text-xl text-black mb-6 flex-1">{path.copy}</p>
+              <Link href={path.href} className="btn-primary text-center">
+                {path.cta}
+              </Link>
+            </div>
+          ))}
+        </section>
       </section>
     </main>
   );

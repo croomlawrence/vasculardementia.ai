@@ -12,7 +12,7 @@ interface LeadFormProps {
   includeTrialFields?: boolean;
   patientResearchFields?: boolean;
   compact?: boolean;
-  context?: Record<string, string | number | boolean>;
+  context?: Record<string, string | number | boolean | undefined | null>;
 }
 
 function eventForLeadType(leadType: LeadType) {

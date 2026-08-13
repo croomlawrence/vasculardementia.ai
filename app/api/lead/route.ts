@@ -13,6 +13,13 @@ type LeadPayload = {
   timeline?: string;
   consent?: string | boolean;
   trialDataConsent?: string | boolean;
+  checkoutStage?: string;
+  product?: string;
+  price?: string;
+  stripeSessionId?: string;
+  stripePaymentIntent?: string;
+  checkoutStatus?: string;
+  sourcePath?: string;
 };
 
 type CustomerRegistration = LeadPayload & {
@@ -61,6 +68,12 @@ const REGISTRATION_FIELDS: (keyof CustomerRegistration)[] = [
   "message",
   "consent",
   "trialDataConsent",
+  "checkoutStage",
+  "product",
+  "price",
+  "stripeSessionId",
+  "stripePaymentIntent",
+  "checkoutStatus",
 ];
 
 function segmentFor(leadType = ""): CustomerRegistration["segment"] {
@@ -97,9 +110,12 @@ function segmentSheetName(segment: CustomerRegistration["segment"]) {
 
 function followUpRow(registration: CustomerRegistration) {
   const followUpDate = new Date(Date.now() + 24 * 60 * 60 * 1000).toISOString().slice(0, 10);
+  const isPostPaymentIntake = registration.checkoutStage === "post_payment_intake";
   const nextStep = registration.segment === "cro"
     ? "Review CRO licensing fit and draft outreach."
-    : "Confirm screening next step and payment/intake status.";
+    : isPostPaymentIntake
+      ? "Fulfill paid MCI Screen baseline intake; confirm Stripe payment status and screening workflow."
+      : "Confirm screening next step and payment/intake status.";
 
   return [
     registration.registrationId,
@@ -182,6 +198,10 @@ async function sendLeadNotification(accessToken: string, registration: CustomerR
     `Organization: ${registration.organization || ""}`,
     `Role: ${registration.role || ""}`,
     `Path: ${registration.path || ""}`,
+    `Checkout stage: ${registration.checkoutStage || ""}`,
+    `Product: ${registration.product || ""}`,
+    `Price: ${registration.price || ""}`,
+    `Stripe session/payment: ${registration.stripeSessionId || registration.stripePaymentIntent || ""}`,
     `Message: ${registration.message || ""}`,
     "",
     "Next step: Review the VascuMind CRM Sheet and assign follow-up.",

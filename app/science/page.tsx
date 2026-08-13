@@ -34,7 +34,7 @@ export default function SciencePage() {
 		<div id="wellness" className="card">
           <h2 className="text-3xl font-bold mb-4">Our Wellness Philosophy</h2>
           <p className="text-black">Optional wellness resources are presented only as general structure/function education. They should be discussed with a qualified healthcare professional, especially if you take medications or have a medical condition.</p>
-		  <p className="text-sm text-black mt-4">*These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease.</p>
+		  <p className="text-sm text-black mt-4">These products are dietary supplements and are not intended to diagnose, treat, cure, or prevent vascular dementia, Alzheimer’s disease, MCI, stroke, or any other disease. Always consult your healthcare professional before use.</p>
         </div>
       </div>
     </main>

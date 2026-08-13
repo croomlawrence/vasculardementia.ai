@@ -51,7 +51,7 @@ export default function VascuMindHome() {
           <h1 className="text-6xl md:text-8xl font-bold tracking-tighter mb-6 leading-tight gradient-text">
             Start with the vascular pattern behind memory change.
           </h1>
-          <p className="text-xl text-foreground-secondary mb-10 max-w-3xl mx-auto">
+          <p className="text-xl text-black mb-10 max-w-3xl mx-auto">
             A clinical-grade, education-first pathway for families concerned about memory changes after stroke, TIA, high blood pressure, diabetes, PAD, or other vascular risk factors.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -67,16 +67,16 @@ export default function VascuMindHome() {
 
       <section className="py-16 bg-background-light">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-4 text-foreground-primary">
+          <h2 className="text-4xl font-bold mb-4 text-black">
             Vascular causes of memory decline are often under-discussed.
           </h2>
           <p className="text-6xl md:text-7xl font-bold tracking-tighter leading-tight gradient-text mb-4">
             Start earlier
           </p>
-          <p className="text-xl text-foreground-secondary mb-6 max-w-2xl mx-auto">
+          <p className="text-xl text-black mb-6 max-w-2xl mx-auto">
             when memory or thinking changes appear after vascular events or vascular risk factors.
           </p>
-          <p className="text-xl text-foreground-secondary max-w-2xl mx-auto">
+          <p className="text-xl text-black max-w-2xl mx-auto">
             The first job is not to diagnose yourself. It is to organize the pattern, create a baseline, and bring clearer questions to a qualified clinician.
           </p>
           <p className="text-sm mt-4 text-black">
@@ -88,7 +88,7 @@ export default function VascuMindHome() {
       <section aria-label="Trust signals" className="border-y border-black">
         <div className="max-w-6xl mx-auto px-6 py-8 grid md:grid-cols-4 gap-6 text-center">
           {trustSignals.map(([title, copy]) => (
-            <div key={title}><strong className="text-foreground-primary">{title}</strong><br />{copy}</div>
+            <div key={title}><strong className="text-black">{title}</strong><br />{copy}</div>
           ))}
         </div>
       </section>
@@ -103,8 +103,8 @@ export default function VascuMindHome() {
             <div key={step.title} className="card text-center">
               <div className="text-6xl font-bold gradient-text mb-4">{index + 1}</div>
               <div className="section-label mb-3">{step.label}</div>
-              <h3 className="text-2xl font-bold mb-3 text-foreground-primary">{step.title}</h3>
-              <p className="text-foreground-secondary mb-6">{step.copy}</p>
+              <h3 className="text-2xl font-bold mb-3 text-black">{step.title}</h3>
+              <p className="text-black mb-6">{step.copy}</p>
               <Link href={step.href} className="btn-primary">
                 {step.cta}
               </Link>
@@ -116,8 +116,8 @@ export default function VascuMindHome() {
       <section className="bg-background-light py-24">
         <div className="max-w-4xl mx-auto px-6 text-center">
            <div className="section-label mb-4">THE HEART-BRAIN CONNECTION</div>
-          <h2 className="text-5xl font-bold tracking-tight mb-6 text-foreground-primary">Your Brain Thinks Best When Your Blood Flows Freely.</h2>
-          <p className="text-xl text-foreground-secondary mx-auto">
+          <h2 className="text-5xl font-bold tracking-tight mb-6 text-black">Your Brain Thinks Best When Your Blood Flows Freely.</h2>
+          <p className="text-xl text-black mx-auto">
             Vascular risk factors can affect attention, memory, processing speed, and day-to-day function. VascuMind helps families move from vague concern to a documented pattern and an objective cognitive baseline for clinician discussion.
           </p>
         </div>
@@ -125,8 +125,8 @@ export default function VascuMindHome() {
 
       <section className="py-24">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-5xl font-bold tracking-tight mb-6 text-foreground-primary">Ready to Move from Concern to Clarity?</h2>
-          <p className="text-xl text-foreground-secondary max-w-3xl mx-auto mb-8">
+          <h2 className="text-5xl font-bold tracking-tight mb-6 text-black">Ready to Move from Concern to Clarity?</h2>
+          <p className="text-xl text-black max-w-3xl mx-auto mb-8">
             Start with the free Hachinski-style pattern check. If a vascular pattern is present, the next step is the paid MCI Screen cognitive baseline.
           </p>
           <Link href="/hachinski" className="btn-primary">

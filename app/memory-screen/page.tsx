@@ -65,7 +65,8 @@ export default function MemoryScreenPage() {
             >
               Start the $99 MCI Screen
             </TrackedLink>
-            <p className="text-sm text-black mt-3">Private next step • clinician discussion support • educational only • not a diagnosis</p>
+            <p className="text-sm text-black mt-3">Contact information used for this request only • no identifiable information shared without permission • educational only • not a diagnosis</p>
+            <p className="text-sm text-black mt-2">Checkout and/or screening may occur through Stripe or MCI Screen. VascuMind does not provide diagnosis or emergency triage.</p>
           </div>
         </div>
       </section>
@@ -120,7 +121,7 @@ export default function MemoryScreenPage() {
       </section>
 
       <section id="follow-up">
-        <LeadForm leadType="memory-screen" title="Request cognitive baseline follow-up" submitLabel="Request Follow-Up" />
+        <LeadForm leadType="memory-screen" title="Have questions? Request cognitive baseline follow-up" submitLabel="Request Follow-Up" />
       </section>
     </main>
   );

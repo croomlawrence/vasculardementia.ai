@@ -22,6 +22,28 @@ function eventForLeadType(leadType: LeadType) {
 export default function LeadForm({ leadType, title, submitLabel, includeTrialFields = false, patientResearchFields = false }: LeadFormProps) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
+  const [started, setStarted] = useState(false);
+  const useConsumerFields = patientResearchFields || leadType === "memory-screen";
+
+  function browserContext() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+      path: window.location.pathname,
+      search: window.location.search,
+      referrer: document.referrer,
+      utmSource: params.get("utm_source") || "",
+      utmMedium: params.get("utm_medium") || "",
+      utmCampaign: params.get("utm_campaign") || "",
+      utmTerm: params.get("utm_term") || "",
+      utmContent: params.get("utm_content") || "",
+    };
+  }
+
+  function onFormFocus() {
+    if (started) return;
+    setStarted(true);
+    trackVascuMindEvent("lead_form_started", { eventData: { leadType, formTitle: title } });
+  }
 
   async function onSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -29,11 +51,13 @@ export default function LeadForm({ leadType, title, submitLabel, includeTrialFie
     setMessage("");
     const form = event.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
+    const context = browserContext();
+    trackVascuMindEvent("lead_form_submit_attempt", { eventData: { leadType, formTitle: title } });
     try {
       const response = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ leadType, ...data, path: window.location.pathname }),
+        body: JSON.stringify({ leadType, ...context, ...data }),
       });
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || "Submission failed");
@@ -48,13 +72,20 @@ export default function LeadForm({ leadType, title, submitLabel, includeTrialFie
       setMessage(result.message || "Received. We will follow up shortly.");
       form.reset();
     } catch (error) {
+      trackVascuMindEvent("lead_form_submit_error", {
+        eventData: {
+          leadType,
+          formTitle: title,
+          errorMessage: error instanceof Error ? error.message : "Unknown submission error",
+        },
+      });
       setStatus("error");
       setMessage(error instanceof Error ? error.message : "Submission failed. Please try again.");
     }
   }
 
   return (
-    <form onSubmit={onSubmit} className="border-4 border-black rounded-3xl p-8 space-y-5" aria-label={title}>
+    <form onSubmit={onSubmit} onFocusCapture={onFormFocus} className="border-4 border-black rounded-3xl p-8 space-y-5" aria-label={title}>
       <h2 className="text-3xl font-semibold">{title}</h2>
       <div className="grid md:grid-cols-2 gap-4">
         <label className="block">
@@ -67,7 +98,7 @@ export default function LeadForm({ leadType, title, submitLabel, includeTrialFie
         </label>
       </div>
 
-      {patientResearchFields ? (
+      {useConsumerFields ? (
         <div className="grid md:grid-cols-2 gap-4">
           <label className="block">
             <span className="font-semibold">I am a...</span>
@@ -84,8 +115,8 @@ export default function LeadForm({ leadType, title, submitLabel, includeTrialFie
             <input name="location" placeholder="City/state or country" className="mt-2 w-full border-2 border-black rounded-xl px-4 py-3 text-black" />
           </label>
           <label className="block">
-            <span className="font-semibold">Diagnosis or concern</span>
-            <input name="diagnosisOrConcern" placeholder="Vascular dementia, post-stroke memory changes, etc." className="mt-2 w-full border-2 border-black rounded-xl px-4 py-3 text-black" />
+            <span className="font-semibold">Primary concern</span>
+            <input name="diagnosisOrConcern" placeholder="Memory change after stroke/TIA, vascular risk factors, caregiver concern, etc." className="mt-2 w-full border-2 border-black rounded-xl px-4 py-3 text-black" />
           </label>
           <label className="block">
             <span className="font-semibold">Stroke/TIA history?</span>

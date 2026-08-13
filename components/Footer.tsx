@@ -25,9 +25,9 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-white">Legal</h4>
             <ul className="space-y-2 text-base">
-              <li><Link href="#" className="hover:underline">Privacy Policy</Link></li>
-              <li><Link href="#" className="hover:underline">Terms of Use</Link></li>
-              <li><Link href="#" className="hover:underline">HIPAA Notice</Link></li>
+              <li><Link href="/privacy" className="hover:underline">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="hover:underline">Terms of Use</Link></li>
+              <li><Link href="/compliance" className="hover:underline">Compliance Notice</Link></li>
             </ul>
           </div>
 

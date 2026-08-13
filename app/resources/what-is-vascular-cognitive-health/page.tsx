@@ -49,7 +49,7 @@ export default function VCHGuidePage() {
         <h2>Your First Step to Clarity</h2>
         <p>Understanding your personal risk factors and symptom patterns is the first step. Our free, confidential Vascular Pattern Quiz is designed to help you organize this information, providing a clear starting point for a more informed conversation with your doctor.</p>
         <div className="mt-8">
-          <Link href="/science#hachinski" className="btn-green inline-block px-8 py-3 rounded-full text-lg font-semibold">
+          <Link href="/hachinski" className="btn-green inline-block px-8 py-3 rounded-full text-lg font-semibold">
             Take Your Free Quiz
           </Link>
         </div>

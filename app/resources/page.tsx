@@ -10,7 +10,7 @@ const articles = [
   {
     title: "What is Mild Cognitive Impairment (MCI)? A Complete Patient's Guide",
     href: "/resources/what-is-mild-cognitive-impairment",
-    description: "A complete guide to understanding MCI, its symptoms, causes, and the importance of early, accurate detection."
+    description: "A patient-friendly guide to understanding MCI, symptoms, causes, and clinician-guided evaluation."
   },
   {
     title: "MCI vs. Normal Aging: How to Tell the Difference",
@@ -25,7 +25,7 @@ const articles = [
   {
     title: "How is MCI Diagnosed? A Guide to Cognitive Testing",
     href: "/resources/how-is-mci-diagnosed",
-    description: "Learn about the process of diagnosing MCI, from clinical interviews to objective tests like the MCI Screen."
+    description: "Learn how clinicians evaluate MCI, from clinical interviews to structured cognitive screening tools like the MCI Screen."
   },
   {
     title: "What is Vascular Cognitive Health? A Complete Guide",

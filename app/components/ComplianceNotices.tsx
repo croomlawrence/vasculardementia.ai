@@ -2,7 +2,7 @@ export const MCI_SCREEN_DISCLAIMER =
   "The MCI Screen referenced by VascuMind is a cognitive screening, benchmarking, and tracking tool sourced from MCI Screen / EMBIC materials. It does not diagnose vascular dementia or any other medical condition and is not a substitute for clinical evaluation. Results should be discussed with a qualified healthcare provider.";
 
 export const SUPPLEMENT_DISCLAIMER =
-  "These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.";
+  "These products are dietary supplements and are not intended to diagnose, treat, cure, or prevent vascular dementia, Alzheimer’s disease, MCI, stroke, or any other disease. Always consult your healthcare professional before use.";
 
 export function MCIScreenDisclaimer({ compact = false }: { compact?: boolean }) {
   return (

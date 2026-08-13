@@ -41,7 +41,7 @@ export default function HeartBrainConnectionPage() {
         <p>Understanding the health of your vascular system is the first step. Tools like the Hachinski Score can help you and your doctor assess the potential role of vascular factors in your cognitive symptoms.</p>
         <p><strong>Learn more in our <Link href="/resources/guide-to-hachinski-score">Patient's Guide to the Hachinski Score</Link>.</strong></p>
         <div className="mt-8">
-          <Link href="/science#hachinski" className="btn-green inline-block px-8 py-3 rounded-full text-lg font-semibold">
+          <Link href="/hachinski" className="btn-green inline-block px-8 py-3 rounded-full text-lg font-semibold">
             Take the Free Vascular Pattern Quiz
           </Link>
         </div>

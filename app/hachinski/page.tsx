@@ -149,7 +149,7 @@ function getInterpretation(score: number, answeredCount: number) {
   if (score <= 4) {
     return {
       label: "Fewer vascular-pattern features reported",
-      description: "Lower scores report fewer classic vascular-pattern features. non-vascular cognitive conditions, vascular cognitive impairment, mixed causes, medication effects, sleep problems, depression, infection, and other factors still require professional evaluation.",
+      description: "Lower scores report fewer classic vascular-pattern features. Non-vascular cognitive conditions, vascular cognitive impairment, mixed causes, medication effects, sleep problems, depression, infection, and other factors still require professional evaluation.",
     };
   }
   if (score <= 6) {
@@ -197,6 +197,7 @@ export default function HachinskiPage() {
     trackVascuMindEvent("hachinski_completed", {
       eventData: {
         totalScore,
+        score: totalScore,
         answeredCount,
         riskBand: interpretation.label,
       },
@@ -204,8 +205,18 @@ export default function HachinskiPage() {
   }, [answeredCount, interpretation.label, totalScore]);
 
   const resetAnswers = () => {
+    trackVascuMindEvent("hachinski_reset", {
+      eventData: { score: totalScore, answeredCount, riskBand: interpretation.label },
+    });
     hachinskiCompletedTracked.current = false;
     setAnswers({});
+  };
+
+  const printResults = () => {
+    trackVascuMindEvent("hachinski_print_results", {
+      eventData: { score: totalScore, answeredCount, riskBand: interpretation.label },
+    });
+    window.print();
   };
 
   const toggleFAQ = (index: number) => {
@@ -238,7 +249,7 @@ export default function HachinskiPage() {
       <div className="border-4 border-black rounded-2xl p-6 mb-8 bg-white">
         <div className="section-label mb-2">THE VASCUMIND PROTOCOL</div>
         <p className="text-xl text-black font-semibold mb-2">Step 1 is the free pattern check. Step 2 is the $99 MCI Screen cognitive baseline.</p>
-        <p className="text-black">Complete the questions below, then use the MCI Screen page if you want an objective benchmark for clinician discussion and repeat tracking.</p>
+        <p className="text-black">Complete the questions below, then use the MCI Screen page if you want a paid $99 cognitive benchmark for clinician discussion and repeat tracking, sourced from MCI Screen / EMBIC materials.</p>
       </div>
 
       <div className="border-4 border-black bg-black text-white p-6 mb-12 rounded-2xl">
@@ -334,7 +345,7 @@ export default function HachinskiPage() {
           <p className="text-base text-black mb-6"><strong>Next step:</strong> Share these results with your doctor. Consider formal cognitive screening, vascular risk review, and medical evaluation when appropriate.</p>
           <div className="flex flex-col sm:flex-row gap-3">
             <button type="button" onClick={resetAnswers} className="border-2 border-black px-6 py-3 rounded-full font-semibold hover:bg-black hover:text-white focus:outline focus:outline-4 focus:outline-black">Reset answers</button>
-            <button type="button" onClick={() => window.print()} className="border-2 border-black px-6 py-3 rounded-full font-semibold hover:bg-black hover:text-white focus:outline focus:outline-4 focus:outline-black">Print or save results</button>
+            <button type="button" onClick={printResults} className="border-2 border-black px-6 py-3 rounded-full font-semibold hover:bg-black hover:text-white focus:outline focus:outline-4 focus:outline-black">Print or save results</button>
           </div>
         </div>
       </div>
@@ -343,7 +354,7 @@ export default function HachinskiPage() {
         <div className="section-label mb-3">STEP 2 · BENCHMARK IT</div>
         <h2 className="text-3xl font-semibold mb-3">Ready for the paid cognitive baseline?</h2>
         <p className="text-black mb-6">The $99 MCI Screen is the next step after this free pattern check: an objective cognitive benchmark for clinician discussion. Educational only; not a diagnosis.</p>
-        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/hachinski", ctaLabel: "Continue to the $99 MCI Screen" }} className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold focus:outline focus:outline-4 focus:outline-black">
+        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/hachinski", ctaLabel: "Continue to the $99 MCI Screen", location: "mid-page", score: totalScore, answeredCount, riskBand: interpretation.label }} className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold focus:outline focus:outline-4 focus:outline-black">
           Continue to the $99 MCI Screen
         </TrackedLink>
       </div>
@@ -374,7 +385,7 @@ export default function HachinskiPage() {
       </div>
 
       <div className="text-center">
-        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/hachinski", ctaLabel: "Continue to the $99 MCI Screen" }} className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold focus:outline focus:outline-4 focus:outline-black">
+        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/hachinski", ctaLabel: "Continue to the $99 MCI Screen", location: "bottom", score: totalScore, answeredCount, riskBand: interpretation.label }} className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold focus:outline focus:outline-4 focus:outline-black">
           Continue to the $99 MCI Screen
         </TrackedLink>
       </div>

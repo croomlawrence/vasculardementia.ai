@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import TrackedLink from '@/components/TrackedLink';
 import { memoryScreenPrice } from '@/lib/business';
+import { HumanMomentCard, PathwayLine, ResultPreviewCard, TrustBadgeRow, VascularPathwayArt } from '@/app/components/BrandVisuals';
 
 export const metadata: Metadata = {
   title: 'Free Vascular Cognitive Pattern Check | VascuMind',
@@ -37,13 +38,6 @@ const pathwaySteps = [
   },
 ];
 
-const trustSignals = [
-  ['Free first step', 'Start with an educational vascular-pattern check before any paid benchmark.'],
-  ['Educational, not diagnostic', 'Use results to prepare for a qualified clinician conversation — not to self-diagnose.'],
-  ['Built for caregivers', 'Plain-language questions help families organize what they are noticing.'],
-  ['Clear paid benchmark', `The ${memoryScreenPrice} MCI Screen is the first objective baseline after the free check.`],
-];
-
 const audiences = [
   ['After stroke or TIA', 'Memory, attention, processing speed, or confusion can change after vascular events.'],
   ['Blood pressure, diabetes, PAD, or heart disease', 'Vascular risk factors can shape the questions worth raising with a clinician.'],
@@ -51,16 +45,10 @@ const audiences = [
   ['Adult children and caregivers', 'You may be the first person to notice the pattern. VascuMind gives you a safer way to start.'],
 ];
 
-const paidMediaHooks = [
-  'Memory changes after stroke? Start with a free pattern check.',
-  'High blood pressure and memory concerns? Organize the clues.',
-  'Before the next doctor visit, create a clearer cognitive baseline.',
-];
-
 export default function VascuMindHome() {
   return (
     <main>
-      <section className="py-20 md:py-28">
+      <section className="brand-hero py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
           <div>
             <div className="section-label mb-4">Free vascular cognitive pattern check</div>
@@ -82,30 +70,20 @@ export default function VascuMindHome() {
               Educational only. Not a diagnosis. Sudden neurologic symptoms — facial drooping, one-sided weakness, speech trouble, severe dizziness, or vision loss — require emergency care.
             </p>
           </div>
-          <div className="border-4 border-black rounded-3xl p-6 md:p-8 green-wash">
-            <div className="section-label mb-4">The moment we help with</div>
-            <h2 className="text-3xl font-bold mb-4">“Something changed after the stroke — but I do not know what to ask next.”</h2>
-            <p className="text-black mb-6">
-              VascuMind turns vague concern into a documented vascular-pattern summary, an optional cognitive baseline, and a clearer clinician conversation.
-            </p>
-            <div className="space-y-3">
-              {paidMediaHooks.map((hook) => (
-                <div key={hook} className="border-2 border-black rounded-2xl p-4 bg-white font-semibold">{hook}</div>
-              ))}
-            </div>
+          <div className="space-y-8">
+            <HumanMomentCard />
+            <ResultPreviewCard />
           </div>
         </div>
       </section>
 
-      <section aria-label="Trust signals" className="border-y border-black">
-        <div className="max-w-6xl mx-auto px-6 py-8 grid md:grid-cols-4 gap-6">
-          {trustSignals.map(([title, copy]) => (
-            <div key={title} className="text-left"><strong className="text-black block mb-1">{title}</strong>{copy}</div>
-          ))}
+      <section aria-label="Trust signals" className="border-y border-black bg-white">
+        <div className="max-w-6xl mx-auto px-6 py-8">
+          <TrustBadgeRow />
         </div>
       </section>
 
-      <section className="py-20 bg-background-light">
+      <section className="py-20 brand-section-ivory">
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl mb-10">
             <div className="section-label mb-4">Who this is for</div>
@@ -128,18 +106,21 @@ export default function VascuMindHome() {
           <div className="section-label mb-4">How it works</div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Free pattern check → cognitive baseline → better next questions.</h2>
         </div>
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {pathwaySteps.map((step, index) => (
-            <div key={step.title} className="card flex flex-col text-left min-h-full bg-white">
-              <div className="text-6xl font-bold mb-4">{index + 1}</div>
-              <div className="section-label mb-3">{step.label}</div>
-              <h3 className="text-2xl font-bold mb-3 text-black">{step.title}</h3>
-              <p className="text-black mb-6 flex-1">{step.copy}</p>
-              <Link href={step.href} className="btn-primary inline-flex justify-center text-center w-full sm:w-auto whitespace-normal leading-snug">
-                {step.cta}
-              </Link>
-            </div>
-          ))}
+        <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-10 items-center mb-12">
+          <PathwayLine cta={false} />
+          <div className="grid gap-5">
+            {pathwaySteps.map((step, index) => (
+              <div key={step.title} className="card flex flex-col text-left min-h-full bg-white">
+                <div className="text-5xl font-bold mb-4">{index + 1}</div>
+                <div className="section-label mb-3">{step.label}</div>
+                <h3 className="text-2xl font-bold mb-3 text-black">{step.title}</h3>
+                <p className="text-black mb-6 flex-1">{step.copy}</p>
+                <Link href={step.href} className="btn-primary inline-flex justify-center text-center w-full sm:w-auto whitespace-normal leading-snug">
+                  {step.cta}
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -152,14 +133,17 @@ export default function VascuMindHome() {
               Vascular risk factors can affect attention, memory, processing speed, and day-to-day function. VascuMind helps families move from “something feels different” to a documented pattern and an objective cognitive baseline for clinician discussion.
             </p>
           </div>
-          <div className="bg-white text-black rounded-3xl p-8">
-            <h3 className="text-3xl font-bold mb-4">What you can bring to the next visit</h3>
-            <ul className="list-disc pl-6 space-y-2">
-              <li>A plain-language vascular-pattern summary</li>
-              <li>Questions about stroke/TIA history and vascular risk factors</li>
-              <li>An optional {memoryScreenPrice} cognitive baseline for tracking</li>
-              <li>A safer way to discuss wellness support or research options</li>
-            </ul>
+          <div className="space-y-6">
+            <VascularPathwayArt tone="dark" />
+            <div className="bg-white text-black rounded-3xl p-8">
+              <h3 className="text-3xl font-bold mb-4">What you can bring to the next visit</h3>
+              <ul className="list-disc pl-6 space-y-2">
+                <li>A plain-language vascular-pattern summary</li>
+                <li>Questions about stroke/TIA history and vascular risk factors</li>
+                <li>An optional {memoryScreenPrice} cognitive baseline for tracking</li>
+                <li>A safer way to discuss wellness support or research options</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

@@ -3,6 +3,7 @@ import { MCIScreenDisclaimer } from '@/app/components/ComplianceNotices';
 import LeadForm from "@/components/LeadForm";
 import TrackedLink from "@/components/TrackedLink";
 import { memoryScreenCheckoutUrl, memoryScreenPrice } from "@/lib/business";
+import { HumanMomentCard, PathwayLine, ResultPreviewCard } from "@/app/components/BrandVisuals";
 
 export const metadata: Metadata = {
   title: "$99 MCI Screen Cognitive Baseline",
@@ -33,7 +34,8 @@ const purchaseFlow = [
 
 export default function MemoryScreenPage() {
   return (
-    <main className="max-w-6xl mx-auto px-6 py-16">
+    <main>
+    <div className="max-w-6xl mx-auto px-6 py-16">
       <section className="grid lg:grid-cols-[1fr_360px] gap-10 items-start mb-16">
         <div>
           <div className="section-label mb-3">Step 2 · {memoryScreenPrice} objective cognitive benchmark</div>
@@ -50,7 +52,9 @@ export default function MemoryScreenPage() {
             <MCIScreenDisclaimer />
           </div>
         </div>
-        <aside className="border-4 border-black rounded-3xl p-6 text-center sticky top-24 bg-white">
+        <aside className="space-y-6 sticky top-24">
+          <ResultPreviewCard />
+          <div className="border-4 border-black rounded-3xl p-6 text-center bg-white">
           <div className="text-sm uppercase tracking-widest mb-2">Starting at</div>
           <div className="text-6xl font-semibold mb-4">{memoryScreenPrice}</div>
           <TrackedLink
@@ -65,10 +69,11 @@ export default function MemoryScreenPage() {
           </TrackedLink>
           <p className="text-sm text-black mt-3">Contact information used for this request only • no identifiable information shared without permission • educational only • not a diagnosis</p>
           <a href="#follow-up" className="inline-block mt-4 underline font-semibold">Questions before starting?</a>
+          </div>
         </aside>
       </section>
 
-      <section className="border-4 border-black rounded-3xl p-8 md:p-12 mb-16">
+      <section className="border-4 border-black rounded-3xl p-8 md:p-12 mb-16 brand-section-ivory">
         <div className="grid md:grid-cols-[1fr_300px] gap-10 items-center">
           <div>
             <div className="section-label mb-3">Why create a baseline?</div>
@@ -83,7 +88,9 @@ export default function MemoryScreenPage() {
               Screening performance claims should be reviewed with source documentation and a qualified healthcare professional. The MCI Screen is still a screening, benchmarking, and tracking tool — not a standalone diagnosis or substitute for clinical evaluation.
             </p>
           </div>
-          <div className="border border-black rounded-3xl p-6 bg-background-light">
+          <div className="space-y-6">
+            <HumanMomentCard variant="tablet" />
+            <div className="border border-black rounded-3xl p-6 bg-white">
             <h3 className="text-2xl font-semibold mb-3">Bring this to the visit</h3>
             <ul className="list-disc pl-6 space-y-2">
               <li>Pattern-check summary</li>
@@ -92,7 +99,12 @@ export default function MemoryScreenPage() {
               <li>Follow-up and repeat-tracking prompts</li>
             </ul>
           </div>
+          </div>
         </div>
+      </section>
+
+      <section className="mb-16">
+        <PathwayLine cta={false} />
       </section>
 
       <section className="mb-16">
@@ -146,6 +158,7 @@ export default function MemoryScreenPage() {
       <section id="follow-up">
         <LeadForm leadType="memory-screen" title="Questions before the cognitive baseline?" submitLabel="Request Follow-Up" />
       </section>
+        </div>
     </main>
   );
 }

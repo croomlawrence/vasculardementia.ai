@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
 import { croBenchmarks } from "@/lib/business";
+import { ResultPreviewCard, VascularPathwayArt } from "@/app/components/BrandVisuals";
 
 export const metadata: Metadata = {
   title: "CRO Licensing for Vascular Cognitive Screening",
@@ -43,7 +44,9 @@ export default function CROLicensingPage() {
             <Link href="/cognitive-screening-for-clinical-trials" className="btn-secondary text-center">See Trial Screening Page</Link>
           </div>
         </div>
-        <aside className="border-4 border-black rounded-3xl p-6 bg-background-light">
+        <aside className="space-y-6">
+          <VascularPathwayArt tone="clinical" />
+          <div className="border-4 border-black rounded-3xl p-6 bg-background-light">
           <h2 className="text-2xl font-semibold mb-3">What the license packages</h2>
           <ul className="list-disc pl-6 space-y-2">
             <li>Condition-specific landing page</li>
@@ -52,6 +55,7 @@ export default function CROLicensingPage() {
             <li>Consent-aware research follow-up</li>
             <li>Source and conversion analytics</li>
           </ul>
+          </div>
         </aside>
       </section>
 
@@ -68,7 +72,7 @@ export default function CROLicensingPage() {
         </div>
       </section>
 
-      <section className="border-4 border-black rounded-3xl p-8 md:p-12 mb-16">
+      <section className="border-4 border-black rounded-3xl p-8 md:p-12 mb-16 brand-section-ivory">
         <div className="section-label mb-3">VascuMind wedge</div>
         <h2 className="text-4xl font-semibold mb-6">Consumer-grade front door. Vascular differentiation. Structured cognitive baseline. Consent-aware routing.</h2>
         <div className="grid md:grid-cols-3 gap-6">
@@ -97,6 +101,7 @@ export default function CROLicensingPage() {
       </section>
 
       <section className="grid md:grid-cols-2 gap-8 mb-16">
+        <ResultPreviewCard />
         <div className="border border-black rounded-3xl p-8">
           <h2 className="text-3xl font-semibold mb-4">Implementation workflow</h2>
           <ol className="list-decimal pl-6 space-y-2">

@@ -4,6 +4,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import TrackedLink from "@/components/TrackedLink";
 import { trackVascuMindEvent } from "@/lib/trackVascuMindEvent";
+import { PathwayLine, VascularPathwayArt } from "@/app/components/BrandVisuals";
 
 interface HachinskiItem {
   id: number;
@@ -93,11 +94,14 @@ export default function HachinskiPage() {
     <main className="max-w-5xl mx-auto px-6 py-12">
       <Link href="/" className="text-black hover:underline focus:outline focus:outline-4 focus:outline-black">← Back to VascuMind</Link>
 
-      <section className="py-10">
-        <div className="section-label mb-3">Step 1 · Free vascular cognitive pattern check</div>
-        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-4">Answer one question at a time. Get a plain-language vascular-pattern summary.</h1>
-        <p className="text-xl text-black mb-6">This Hachinski-style educational tool helps organize whether memory or thinking changes may have vascular-pattern features. It cannot diagnose cognitive disease.</p>
-        <div className="border-4 border-black bg-black text-white p-6 rounded-2xl">
+      <section className="py-10 grid lg:grid-cols-[1fr_360px] gap-8 items-center">
+        <div>
+          <div className="section-label mb-3">Step 1 · Free vascular cognitive pattern check</div>
+          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-4">Answer one question at a time. Get a plain-language vascular-pattern summary.</h1>
+          <p className="text-xl text-black mb-6">This Hachinski-style educational tool helps organize whether memory or thinking changes may have vascular-pattern features. It cannot diagnose cognitive disease.</p>
+        </div>
+        <VascularPathwayArt />
+        <div className="lg:col-span-2 border-4 border-black bg-black text-white p-6 rounded-2xl">
           <p className="font-semibold text-xl mb-2 text-white">Emergency warning</p>
           <p className="text-white">Call emergency services immediately if symptoms are sudden or severe — including facial drooping, one-sided weakness, speech trouble, confusion, severe dizziness, or vision loss.</p>
         </div>
@@ -168,7 +172,11 @@ export default function HachinskiPage() {
         </section>
       )}
 
-      <section className="border border-black rounded-3xl p-8 mb-12">
+      <section className="mb-12">
+        <PathwayLine cta={false} />
+      </section>
+
+      <section className="border border-black rounded-3xl p-8 mb-12 brand-section-ivory">
         <h2 className="text-3xl font-semibold mb-4">Clinician conversation checklist</h2>
         <p className="text-black mb-4">Bring your pattern-check result and ask whether formal cognitive screening, medication review, vascular risk-factor management, rehabilitation, sleep/mood review, or imaging may be appropriate.</p>
         <TrackedLink href="/memory-screen" eventName="mci_cta_clicked" eventData={{ sourcePath: "/hachinski", location: "clinician-checklist", score: totalScore, answeredCount, riskBand: interpretation.label }} className="font-semibold underline">

@@ -218,10 +218,10 @@ export default function HachinskiPage() {
         <Link href="/" className="text-black hover:underline focus:outline focus:outline-4 focus:outline-black">← Back to Vascumind</Link>
       </div>
 
-      <h1 className="text-5xl font-semibold tracking-tight mb-4">The Hachinski Ischemic Score</h1>
+      <h1 className="text-5xl font-semibold tracking-tight mb-4">Free Vascular Cognitive Pattern Check</h1>
       <div className="green-divider w-16 mb-8"></div>
       <p className="text-xl text-black mb-8">
-        A classic clinical pattern-recognition tool, translated into patient-friendly language for education and clinician discussion.
+        A Hachinski-style, clinical-grade first step for organizing whether memory or thinking changes may have a vascular pattern. Educational only — not a diagnosis.
       </p>
 
       <div className="border-4 border-black p-6 mb-8 rounded-2xl bg-white">
@@ -231,6 +231,14 @@ export default function HachinskiPage() {
           <li>Several items require a clinician’s physical examination. Choose <strong>Not sure</strong> when you do not know.</li>
           <li>Share results with a qualified healthcare professional before making health decisions.</li>
         </ul>
+      </div>
+
+
+
+      <div className="border-4 border-black rounded-2xl p-6 mb-8 bg-white">
+        <div className="section-label mb-2">THE VASCUMIND PROTOCOL</div>
+        <p className="text-xl text-black font-semibold mb-2">Step 1 is the free pattern check. Step 2 is the $99 MCI Screen cognitive baseline.</p>
+        <p className="text-black">Complete the questions below, then use the MCI Screen page if you want an objective benchmark for clinician discussion and repeat tracking.</p>
       </div>
 
       <div className="border-4 border-black bg-black text-white p-6 mb-12 rounded-2xl">
@@ -333,10 +341,10 @@ export default function HachinskiPage() {
 
       <div className="text-center mb-16 border-4 border-black rounded-3xl p-8">
         <div className="section-label mb-3">STEP 2 · BENCHMARK IT</div>
-        <h2 className="text-3xl font-semibold mb-3">Hachinski shows a pattern? Let’s benchmark it.</h2>
-        <p className="text-black mb-6">Purchase or request the MCI Screen to get a cognitive baseline for clinician discussion. Educational only; not a diagnosis.</p>
-        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/hachinski", ctaLabel: "Benchmark with MCI Screen" }} className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold focus:outline focus:outline-4 focus:outline-black">
-          Benchmark with MCI Screen
+        <h2 className="text-3xl font-semibold mb-3">Ready for the paid cognitive baseline?</h2>
+        <p className="text-black mb-6">The $99 MCI Screen is the next step after this free pattern check: an objective cognitive benchmark for clinician discussion. Educational only; not a diagnosis.</p>
+        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/hachinski", ctaLabel: "Continue to the $99 MCI Screen" }} className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold focus:outline focus:outline-4 focus:outline-black">
+          Continue to the $99 MCI Screen
         </TrackedLink>
       </div>
 
@@ -366,8 +374,8 @@ export default function HachinskiPage() {
       </div>
 
       <div className="text-center">
-        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/hachinski", ctaLabel: "Benchmark with MCI Screen" }} className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold focus:outline focus:outline-4 focus:outline-black">
-          Benchmark with MCI Screen
+        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/hachinski", ctaLabel: "Continue to the $99 MCI Screen" }} className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold focus:outline focus:outline-4 focus:outline-black">
+          Continue to the $99 MCI Screen
         </TrackedLink>
       </div>
     </div>

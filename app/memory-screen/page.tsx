@@ -5,7 +5,7 @@ import TrackedLink from "@/components/TrackedLink";
 import { memoryScreenCheckoutUrl, memoryScreenPrice } from "@/lib/business";
 
 export const metadata: Metadata = {
-  title: "Cognitive Baseline for Vascular Dementia & Post-Stroke Memory Changes | VascuMind",
+  title: "$99 MCI Screen Cognitive Baseline | VascuMind",
   description:
     "Create a cognitive baseline to discuss with your clinician if you are facing vascular dementia, post-stroke memory changes, or vascular cognitive impairment.",
 };
@@ -27,10 +27,10 @@ export default function MemoryScreenPage() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-16">
       <section className="text-center mb-16">
-        <div className="section-label mb-3">STEP 2 · OBJECTIVE COGNITIVE BENCHMARK</div>
-        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Create a cognitive baseline to discuss with your clinician.</h1>
+        <div className="section-label mb-3">STEP 2 · $99 OBJECTIVE COGNITIVE BENCHMARK</div>
+        <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Create a $99 MCI Screen baseline to discuss with your clinician.</h1>
         <p className="text-2xl text-black max-w-4xl mx-auto mb-6">
-          For families facing vascular dementia, stroke-related memory changes, or vascular cognitive impairment, a structured screen can help organize what is changing and support a more informed clinical conversation.
+          After the free Hachinski-style pattern check, the MCI Screen gives families a structured cognitive benchmark for clinician discussion and repeat tracking.
         </p>
         <div className="max-w-4xl mx-auto text-left">
           <MCIScreenDisclaimer />
@@ -63,9 +63,9 @@ export default function MemoryScreenPage() {
               eventData={{ product: "memory-screen", price: memoryScreenPrice }}
               className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold w-full"
             >
-              Start Cognitive Baseline
+              Start the $99 MCI Screen
             </TrackedLink>
-            <p className="text-sm text-black mt-3">Private next step • clinician discussion support • educational only</p>
+            <p className="text-sm text-black mt-3">Private next step • clinician discussion support • educational only • not a diagnosis</p>
           </div>
         </div>
       </section>

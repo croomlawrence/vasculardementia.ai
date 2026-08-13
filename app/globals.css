@@ -1,17 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background-dark: #0D0F1A; /* Deep, dark blue */
-  --background-light: #1A1C2A; /* Slightly lighter for cards/sections */
-  --foreground-primary: #FFFFFF;
-  --foreground-secondary: #A9B2CC; /* Muted text color */
+  --background-dark: #FFFFFF;
+  --background-light: #F3F8F5;
+  --foreground-primary: #000000;
+  --foreground-secondary: #000000;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-
-  /* XPRIZE-inspired Accent Gradients */
-  --accent-purple: #9A77FF;
-  --accent-blue: #55A6FF;
-  --accent-pink: #F871B9;
+  --accent-green: #0B4D3C;
+  --accent-green-bright: #10B981;
 }
 
 @theme {
@@ -23,7 +20,7 @@
 
 body {
   background: var(--background-dark);
-  color: var(--foreground-secondary);
+  color: #000000;
   font-family: var(--font-geist-sans);
   font-feature-settings: "kern" "tnum" "ss01";
   -webkit-font-smoothing: antialiased;
@@ -37,33 +34,35 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
 }
 
-/* Gradient text effect for headings */
 .gradient-text {
-  background: linear-gradient(to right, var(--accent-purple), var(--accent-blue));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: #000000;
+  color: #000000;
 }
 
-/* New Button System */
 .btn-primary {
-  background: linear-gradient(to right, var(--accent-purple), var(--accent-blue));
-  color: white;
+  background: #000000;
+  color: #FFFFFF;
+  border: 2px solid #000000;
   border-radius: 9999px;
   padding: 0.75rem 2rem;
   font-weight: 600;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.16);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(154, 119, 255, 0.4);
+  background: #FFFFFF;
+  color: #000000;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
 }
 
 .btn-secondary {
-  background-color: var(--background-light);
-  color: white;
-  border: 1px solid var(--foreground-secondary);
+  background-color: #FFFFFF;
+  color: #000000;
+  border: 2px solid #000000;
   border-radius: 9999px;
   padding: 0.75rem 2rem;
   font-weight: 600;
@@ -71,25 +70,50 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-secondary:hover {
-  background-color: white;
-  color: var(--background-dark);
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
-/* Styled sections and cards */
 .card {
   background-color: var(--background-light);
-  border: 1px solid #2A2D40;
-  border-radius: 1.5rem; /* 24px */
+  border: 2px solid #000000;
+  border-radius: 1.5rem;
   padding: 2rem;
 }
 
-/* Custom Section Label */
 .section-label {
   font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  background: linear-gradient(to right, var(--accent-purple), var(--accent-blue));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  background: none;
+  -webkit-background-clip: initial;
+  -webkit-text-fill-color: var(--accent-green);
+  color: var(--accent-green);
+}
+
+.btn-green {
+  background: var(--accent-green);
+  color: #FFFFFF;
+  border: 2px solid var(--accent-green);
+  transition: all 0.2s ease;
+}
+
+.btn-green:hover {
+  background: #FFFFFF;
+  color: #000000;
+  border-color: #000000;
+}
+
+.green-card:hover {
+  border-color: var(--accent-green);
+}
+
+.green-wash {
+  background: var(--background-light);
+}
+
+.green-divider {
+  height: 4px;
+  background: var(--accent-green);
 }

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'The Science Behind VascuMind',
-  description: 'Learn about the trusted, clinically-validated tools that power the VascuMind protocol.',
+  description: 'Learn about the educational screening, cognitive benchmarking, and clinician-discussion tools behind the VascuMind protocol.',
 };
 
 export default function SciencePage() {
@@ -11,29 +11,30 @@ export default function SciencePage() {
     <main className="py-24">
       <div className="max-w-4xl mx-auto px-6 text-center">
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 gradient-text">Confidence in Your Results.</h1>
-        <p className="text-xl text-foreground-secondary mb-12">We use trusted, clinically-validated tools so you can feel confident in the information you receive and the conversations you have with your doctor.</p>
+        <p className="text-xl text-black mb-12">We use structured educational tools so families can organize observations, create a cognitive baseline, and have better conversations with qualified clinicians.</p>
       </div>
 
       <div className="max-w-4xl mx-auto px-6 space-y-12">
         <div id="mci-screen" className="card">
           <h2 className="text-3xl font-bold mb-4">The MCI Screen®: A Trusted Cognitive Snapshot</h2>
-          <p className="text-foreground-secondary">The heart of our assessment is the MCI Screen, a tool used by doctors and researchers for over a decade to detect early cognitive changes.</p>
-          <ul className="list-disc pl-6 space-y-2 my-6 text-foreground-secondary">
-            <li><strong className="text-foreground-primary">Backed by Research:</strong> The MCI Screen's accuracy is supported by multiple studies published in peer-reviewed medical journals.</li>
-            <li><strong className="text-foreground-primary">Objective and Reliable:</strong> This isn't a subjective web quiz. It is a structured test administered by a live, trained proctor to ensure your results are accurate and repeatable.</li>
+          <p className="text-black">The MCI Screen is used by VascuMind as a structured cognitive screening, benchmarking, and tracking tool to support clinician discussion. It is not a diagnosis or a substitute for clinical evaluation.</p>
+          <ul className="list-disc pl-6 space-y-2 my-6 text-black">
+            <li><strong className="text-black">Published-validation context:</strong> MCI Screen materials describe published validation for detecting memory changes versus normal aging. Ask for source documentation and discuss results with a qualified healthcare professional.</li>
+            <li><strong className="text-black">Structured baseline:</strong> The screen is administered by a trained proctor to create a repeatable cognitive benchmark for discussion and tracking.</li>
           </ul>
-		  <Link href="#" className="font-semibold text-accent-blue hover:underline">See the Published Research →</Link>
+
+		  <Link href="/memory-screen" className="font-semibold text-black underline">Learn about the MCI Screen pathway →</Link>
         </div>
 
         <div id="hachinski" className="card">
           <h2 className="text-3xl font-bold mb-4">The Vascular Pattern Quiz</h2>
-          <p className="text-foreground-secondary">Our free quiz is a patient-friendly version of a questionnaire that neurologists have used for decades to understand the potential role of vascular factors in cognitive symptoms. It's a simple, powerful way to help organize your health story before your next doctor's visit.</p>
+          <p className="text-black">Our free pattern check adapts Hachinski-style vascular questions into patient-friendly language. It helps organize your health story before a clinician visit; it does not diagnose vascular dementia, Alzheimer’s disease, MCI, stroke, or any disease.</p>
         </div>
 		
 		<div id="wellness" className="card">
           <h2 className="text-3xl font-bold mb-4">Our Wellness Philosophy</h2>
-          <p className="text-foreground-secondary">We believe in a "whole body" approach to health. Any optional supplements we suggest are intended to support your body's natural circulatory and cognitive systems. We partner with best-in-class providers like Swanson® to ensure quality and transparency.</p>
-		  <p className="text-sm text-foreground-secondary mt-4">*These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease.</p>
+          <p className="text-black">Optional wellness resources are presented only as general structure/function education. They should be discussed with a qualified healthcare professional, especially if you take medications or have a medical condition.</p>
+		  <p className="text-sm text-black mt-4">*These statements have not been evaluated by the Food and Drug Administration. These products are not intended to diagnose, treat, cure, or prevent any disease.</p>
         </div>
       </div>
     </main>

@@ -1,32 +1,31 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import TrackedLink from '@/components/TrackedLink';
 import { memoryScreenPrice } from '@/lib/business';
 
 export const metadata: Metadata = {
   title: 'The VascuMind Protocol | Your Path to Cognitive Clarity',
   description:
-    'Discover our 3-step protocol: a free pattern quiz, an objective cognitive baseline, and a personalized plan to share with your doctor.',
+    'Discover the VascuMind Protocol: free Hachinski-style vascular cognitive pattern check, paid MCI Screen cognitive baseline, and clinician-discussion next steps.',
 };
 
 const pathwaySteps = [
   {
-    label: 'Step 1 · Your Free Pattern Quiz',
-    title: 'Discover Your Cognitive Pattern',
+    label: 'Step 1 · Free Hachinski-style Pattern Check',
+    title: 'Check for vascular-pattern features first',
     body:
-      "Start with a private, 5-minute quiz to help organize your symptoms and health history. It's a simple first step to see if a vascular connection is worth exploring.",
+      "Start with a private, patient-friendly version of the Hachinski Ischemic Score to organize sudden onset, stepwise change, stroke/TIA history, and vascular risk factors.",
     why:
-      'Why it matters: This quiz helps turn confusing symptoms into a clear story you can share with your doctor, empowering a more productive conversation.',
-    href: '/science',
-    cta: 'Start Your Free Quiz',
+      'Why it matters: The pattern check helps turn confusing symptoms into structured observations for a clinician conversation.',
+    href: '/hachinski',
+    cta: 'Start Free Pattern Check',
   },
   {
-    label: `Step 2 · Your Cognitive Snapshot (${memoryScreenPrice})`,
-    title: 'Get Your Objective Baseline',
+    label: `Step 2 · Paid MCI Screen Baseline (${memoryScreenPrice})`,
+    title: 'Create an objective cognitive benchmark',
     body:
-      'If your pattern suggests a vascular link, the next step is an objective snapshot of your cognitive health, taken over the phone with a trained proctor using the validated MCI Screen.',
+      'If your pattern suggests a vascular link, the next step is an objective cognitive baseline using the MCI Screen for clinician discussion and repeat tracking.',
     why:
-      'Why it matters: Unlike unreliable web quizzes, this provides a trusted, scientific baseline to track changes and gives you concrete information to discuss with your healthcare provider.',
+      'Why it matters: A structured baseline gives families concrete information to discuss with a healthcare provider. It is a screen, not a diagnosis.',
     href: '/memory-screen',
     cta: 'Get Your Baseline',
   },
@@ -70,10 +69,10 @@ export default function ProtocolPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="section-label mb-4">THE VASCUMIND PROTOCOL</div>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight gradient-text">
-            From Concern to Clarity: A Guided Path for Your Cognitive Health.
+            Pattern check first. Cognitive baseline second. Better clinical conversations next.
           </h1>
           <p className="text-xl text-foreground-secondary max-w-3xl mx-auto">
-            The VascuMind Protocol is your 3-step journey to understand your cognitive health. We provide the tools to help you have a better conversation with your doctor and make informed decisions about your wellness.
+            The VascuMind Protocol is a clinical-grade, education-first pathway for vascular cognitive concerns: free Hachinski-style pattern check, paid MCI Screen baseline, and clinician-discussion next steps.
           </p>
         </div>
       </section>
@@ -94,13 +93,13 @@ export default function ProtocolPage() {
         <section className="grid lg:grid-cols-2 gap-8 mb-16">
           <div className="card">
             <div className="section-label mb-3">OPTIONAL WELLNESS SUPPORT</div>
-            <h2 className="text-4xl font-bold mb-4">Support Your Brain's Circulation</h2>
+            <h2 className="text-4xl font-bold mb-4">Support Your Brain&apos;s Circulation</h2>
             <p className="text-foreground-secondary mb-6">
-              After your screening and discussion with your doctor, you can explore optional wellness products. These supplements are intended to support your body's natural functions. They are not treatments for any disease.
+              After your screening and discussion with your doctor, you can explore optional wellness products. These supplements are intended to support your body&apos;s natural functions. They are not treatments for any disease.
             </p>
             <div className="space-y-4 mb-8">
               {stack.map((item) => (
-                <Link key={item.ingredient} href={item.href} className="block card hover:border-accent-blue">
+                <Link key={item.ingredient} href={item.href} className="block card hover:border-black">
                   <div className="section-label mb-2">{item.role}</div>
                   <h3 className="text-2xl font-bold mb-2 text-foreground-primary">{item.ingredient}</h3>
                   <p className="text-foreground-secondary">{item.claim}</p>
@@ -134,7 +133,7 @@ export default function ProtocolPage() {
         <section className="card text-center">
           <h2 className="text-3xl font-bold mb-4">Our Commitment to You</h2>
           <div className="grid md:grid-cols-3 gap-6 text-lg text-foreground-secondary">
-            <div><strong>For Information, Not Diagnosis:</strong> Our tools help you prepare for a doctor's visit. They do not replace a medical evaluation.</div>
+            <div><strong>For Information, Not Diagnosis:</strong> Our tools help you prepare for a doctor&apos;s visit. They do not replace a medical evaluation.</div>
             <div><strong>Responsible Wellness:</strong> Any supplements we feature are for supporting general wellness and are not intended to treat, cure, or prevent any disease.</div>
             <div><strong>You Are in Control:</strong> You choose if you want to explore research. Your privacy and consent are our top priorities.</div>
           </div>

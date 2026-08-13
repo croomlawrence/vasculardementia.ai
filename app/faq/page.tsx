@@ -39,8 +39,8 @@ export default function FaqPage() {
         <div className="space-y-10">
           {faqs.map((faq) => (
             <div key={faq.question} className="card">
-              <h2 className="text-2xl font-bold mb-3 text-foreground-primary">{faq.question}</h2>
-              <p className="text-lg text-foreground-secondary">{faq.answer}</p>
+              <h2 className="text-2xl font-bold mb-3 text-black">{faq.question}</h2>
+              <p className="text-lg text-black">{faq.answer}</p>
             </div>
           ))}
         </div>

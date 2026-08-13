@@ -39,7 +39,7 @@ export default function ConsentFormPage() {
     return (
         <main className="max-w-xl mx-auto px-6 py-20 text-center">
             <h1 className="text-4xl font-semibold tracking-tight mb-4">Thank You</h1>
-            <p className="text-lg text-black">Your information has been securely submitted. Our research partners may contact you if you are a good fit for a study.</p>
+            <p className="text-lg text-black">Your information has been submitted. Study teams may contact you if there is a potential research discussion to explore. VascuMind does not determine trial eligibility.</p>
         </main>
     );
   }
@@ -73,8 +73,8 @@ export default function ConsentFormPage() {
             <p>By checking the box below and submitting this form, you acknowledge and agree to the following:</p>
             <ul className="list-disc pl-6 space-y-2">
                 <li>You are providing your accurate contact information.</li>
-                <li>You have read and understood that VascuMind may provide your information to its clinical research partners.</li>
-                <li>Those partners may contact you to discuss your potential eligibility for a clinical trial.</li>
+                <li>You have read and understood that VascuMind may provide your information to clinical research partners only for research-awareness follow-up.</li>
+                <li>Those partners may contact you to discuss whether a study conversation is appropriate.</li>
                 <li>This does not guarantee your participation in any study and is not medical advice.</li>
             </ul>
           </div>
@@ -87,11 +87,11 @@ export default function ConsentFormPage() {
                 type="checkbox"
                 checked={hasConsented}
                 onChange={(e) => setHasConsented(e.target.checked)}
-                className="h-6 w-6 rounded border-black text-blue-600 focus:ring-blue-600"
+                className="h-6 w-6 rounded border-black text-black focus:ring-black"
               />
             </div>
             <div className="ml-3 text-lg leading-6">
-              <label htmlFor="consent" className="font-medium text-gray-900">I have read, understood, and agree to the consent statement above.</label>
+              <label htmlFor="consent" className="font-medium text-black">I have read, understood, and agree to the consent statement above.</label>
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function ConsentFormPage() {
           <button 
             type="submit" 
             disabled={!hasConsented || status === 'loading'}
-            className="w-full btn-green disabled:bg-gray-400 disabled:cursor-not-allowed px-10 py-4 text-xl font-semibold rounded-full"
+            className="w-full btn-green disabled:bg-black disabled:text-white disabled:cursor-not-allowed px-10 py-4 text-xl font-semibold rounded-full"
           >
             {status === 'loading' ? 'Submitting...' : 'Submit Information'}
           </button>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
 import Disclaimer from "./components/Disclaimer";
 import MarketingPixels from "./components/MarketingPixels";
+import NavDropdown from "./components/NavDropdown";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
@@ -73,22 +74,16 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-10">
               <Link href="/" className="font-semibold text-xl">VascuMind®</Link>
               <div className="flex flex-wrap gap-3 lg:gap-6 text-base items-center">
-                <details className="nav-dropdown">
-                  <summary>For Caregivers</summary>
-                  <div className="nav-dropdown-menu">
-                    {caregiverLinks.map(([label, href]) => (
-                      <Link key={href} href={href}>{label}</Link>
-                    ))}
-                  </div>
-                </details>
-                <details className="nav-dropdown">
-                  <summary>For Organizations</summary>
-                  <div className="nav-dropdown-menu">
-                    {organizationLinks.map(([label, href]) => (
-                      <Link key={href} href={href}>{label}</Link>
-                    ))}
-                  </div>
-                </details>
+                <NavDropdown summary="For Caregivers">
+                  {caregiverLinks.map(([label, href]) => (
+                    <Link key={href} href={href}>{label}</Link>
+                  ))}
+                </NavDropdown>
+                <NavDropdown summary="For Organizations">
+                  {organizationLinks.map(([label, href]) => (
+                    <Link key={href} href={href}>{label}</Link>
+                  ))}
+                </NavDropdown>
                 <Link href="/about" className="hover:underline font-semibold">About</Link>
               </div>
             </div>

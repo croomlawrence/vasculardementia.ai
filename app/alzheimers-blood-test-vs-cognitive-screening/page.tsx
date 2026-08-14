@@ -5,7 +5,7 @@ import { memoryScreenPrice } from "@/lib/business";
 export const metadata: Metadata = {
   title: "Alzheimer’s Blood Test vs Cognitive Screening | VascuMind",
   description:
-    "Learn how Alzheimer’s blood tests, cognitive screening, and vascular-pattern checks answer different questions for families worried about memory changes.",
+    "Learn how Alzheimer’s blood tests, cognitive screening, and ischemic pattern checks answer different questions for families worried about memory changes.",
   alternates: { canonical: "/alzheimers-blood-test-vs-cognitive-screening" },
 };
 
@@ -21,7 +21,7 @@ const comparisonRows = [
     limits: "Does not identify the medical cause by itself and is not a diagnosis.",
   },
   {
-    tool: "Vascular pattern check",
+    tool: "Ischemic pattern check",
     helps: "Organizes clues like sudden onset, stepwise change, stroke/TIA history, and vascular risk factors.",
     limits: "Does not diagnose vascular dementia or tell you which treatment is needed.",
   },
@@ -31,7 +31,7 @@ const questions = [
   "Did memory or thinking change suddenly or in steps?",
   "Was there a stroke, TIA, or vascular event?",
   "Are blood pressure, diabetes, PAD, heart disease, cholesterol, or smoking history part of the story?",
-  "Would a cognitive baseline help track changes over time?",
+  "Would a memory baseline help track changes over time?",
   "Are Alzheimer’s biomarkers appropriate to discuss with a clinician?",
 ];
 
@@ -53,7 +53,7 @@ export default function AlzheimersBloodTestVsCognitiveScreeningPage() {
         name: "Can VascuMind diagnose Alzheimer’s disease or vascular dementia?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "No. VascuMind is educational only. It provides a vascular-pattern check and cognitive baseline pathway to support clinician conversations, not diagnosis or treatment decisions.",
+          text: "No. VascuMind is educational only. It provides an ischemic pattern check and memory baseline pathway to support clinician conversations, not diagnosis or treatment decisions.",
         },
       },
     ],
@@ -68,9 +68,9 @@ export default function AlzheimersBloodTestVsCognitiveScreeningPage() {
           Alzheimer’s blood tests, cognitive screening, and vascular memory patterns are different tools.
         </h1>
         <p className="text-2xl text-black mb-8">
-          Blood-based biomarkers may help clinicians evaluate Alzheimer’s-related biology in certain symptomatic adults. Cognitive screening and vascular-pattern checks help organize symptoms, function, and risk-factor context for a clinician conversation.
+          Blood-based biomarkers may help clinicians evaluate Alzheimer’s-related biology in certain symptomatic adults. Cognitive screening and ischemic pattern checks help organize symptoms, function, and risk-factor context for a clinician conversation.
         </p>
-        <Link href="/hachinski" className="btn-primary inline-block">Start with the Free Vascular Pattern Check</Link>
+        <Link href="/hachinski" className="btn-primary inline-block">Start with the Free Ischemic Pattern Check</Link>
       </section>
 
       <section className="mb-16">
@@ -95,10 +95,10 @@ export default function AlzheimersBloodTestVsCognitiveScreeningPage() {
         <div className="green-wash rounded-3xl p-8 md:p-10">
           <h2 className="text-4xl font-semibold tracking-tight mb-5">Where VascuMind fits.</h2>
           <p className="text-xl text-black mb-5">
-            VascuMind is a first step for families worried that memory changes may have a vascular pattern: stroke or TIA history, sudden onset, stepwise change, or vascular risk factors.
+            VascuMind is a first step for families worried that memory changes may have an ischemic pattern: stroke or TIA history, sudden onset, stepwise change, or vascular risk factors.
           </p>
           <p className="text-xl text-black">
-            The free check organizes the pattern. The {memoryScreenPrice} MCI Screen pathway can create a structured cognitive baseline for clinician discussion and repeat tracking.
+            The free check organizes the pattern. The {memoryScreenPrice} MCI Screen pathway can create a structured memory baseline for clinician discussion and repeat tracking.
           </p>
         </div>
         <div className="border-2 border-black rounded-3xl p-8 md:p-10">
@@ -116,7 +116,7 @@ export default function AlzheimersBloodTestVsCognitiveScreeningPage() {
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link href="/hachinski" className="btn-primary text-center">Start Free Pattern Check</Link>
-          <Link href="/memory-screen" className="btn-secondary text-center">Create a {memoryScreenPrice} Cognitive Baseline</Link>
+          <Link href="/memory-screen" className="btn-secondary text-center">Create a {memoryScreenPrice} Memory Baseline</Link>
         </div>
       </section>
     </main>

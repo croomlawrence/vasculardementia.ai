@@ -36,7 +36,7 @@ export default function CaregiverTriagePage() {
       <section className="grid md:grid-cols-2 gap-6 mb-12">
         <div className="border border-black rounded-3xl p-8">
           <h2 className="text-2xl font-semibold mb-3">Use VascuMind for non-emergency organization</h2>
-          <p>When symptoms are not sudden or severe, use the Hachinski pattern check and cognitive baseline to prepare for clinician discussion.</p>
+          <p>When symptoms are not sudden or severe, use the Hachinski pattern check and memory baseline to prepare for clinician discussion.</p>
         </div>
         <div className="border border-black rounded-3xl p-8">
           <h2 className="text-2xl font-semibold mb-3">Do not use website tools to triage acute symptoms</h2>
@@ -46,7 +46,7 @@ export default function CaregiverTriagePage() {
 
       <div className="flex flex-col sm:flex-row gap-3">
         <Link href="/hachinski" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold text-center">Start Free Pattern Check</Link>
-        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/caregiver-triage", ctaLabel: "Create Cognitive Baseline" }} className="inline-block border-2 border-black px-8 py-4 rounded-full text-lg font-semibold text-center hover:bg-black hover:text-white">Create Cognitive Baseline</TrackedLink>
+        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/caregiver-triage", ctaLabel: "Create Memory Baseline" }} className="inline-block border-2 border-black px-8 py-4 rounded-full text-lg font-semibold text-center hover:bg-black hover:text-white">Create Memory Baseline</TrackedLink>
       </div>
     </main>
   );

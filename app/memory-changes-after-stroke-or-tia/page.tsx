@@ -19,7 +19,7 @@ const patterns = [
 const clinicianChecklist = [
   "Could stroke, TIA, small-vessel disease, or vascular risk factors be contributing to the changes?",
   "Should we review blood pressure, diabetes, cholesterol, PAD, smoking history, sleep, mood, medications, B12, or hearing?",
-  "Is formal cognitive screening or a repeatable cognitive baseline appropriate?",
+  "Is formal cognitive screening or a repeatable memory baseline appropriate?",
   "Are imaging, labs, rehabilitation, or a specialist referral worth discussing?",
   "Are Alzheimer’s biomarker tests relevant, or is a different first step more appropriate?",
 ];
@@ -39,7 +39,7 @@ export default function MemoryChangesAfterStrokeOrTiaPage() {
       },
       {
         "@type": "Question",
-        name: "Does a vascular pattern check diagnose vascular dementia?",
+        name: "Does an ischemic pattern check diagnose vascular dementia?",
         acceptedAnswer: {
           "@type": "Answer",
           text: "No. VascuMind’s pattern check is educational only. It helps organize observations for clinician discussion and does not diagnose dementia or replace medical evaluation.",
@@ -62,7 +62,7 @@ export default function MemoryChangesAfterStrokeOrTiaPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/hachinski" className="btn-primary text-center">Start the Free Pattern Check</Link>
-            <Link href="/memory-screen" className="btn-secondary text-center">Create a {memoryScreenPrice} Cognitive Baseline</Link>
+            <Link href="/memory-screen" className="btn-secondary text-center">Create a {memoryScreenPrice} Memory Baseline</Link>
           </div>
         </div>
         <aside className="border-4 border-black rounded-3xl p-6 bg-background-light">
@@ -102,8 +102,8 @@ export default function MemoryChangesAfterStrokeOrTiaPage() {
       </section>
 
       <section className="bg-black text-white rounded-3xl p-8 md:p-12 text-center">
-        <h2 className="text-4xl font-semibold text-white mb-4">Start with the free vascular pattern check.</h2>
-        <p className="text-xl text-white max-w-3xl mx-auto mb-8">If the pattern is worth documenting, the next step is a structured {memoryScreenPrice} cognitive baseline for clinician discussion and repeat tracking.</p>
+        <h2 className="text-4xl font-semibold text-white mb-4">Start with the free ischemic pattern check.</h2>
+        <p className="text-xl text-white max-w-3xl mx-auto mb-8">If the pattern is worth documenting, the next step is a structured {memoryScreenPrice} memory baseline for clinician discussion and repeat tracking.</p>
         <Link href="/hachinski" className="bg-white text-black border-2 border-white hover:bg-black hover:text-white inline-block px-8 py-4 rounded-full text-lg font-semibold">Start Free Pattern Check</Link>
       </section>
     </main>

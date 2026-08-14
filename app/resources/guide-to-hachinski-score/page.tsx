@@ -36,14 +36,14 @@ export default function HachinskiGuidePage() {
         <p><strong>Learn more about the <Link href="/resources/heart-brain-connection">Heart-Brain Connection</Link>.</strong></p>
 
         <h2>How VascuMind Uses This Approach</h2>
-        <p>Our free <strong>Vascular Pattern Quiz</strong> is a patient-friendly version of the Hachinski questionnaire.</p>
+        <p>Our free <strong>Ischemic Pattern Quiz</strong> is a patient-friendly version of the Hachinski questionnaire.</p>
         <p>We designed it to be a safe, private, and stress-free first step. It allows you to organize your experiences and symptoms from the comfort of your home. You'll receive a personalized report that can help you prepare for your next doctor's appointment.</p>
 
         <h2>Take the First Step</h2>
         <p>Ready to understand your pattern? The quiz is free, takes about 5 minutes, and is completely private.</p>
         <div className="mt-8">
           <Link href="/hachinski" className="btn-green inline-block px-8 py-3 rounded-full text-lg font-semibold">
-            Take the Free Vascular Pattern Quiz
+            Take the Free Ischemic Pattern Quiz
           </Link>
         </div>
 

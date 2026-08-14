@@ -2,13 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const trustBadges = [
-  ["Free first step", "Start with the pattern"],
+  ["Free first step", "Ischemic pattern check"],
   ["Educational only", "Not a diagnosis"],
   ["Clinician-ready", "Better questions"],
-  ["Baseline next", "$99 MCI Screen"],
+  ["Baseline next", "$99 Memory Baseline"],
 ];
 
-const pathway = ["Concern", "Pattern", "Baseline", "Questions", "Options"];
+const pathway = ["Concern", "Ischemic clues", "Memory baseline", "Questions", "Options"];
 
 const imageMap = {
   kitchen: {
@@ -25,8 +25,8 @@ const imageMap = {
   },
   tablet: {
     src: "/images/brand/vascumind-closeup-checklist.png",
-    alt: "Hands near a tablet and notebook on a warm kitchen table while preparing cognitive-health questions.",
-    label: "Cognitive baseline",
+    alt: "Hands near a tablet and notebook on a warm kitchen table while preparing memory-health questions.",
+    label: "Memory baseline",
     caption: "Create a benchmark for discussion and repeat tracking.",
   },
 };
@@ -34,24 +34,24 @@ const imageMap = {
 const journeyCards = [
   {
     eyebrow: "Free first step",
-    title: "Vascular Pattern Check",
-    copy: "Answer plain-language questions about sudden changes, stepwise decline, stroke/TIA history, and vascular risk factors.",
+    title: "Ischemic Pattern Check",
+    copy: "Answer plain-language questions about sudden changes, stepwise decline, stroke/TIA history, and vascular risk factors that may point toward ischemic or blood-flow-related concerns.",
     href: "/hachinski",
     cta: "Start free check",
     visual: "check",
   },
   {
     eyebrow: "$99 baseline",
-    title: "Cognitive Baseline",
-    copy: "Create a structured MCI Screen benchmark for discussion and repeat tracking. It is a screen, not a diagnosis.",
+    title: "Memory Baseline",
+    copy: "Create a structured MCI Screen benchmark for clinician discussion and repeat tracking. It is a screen, not a diagnosis.",
     href: "/memory-screen",
-    cta: "Create baseline",
+    cta: "Create memory baseline",
     visual: "baseline",
   },
   {
     eyebrow: "Visit prep",
     title: "Clinician Questions",
-    copy: "Turn family observations into better questions about vascular risk factors, medications, sleep, mood, imaging, and follow-up.",
+    copy: "Turn family observations into better questions about blood flow, stroke/TIA history, vascular risk factors, medications, sleep, mood, imaging, and follow-up.",
     href: "/protocol",
     cta: "See the protocol",
     visual: "questions",
@@ -62,7 +62,7 @@ export function VascularPathwayArt({ tone = "consumer" }: { tone?: "consumer" | 
   const src = tone === "clinical" ? "/images/brand/vascumind-cro-dashboard.png" : "/images/brand/vascumind-abstract-pathway.png";
   const alt = tone === "clinical"
     ? "Abstract VascuMind clinical research dashboard concept for sponsor screening workflows."
-    : "Abstract deep emerald pathway artwork representing guided vascular cognitive health navigation.";
+    : "Abstract deep emerald pathway artwork representing guided vascular and ischemic memory-health navigation.";
   return (
     <div className={`pathway-art ${tone === "dark" ? "pathway-art-dark" : ""}`}>
       <Image src={src} alt={alt} width={1024} height={576} className="brand-image" priority={tone !== "clinical"} />
@@ -87,18 +87,25 @@ export function HumanMomentCard({ variant = "kitchen", priority = false }: { var
 
 export function HeroVisualStack() {
   return (
-    <div className="hero-visual-stack" aria-label="Warm VascuMind family-first visual with product previews">
-      <HumanMomentCard priority />
-      <div className="hero-floating-card hero-floating-card-left">
-        <span>Free check</span>
-        <strong>Organize the pattern</strong>
-        <small>Sudden · stepwise · stroke/TIA · vascular risk</small>
-      </div>
-      <div className="hero-floating-card hero-floating-card-right">
-        <span>Next step</span>
-        <strong>$99 cognitive baseline</strong>
-        <small>For clinician discussion and repeat tracking</small>
-      </div>
+    <div className="hero-product-stack" aria-label="VascuMind first-step product options">
+      <Link href="/hachinski" className="hero-product-card hero-product-card-primary">
+        <div>
+          <div className="hero-product-logo">VascuMind <span>Free</span></div>
+          <h2>Free Ischemic Pattern Check</h2>
+          <p>Start with memory changes that may relate to blood flow, stroke/TIA history, or vascular risk factors.</p>
+          <strong>Start the free check</strong>
+        </div>
+        <div className="hero-product-visual product-mini-visual product-mini-check" aria-hidden="true"><span /><span /><span /></div>
+      </Link>
+      <Link href="/memory-screen" className="hero-product-card">
+        <div>
+          <div className="hero-product-logo">VascuMind <span>Baseline</span></div>
+          <h2>$99 Memory Baseline</h2>
+          <p>Create a structured memory benchmark to discuss with a clinician and compare over time.</p>
+          <strong>Create my baseline</strong>
+        </div>
+        <div className="hero-product-visual product-mini-visual product-mini-baseline" aria-hidden="true"><span /><span /><span /></div>
+      </Link>
     </div>
   );
 }
@@ -141,15 +148,15 @@ export function StoryPanels() {
     <div className="story-panel-grid">
       <HumanMomentCard variant="kitchen" />
       <div className="story-copy-card">
-        <div className="section-label mb-4">The moment families need VascuMind</div>
-        <h2>Something changed. Now you need a calmer way to start.</h2>
+        <div className="section-label mb-4">Memory as a signal</div>
+        <h2>Memory can be a clue to what blood flow may be doing inside the body.</h2>
         <p>
-          Maybe the change followed a stroke, TIA, blood-pressure issue, diabetes, PAD, or heart disease. VascuMind helps families organize what they notice before the next clinical conversation.
+          Memory is not a blood test and VascuMind does not diagnose disease. But changes in attention, processing speed, confusion, or memory can be a functional signal worth organizing when stroke, TIA, blood pressure, diabetes, PAD, heart disease, or other vascular risks are part of the story.
         </p>
         <ul>
-          <li>Start with a free educational pattern check.</li>
-          <li>Create a cognitive baseline only if it makes sense.</li>
-          <li>Bring clearer, safer questions to a qualified clinician.</li>
+          <li>Start with a free educational ischemic-pattern check.</li>
+          <li>Create a memory baseline only if it makes sense.</li>
+          <li>Bring clearer, safer questions about blood flow and vascular risk to a qualified clinician.</li>
         </ul>
       </div>
       <HumanMomentCard variant="tablet" />
@@ -170,7 +177,7 @@ export function PathwayLine({ cta = true }: { cta?: boolean }) {
       </div>
       {cta && (
         <Link href="/hachinski" className="btn-primary inline-flex justify-center text-center mt-8">
-          Start with the Pattern
+          Start with the Check
         </Link>
       )}
     </div>
@@ -179,24 +186,24 @@ export function PathwayLine({ cta = true }: { cta?: boolean }) {
 
 export function ResultPreviewCard({ dark = false }: { dark?: boolean }) {
   return (
-    <div className={`result-preview-card ${dark ? "result-preview-dark" : ""}`} aria-label="Example of non-diagnostic pattern summary preview">
+    <div className={`result-preview-card ${dark ? "result-preview-dark" : ""}`} aria-label="Example of non-diagnostic ischemic-pattern summary preview">
       <div className="preview-topline">
-        <span>Pattern summary</span>
+        <span>Memory signal summary</span>
         <strong>Educational only</strong>
       </div>
       <div className="preview-score-row">
         <div>
           <small>Free check</small>
-          <strong>Organized clues</strong>
+          <strong>Ischemic clues</strong>
         </div>
         <div>
           <small>Next step</small>
-          <strong>Cognitive baseline</strong>
+          <strong>Memory baseline</strong>
         </div>
       </div>
       <ul>
         <li>Stroke/TIA history questions</li>
-        <li>Vascular risk-factor prompts</li>
+        <li>Blood-flow and vascular risk prompts</li>
         <li>Clinician conversation checklist</li>
       </ul>
     </div>

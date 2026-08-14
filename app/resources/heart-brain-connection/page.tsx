@@ -42,7 +42,7 @@ export default function HeartBrainConnectionPage() {
         <p><strong>Learn more in our <Link href="/resources/guide-to-hachinski-score">Patient's Guide to the Hachinski Score</Link>.</strong></p>
         <div className="mt-8">
           <Link href="/hachinski" className="btn-green inline-block px-8 py-3 rounded-full text-lg font-semibold">
-            Take the Free Vascular Pattern Quiz
+            Take the Free Ischemic Pattern Quiz
           </Link>
         </div>
 

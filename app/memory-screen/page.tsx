@@ -6,15 +6,15 @@ import { memoryScreenCheckoutUrl, memoryScreenPrice } from "@/lib/business";
 import { HumanMomentCard, PathwayLine, ResultPreviewCard } from "@/app/components/BrandVisuals";
 
 export const metadata: Metadata = {
-  title: "$99 MCI Screen Cognitive Baseline",
+  title: "$99 MCI Screen Memory Baseline",
   description:
-    "Create a $99 MCI Screen cognitive baseline after the free vascular pattern check. Use the structured benchmark for clinician discussion and repeat tracking; not a diagnosis.",
+    "Create a $99 MCI Screen memory baseline after the free ischemic pattern check. Use the structured benchmark for clinician discussion and repeat tracking; not a diagnosis.",
   alternates: { canonical: "/memory-screen" },
 };
 
 const deliverables = [
-  "A structured MCI Screen cognitive baseline for clinician discussion",
-  "Objective benchmarking after the free Hachinski-style vascular pattern check",
+  "A structured MCI Screen memory baseline for clinician discussion",
+  "Objective benchmarking after the free Hachinski-style ischemic pattern check",
   "Plain-language next-step questions for caregivers and clinicians",
   "Repeat-tracking context if you want to compare changes over time",
 ];
@@ -39,7 +39,7 @@ export default function MemoryScreenPage() {
       <section className="grid lg:grid-cols-[1fr_360px] gap-10 items-start mb-16">
         <div>
           <div className="section-label mb-3">Step 2 · {memoryScreenPrice} objective cognitive benchmark</div>
-          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Create your {memoryScreenPrice} cognitive baseline after the free pattern check.</h1>
+          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Create your {memoryScreenPrice} memory baseline after the free pattern check.</h1>
           <p className="text-2xl text-black max-w-4xl mb-6">
             If stroke, TIA, blood pressure, diabetes, PAD, or other vascular risk factors may be part of the story, the MCI Screen gives your family a structured benchmark to discuss with a clinician.
           </p>
@@ -65,7 +65,7 @@ export default function MemoryScreenPage() {
             eventData={{ product: "memory-screen", price: memoryScreenPrice, location: "hero-card" }}
             className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold w-full"
           >
-            Create My {memoryScreenPrice} Cognitive Baseline
+            Create My {memoryScreenPrice} Memory Baseline
           </TrackedLink>
           <p className="text-sm text-black mt-3">Contact information used for this request only • no identifiable information shared without permission • educational only • not a diagnosis</p>
           <a href="#follow-up" className="inline-block mt-4 underline font-semibold">Questions before starting?</a>
@@ -79,7 +79,7 @@ export default function MemoryScreenPage() {
             <div className="section-label mb-3">Why create a baseline?</div>
             <h2 className="text-4xl font-semibold mb-4">Move from concern to a structured benchmark.</h2>
             <p className="text-xl text-black mb-6">
-              The free check organizes a possible vascular pattern. The paid baseline helps your next conversation — clinician, caregiver, research, or wellness — start from clearer information.
+              The free check organizes a possible ischemic pattern. The paid baseline helps your next conversation — clinician, caregiver, research, or wellness — start from clearer information.
             </p>
             <ul className="list-disc pl-6 space-y-2">
               {deliverables.map((item) => <li key={item}>{item}</li>)}
@@ -94,7 +94,7 @@ export default function MemoryScreenPage() {
             <h3 className="text-2xl font-semibold mb-3">Bring this to the visit</h3>
             <ul className="list-disc pl-6 space-y-2">
               <li>Pattern-check summary</li>
-              <li>Cognitive baseline context</li>
+              <li>Memory baseline context</li>
               <li>Questions about vascular risk factors</li>
               <li>Follow-up and repeat-tracking prompts</li>
             </ul>
@@ -105,14 +105,14 @@ export default function MemoryScreenPage() {
 
       <section className="mb-16">
         <div className="section-label mb-3">How this differs from other tests</div>
-        <h2 className="text-4xl font-semibold mb-6">Pattern check, cognitive baseline, and Alzheimer’s blood tests answer different questions.</h2>
+        <h2 className="text-4xl font-semibold mb-6">Pattern check, memory baseline, and Alzheimer’s blood tests answer different questions.</h2>
         <div className="grid md:grid-cols-3 gap-6">
           <div className="border border-black rounded-3xl p-6 bg-white">
-            <h3 className="text-2xl font-semibold mb-3">Vascular pattern check</h3>
+            <h3 className="text-2xl font-semibold mb-3">Ischemic pattern check</h3>
             <p className="text-black">Organizes sudden onset, stepwise change, stroke/TIA history, and vascular risk factors. It does not diagnose disease.</p>
           </div>
           <div className="border border-black rounded-3xl p-6 bg-white">
-            <h3 className="text-2xl font-semibold mb-3">Cognitive baseline</h3>
+            <h3 className="text-2xl font-semibold mb-3">Memory baseline</h3>
             <p className="text-black">Creates a structured cognitive benchmark for clinician discussion and repeat tracking. It does not explain the medical cause by itself.</p>
           </div>
           <div className="border border-black rounded-3xl p-6 bg-white">
@@ -178,7 +178,7 @@ export default function MemoryScreenPage() {
       </section>
 
       <section id="follow-up">
-        <LeadForm leadType="memory-screen" title="Questions before the cognitive baseline?" submitLabel="Request Follow-Up" />
+        <LeadForm leadType="memory-screen" title="Questions before the memory baseline?" submitLabel="Request Follow-Up" />
       </section>
         </div>
     </main>

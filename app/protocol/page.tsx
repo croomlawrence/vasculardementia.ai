@@ -5,13 +5,13 @@ import { memoryScreenPrice } from '@/lib/business';
 export const metadata: Metadata = {
   title: 'The VascuMind Protocol | Your Path to Cognitive Clarity',
   description:
-    'Discover the VascuMind Protocol: free Hachinski-style vascular cognitive pattern check, paid MCI Screen cognitive baseline, and clinician-discussion next steps.',
+    'Discover the VascuMind Protocol: free Hachinski-style vascular cognitive pattern check, paid MCI Screen memory baseline, and clinician-discussion next steps.',
 };
 
 const pathwaySteps = [
   {
     label: 'Step 1 · Free Hachinski-style Pattern Check',
-    title: 'Check for vascular-pattern features first',
+    title: 'Check for ischemic-pattern features first',
     body:
       "Start with a private, patient-friendly version of the Hachinski Ischemic Score to organize sudden onset, stepwise change, stroke/TIA history, and vascular risk factors.",
     why:
@@ -23,7 +23,7 @@ const pathwaySteps = [
     label: `Step 2 · Paid MCI Screen Baseline (${memoryScreenPrice})`,
     title: 'Create an objective cognitive benchmark',
     body:
-      'If your pattern suggests a vascular link, the next step is an objective cognitive baseline using the MCI Screen for clinician discussion and repeat tracking.',
+      'If your pattern suggests a vascular link, the next step is an objective memory baseline using the MCI Screen for clinician discussion and repeat tracking.',
     why:
       'Why it matters: A structured baseline gives families concrete information to discuss with a healthcare provider. It is a screen, not a diagnosis.',
     href: '/memory-screen',
@@ -33,7 +33,7 @@ const pathwaySteps = [
     label: 'Step 3 · Clinician Discussion + Optional Pathways',
     title: 'Choose the next conversation',
     body:
-      'Use your pattern check and cognitive baseline to prepare for clinician discussion, wellness-support education, or research-awareness follow-up when appropriate.',
+      'Use your pattern check and memory baseline to prepare for clinician discussion, wellness-support education, or research-awareness follow-up when appropriate.',
     why:
       'Why it matters: You stay in control of your data and can choose whether to explore optional wellness resources or research conversations.',
     href: '/what-we-offer',
@@ -69,7 +69,7 @@ export default function ProtocolPage() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="section-label mb-4">THE VASCUMIND PROTOCOL</div>
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6 leading-tight gradient-text">
-            Pattern check first. Cognitive baseline second. Better clinical conversations next.
+            Pattern check first. Memory baseline second. Better clinical conversations next.
           </h1>
           <p className="text-xl text-black max-w-3xl mx-auto">
             The VascuMind Protocol is a clinical-grade, education-first pathway for vascular cognitive concerns: free Hachinski-style pattern check, paid MCI Screen baseline, and clinician-discussion next steps.

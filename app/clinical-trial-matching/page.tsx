@@ -14,7 +14,7 @@ export default function ClinicalTrialMatchingPage() {
         <div className="section-label mb-3">CONSENTED RESEARCH OPTIONS</div>
         <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Explore whether current vascular cognitive research may be relevant.</h1>
         <p className="text-2xl text-black max-w-4xl mx-auto">
-          After a cognitive baseline, patients and caregivers who want research options can opt in to VascuMind reviewing whether vascular dementia, vascular cognitive impairment, or post-stroke cognitive studies may be worth discussing with clinicians or study teams.
+          After a memory baseline, patients and caregivers who want research options can opt in to VascuMind reviewing whether vascular dementia, vascular cognitive impairment, or post-stroke cognitive studies may be worth discussing with clinicians or study teams.
         </p>
       </section>
 

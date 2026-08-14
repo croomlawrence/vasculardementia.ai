@@ -6,21 +6,21 @@ import { memoryScreenPrice } from '@/lib/business';
 export const metadata: Metadata = {
   title: "Help for Vascular-Pattern Memory Changes & Caregivers | VascuMind",
   description:
-    "Start with concern, organize vascular clues, create a cognitive baseline when appropriate, and bring better questions to a qualified clinician.",
+    "Start with concern, organize vascular clues, create a memory baseline when appropriate, and bring better questions to a qualified clinician.",
 };
 
 const journeyCards = [
   {
-    title: 'Free Vascular Pattern Check',
+    title: 'Free Ischemic Pattern Check',
     copy: 'For memory changes after stroke, TIA, blood-pressure issues, diabetes, PAD, heart disease, or stepwise decline.',
     href: '/hachinski',
     cta: 'Start Free Pattern Check',
   },
   {
-    title: `${memoryScreenPrice} Cognitive Baseline`,
+    title: `${memoryScreenPrice} Memory Baseline`,
     copy: 'A structured MCI Screen benchmark for clinician discussion and repeat tracking. Screening and benchmarking only, not a diagnosis.',
     href: '/memory-screen',
-    cta: 'Create Cognitive Baseline',
+    cta: 'Create Memory Baseline',
   },
   {
     title: 'Clinician Conversation Guide',
@@ -50,7 +50,7 @@ export default function WhatWeOfferPage() {
           Start with the concern. Organize the vascular clues. Bring better questions.
         </h1>
         <p className="text-2xl text-black max-w-4xl mx-auto">
-          VascuMind helps families move from “something changed” to a safer first step: free pattern check, optional cognitive baseline, and clearer clinician conversation.
+          VascuMind helps families move from “something changed” to a safer first step: free pattern check, optional memory baseline, and clearer clinician conversation.
         </p>
       </div>
 

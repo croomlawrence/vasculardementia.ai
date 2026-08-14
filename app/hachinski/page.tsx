@@ -23,7 +23,7 @@ const hachinskiItems: HachinskiItem[] = [
   { id: 2, points: 1, category: "Course over time", question: "Have symptoms worsened in clear steps — stable for a while, then suddenly worse after a specific event?", explanation: "A stepwise pattern can happen when repeated vascular events affect the brain over time." },
   { id: 3, points: 2, category: "Course over time", question: "Do thinking, memory, or confusion symptoms fluctuate noticeably from day to day or within the same day?", explanation: "Fluctuating symptoms can relate to blood flow, sleep, medicines, infections, or vascular brain changes." },
   { id: 4, points: 1, category: "Daily pattern", question: "Are there periods of confusion that are worse at night?", explanation: "Nighttime confusion can have many causes, including sleep disruption, medicines, infection, or cognitive disorders." },
-  { id: 5, points: 1, category: "Behavior and mood", question: "Has personality stayed relatively the same, even as memory has declined?", explanation: "In vascular-pattern cognitive impairment, personality may be better preserved than memory or executive function, although every person is different." },
+  { id: 5, points: 1, category: "Behavior and mood", question: "Has personality stayed relatively the same, even as memory has declined?", explanation: "In ischemic-pattern cognitive impairment, personality may be better preserved than memory or executive function, although every person is different." },
   { id: 6, points: 1, category: "Behavior and mood", question: "Has there been significant depression along with the memory changes?", explanation: "Depression is common in older adults and may occur alongside vascular cognitive impairment. It is important to raise with a clinician." },
   { id: 7, points: 1, category: "Physical symptoms", question: "Are frequent physical complaints — headaches, dizziness, fatigue, or unexplained discomfort — happening along with memory changes?", explanation: "Physical complaints can accompany vascular brain changes, but they can also reflect many non-cognitive causes." },
   { id: 8, points: 1, category: "Behavior and mood", question: "Are there sudden episodes of crying or laughing that seem out of proportion or hard to control?", explanation: "This can sometimes happen after strokes or other brain changes. A clinician can help distinguish causes." },
@@ -35,16 +35,16 @@ const hachinskiItems: HachinskiItem[] = [
 ];
 
 const faqs = [
-  ["Is this an Alzheimer’s test?", "No. This educational check looks for vascular-pattern clues. Many people have mixed or non-vascular causes, so results should be paired with clinical evaluation."],
+  ["Is this an Alzheimer’s test?", "No. This educational check looks for ischemic-pattern clues. Many people have mixed or non-vascular causes, so results should be paired with clinical evaluation."],
   ["Is the Hachinski score still used?", "Clinicians may still use Hachinski-style vascular features as part of a broader assessment that can include history, cognitive testing, risk-factor review, and imaging."],
-  ["What should I do with my result?", "Save or print it, discuss it with a qualified clinician, and consider a structured cognitive baseline if you need something trackable over time."],
+  ["What should I do with my result?", "Save or print it, discuss it with a qualified clinician, and consider a structured memory baseline if you need something trackable over time."],
 ];
 
 function getInterpretation(score: number, answeredCount: number) {
-  if (answeredCount === 0) return { label: "No answers selected yet", description: "Answer each question to see whether fewer, mixed, or more vascular-pattern features are reported.", cta: "Start the questions" };
-  if (score <= 4) return { label: "Fewer vascular-pattern features reported", description: "Lower scores report fewer classic vascular-pattern features. Memory changes can still have vascular, non-vascular, medication, sleep, mood, infection, or mixed causes that deserve clinical evaluation.", cta: "Save results and learn what to discuss" };
-  if (score <= 6) return { label: "Mixed or uncertain vascular-pattern features", description: "Middle-range scores can reflect mixed or uncertain causes. Discuss the pattern with a clinician and consider a formal cognitive baseline and vascular risk review.", cta: "Create a cognitive baseline" };
-  return { label: "More vascular-pattern features reported", description: "Higher scores are more suggestive of vascular contribution. This is not a diagnosis; it is a reason to discuss vascular risk factors, stroke/TIA history, cognitive testing, and imaging with a healthcare professional.", cta: "Create a baseline and discuss with a clinician" };
+  if (answeredCount === 0) return { label: "No answers selected yet", description: "Answer each question to see whether fewer, mixed, or more ischemic-pattern features are reported.", cta: "Start the questions" };
+  if (score <= 4) return { label: "Fewer ischemic-pattern features reported", description: "Lower scores report fewer classic ischemic-pattern features. Memory changes can still have vascular, non-vascular, medication, sleep, mood, infection, or mixed causes that deserve clinical evaluation.", cta: "Save results and learn what to discuss" };
+  if (score <= 6) return { label: "Mixed or uncertain ischemic-pattern features", description: "Middle-range scores can reflect mixed or uncertain causes. Discuss the pattern with a clinician and consider a formal memory baseline and vascular risk review.", cta: "Create a memory baseline" };
+  return { label: "More ischemic-pattern features reported", description: "Higher scores are more suggestive of vascular contribution. This is not a diagnosis; it is a reason to discuss vascular risk factors, stroke/TIA history, cognitive testing, and imaging with a healthcare professional.", cta: "Create a baseline and discuss with a clinician" };
 }
 
 export default function HachinskiPage() {
@@ -96,9 +96,9 @@ export default function HachinskiPage() {
 
       <section className="py-10 grid lg:grid-cols-[1fr_360px] gap-8 items-center">
         <div>
-          <div className="section-label mb-3">Step 1 · Free vascular cognitive pattern check</div>
-          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-4">Answer one question at a time. Get a plain-language vascular-pattern summary.</h1>
-          <p className="text-xl text-black mb-6">This Hachinski-style educational tool helps organize whether memory or thinking changes may have vascular-pattern features. It cannot diagnose cognitive disease.</p>
+          <div className="section-label mb-3">Step 1 · Free ischemic pattern check</div>
+          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-4">Answer one question at a time. Get a plain-language ischemic-pattern summary.</h1>
+          <p className="text-xl text-black mb-6">This Hachinski-style educational tool helps organize whether memory or thinking changes may have ischemic-pattern features. It cannot diagnose cognitive disease.</p>
         </div>
         <VascularPathwayArt />
         <div className="lg:col-span-2 border-4 border-black bg-black text-white p-6 rounded-2xl">
@@ -158,9 +158,9 @@ export default function HachinskiPage() {
           <div className="text-6xl font-semibold mb-4 tabular-nums">{totalScore} / 18</div>
           <p className="text-xl text-black mb-6">{interpretation.description}</p>
           <div className="grid md:grid-cols-3 gap-4 mb-8">
-            <div className="border border-black rounded-2xl p-4 bg-white"><strong>0–4:</strong><br />Fewer vascular-pattern features reported.</div>
+            <div className="border border-black rounded-2xl p-4 bg-white"><strong>0–4:</strong><br />Fewer ischemic-pattern features reported.</div>
             <div className="border border-black rounded-2xl p-4 bg-white"><strong>5–6:</strong><br />Mixed or uncertain pattern; discuss with a clinician.</div>
-            <div className="border border-black rounded-2xl p-4 bg-white"><strong>7+:</strong><br />More vascular-pattern features; clinical evaluation recommended.</div>
+            <div className="border border-black rounded-2xl p-4 bg-white"><strong>7+:</strong><br />More ischemic-pattern features; clinical evaluation recommended.</div>
           </div>
           <div className="flex flex-col sm:flex-row gap-3">
             <TrackedLink href="/memory-screen" eventName="mci_cta_clicked" eventData={{ sourcePath: "/hachinski", ctaLabel: interpretation.cta, location: "result-card", score: totalScore, answeredCount, riskBand: interpretation.label }} className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold text-center">
@@ -180,7 +180,7 @@ export default function HachinskiPage() {
         <h2 className="text-3xl font-semibold mb-4">Clinician conversation checklist</h2>
         <p className="text-black mb-4">Bring your pattern-check result and ask whether formal cognitive screening, medication review, vascular risk-factor management, rehabilitation, sleep/mood review, or imaging may be appropriate.</p>
         <TrackedLink href="/memory-screen" eventName="mci_cta_clicked" eventData={{ sourcePath: "/hachinski", location: "clinician-checklist", score: totalScore, answeredCount, riskBand: interpretation.label }} className="font-semibold underline">
-          Create the $99 cognitive baseline →
+          Create the $99 memory baseline →
         </TrackedLink>
       </section>
 

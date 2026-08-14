@@ -12,7 +12,7 @@ export default function CognitiveScreeningClinicalTrialsPage() {
     <main className="max-w-6xl mx-auto px-6 py-16">
       <div className="section-label mb-3">For sponsors and CROs</div>
       <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">A vascular-differentiated cognitive screening funnel for clinical trials.</h1>
-      <p className="text-2xl text-black mb-8 max-w-4xl">VascuMind combines a consumer-grade front door, vascular-pattern education, structured cognitive baseline options, consent-aware routing, and sponsor-ready analytics for research programs where vascular cognition matters.</p>
+      <p className="text-2xl text-black mb-8 max-w-4xl">VascuMind combines a consumer-grade front door, ischemic-pattern education, structured memory baseline options, consent-aware routing, and sponsor-ready analytics for research programs where vascular cognition matters.</p>
       <Link href="/cro-licensing" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">See CRO Licensing</Link>
     </main>
   );

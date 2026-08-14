@@ -39,7 +39,7 @@ export default function VCHGuidePage() {
         <ul>
             <li><strong>Medical History:</strong> A thorough review of your health history, especially the risk factors listed above.</li>
             <li><strong>Brain Imaging:</strong> MRIs or CT scans can reveal evidence of past strokes or damage to the brain's white matter.</li>
-            <li><strong>Questionnaires:</strong> Tools like the Hachinski Score help organize symptoms to see if they fit a vascular pattern. <strong><Link href="/resources/guide-to-hachinski-score">Learn more about the Hachinski Score in our guide</Link>.</strong></li>
+            <li><strong>Questionnaires:</strong> Tools like the Hachinski Score help organize symptoms to see if they fit an ischemic pattern. <strong><Link href="/resources/guide-to-hachinski-score">Learn more about the Hachinski Score in our guide</Link>.</strong></li>
         </ul>
 
         <h2>You Can Take Action to Support Your Cognitive Health</h2>
@@ -47,7 +47,7 @@ export default function VCHGuidePage() {
         <p>Focusing on a healthy lifestyle can have a profound impact. A heart-healthy diet, regular physical activity, and good quality sleep are all powerful strategies. <strong><Link href="/resources/improve-brain-circulation">Discover 5 lifestyle changes</Link></strong> you can start making today.</p>
 
         <h2>Your First Step to Clarity</h2>
-        <p>Understanding your personal risk factors and symptom patterns is the first step. Our free, confidential Vascular Pattern Quiz is designed to help you organize this information, providing a clear starting point for a more informed conversation with your doctor.</p>
+        <p>Understanding your personal risk factors and symptom patterns is the first step. Our free, confidential Ischemic Pattern Quiz is designed to help you organize this information, providing a clear starting point for a more informed conversation with your doctor.</p>
         <div className="mt-8">
           <Link href="/hachinski" className="btn-green inline-block px-8 py-3 rounded-full text-lg font-semibold">
             Take Your Free Quiz

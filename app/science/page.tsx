@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Science & Validation',
-  description: 'Source-aware science, validation, and compliance framing for the VascuMind protocol, Hachinski-style pattern check, and MCI Screen cognitive baseline.',
+  description: 'Source-aware science, validation, and compliance framing for the VascuMind protocol, Hachinski-style pattern check, and MCI Screen memory baseline.',
   alternates: { canonical: '/science' },
 };
 
@@ -19,7 +19,7 @@ export default function SciencePage() {
       <div className="max-w-4xl mx-auto px-6 text-center">
         <div className="section-label mb-3">Science & validation</div>
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">Structured tools for better clinician conversations.</h1>
-        <p className="text-xl text-black mb-12">VascuMind uses educational vascular-pattern questions and an MCI Screen cognitive baseline pathway so families can organize observations, create a benchmark, and discuss next steps with qualified clinicians.</p>
+        <p className="text-xl text-black mb-12">VascuMind uses educational ischemic-pattern questions and an MCI Screen memory baseline pathway so families can organize observations, create a benchmark, and discuss next steps with qualified clinicians.</p>
       </div>
 
       <div className="max-w-5xl mx-auto px-6 space-y-12">
@@ -35,7 +35,7 @@ export default function SciencePage() {
         </section>
 
         <section id="hachinski" className="card bg-white">
-          <h2 className="text-3xl font-bold mb-4">The free Hachinski-style vascular pattern check</h2>
+          <h2 className="text-3xl font-bold mb-4">The free Hachinski-style ischemic pattern check</h2>
           <p className="text-black">The free check adapts Hachinski-style vascular features into patient-friendly language: sudden onset, stepwise worsening, stroke/TIA history, focal neurological symptoms, and vascular risk factors. It helps organize a health story before a clinician visit; it is not a disease-confirmation tool.</p>
         </section>
 

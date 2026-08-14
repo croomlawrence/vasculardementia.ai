@@ -5,8 +5,8 @@ import { HumanMomentCard, PathwayLine } from "@/app/components/BrandVisuals";
 import PaidBaselineIntake from "@/app/components/PaidBaselineIntake";
 
 export const metadata: Metadata = {
-  title: "After Your Cognitive Baseline",
-  description: "After the $99 MCI Screen cognitive baseline, complete intake and use your result for clinician discussion, optional wellness-support review, and consent-aware research follow-up.",
+  title: "After Your Memory Baseline",
+  description: "After the $99 MCI Screen memory baseline, complete intake and use your result for clinician discussion, optional wellness-support review, and consent-aware research follow-up.",
   alternates: { canonical: "/memory-screen/thank-you" },
   robots: { index: false, follow: false },
 };
@@ -15,14 +15,14 @@ const checklist = [
   "Watch for Stripe confirmation by email.",
   "Complete the intake form below so your request can be matched to the right screening workflow.",
   "Do not enter emergency symptoms or sensitive medical records into this form.",
-  "Save your pattern-check summary and cognitive baseline for clinician discussion.",
+  "Save your pattern-check summary and memory baseline for clinician discussion.",
 ];
 
 const paths = [
   {
     label: "Path A · clinician conversation",
     title: "Prepare for the next appointment",
-    copy: "Use your pattern-check summary and cognitive baseline to ask about stroke/TIA history, blood pressure, diabetes, PAD, medications, sleep, mood, rehabilitation, repeat cognitive tracking, or imaging when appropriate.",
+    copy: "Use your pattern-check summary and memory baseline to ask about stroke/TIA history, blood pressure, diabetes, PAD, medications, sleep, mood, rehabilitation, repeat cognitive tracking, or imaging when appropriate.",
     href: "/what-we-offer",
     cta: "Review clinician questions",
   },
@@ -48,10 +48,10 @@ export default function MemoryScreenThankYouPage() {
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-[1fr_380px] gap-10 items-start mb-12">
           <div className="border-4 border-black rounded-3xl p-8 md:p-12 green-wash">
-            <div className="section-label mb-3">After the {memoryScreenPrice} cognitive baseline</div>
+            <div className="section-label mb-3">After the {memoryScreenPrice} memory baseline</div>
             <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Your baseline is a starting point for better questions — not a diagnosis.</h1>
             <p className="text-2xl text-black mb-6 max-w-4xl">
-              Use your MCI Screen benchmark and vascular-pattern context to guide clinician discussion, repeat tracking, optional wellness-support review, or consent-aware research follow-up.
+              Use your MCI Screen benchmark and ischemic-pattern context to guide clinician discussion, repeat tracking, optional wellness-support review, or consent-aware research follow-up.
             </p>
             <p className="text-xl text-black mb-6">
               If symptoms are sudden or severe — facial drooping, one-sided weakness, speech trouble, confusion, severe dizziness, or vision loss — call emergency services immediately.

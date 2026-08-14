@@ -40,7 +40,7 @@ export default function HowMciIsDiagnosedPage() {
         </ul>
 
         <h2>Your Baseline is Your Power</h2>
-        <p>A diagnosis of MCI is not just a label; it can be a starting point for clearer clinician conversations. A structured cognitive baseline may help you and your doctor track change over time and decide what evaluation or support is appropriate.</p>
+        <p>A diagnosis of MCI is not just a label; it can be a starting point for clearer clinician conversations. A structured memory baseline may help you and your doctor track change over time and decide what evaluation or support is appropriate.</p>
         <p><strong><Link href="/resources/mci-vs-normal-aging">Learn more about the difference between MCI and normal aging</Link>.</strong></p>
 
         <EmailCapture />

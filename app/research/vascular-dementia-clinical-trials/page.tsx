@@ -31,7 +31,7 @@ export default function VascularDementiaResearchPage() {
           </div>
           <div className="border border-black rounded-3xl p-10 green-card">
             <div className="text-sm font-medium tracking-widest text-black mb-3">STEP 2 — BENCHMARK</div>
-            <h3 className="text-3xl font-semibold mb-4">Create a cognitive baseline</h3>
+            <h3 className="text-3xl font-semibold mb-4">Create a memory baseline</h3>
             <p className="text-lg text-black">Use screening and tracking information to support clinician discussion before exploring research pathways.</p>
           </div>
           <div className="border border-black rounded-3xl p-10 green-card">
@@ -43,8 +43,8 @@ export default function VascularDementiaResearchPage() {
       </div>
 
       <div className="text-center mb-12 flex flex-col sm:flex-row gap-3 justify-center">
-        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/research/vascular-dementia-clinical-trials", ctaLabel: "Create Cognitive Baseline" }} className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
-          Create Cognitive Baseline
+        <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/research/vascular-dementia-clinical-trials", ctaLabel: "Create Memory Baseline" }} className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+          Create Memory Baseline
         </TrackedLink>
         <a href="/clinical-trial-matching" className="inline-block border-2 border-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-black hover:text-white">
           Request Research Follow-Up

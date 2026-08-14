@@ -4,7 +4,7 @@ import { HumanMomentCard, PathwayLine } from "@/app/components/BrandVisuals";
 
 export const metadata: Metadata = {
   title: "Memory Changes After Stroke",
-  description: "Noticing memory, attention, or confusion changes after stroke or TIA? Start with a free vascular cognitive pattern check and learn what to discuss with a clinician.",
+  description: "Noticing memory, attention, or confusion changes after stroke or TIA? Start with a free ischemic pattern check and learn what to discuss with a clinician.",
   alternates: { canonical: "/memory-after-stroke" },
 };
 
@@ -27,14 +27,14 @@ export default function MemoryAfterStrokePage() {
         </aside>
       </section>
       <section className="grid md:grid-cols-3 gap-6 mb-16">
-        {["Sudden onset", "Stepwise worsening", "Stroke/TIA history"].map((item) => <div key={item} className="border border-black rounded-3xl p-8"><h2 className="text-2xl font-semibold mb-3">{item}</h2><p>These vascular-pattern clues can help organize the story before a clinician visit. They do not diagnose disease.</p></div>)}
+        {["Sudden onset", "Stepwise worsening", "Stroke/TIA history"].map((item) => <div key={item} className="border border-black rounded-3xl p-8"><h2 className="text-2xl font-semibold mb-3">{item}</h2><p>These ischemic-pattern clues can help organize the story before a clinician visit. They do not diagnose disease.</p></div>)}
       </section>
       <section className="mb-16">
         <PathwayLine cta={false} />
       </section>
       <section className="border-4 border-black rounded-3xl p-8 text-center brand-section-ivory">
         <h2 className="text-4xl font-semibold mb-4">Before the next appointment, bring better questions.</h2>
-        <p className="text-xl mb-6">Start free. If the pattern is worth tracking, create a structured cognitive baseline.</p>
+        <p className="text-xl mb-6">Start free. If the pattern is worth tracking, create a structured memory baseline.</p>
         <Link href="/hachinski" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">Start Free Check</Link>
       </section>
     </main>

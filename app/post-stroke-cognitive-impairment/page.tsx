@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Post-Stroke Cognitive Impairment Guide",
-  description: "A plain-language guide to post-stroke cognitive impairment, caregiver questions, and VascuMind’s free vascular cognitive pattern check.",
+  description: "A plain-language guide to post-stroke cognitive impairment, caregiver questions, and VascuMind’s free ischemic pattern check.",
   alternates: { canonical: "/post-stroke-cognitive-impairment" },
 };
 

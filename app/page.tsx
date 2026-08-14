@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import TrackedLink from '@/components/TrackedLink';
 import { memoryScreenPrice } from '@/lib/business';
-import { HumanMomentCard, PathwayLine, ResultPreviewCard, TrustBadgeRow, VascularPathwayArt } from '@/app/components/BrandVisuals';
+import { HeroVisualStack, HumanMomentCard, PathwayLine, ProductJourneyCards, ResultPreviewCard, StoryPanels, TrustBadgeRow, VascularPathwayArt } from '@/app/components/BrandVisuals';
 
 export const metadata: Metadata = {
   title: 'Free Vascular Cognitive Pattern Check | VascuMind',
@@ -97,16 +97,42 @@ export default function VascuMindHome() {
               Educational only. Not a diagnosis. Sudden facial drooping, one-sided weakness, speech trouble, severe dizziness, confusion, or vision loss may require emergency care.
             </p>
           </div>
-          <div className="space-y-8">
-            <HumanMomentCard priority />
-            <ResultPreviewCard />
-          </div>
+          <HeroVisualStack />
         </div>
       </section>
 
       <section aria-label="Trust signals" className="border-y border-black bg-white">
         <div className="max-w-6xl mx-auto px-6 py-8">
           <TrustBadgeRow />
+        </div>
+      </section>
+
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="max-w-3xl mb-10">
+            <div className="section-label mb-4">Choose your first step</div>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-black">A consumer-health path that feels simple, not scary.</h2>
+            <p className="text-xl text-black">Like the best modern health brands, VascuMind turns concern into a clear next action: start free, organize the pattern, and only then decide whether a cognitive baseline makes sense.</p>
+          </div>
+          <ProductJourneyCards />
+        </div>
+      </section>
+
+      <section className="py-20 brand-section-ivory">
+        <div className="max-w-6xl mx-auto px-6">
+          <StoryPanels />
+        </div>
+      </section>
+
+      <section className="py-20 brand-section-mint">
+        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[0.95fr_1.05fr] gap-10 items-center">
+          <HumanMomentCard variant="clinic" />
+          <div>
+            <div className="section-label mb-4">Built for safer conversations</div>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-5 text-black">Not self-diagnosis. Better preparation.</h2>
+            <p className="text-xl text-black mb-6">VascuMind should feel warm and easy to start, but the guardrails stay explicit: educational only, not a diagnosis, and designed to support discussion with qualified clinicians.</p>
+            <ResultPreviewCard />
+          </div>
         </div>
       </section>
 

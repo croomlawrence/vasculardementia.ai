@@ -40,6 +40,7 @@ const navLinks = [
   ["Start Here", "/what-we-offer"],
   ["Free Pattern Check", "/hachinski"],
   ["Cognitive Baseline", "/memory-screen"],
+  ["Stroke/TIA Memory", "/memory-changes-after-stroke-or-tia"],
   ["Science", "/science"],
   ["Research Options", "/clinical-trial-matching"],
   ["For Sponsors", "/cro-licensing"],
@@ -92,6 +93,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                   <Link href="/protocol" className="block hover:underline">VascuMind Protocol</Link>
                   <Link href="/hachinski" className="block hover:underline">Free Pattern Check</Link>
                   <Link href="/memory-screen" className="block hover:underline">Cognitive Baseline</Link>
+                  <Link href="/memory-changes-after-stroke-or-tia" className="block hover:underline">Memory After Stroke or TIA</Link>
+                  <Link href="/alzheimers-blood-test-vs-cognitive-screening" className="block hover:underline">Blood Test vs Screening</Link>
                   <Link href="/memory-after-stroke" className="block hover:underline">Memory After Stroke</Link>
                   <Link href="/caregiver-guide-memory-after-stroke" className="block hover:underline">Caregiver Guide</Link>
                   <Link href="/marketplace" className="block hover:underline">Wellness Support</Link>

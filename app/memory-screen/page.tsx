@@ -104,6 +104,28 @@ export default function MemoryScreenPage() {
       </section>
 
       <section className="mb-16">
+        <div className="section-label mb-3">How this differs from other tests</div>
+        <h2 className="text-4xl font-semibold mb-6">Pattern check, cognitive baseline, and Alzheimer’s blood tests answer different questions.</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          <div className="border border-black rounded-3xl p-6 bg-white">
+            <h3 className="text-2xl font-semibold mb-3">Vascular pattern check</h3>
+            <p className="text-black">Organizes sudden onset, stepwise change, stroke/TIA history, and vascular risk factors. It does not diagnose disease.</p>
+          </div>
+          <div className="border border-black rounded-3xl p-6 bg-white">
+            <h3 className="text-2xl font-semibold mb-3">Cognitive baseline</h3>
+            <p className="text-black">Creates a structured cognitive benchmark for clinician discussion and repeat tracking. It does not explain the medical cause by itself.</p>
+          </div>
+          <div className="border border-black rounded-3xl p-6 bg-white">
+            <h3 className="text-2xl font-semibold mb-3">Alzheimer’s blood test</h3>
+            <p className="text-black">May help clinicians assess Alzheimer’s-related biology in appropriate symptomatic adults. It does not rule out vascular, medication, sleep, mood, or mixed causes.</p>
+          </div>
+        </div>
+        <div className="mt-6">
+          <a href="/alzheimers-blood-test-vs-cognitive-screening" className="font-semibold underline">Compare the options →</a>
+        </div>
+      </section>
+
+      <section className="mb-16">
         <PathwayLine cta={false} />
       </section>
 

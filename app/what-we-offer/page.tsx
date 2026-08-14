@@ -1,93 +1,105 @@
 import type { Metadata } from "next";
 import Link from 'next/link';
 import TrackedLink from '@/components/TrackedLink';
+import { memoryScreenPrice } from '@/lib/business';
 
 export const metadata: Metadata = {
-  title: "Help for Vascular Dementia, Stroke-Related Memory Changes & Caregivers | VascuMind",
+  title: "Help for Vascular-Pattern Memory Changes & Caregivers | VascuMind",
   description:
-    "Understand, track, and discuss vascular dementia, post-stroke cognitive changes, and vascular cognitive impairment with VascuMind patient and caregiver resources.",
+    "Start with concern, organize vascular clues, create a cognitive baseline when appropriate, and bring better questions to a qualified clinician.",
 };
+
+const journeyCards = [
+  {
+    title: 'Free Vascular Pattern Check',
+    copy: 'For memory changes after stroke, TIA, blood-pressure issues, diabetes, PAD, heart disease, or stepwise decline.',
+    href: '/hachinski',
+    cta: 'Start Free Pattern Check',
+  },
+  {
+    title: `${memoryScreenPrice} Cognitive Baseline`,
+    copy: 'A structured MCI Screen benchmark for clinician discussion and repeat tracking. Screening and benchmarking only, not a diagnosis.',
+    href: '/memory-screen',
+    cta: 'Create Cognitive Baseline',
+  },
+  {
+    title: 'Clinician Conversation Guide',
+    copy: 'Plain-language questions about vascular risk, medications, sleep, mood, rehabilitation, imaging, repeat testing, and research options.',
+    href: '/protocol',
+    cta: 'See the Protocol',
+  },
+];
+
+const discussionItems = [
+  'blood pressure, diabetes, cholesterol, smoking history, PAD, and heart disease',
+  'stroke, TIA, small-vessel disease, or other vascular history',
+  'medication review, sleep, mood, hearing, B12, and other possible contributors',
+  'formal cognitive screening, imaging, rehabilitation, referral, or repeat tracking',
+];
 
 export default function WhatWeOfferPage() {
   return (
-    <div className="max-w-5xl mx-auto px-6 py-16">
+    <div className="max-w-6xl mx-auto px-6 py-16">
       <div className="mb-8">
         <Link href="/" className="text-black hover:underline">← Back to VascuMind</Link>
       </div>
 
       <div className="text-center mb-16">
+        <div className="section-label mb-3">Start here</div>
         <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">
-          Help for vascular dementia, stroke-related memory changes, and caregivers.
+          Start with the concern. Organize the vascular clues. Bring better questions.
         </h1>
-        <p className="text-2xl text-black max-w-3xl mx-auto">
-          A clearer path to understand the vascular pattern, benchmark cognition, and prepare better clinician conversations.
+        <p className="text-2xl text-black max-w-4xl mx-auto">
+          VascuMind helps families move from “something changed” to a safer first step: free pattern check, optional cognitive baseline, and clearer clinician conversation.
         </p>
       </div>
 
       <section className="mb-20">
-        <div className="mb-8">
-          <div className="section-label mb-2">START WITH CLARITY</div>
-          <h2 className="text-4xl font-semibold tracking-tight mb-4">
-            Organize memory concerns and vascular clues before the next visit.
-          </h2>
-          <p className="text-xl text-black max-w-3xl">
-            A quick pattern check can help you organize memory concerns and vascular risk factors — stroke/TIA history, blood pressure, diabetes, PAD, heart disease, and stepwise change — so you know what to discuss with a clinician.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="border border-black rounded-3xl p-8">
-            <h3 className="text-2xl font-semibold mb-3">Concerned about changes? Start with the pattern.</h3>
-            <p className="text-black">The Hachinski check is a free, educational self-report tool that helps families notice whether symptoms may fit a vascular-pattern profile.</p>
-          </div>
-          <div className="border border-black rounded-3xl p-8">
-            <h3 className="text-2xl font-semibold mb-3">Then create an objective cognitive baseline.</h3>
-            <p className="text-black">The MCI Screen gives families a structured benchmark to discuss with clinicians and track over time.</p>
-          </div>
-        </div>
-
-        <div className="mt-8 flex flex-col sm:flex-row gap-3">
-          <a href="/hachinski" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold text-center">
-            Start Free Pattern Check
-          </a>
-          <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/what-we-offer", ctaLabel: "Create Cognitive Baseline" }} className="inline-block border-2 border-black px-8 py-4 rounded-full text-lg font-semibold text-center hover:bg-black hover:text-white">
-            Create Cognitive Baseline
-          </TrackedLink>
+        <div className="grid md:grid-cols-3 gap-6">
+          {journeyCards.map((card) => (
+            <div key={card.title} className="border-2 border-black rounded-3xl p-8 bg-white flex flex-col">
+              <h2 className="text-3xl font-semibold mb-4">{card.title}</h2>
+              <p className="text-black mb-6 flex-1">{card.copy}</p>
+              {card.href === '/memory-screen' ? (
+                <TrackedLink href={card.href} eventName="cta_memory_screen_click" eventData={{ sourcePath: "/what-we-offer", ctaLabel: card.cta }} className="btn-secondary inline-flex justify-center text-center">
+                  {card.cta}
+                </TrackedLink>
+              ) : (
+                <Link href={card.href} className="btn-primary inline-flex justify-center text-center">
+                  {card.cta}
+                </Link>
+              )}
+            </div>
+          ))}
         </div>
       </section>
 
-      <section className="mb-20 green-wash rounded-3xl p-12">
-        <div className="mb-8">
-          <div className="section-label mb-2">WHAT MAY BE ACTIONABLE</div>
-          <h2 className="text-4xl font-semibold tracking-tight mb-4">
-            Vascular cognitive decline may have contributors worth discussing.
-          </h2>
-          <p className="text-xl text-black max-w-3xl">
-            VascuMind does not provide treatment. It helps families ask better questions about clinician-directed action areas such as blood pressure, diabetes, cholesterol, smoking, sleep, mood, medications, rehabilitation, repeat cognitive tracking, and research options.
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-6">
+      <section className="mb-20 green-wash rounded-3xl p-8 md:p-12">
+        <div className="grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start">
           <div>
-            <h3 className="text-2xl font-semibold mb-3">Care decisions belong with clinicians.</h3>
-            <p className="text-black">Use VascuMind to prepare for visits — not to diagnose, change medications, or replace medical care.</p>
+            <div className="section-label mb-2">What may be actionable</div>
+            <h2 className="text-4xl font-semibold tracking-tight mb-4">
+              Vascular-pattern memory changes deserve specific questions.
+            </h2>
+            <p className="text-xl text-black mb-6">
+              VascuMind does not provide treatment. It helps families prepare for clinician-directed conversations about contributors that may be worth reviewing.
+            </p>
+            <Link href="/research/clinical-evidence" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+              Learn What May Be Actionable
+            </Link>
           </div>
-          <div>
-            <h3 className="text-2xl font-semibold mb-3">Research is moving quickly.</h3>
-            <p className="text-black">Families may want to understand whether current or emerging vascular cognitive studies are worth discussing with physicians and study teams.</p>
+          <div className="bg-white border-2 border-black rounded-3xl p-8">
+            <h3 className="text-3xl font-semibold mb-4">Questions may include:</h3>
+            <ul className="list-disc pl-6 space-y-3 text-black">
+              {discussionItems.map((item) => <li key={item}>{item}</li>)}
+            </ul>
           </div>
-        </div>
-
-        <div className="mt-8">
-          <a href="/research/clinical-evidence" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
-            Learn What May Be Actionable
-          </a>
         </div>
       </section>
 
       <section className="mb-20">
         <div className="mb-8">
-          <div className="section-label mb-2">CAREGIVERS AND FAMILIES</div>
+          <div className="section-label mb-2">Caregivers and families</div>
           <h2 className="text-4xl font-semibold tracking-tight mb-4">
             When someone you love starts slipping, start here.
           </h2>
@@ -103,7 +115,7 @@ export default function WhatWeOfferPage() {
           </div>
           <div className="border border-black rounded-3xl p-8">
             <h3 className="text-2xl font-semibold mb-3">Vascular causes deserve specific questions.</h3>
-            <p className="text-black">Stroke history, small vessel disease, blood pressure, diabetes, PAD, and heart disease can shape the conversation.</p>
+            <p className="text-black">Stroke history, small-vessel disease, blood pressure, diabetes, PAD, and heart disease can shape the conversation.</p>
           </div>
           <div className="border border-black rounded-3xl p-8">
             <h3 className="text-2xl font-semibold mb-3">You do not have to navigate this alone.</h3>
@@ -112,16 +124,16 @@ export default function WhatWeOfferPage() {
         </div>
       </section>
 
-      <section className="bg-black text-white rounded-3xl p-12 text-center">
-        <h2 className="text-3xl font-semibold tracking-tight mb-6 text-white">
-          Start with the pattern. Then benchmark cognition.
+      <section className="bg-black text-white rounded-3xl p-8 md:p-12 text-center">
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight mb-6 text-white">
+          Concern → pattern → baseline → clinician conversation.
         </h2>
-        <p className="text-xl max-w-2xl mx-auto mb-8">
-          Memory changes can have vascular, non-vascular, medication-related, mood-related, sleep-related, and other causes. Vascular risk is one important place to look with a qualified clinician.
+        <p className="text-xl max-w-3xl mx-auto mb-8 text-white">
+          Memory changes can have vascular, non-vascular, medication-related, mood-related, sleep-related, Alzheimer’s-related, and other causes. Vascular risk is one important place to organize with a qualified clinician.
         </p>
-        <a href="/hachinski" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">
+        <Link href="/hachinski" className="bg-white text-black border-2 border-white hover:bg-black hover:text-white inline-block px-8 py-4 rounded-full text-lg font-semibold">
           Start Free Pattern Check
-        </a>
+        </Link>
       </section>
     </div>
   );

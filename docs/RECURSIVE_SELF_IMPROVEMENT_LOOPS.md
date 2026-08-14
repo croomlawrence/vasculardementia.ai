@@ -14,9 +14,18 @@ Observe → Analyze → Prioritize → Ship → Measure → Store learning → R
 
 | Loop | Cadence | Owner | Input | Output |
 |---|---:|---|---|---|
-| QA watchdog | Daily 8:00 AM | Script | Live routes, banned claims, redirect health | Silent if pass; alert if failure |
-| CRM operator loop | Daily 8:30 AM | Script | Google Sheets CRM registrations/follow-ups | Telegram operating digest |
-| Recursive improvement loop | Mondays 10:00 AM | Hermes agent | CRM snapshot + live site | Next experiment, acceptance criteria, implementation checklist |
+| QA watchdog | Daily | `npm run qa:vascumind` | Live routes, banned claims, redirect health | Silent if pass; alert if failure |
+| CRM operator loop | Daily | `npm run digest:funnel` | Google Sheets CRM registrations, events, follow-ups, experiments | Operating digest + one action |
+| Recursive improvement loop | Weekly | `npm run improve:weekly` | CRM snapshot + event ledger + active experiments | Next experiment, acceptance criteria, implementation checklist |
+
+## Local commands
+
+```bash
+npm run setup:loops       # create/repair Events, Experiments, and Loop Runs tabs
+npm run digest:funnel     # daily operating digest from Google Sheets CRM
+npm run improve:weekly    # weekly recursive improvement report; saves to Obsidian
+npm run qa:vascumind      # public route/compliance watchdog
+```
 
 ## Metrics by revenue stream
 
@@ -42,6 +51,8 @@ Tabs:
 - `Follow-Ups`
 - `Email Log`
 - `Events`
+- `Experiments`
+- `Loop Runs`
 
 ## Guardrails
 
@@ -55,7 +66,7 @@ Tabs:
 ## Next loop upgrades
 
 1. Add Stripe checkout/completion signal once Stripe Payment Link is live.
-2. Add Vercel Analytics/PostHog event export for page/CTA conversion rates.
+2. Add richer Vercel Analytics/PostHog pageview export if needed; durable first-party funnel events now land in the `Events` tab when Google Sheets env vars are configured.
 3. Add Obsidian notes generated from high-value CRM rows.
 4. Add a weekly CRO outreach packet generator.
-5. Add an experiment ledger with hypothesis, change, date shipped, and measured result.
+5. Record every shipped learning in `Experiments` with hypothesis, change, date shipped, result, and decision.

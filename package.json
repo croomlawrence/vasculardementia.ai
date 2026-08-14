@@ -9,7 +9,9 @@
     "lint": "eslint",
     "qa:vascumind": "node scripts/vascumind-qa.mjs",
     "score:lead": "node scripts/local-lead-scoring.mjs",
-    "digest:funnel": "node scripts/funnel-digest.mjs"
+    "setup:loops": "python3 scripts/setup-recursive-loops.py",
+    "digest:funnel": "node scripts/funnel-digest.mjs",
+    "improve:weekly": "node scripts/weekly-recursive-improvement.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

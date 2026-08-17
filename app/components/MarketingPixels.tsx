@@ -4,6 +4,7 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
 const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
 const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID;
 const LINKEDIN_PARTNER_ID = process.env.NEXT_PUBLIC_LINKEDIN_PARTNER_ID;
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
 export default function MarketingPixels() {
   const googleId = GA_ID || GOOGLE_ADS_ID;
@@ -23,6 +24,15 @@ export default function MarketingPixels() {
               ${GOOGLE_ADS_ID ? `gtag('config', '${GOOGLE_ADS_ID}');` : ""}
             `}
           </Script>
+        </>
+      )}
+
+      {GTM_ID && (
+        <>
+          <Script
+            src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
+            strategy="afterInteractive"
+          />
         </>
       )}
 

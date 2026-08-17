@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const trustBadges = [
-  ["Free first step", "Ischemic pattern check"],
+  ["Free first step", "Vascular memory check"],
   ["Educational only", "Not a diagnosis"],
   ["Clinician-ready", "Better questions"],
   ["Baseline next", "$99 Memory Baseline"],
@@ -34,8 +34,8 @@ const imageMap = {
 const journeyCards = [
   {
     eyebrow: "Free first step",
-    title: "Ischemic Pattern Check",
-    copy: "Answer plain-language questions about sudden changes, stepwise decline, stroke/TIA history, and vascular risk factors that may point toward ischemic or blood-flow-related concerns.",
+    title: "Vascular Memory Check",
+    copy: "Answer plain-language questions about sudden changes, stepwise decline, stroke/TIA history, and vascular risk factors that may point toward vascular or blood-flow-related concerns.",
     href: "/hachinski",
     cta: "Start free check",
     visual: "check",
@@ -62,7 +62,7 @@ export function VascularPathwayArt({ tone = "consumer" }: { tone?: "consumer" | 
   const src = tone === "clinical" ? "/images/brand/vascumind-cro-dashboard.png" : "/images/brand/vascumind-abstract-pathway.png";
   const alt = tone === "clinical"
     ? "Abstract VascuMind clinical research dashboard concept for sponsor screening workflows."
-    : "Abstract deep emerald pathway artwork representing guided vascular and ischemic memory-health navigation.";
+    : "Abstract deep emerald pathway artwork representing guided vascular memory-health navigation.";
   return (
     <div className={`pathway-art ${tone === "dark" ? "pathway-art-dark" : ""}`}>
       <Image src={src} alt={alt} width={1024} height={576} className="brand-image" priority={tone !== "clinical"} />
@@ -91,9 +91,9 @@ export function HeroVisualStack() {
       <Link href="/hachinski" className="hero-product-card hero-product-card-primary">
         <div>
           <div className="hero-product-logo">VascuMind <span>Free</span></div>
-          <h2>Free Ischemic Pattern Check</h2>
+          <h2>Vascular Memory Check</h2>
           <p>Start with memory changes that may relate to blood flow, stroke/TIA history, or vascular risk factors.</p>
-          <strong>Start the free check</strong>
+          <strong>Check my vascular memory pattern</strong>
         </div>
         <div className="hero-product-visual product-mini-visual product-mini-check" aria-hidden="true"><span /><span /><span /></div>
       </Link>
@@ -106,6 +106,22 @@ export function HeroVisualStack() {
         </div>
         <div className="hero-product-visual product-mini-visual product-mini-baseline" aria-hidden="true"><span /><span /><span /></div>
       </Link>
+    </div>
+  );
+}
+
+export function HeroPortrait() {
+  return (
+    <div className="hero-portrait" aria-hidden="true">
+      <Image
+        src="/images/brand/vascumind-clinician-conversation.png"
+        alt="Older adult with family caregiver and clinician reviewing cognitive health together in a bright clinical setting"
+        width={1280}
+        height={720}
+        className="hero-portrait-image"
+        priority
+      />
+      <div className="hero-portrait-scrim" />
     </div>
   );
 }
@@ -154,7 +170,7 @@ export function StoryPanels() {
           Memory is not a blood test and VascuMind does not diagnose disease. But changes in attention, processing speed, confusion, or memory can be a functional signal worth organizing when stroke, TIA, blood pressure, diabetes, PAD, heart disease, or other vascular risks are part of the story.
         </p>
         <ul>
-          <li>Start with a free educational ischemic-pattern check.</li>
+          <li>Start with a free educational vascular memory check.</li>
           <li>Create a memory baseline only if it makes sense.</li>
           <li>Bring clearer, safer questions about blood flow and vascular risk to a qualified clinician.</li>
         </ul>
@@ -186,7 +202,7 @@ export function PathwayLine({ cta = true }: { cta?: boolean }) {
 
 export function ResultPreviewCard({ dark = false }: { dark?: boolean }) {
   return (
-    <div className={`result-preview-card ${dark ? "result-preview-dark" : ""}`} aria-label="Example of non-diagnostic ischemic-pattern summary preview">
+    <div className={`result-preview-card ${dark ? "result-preview-dark" : ""}`} aria-label="Example of non-diagnostic vascular-pattern summary preview">
       <div className="preview-topline">
         <span>Memory signal summary</span>
         <strong>Educational only</strong>
@@ -194,7 +210,7 @@ export function ResultPreviewCard({ dark = false }: { dark?: boolean }) {
       <div className="preview-score-row">
         <div>
           <small>Free check</small>
-          <strong>Ischemic clues</strong>
+          <strong>Vascular clues</strong>
         </div>
         <div>
           <small>Next step</small>

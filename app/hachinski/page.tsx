@@ -35,16 +35,16 @@ const hachinskiItems: HachinskiItem[] = [
 ];
 
 const faqs = [
-  ["Is this an Alzheimer’s test?", "No. This educational check looks for ischemic-pattern clues. Many people have mixed or non-vascular causes, so results should be paired with clinical evaluation."],
+  ["Is this an Alzheimer’s test?", "No. This educational check looks for vascular-pattern clues. Many people have mixed or non-vascular causes, so results should be paired with clinical evaluation."],
   ["Is the Hachinski score still used?", "Clinicians may still use Hachinski-style vascular features as part of a broader assessment that can include history, cognitive testing, risk-factor review, and imaging."],
   ["What should I do with my result?", "Save or print it, discuss it with a qualified clinician, and consider a structured memory baseline if you need something trackable over time."],
 ];
 
 function getInterpretation(score: number, answeredCount: number) {
-  if (answeredCount === 0) return { label: "No answers selected yet", description: "Answer each question to see whether fewer, mixed, or more ischemic-pattern features are reported.", cta: "Start the questions" };
-  if (score <= 4) return { label: "Fewer ischemic-pattern features reported", description: "Lower scores report fewer classic ischemic-pattern features. Memory changes can still have vascular, non-vascular, medication, sleep, mood, infection, or mixed causes that deserve clinical evaluation.", cta: "Save results and learn what to discuss" };
-  if (score <= 6) return { label: "Mixed or uncertain ischemic-pattern features", description: "Middle-range scores can reflect mixed or uncertain causes. Discuss the pattern with a clinician and consider a formal memory baseline and vascular risk review.", cta: "Create a memory baseline" };
-  return { label: "More ischemic-pattern features reported", description: "Higher scores are more suggestive of vascular contribution. This is not a diagnosis; it is a reason to discuss vascular risk factors, stroke/TIA history, cognitive testing, and imaging with a healthcare professional.", cta: "Create a baseline and discuss with a clinician" };
+  if (answeredCount === 0) return { label: "No answers selected yet", description: "Answer each question to see whether fewer, mixed, or more vascular-pattern features are reported.", cta: "Start the questions" };
+  if (score <= 4) return { label: "Fewer vascular-pattern features reported", description: "Lower scores report fewer classic vascular-pattern features. Memory changes can still have vascular, non-vascular, medication, sleep, mood, infection, or mixed causes that deserve clinical evaluation.", cta: "Save results and learn what to discuss" };
+  if (score <= 6) return { label: "Mixed or uncertain vascular-pattern features", description: "Middle-range scores can reflect mixed or uncertain causes. Discuss the pattern with a clinician and consider a formal memory baseline and vascular risk review.", cta: "Create a memory baseline" };
+  return { label: "More vascular-pattern features reported", description: "Higher scores are more suggestive of vascular contribution. This is not a diagnosis; it is a reason to discuss vascular risk factors, stroke/TIA history, cognitive testing, and imaging with a healthcare professional.", cta: "Create a baseline and discuss with a clinician" };
 }
 
 export default function HachinskiPage() {
@@ -96,9 +96,9 @@ export default function HachinskiPage() {
 
       <section className="py-10 grid lg:grid-cols-[1fr_360px] gap-8 items-center">
         <div>
-          <div className="section-label mb-3">Step 1 · Free ischemic pattern check</div>
-          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-4">Answer one question at a time. Get a plain-language ischemic-pattern summary.</h1>
-          <p className="text-xl text-black mb-6">This Hachinski-style educational tool helps organize whether memory or thinking changes may have ischemic-pattern features. It cannot diagnose cognitive disease.</p>
+          <div className="section-label mb-3">Step 1 · Free vascular memory check</div>
+          <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-4">Could Blood Flow Be Affecting Your Memory?</h1>
+          <p className="text-xl text-black mb-6">Take the free 3-minute vascular memory check. See whether your symptoms and health history show patterns sometimes associated with vascular contributions to cognitive change. Get a summary to discuss with your clinician.</p>
         </div>
         <VascularPathwayArt />
         <div className="lg:col-span-2 border-4 border-black bg-black text-white p-6 rounded-2xl">
@@ -158,17 +158,22 @@ export default function HachinskiPage() {
           <div className="text-6xl font-semibold mb-4 tabular-nums">{totalScore} / 18</div>
           <p className="text-xl text-black mb-6">{interpretation.description}</p>
           <div className="grid md:grid-cols-3 gap-4 mb-8">
-            <div className="border border-black rounded-2xl p-4 bg-white"><strong>0–4:</strong><br />Fewer ischemic-pattern features reported.</div>
+            <div className="border border-black rounded-2xl p-4 bg-white"><strong>0–4:</strong><br />Fewer vascular-pattern features reported.</div>
             <div className="border border-black rounded-2xl p-4 bg-white"><strong>5–6:</strong><br />Mixed or uncertain pattern; discuss with a clinician.</div>
-            <div className="border border-black rounded-2xl p-4 bg-white"><strong>7+:</strong><br />More ischemic-pattern features; clinical evaluation recommended.</div>
+            <div className="border border-black rounded-2xl p-4 bg-white"><strong>7+:</strong><br />More vascular-pattern features; clinical evaluation recommended.</div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-3">
+          <div className="flex flex-col sm:flex-row gap-3 mb-8">
             <TrackedLink href="/memory-screen" eventName="mci_cta_clicked" eventData={{ sourcePath: "/hachinski", ctaLabel: interpretation.cta, location: "result-card", score: totalScore, answeredCount, riskBand: interpretation.label }} className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold text-center">
               {interpretation.cta}
             </TrackedLink>
             <button type="button" onClick={printResults} className="btn-secondary">Print or Save Results</button>
             <button type="button" onClick={resetAnswers} className="btn-secondary">Reset</button>
           </div>
+          <div className="border border-black rounded-2xl p-6 bg-white mb-8">
+            <h3 className="text-xl font-semibold mb-3">What you'll learn</h3>
+            <p className="text-black">Answer questions about how your memory changes began, how they have progressed, your stroke history and other vascular clues. You'll receive a vascular-pattern score and a summary you can discuss with your healthcare professional.</p>
+          </div>
+          <p className="text-sm text-black text-center">Based on the Hachinski Ischemic Score, a longstanding clinical framework for recognizing patterns associated with vascular contributions to cognitive impairment.</p>
         </section>
       )}
 

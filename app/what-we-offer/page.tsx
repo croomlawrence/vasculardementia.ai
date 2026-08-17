@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 
 const journeyCards = [
   {
-    title: 'Free Ischemic Pattern Check',
+    title: 'Free Vascular Memory Check',
     copy: 'For memory changes after stroke, TIA, blood-pressure issues, diabetes, PAD, heart disease, or stepwise decline.',
     href: '/hachinski',
-    cta: 'Start Free Pattern Check',
+    cta: 'Check My Vascular Memory Pattern',
   },
   {
     title: `${memoryScreenPrice} Memory Baseline`,
@@ -132,7 +132,7 @@ export default function WhatWeOfferPage() {
           Memory changes can have vascular, non-vascular, medication-related, mood-related, sleep-related, Alzheimer’s-related, and other causes. Vascular risk is one important place to organize with a qualified clinician.
         </p>
         <Link href="/hachinski" className="bg-white text-black border-2 border-white hover:bg-black hover:text-white inline-block px-8 py-4 rounded-full text-lg font-semibold">
-          Start Free Pattern Check
+          Check My Vascular Memory Pattern
         </Link>
       </section>
     </div>

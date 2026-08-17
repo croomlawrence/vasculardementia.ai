@@ -16,31 +16,31 @@ const siteUrl = "https://www.vascumind.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "VascuMind | Free Ischemic Pattern Check",
+    default: "VascuMind | Could Blood Flow Be Affecting Your Memory?",
     template: "%s | VascuMind",
   },
   description:
-    "Start with a free ischemic pattern check for memory changes after stroke, TIA, blood pressure, diabetes, PAD, or other vascular risk factors, then create a $99 memory baseline for clinician discussion.",
+    "Start with a free 3-minute vascular memory check for memory changes after stroke, TIA, blood pressure, diabetes, PAD, or other vascular risk factors, then create a $99 memory baseline for clinician discussion.",
   alternates: { canonical: siteUrl },
   openGraph: {
     type: "website",
     url: siteUrl,
     siteName: "VascuMind",
-    title: "VascuMind | Free Ischemic Pattern Check",
+    title: "VascuMind | Could Blood Flow Be Affecting Your Memory?",
     description:
       "A clearer first step for families worried memory changes may relate to blood flow, stroke, TIA, or vascular risk factors. Educational only; not a diagnosis.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "VascuMind | Free Ischemic Pattern Check",
+    title: "VascuMind | Could Blood Flow Be Affecting Your Memory?",
     description:
-      "Start with a free ischemic pattern check, then create a structured memory baseline for clinician discussion.",
+      "Start with a free 3-minute vascular memory check, then create a structured memory baseline for clinician discussion.",
   },
 };
 
 const caregiverLinks = [
   ["Start Here", "/what-we-offer"],
-  ["Free Ischemic Pattern Check", "/hachinski"],
+  ["Free Vascular Memory Check", "/hachinski"],
   ["$99 Memory Baseline", "/memory-screen"],
   ["Stroke/TIA Memory", "/memory-changes-after-stroke-or-tia"],
   ["Blood Test vs Memory Screen", "/alzheimers-blood-test-vs-cognitive-screening"],
@@ -62,7 +62,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     "@type": "Organization",
     name: "VascuMind",
     url: siteUrl,
-    description: "Educational ischemic and vascular memory-health tools and clinician conversation support.",
+    description: "Educational vascular memory-health tools and clinician conversation support.",
   };
 
   return (
@@ -117,7 +117,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <div className="grid md:grid-cols-4 gap-8 mb-10">
               <div>
                 <div className="font-semibold text-xl mb-3 text-white">VascuMind®</div>
-                <p className="text-sm text-white">Educational tools for ischemic and vascular memory changes, post-stroke cognitive concerns, and caregiver navigation.</p>
+                <p className="text-sm text-white">Educational tools for vascular memory changes, post-stroke cognitive concerns, and caregiver navigation.</p>
               </div>
               <div>
                 <div className="font-semibold mb-3 text-sm tracking-widest text-white">FOR CAREGIVERS</div>

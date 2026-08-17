@@ -16,29 +16,29 @@ const coreStack = [
     label: 'Brain Energy',
     name: 'Citicoline (Cognizin-style)',
     description: 'Supports healthy brain energy and cognitive wellness',
-    price: '$39',
+    qualityNote: 'Clinically characterized sources; batch COAs for identity, potency, contaminants',
   },
   {
     href: '/marketplace/omega-3',
     label: 'Vascular Function',
     name: 'High-EPA Omega-3',
     description: 'Supports general vascular and cognitive wellness',
-    price: '$34',
+    qualityNote: 'Third-party purity; EPA/DHA verified; oxidation markers tested',
   },
   {
     href: '/marketplace/mct-oil',
     label: 'Alternative Brain Energy',
     name: 'MCT Oil',
     description: 'Provides ketone fuel as an alternative brain-energy source',
-    price: '$29',
+    qualityNote: 'Fatty-acid composition verified; oxidation/rancidity markers tested',
   },
 ];
 
 const secondaryProducts = [
-  { href: '/marketplace/beetroot', label: 'Circulation', name: 'Beetroot Powder', description: 'Natural nitric oxide support', price: '$29' },
-  { href: '/marketplace/b-complex', label: 'Cognitive Support', name: 'Methylated B-Complex', description: 'Active forms of B vitamins', price: '$32' },
-  { href: '/marketplace/vitamin-d3-k2', label: 'Bone & Brain', name: 'Vitamin D3 + K2', description: 'High-potency with K2 for absorption', price: '$27' },
-  { href: '/marketplace/percepta', label: 'Brain Health', name: 'Percepta', description: 'Ingredients studied in cognitive-aging research', price: '$59' },
+  { href: '/marketplace/beetroot', label: 'Circulation', name: 'Beetroot Powder', description: 'Natural nitric oxide support', qualityNote: 'Dietary nitrate content verified; microbial & heavy metal tested' },
+  { href: '/marketplace/b-complex', label: 'Cognitive Support', name: 'Methylated B-Complex', description: 'Active forms of B vitamins', qualityNote: 'Active B-vitamin forms verified; dosage confirmation; allergen tested' },
+  { href: '/marketplace/vitamin-d3-k2', label: 'Bone & Brain', name: 'Vitamin D3 + K2', description: 'High-potency with K2 for absorption', qualityNote: 'D3/K2 potency verified; carrier oil quality; heavy metals tested' },
+  { href: '/marketplace/percepta', label: 'Brain Health', name: 'Percepta', description: 'Ingredients studied in cognitive-aging research', qualityNote: 'Ingredient identity & potency verified; contaminant screening completed' },
 ];
 
 export default function Marketplace() {
@@ -79,7 +79,7 @@ export default function Marketplace() {
                 <div className="section-label mb-4">{product.label}</div>
                 <h3 className="text-2xl font-semibold mb-2 group-hover:text-black">{product.name}</h3>
                 <p className="text-black mb-4">{product.description}</p>
-                <div className="text-lg font-medium">{product.price}</div>
+                <div className="text-sm text-black/70 font-medium">{product.qualityNote}</div>
               </Link>
             ))}
           </div>
@@ -98,7 +98,7 @@ export default function Marketplace() {
                 <div className="section-label mb-4">{product.label}</div>
                 <h3 className="text-2xl font-semibold mb-2 group-hover:text-black">{product.name}</h3>
                 <p className="text-black mb-4">{product.description}</p>
-                <div className="text-lg font-medium">{product.price}</div>
+                <div className="text-sm text-black/70 font-medium">{product.qualityNote}</div>
               </Link>
             ))}
           </div>

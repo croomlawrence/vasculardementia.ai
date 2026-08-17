@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'About VascuMind',
-  description: 'Learn about VascuMind’s mission, vision, and founder Croom Lawrence: a caregiver-first front door for ischemic and vascular memory-health questions.',
+  description: "Learn about VascuMind's mission, vision, and founder Croom Lawrence: a caregiver-first front door for vascular memory-health questions.",
 };
 
 const missionCards = [
-  ['Mission', 'Give families a calmer, clearer first step when memory changes may relate to blood flow, ischemic disease, stroke/TIA history, or vascular risk factors.'],
+  ['Mission', 'Give families a calmer, clearer first step when memory changes may relate to blood flow, vascular disease, stroke/TIA history, or vascular risk factors.'],
   ['Vision', 'Make memory-health navigation more accessible, trackable, and clinician-ready without turning families into self-diagnosticians.'],
   ['Principle', 'Memory can be a practical signal families observe over time — but it must be interpreted with qualified clinical judgment, context, and appropriate evaluation.'],
 ];
@@ -67,7 +67,7 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <Link href="/hachinski" className="btn-primary text-center">Start the Free Ischemic Pattern Check</Link>
+            <Link href="/hachinski" className="btn-primary text-center">Check My Vascular Memory Pattern</Link>
             <Link href="/memory-screen" className="btn-secondary text-center">Create a $99 Memory Baseline</Link>
           </div>
         </div>

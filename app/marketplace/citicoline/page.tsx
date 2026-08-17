@@ -29,10 +29,19 @@ export default function CiticolinePage() {
         </p>
       </div>
 
+      <div className="border border-black rounded-2xl p-6 mb-12 bg-white">
+        <h3 className="text-xl font-semibold mb-3">Quality & sourcing standards</h3>
+        <ul className="list-disc pl-6 space-y-2 text-black">
+          <li>Clinically characterized citicoline sources preferred (e.g., Cognizin® or equivalent)</li>
+          <li>Batch-specific Certificates of Analysis for identity, potency, heavy metals, microbial limits</li>
+          <li>Manufacturer GMP documentation and stability data available on request</li>
+          <li>Third-party testing verification for each production lot</li>
+        </ul>
+      </div>
+
       <div className="flex items-center gap-4 mb-12">
-        <div className="text-4xl font-semibold">$39</div>
-        <TrackedLink href={affiliateLinks.citicoline} target="_blank" rel="noopener noreferrer" eventName="affiliate_product_click" eventData={{ product: 'Citicoline' }} className="btn-green px-8 py-3 rounded-full text-lg focus:outline focus:outline-4 focus:outline-black">
-          View Product
+        <TrackedLink href={affiliateLinks.citicoline} target="_blank" rel="noopener noreferrer" eventName="affiliate_product_click" eventData={{ product: 'Citicoline' }} className="btn-green px-8 py-3 rounded-full text-lg focus:outline focus:outline-4 focus:outline-black w-full">
+          View Product & Verify Quality Documentation
         </TrackedLink>
       </div>
 

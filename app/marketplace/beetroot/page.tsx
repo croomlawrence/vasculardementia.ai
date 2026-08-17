@@ -30,17 +30,27 @@ export default function OrganicBeetrootPowderPage() {
         </p>
       </div>
 
+      <div className="border border-black rounded-2xl p-6 mb-12 bg-white">
+        <h3 className="text-xl font-semibold mb-3">Quality & sourcing standards</h3>
+        <ul className="list-disc pl-6 space-y-2 text-black">
+          <li>Standardized dietary nitrate content (≥1.5% or equivalent per serving)</li>
+          <li>Organic certification with batch traceability</li>
+          <li>Microbial limits (yeast, mold, coliforms) within pharmacopeial standards</li>
+          <li>Heavy metals (Pb, Cd, As, Hg) tested below USP limits</li>
+          <li>No added sugars, fillers, or artificial ingredients</li>
+        </ul>
+      </div>
+
       <div className="flex items-center gap-4 mb-12">
-        <div className="text-4xl font-semibold">$26</div>
         <TrackedLink
           href={affiliateLinks.beetroot}
           target="_blank"
           rel="noopener noreferrer"
           eventName="affiliate_product_click"
           eventData={{ product: "Organic Beetroot Powder" }}
-          className="btn-green px-8 py-3 rounded-full text-lg focus:outline focus:outline-4 focus:outline-black"
+          className="btn-green px-8 py-3 rounded-full text-lg focus:outline focus:outline-4 focus:outline-black w-full"
         >
-          View Product
+          View Product & Verify Quality Documentation
         </TrackedLink>
       </div>
 

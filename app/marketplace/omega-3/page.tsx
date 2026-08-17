@@ -30,17 +30,27 @@ export default function HighPotencyOmega3Page() {
         </p>
       </div>
 
+      <div className="border border-black rounded-2xl p-6 mb-12 bg-white">
+        <h3 className="text-xl font-semibold mb-3">Quality & sourcing standards</h3>
+        <ul className="list-disc pl-6 space-y-2 text-black">
+          <li>High-EPA/DHA ratio with ≥1,400 mg combined per serving</li>
+          <li>IFOS 5-star or equivalent third-party purity certification</li>
+          <li>Oxidation markers (peroxide, anisidine, TOTOX) within strict limits</li>
+          <li>Heavy metals (Hg, Pb, Cd, As) below Proposition 65 thresholds</li>
+          <li>Molecularly distilled; sustainably sourced; GMP manufactured</li>
+        </ul>
+      </div>
+
       <div className="flex items-center gap-4 mb-12">
-        <div className="text-4xl font-semibold">$34</div>
         <TrackedLink
           href={affiliateLinks.omega3}
           target="_blank"
           rel="noopener noreferrer"
           eventName="affiliate_product_click"
           eventData={{ product: "High-Potency Omega-3" }}
-          className="btn-green px-8 py-3 rounded-full text-lg focus:outline focus:outline-4 focus:outline-black"
+          className="btn-green px-8 py-3 rounded-full text-lg focus:outline focus:outline-4 focus:outline-black w-full"
         >
-          View Product
+          View Product & Verify Quality Documentation
         </TrackedLink>
       </div>
 

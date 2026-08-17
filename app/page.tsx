@@ -1,23 +1,23 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { memoryScreenPrice } from '@/lib/business';
-import { HeroVisualStack, HumanMomentCard, PathwayLine, ProductJourneyCards, ResultPreviewCard, StoryPanels, TrustBadgeRow, VascularPathwayArt } from '@/app/components/BrandVisuals';
+import { HeroPortrait, HumanMomentCard, PathwayLine, ProductJourneyCards, ResultPreviewCard, StoryPanels, TrustBadgeRow, VascularPathwayArt } from '@/app/components/BrandVisuals';
 
 export const metadata: Metadata = {
-  title: 'Free Ischemic Pattern Check | VascuMind',
+  title: 'Could Blood Flow Be Affecting Your Memory? | VascuMind',
   description:
-    'Worried memory changes may be a signal of blood-flow or ischemic disease risk after stroke, TIA, blood pressure, diabetes, PAD, heart disease, or circulation issues? Start with a free check, then create a $99 memory baseline for clinician discussion.',
+    'Worried memory changes may be a signal of blood-flow or vascular disease risk after stroke, TIA, blood pressure, diabetes, PAD, heart disease, or circulation issues? Start with a free 3-minute vascular memory check, then create a $99 memory baseline for clinician discussion.',
   alternates: { canonical: '/' },
 };
 
 const pathwaySteps = [
   {
-    label: 'Step 1 · Free Pattern Check',
-    title: 'Organize the ischemic and vascular clues',
+    label: 'Step 1 · Free Vascular Memory Check',
+    title: 'Organize the vascular clues in your history',
     copy:
-      'Answer simple questions based on ischemic-pattern features clinicians have long used to organize cognitive concerns: sudden onset, stepwise change, stroke/TIA history, and vascular risk factors. Educational only, not a diagnosis.',
+      'Answer simple questions based on vascular-pattern features clinicians have long used to organize cognitive concerns: sudden onset, stepwise change, stroke/TIA history, and vascular risk factors. Educational only, not a diagnosis.',
     href: '/hachinski',
-    cta: 'Start Free Check',
+    cta: 'Check My Vascular Memory Pattern',
   },
   {
     label: `Step 2 · ${memoryScreenPrice} Memory Baseline`,
@@ -46,7 +46,7 @@ const audiences = [
 
 const comparisonRows = [
   {
-    option: 'Ischemic Pattern Check',
+    option: 'Vascular Memory Check',
     helps: 'Organizes clues like sudden onset, stepwise change, stroke/TIA history, and vascular risk factors.',
     doesNot: 'Does not diagnose dementia or replace medical evaluation.',
   },
@@ -74,24 +74,27 @@ const clinicianQuestions = [
 export default function VascuMindHome() {
   return (
     <main>
-      <section className="brand-hero py-20 md:py-28">
+      <section className="brand-hero py-20 md:py-28 relative">
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
-          <div>
-            <div className="section-label mb-4">Free ischemic pattern check</div>
+          <div className="relative z-10">
+            <div className="section-label mb-4">Free vascular memory check</div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-tight">
-              Memory changes can be a signal of blood-flow problems.
+              Could Blood Flow Be Affecting Your Memory?
             </h1>
             <p className="text-2xl text-black mb-6 max-w-3xl">
-              If memory, attention, processing speed, or confusion changed after a stroke, TIA, blood-pressure issues, diabetes, PAD, heart disease, or other vascular risks, start with a free ischemic pattern check. Then create a {memoryScreenPrice} memory baseline to discuss with a clinician.
+              Take the free 3-minute vascular memory check. See whether your symptoms and health history show patterns sometimes associated with vascular contributions to cognitive change. Get a summary to discuss with your clinician.
             </p>
             <p className="text-lg text-black mb-6 max-w-3xl">
-              Memory is not a blood test and VascuMind does not diagnose disease. But memory can function like an important biomarker-style signal: something observable and trackable that may help families ask better questions about blood flow, ischemic disease, and vascular risk.
+              Memory is not a blood test and VascuMind does not diagnose disease. But memory can function like an important biomarker-style signal: something observable and trackable that may help families ask better questions about blood flow, vascular disease, and vascular risk.
             </p>
             <p className="text-base text-black">
               Educational only. Not a diagnosis. Sudden facial drooping, one-sided weakness, speech trouble, severe dizziness, confusion, or vision loss may require emergency care.
             </p>
+            <Link href="/hachinski" className="btn-primary inline-block mt-8">
+              Check My Vascular Memory Pattern
+            </Link>
           </div>
-          <HeroVisualStack />
+          <HeroPortrait />
         </div>
       </section>
 
@@ -134,7 +137,7 @@ export default function VascuMindHome() {
         <div className="max-w-6xl mx-auto px-6">
           <div className="max-w-3xl mb-10">
             <div className="section-label mb-4">Who this is for</div>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-black">A clearer start for families noticing ischemic-pattern memory changes.</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-black">A clearer start for families noticing vascular-pattern memory changes.</h2>
             <p className="text-xl text-black">The first job is not to diagnose yourself. It is to organize the pattern, create a baseline when appropriate, and bring clearer questions to qualified clinicians.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -153,7 +156,7 @@ export default function VascuMindHome() {
           <div className="section-label mb-4">Which first step makes sense?</div>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-5">Ischemic pattern check, memory screen, or Alzheimer’s blood test?</h2>
           <p className="text-xl text-black max-w-4xl mx-auto">
-            Families hear about many kinds of brain-health testing. They are not the same. VascuMind helps you understand where an ischemic pattern check and memory baseline fit before your next clinician conversation.
+            Families hear about many kinds of brain-health testing. They are not the same. VascuMind helps you understand where a vascular memory check and memory baseline fit before your next clinician conversation.
           </p>
         </div>
         <div className="overflow-hidden border-2 border-black rounded-3xl bg-white">
@@ -171,7 +174,7 @@ export default function VascuMindHome() {
           ))}
         </div>
         <div className="text-center mt-8">
-          <Link href="/hachinski" className="btn-primary inline-block">Start with the free ischemic pattern check</Link>
+          <Link href="/hachinski" className="btn-primary inline-block">Check My Vascular Memory Pattern</Link>
         </div>
       </section>
 
@@ -183,7 +186,7 @@ export default function VascuMindHome() {
             <p className="text-xl text-black mb-6">
               Some families notice memory or thinking changes that seem to appear suddenly, worsen after a stroke or TIA, or decline in steps rather than gradually. That does not confirm the cause, but it is a pattern worth organizing before a clinician visit.
             </p>
-            <Link href="/hachinski" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">Check the ischemic pattern</Link>
+            <Link href="/hachinski" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">Check Your Vascular Memory Pattern</Link>
           </div>
           <div className="card bg-white">
             <h3 className="text-3xl font-bold mb-4 text-black">Questions to bring to the next visit</h3>
@@ -225,7 +228,7 @@ export default function VascuMindHome() {
             <div className="section-label section-label-on-dark mb-4">The heart-brain connection</div>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">Memory is one of the signals families can actually observe.</h2>
             <p className="text-xl text-white">
-              Blood flow, ischemic disease, and vascular risk factors can affect attention, memory, processing speed, and day-to-day function. VascuMind helps families move from “something feels different” to a documented memory signal, an ischemic-pattern summary, and a memory baseline for clinician discussion.
+              Blood flow, vascular disease, and vascular risk factors can affect attention, memory, processing speed, and day-to-day function. VascuMind helps families move from “something feels different” to a documented memory signal, a vascular-pattern summary, and a memory baseline for clinician discussion.
             </p>
           </div>
           <div className="space-y-6">
@@ -233,7 +236,7 @@ export default function VascuMindHome() {
             <div className="bg-white text-black rounded-3xl p-8">
               <h3 className="text-3xl font-bold mb-4">What you can bring to the next visit</h3>
               <ul className="list-disc pl-6 space-y-2">
-                <li>A plain-language ischemic-pattern summary</li>
+                <li>A plain-language vascular-pattern summary</li>
                 <li>Questions about stroke/TIA history and vascular risk factors</li>
                 <li>An optional {memoryScreenPrice} memory baseline for tracking</li>
                 <li>A safer way to discuss wellness support or research options</li>
@@ -247,10 +250,10 @@ export default function VascuMindHome() {
         <div className="max-w-5xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-black">Start free. Benchmark only if it makes sense.</h2>
           <p className="text-xl text-black max-w-3xl mx-auto mb-8">
-            Take the free ischemic pattern check first. If the pattern is worth documenting, the next step is the paid MCI Screen memory baseline.
+            Take the free 3-minute vascular memory check first. If the pattern is worth documenting, the next step is the paid MCI Screen memory baseline.
           </p>
           <Link href="/hachinski" className="btn-primary inline-block">
-            Start the Free Ischemic Pattern Check
+            Check My Vascular Memory Pattern
           </Link>
         </div>
       </section>

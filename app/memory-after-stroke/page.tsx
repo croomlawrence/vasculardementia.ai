@@ -4,7 +4,7 @@ import { HumanMomentCard, PathwayLine } from "@/app/components/BrandVisuals";
 
 export const metadata: Metadata = {
   title: "Memory Changes After Stroke",
-  description: "Noticing memory, attention, or confusion changes after stroke or TIA? Start with a free ischemic pattern check and learn what to discuss with a clinician.",
+  description: "Noticing memory, attention, or confusion changes after stroke or TIA? Start with a free 3-minute vascular memory check and learn what to discuss with a clinician.",
   alternates: { canonical: "/memory-after-stroke" },
 };
 
@@ -16,7 +16,7 @@ export default function MemoryAfterStrokePage() {
           <div className="section-label mb-3">Memory changes after stroke or TIA</div>
           <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Noticing memory or thinking changes after a stroke? Start by organizing the pattern.</h1>
           <p className="text-2xl text-black mb-6">Families often notice attention, processing speed, confusion, or memory changes before they know what to ask. VascuMind helps you prepare for a qualified clinician conversation.</p>
-          <Link href="/hachinski" className="btn-primary inline-block">Start Free Pattern Check</Link>
+          <Link href="/hachinski" className="btn-primary inline-block">Check My Vascular Memory Pattern</Link>
         </div>
         <aside className="space-y-6">
           <HumanMomentCard />
@@ -35,7 +35,7 @@ export default function MemoryAfterStrokePage() {
       <section className="border-4 border-black rounded-3xl p-8 text-center brand-section-ivory">
         <h2 className="text-4xl font-semibold mb-4">Before the next appointment, bring better questions.</h2>
         <p className="text-xl mb-6">Start free. If the pattern is worth tracking, create a structured memory baseline.</p>
-        <Link href="/hachinski" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">Start Free Check</Link>
+        <Link href="/hachinski" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">Check My Vascular Memory Pattern</Link>
       </section>
     </main>
   );

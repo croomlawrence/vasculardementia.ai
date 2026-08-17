@@ -181,7 +181,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-portrait {
   position: relative;
-  border-radius: 2rem;
+  border-radius: 0;
   overflow: hidden;
   background: var(--brand-ivory);
   height: 100%;

@@ -75,8 +75,8 @@ export default function VascuMindHome() {
   return (
     <main>
       <section className="brand-hero py-20 md:py-28 relative">
-        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
-          <div className="relative z-10">
+        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-stretch">
+          <div className="relative z-10 flex flex-col justify-center">
             <div className="section-label mb-4">Free vascular memory check</div>
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-tight">
               Could Blood Flow Be Affecting Your Memory?
@@ -87,10 +87,10 @@ export default function VascuMindHome() {
             <p className="text-lg text-black mb-6 max-w-3xl">
               Memory is not a blood test and VascuMind does not diagnose disease. But memory can function like an important biomarker-style signal: something observable and trackable that may help families ask better questions about blood flow, vascular disease, and vascular risk.
             </p>
-            <p className="text-base text-black">
+            <p className="text-base text-black mb-8">
               Educational only. Not a diagnosis. Sudden facial drooping, one-sided weakness, speech trouble, severe dizziness, confusion, or vision loss may require emergency care.
             </p>
-            <Link href="/hachinski" className="btn-primary inline-block mt-8">
+            <Link href="/hachinski" className="btn-primary inline-block w-fit">
               Check My Vascular Memory Pattern
             </Link>
           </div>

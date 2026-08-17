@@ -12,8 +12,8 @@ export default function SmallVesselDiseaseMemoryPage() {
     <main className="max-w-5xl mx-auto px-6 py-16">
       <div className="section-label mb-3">Small vessel disease and memory</div>
       <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Small vessel disease can raise specific cognitive-health questions.</h1>
-      <p className="text-2xl text-black mb-8">Only a qualified clinician can interpret imaging and symptoms. VascuMind helps families organize ischemic-pattern clues and prepare for that discussion.</p>
-      <Link href="/hachinski" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">Start Free Pattern Check</Link>
+      <p className="text-2xl text-black mb-8">Only a qualified clinician can interpret imaging and symptoms. VascuMind helps families organize vascular-pattern clues and prepare for that discussion.</p>
+      <Link href="/hachinski" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">Check My Vascular Memory Pattern</Link>
     </main>
   );
 }

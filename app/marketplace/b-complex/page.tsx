@@ -30,17 +30,27 @@ export default function MethylatedBComplexPage() {
         </p>
       </div>
 
+      <div className="border border-black rounded-2xl p-6 mb-12 bg-white">
+        <h3 className="text-xl font-semibold mb-3">Quality & sourcing standards</h3>
+        <ul className="list-disc pl-6 space-y-2 text-black">
+          <li>Active methylated forms: methylfolate (5-MTHF), methylcobalamin, P-5-P (B6)</li>
+          <li>Potency verified per batch; no cyanocobalamin or folic acid</li>
+          <li>Allergen tested (gluten, soy, dairy, shellfish); non-GMO</li>
+          <li>Heavy metals below USP <232>/<233> limits</li>
+          <li>GMP manufactured; stability data available</li>
+        </ul>
+      </div>
+
       <div className="flex items-center gap-4 mb-12">
-        <div className="text-4xl font-semibold">$32</div>
         <TrackedLink
           href={affiliateLinks.bComplex}
           target="_blank"
           rel="noopener noreferrer"
           eventName="affiliate_product_click"
           eventData={{ product: "Methylated B-Complex" }}
-          className="btn-green px-8 py-3 rounded-full text-lg focus:outline focus:outline-4 focus:outline-black"
+          className="btn-green px-8 py-3 rounded-full text-lg focus:outline focus:outline-4 focus:outline-black w-full"
         >
-          View Product
+          View Product & Verify Quality Documentation
         </TrackedLink>
       </div>
 

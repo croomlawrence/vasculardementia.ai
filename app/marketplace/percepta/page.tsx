@@ -30,17 +30,27 @@ export default function PerceptaPage() {
         </p>
       </div>
 
+      <div className="border border-black rounded-2xl p-6 mb-12 bg-white">
+        <h3 className="text-xl font-semibold mb-3">Quality & sourcing standards</h3>
+        <ul className="list-disc pl-6 space-y-2 text-black">
+          <li>Ingredient identity confirmed by HPLC/UPLC per batch</li>
+          <li>Potency verified for each active component (PTI-00703, EGCG, etc.)</li>
+          <li>Contaminant screening: heavy metals, microbes, residual solvents</li>
+          <li>Allergen tested; non-GMO; no artificial preservatives</li>
+          <li>GMP manufactured; finished-product stability data available</li>
+        </ul>
+      </div>
+
       <div className="flex items-center gap-4 mb-12">
-        <div className="text-4xl font-semibold">$59</div>
         <TrackedLink
           href={affiliateLinks.percepta}
           target="_blank"
           rel="noopener noreferrer"
           eventName="affiliate_product_click"
           eventData={{ product: "Percepta" }}
-          className="btn-green px-8 py-3 rounded-full text-lg focus:outline focus:outline-4 focus:outline-black"
+          className="btn-green px-8 py-3 rounded-full text-lg focus:outline focus:outline-4 focus:outline-black w-full"
         >
-          View Product
+          View Product & Verify Quality Documentation
         </TrackedLink>
       </div>
 

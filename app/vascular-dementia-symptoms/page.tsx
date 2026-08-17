@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Vascular Dementia Symptoms & First Questions",
-  description: "Learn common ischemic-pattern cognitive symptoms and start a free educational pattern check for clinician discussion. VascuMind does not diagnose disease.",
+  description: "Learn common vascular-pattern cognitive symptoms and start a free educational pattern check for clinician discussion. VascuMind does not diagnose disease.",
   alternates: { canonical: "/vascular-dementia-symptoms" },
 };
 
@@ -25,9 +25,9 @@ export default function VascularDementiaSymptomsPage() {
         {symptoms.map((symptom) => <div key={symptom} className="border border-black rounded-3xl p-6 text-xl font-semibold">{symptom}</div>)}
       </div>
       <section className="border-4 border-black rounded-3xl p-8 text-center bg-background-light">
-        <h2 className="text-4xl font-semibold mb-4">Start with the free ischemic pattern check.</h2>
+        <h2 className="text-4xl font-semibold mb-4">Start with the free vascular memory check.</h2>
         <p className="text-xl mb-6">Then decide whether a $99 memory baseline would help your clinician discussion.</p>
-        <Link href="/hachinski" className="btn-primary inline-block">Start Free Pattern Check</Link>
+        <Link href="/hachinski" className="btn-primary inline-block">Check My Vascular Memory Pattern</Link>
       </section>
     </main>
   );

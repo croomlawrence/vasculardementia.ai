@@ -19,7 +19,7 @@ export default function SciencePage() {
       <div className="max-w-4xl mx-auto px-6 text-center">
         <div className="section-label mb-3">Science & validation</div>
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-6">Structured tools for better clinician conversations.</h1>
-        <p className="text-xl text-black mb-12">VascuMind uses educational ischemic-pattern questions and an MCI Screen memory baseline pathway so families can organize observations, create a benchmark, and discuss next steps with qualified clinicians.</p>
+        <p className="text-xl text-black mb-12">VascuMind uses educational vascular-pattern questions and an MCI Screen memory baseline pathway so families can organize observations, create a benchmark, and discuss next steps with qualified clinicians.</p>
       </div>
 
       <div className="max-w-5xl mx-auto px-6 space-y-12">

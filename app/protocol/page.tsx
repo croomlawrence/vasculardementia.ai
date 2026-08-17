@@ -10,14 +10,14 @@ export const metadata: Metadata = {
 
 const pathwaySteps = [
   {
-    label: 'Step 1 · Free Hachinski-style Pattern Check',
-    title: 'Check for ischemic-pattern features first',
+    label: 'Step 1 · Free Vascular Memory Check',
+    title: 'Check for vascular-pattern features first',
     body:
       "Start with a private, patient-friendly version of the Hachinski Ischemic Score to organize sudden onset, stepwise change, stroke/TIA history, and vascular risk factors.",
     why:
       'Why it matters: The pattern check helps turn confusing symptoms into structured observations for a clinician conversation.',
     href: '/hachinski',
-    cta: 'Start Free Pattern Check',
+    cta: 'Check My Vascular Memory Pattern',
   },
   {
     label: `Step 2 · Paid MCI Screen Baseline (${memoryScreenPrice})`,

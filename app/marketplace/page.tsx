@@ -7,7 +7,7 @@ import TrackedLink from '@/components/TrackedLink';
 export const metadata: Metadata = {
   title: "Wellness Support for Vascular & Cognitive Health | VascuMind",
   description:
-    "Review optional wellness-support products for vascular and cognitive wellness with supplement disclaimers, clinician-discussion framing, affiliate disclosure, and COA transparency.",
+    "Explore optional wellness-support products for vascular and cognitive wellness with clinician-discussion framing, COA transparency, and supplement disclaimers. No public pricing—quality verified.",
 };
 
 const coreStack = [
@@ -59,6 +59,22 @@ export default function Marketplace() {
           <p className="text-base text-black mt-4 max-w-3xl mx-auto">
             VascuMind may earn commissions from qualifying purchases; see our affiliate disclosure. Product pages are for general wellness education and should not be interpreted as treatment for vascular dementia, stroke, MCI, Alzheimer’s disease, or any medical condition.
           </p>
+          
+          {/* Quality & Transparency Commitment */}
+          <div className="mt-10 p-6 border-2 border-black rounded-3xl bg-white max-w-3xl mx-auto">
+            <div className="flex items-center gap-3 mb-4">
+              <span className="text-2xl">🔬</span>
+              <h3 className="text-xl font-semibold">Quality & Transparency Commitment</h3>
+            </div>
+            <p className="text-black mb-3">We do not display public pricing. Instead, we prioritize verified quality documentation so you and your clinician can make informed decisions.</p>
+            <ul className="list-disc pl-6 space-y-1 text-black text-sm">
+              <li>Batch-specific Certificates of Analysis (COAs) requested for every product</li>
+              <li>Third-party testing verification: identity, potency, heavy metals, microbes, oxidation</li>
+              <li>GMP manufacturing documentation and stability data available on request</li>
+              <li>Affiliate relationships disclosed upfront; no hidden compensation</li>
+            </ul>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-3 justify-center mt-5">
             <TrackedLink href="/memory-screen" eventName="cta_memory_screen_click" eventData={{ sourcePath: "/marketplace", ctaLabel: "Create Memory Baseline First" }} className="btn-green inline-block px-7 py-3 rounded-full font-semibold">Create Memory Baseline First</TrackedLink>
             <Link href="/protocol" className="text-black underline">See full Protocol</Link>
@@ -73,6 +89,13 @@ export default function Marketplace() {
           <p className="text-xl text-black mb-8">
             The VascuMind bundle centers on citicoline, high-EPA omega-3, and MCT oil because each maps to a general wellness-support role. This is not a disease-treatment protocol; it is an optional support layer to review after screening and clinician discussion.
           </p>
+          
+          {/* Quality-First Approach Notice */}
+          <div className="mb-8 p-4 border border-black rounded-2xl bg-white">
+            <p className="text-black font-medium mb-2">Our quality-first approach:</p>
+            <p className="text-black text-sm">Product pages link to partner sites where you can verify current pricing, Certificates of Analysis, and sourcing documentation. We encourage you to review these with your clinician before any purchase decision.</p>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8">
             {coreStack.map((product) => (
               <Link key={product.href} href={product.href} className="group border border-black rounded-2xl p-6 hover:shadow-lg transition green-card">
@@ -80,6 +103,9 @@ export default function Marketplace() {
                 <h3 className="text-2xl font-semibold mb-2 group-hover:text-black">{product.name}</h3>
                 <p className="text-black mb-4">{product.description}</p>
                 <div className="text-sm text-black/70 font-medium">{product.qualityNote}</div>
+                <div className="mt-4 pt-4 border-t border-black/20">
+                  <span className="text-sm font-semibold underline">View quality standards &rarr;</span>
+                </div>
               </Link>
             ))}
           </div>
@@ -92,6 +118,13 @@ export default function Marketplace() {
 
         <section className="mb-16">
           <h2 className="text-4xl font-semibold mb-6">Additional wellness-support options</h2>
+          
+          {/* Quality-First Approach Notice */}
+          <div className="mb-8 p-4 border border-black rounded-2xl bg-white">
+            <p className="text-black font-medium mb-2">Our quality-first approach:</p>
+            <p className="text-black text-sm">Each product page provides quality standards, evidence context, and links to verify COAs and sourcing. No public pricing displayed—review with your clinician.</p>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {secondaryProducts.map((product) => (
               <Link key={product.href} href={product.href} className="group border border-black rounded-2xl p-6 hover:shadow-lg transition green-card">
@@ -99,6 +132,9 @@ export default function Marketplace() {
                 <h3 className="text-2xl font-semibold mb-2 group-hover:text-black">{product.name}</h3>
                 <p className="text-black mb-4">{product.description}</p>
                 <div className="text-sm text-black/70 font-medium">{product.qualityNote}</div>
+                <div className="mt-4 pt-4 border-t border-black/20">
+                  <span className="text-sm font-semibold underline">View quality standards &rarr;</span>
+                </div>
               </Link>
             ))}
           </div>

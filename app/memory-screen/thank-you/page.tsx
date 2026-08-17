@@ -51,7 +51,7 @@ export default function MemoryScreenThankYouPage() {
             <div className="section-label mb-3">After the {memoryScreenPrice} memory baseline</div>
             <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Your baseline is a starting point for better questions — not a diagnosis.</h1>
             <p className="text-2xl text-black mb-6 max-w-4xl">
-              Use your MCI Screen benchmark and ischemic-pattern context to guide clinician discussion, repeat tracking, optional wellness-support review, or consent-aware research follow-up.
+              Use your MCI Screen benchmark and vascular-pattern context to guide clinician discussion, repeat tracking, optional wellness-support review, or consent-aware research follow-up.
             </p>
             <p className="text-xl text-black mb-6">
               If symptoms are sudden or severe — facial drooping, one-sided weakness, speech trouble, confusion, severe dizziness, or vision loss — call emergency services immediately.

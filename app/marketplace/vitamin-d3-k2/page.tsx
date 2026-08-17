@@ -30,17 +30,27 @@ export default function VitaminD3K2Page() {
         </p>
       </div>
 
+      <div className="border border-black rounded-2xl p-6 mb-12 bg-white">
+        <h3 className="text-xl font-semibold mb-3">Quality & sourcing standards</h3>
+        <ul className="list-disc pl-6 space-y-2 text-black">
+          <li>Vitamin D3 (cholecalciferol) + K2 (MK-7 menaquinone-7) in clinical ratio</li>
+          <li>Potency verified per batch; carrier oil (MCT/olive) oxidation tested</li>
+          <li>Heavy metals below USP <232>/<233> limits; microbial limits met</li>
+          <li>Allergen tested; non-GMO; no unnecessary fillers</li>
+          <li>GMP manufactured; stability data supports label claim through expiry</li>
+        </ul>
+      </div>
+
       <div className="flex items-center gap-4 mb-12">
-        <div className="text-4xl font-semibold">$27</div>
         <TrackedLink
           href={affiliateLinks.vitaminD3K2}
           target="_blank"
           rel="noopener noreferrer"
           eventName="affiliate_product_click"
           eventData={{ product: "Vitamin D3 + K2" }}
-          className="btn-green px-8 py-3 rounded-full text-lg focus:outline focus:outline-4 focus:outline-black"
+          className="btn-green px-8 py-3 rounded-full text-lg focus:outline focus:outline-4 focus:outline-black w-full"
         >
-          View Product
+          View Product & Verify Quality Documentation
         </TrackedLink>
       </div>
 

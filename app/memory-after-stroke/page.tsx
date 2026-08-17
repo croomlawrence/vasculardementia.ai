@@ -27,7 +27,7 @@ export default function MemoryAfterStrokePage() {
         </aside>
       </section>
       <section className="grid md:grid-cols-3 gap-6 mb-16">
-        {["Sudden onset", "Stepwise worsening", "Stroke/TIA history"].map((item) => <div key={item} className="border border-black rounded-3xl p-8"><h2 className="text-2xl font-semibold mb-3">{item}</h2><p>These ischemic-pattern clues can help organize the story before a clinician visit. They do not diagnose disease.</p></div>)}
+        {["Sudden onset", "Stepwise worsening", "Stroke/TIA history"].map((item) => <div key={item} className="border border-black rounded-3xl p-8"><h2 className="text-2xl font-semibold mb-3">{item}</h2><p>These vascular-pattern clues can help organize the story before a clinician visit. They do not diagnose disease.</p></div>)}
       </section>
       <section className="mb-16">
         <PathwayLine cta={false} />

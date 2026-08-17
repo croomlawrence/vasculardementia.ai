@@ -51,6 +51,24 @@ export default function MctOilPage() {
         <p>MCT oil can increase circulating ketones, which are studied as an alternative energy substrate for the brain. VascuMind frames MCT oil as wellness support, not as a disease-directed therapy.</p>
         <h2>Protocol role</h2>
         <p>MCT oil is the “alternative brain energy” component of the Cerebrovascular Support stack and should be considered only after screening/benchmarking and clinician discussion.</p>
+
+        <h2>How to review with your clinician</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Bring the MCI Screen baseline and pattern-check summary to the visit</li>
+          <li>Discuss metabolic health: diabetes, insulin resistance, lipid profile</li>
+          <li>Review GI tolerance history (MCT oil can cause digestive upset initially)</li>
+          <li>Ask about ketone monitoring if clinically relevant to your situation</li>
+          <li>Request guidance on dosing titration and integration with nutrition plan</li>
+        </ul>
+
+        <h2>Quality verification checklist</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Confirm C8 (caprylic) and C10 (capric) acid percentages clearly labeled</li>
+          <li>Verify peroxide value and acid value within pharmacopeial limits</li>
+          <li>Check no fillers, solvents, or hydrogenated oils</li>
+          <li>Confirm heavy metals and microbial limits tested per batch</li>
+          <li>Verify sustainable coconut/palm sourcing and GMP manufacturing</li>
+        </ul>
       </div>
 
       <div className="mt-16"><CompactMCIScreenCTA /></div>

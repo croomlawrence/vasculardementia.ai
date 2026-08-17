@@ -155,6 +155,29 @@ export default function Marketplace() {
           </div>
         </section>
 
+        {/* Compliance & Regulatory Framework */}
+        <section className="mb-16 p-8 border-4 border-black rounded-3xl bg-white">
+          <h2 className="text-3xl font-semibold mb-6">Compliance & Regulatory Framework</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="text-xl font-semibold mb-3">FDA Supplement Disclaimers</h3>
+              <ul className="list-disc pl-6 space-y-2 text-black">
+                <li>These statements have not been evaluated by the FDA</li>
+                <li>Products are not intended to diagnose, treat, cure, or prevent any disease</li>
+                <li>Supplements support general wellness only—not a substitute for medical care</li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-3">Healthcare Professional Review Required</h3>
+              <ul className="list-disc pl-6 space-y-2 text-black">
+                <li>Always consult a qualified clinician before starting any supplement</li>
+                <li>Critical if you take medications (blood thinners, BP meds, etc.)</li>
+                <li>Review vascular risk factors, stroke history, and current treatment plan</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         <LeadForm leadType="affiliate-interest" title="Request wellness-support follow-up" submitLabel="Request Follow-Up" />
       </div>
     </main>

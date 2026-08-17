@@ -63,6 +63,24 @@ export default function PerceptaPage() {
 
         <h2>What this does and does not mean</h2>
         <p>Research can inform wellness decisions, but it does not establish disease-related benefits for this product. Discuss supplement use with a qualified healthcare professional as part of a broader plan for blood pressure, exercise, nutrition, sleep, medication review, and formal cognitive evaluation.</p>
+
+        <h2>How to review with your clinician</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Bring the MCI Screen baseline and pattern-check summary to the visit</li>
+          <li>Disclose all ingredients in the formula for interaction review</li>
+          <li>Discuss cognitive baseline, vascular risk factors, and current medications</li>
+          <li>Ask about ingredient-specific evidence vs. proprietary blend claims</li>
+          <li>Request guidance on whether a multi-ingredient formula is appropriate for you</li>
+        </ul>
+
+        <h2>Quality verification checklist</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Confirm ingredient identity by HPLC/UPLC per batch</li>
+          <li>Verify potency for each active component (PTI-00703, EGCG, etc.)</li>
+          <li>Check contaminant screening: heavy metals, microbes, residual solvents</li>
+          <li>Confirm allergen tested; non-GMO; no artificial preservatives</li>
+          <li>Verify GMP manufacturing; finished-product stability data available</li>
+        </ul>
       </div>
 
       <div className="mt-16">

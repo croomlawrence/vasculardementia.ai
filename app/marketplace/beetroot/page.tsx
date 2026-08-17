@@ -63,6 +63,24 @@ export default function OrganicBeetrootPowderPage() {
 
         <h2>What this does and does not mean</h2>
         <p>Research can inform wellness decisions, but it does not establish disease-related benefits for this product. Discuss supplement use with a qualified healthcare professional as part of a broader plan for blood pressure, exercise, nutrition, sleep, medication review, and formal cognitive evaluation.</p>
+
+        <h2>How to review with your clinician</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Bring the MCI Screen baseline and pattern-check summary to the visit</li>
+          <li>Disclose blood pressure medications, nitrate medications, PDE5 inhibitors</li>
+          <li>Discuss kidney function (nitrate excretion) and blood pressure trends</li>
+          <li>Ask about dietary nitrate dose standardization and timing</li>
+          <li>Request guidance on monitoring BP response and medication adjustments</li>
+        </ul>
+
+        <h2>Quality verification checklist</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Confirm standardized dietary nitrate content (≥1.5% or equivalent)</li>
+          <li>Verify organic certification with batch traceability</li>
+          <li>Check microbial limits: yeast, mold, coliforms within pharmacopeial standards</li>
+          <li>Confirm heavy metals (Pb, Cd, As, Hg) below USP limits</li>
+          <li>Verify no added sugars, fillers, or artificial ingredients</li>
+        </ul>
       </div>
 
       <div className="mt-16">

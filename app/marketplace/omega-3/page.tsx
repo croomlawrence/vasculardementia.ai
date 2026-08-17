@@ -63,6 +63,24 @@ export default function HighPotencyOmega3Page() {
 
         <h2>What this does and does not mean</h2>
         <p>Research can inform wellness decisions, but it does not establish disease-related benefits for this product. Discuss supplement use with a qualified healthcare professional as part of a broader plan for blood pressure, exercise, nutrition, sleep, medication review, and formal cognitive evaluation.</p>
+
+        <h2>How to review with your clinician</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Bring the MCI Screen baseline and pattern-check summary to the visit</li>
+          <li>Disclose all medications, especially blood thinners, anticoagulants, antiplatelets</li>
+          <li>Discuss vascular risk factors and current cardiovascular treatment plan</li>
+          <li>Ask about EPA/DHA ratio, dose, and form (triglyceride vs. ethyl ester)</li>
+          <li>Request guidance on monitoring (lipid panel, bleeding risk, INR if applicable)</li>
+        </ul>
+
+        <h2>Quality verification checklist</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Confirm ≥1,400 mg EPA+DHA per serving with high EPA ratio</li>
+          <li>Verify IFOS 5-star or equivalent third-party purity certification</li>
+          <li>Check oxidation markers: peroxide, anisidine, TOTOX within limits</li>
+          <li>Confirm heavy metals below Prop 65/USP thresholds</li>
+          <li>Verify molecular distillation, sustainable sourcing, GMP manufacturing</li>
+        </ul>
       </div>
 
       <div className="mt-16">

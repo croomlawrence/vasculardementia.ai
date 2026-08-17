@@ -36,7 +36,7 @@ export default function MethylatedBComplexPage() {
           <li>Active methylated forms: methylfolate (5-MTHF), methylcobalamin, P-5-P (B6)</li>
           <li>Potency verified per batch; no cyanocobalamin or folic acid</li>
           <li>Allergen tested (gluten, soy, dairy, shellfish); non-GMO</li>
-          <li>Heavy metals below USP <232>/<233> limits</li>
+          <li>Heavy metals below USP {String.fromCharCode(60)}232{String.fromCharCode(62)}/{String.fromCharCode(60)}233{String.fromCharCode(62)} limits</li>
           <li>GMP manufactured; stability data available</li>
         </ul>
       </div>
@@ -63,6 +63,24 @@ export default function MethylatedBComplexPage() {
 
         <h2>What this does and does not mean</h2>
         <p>Research can inform wellness decisions, but it does not establish disease-related benefits for this product. Discuss supplement use with a qualified healthcare professional as part of a broader plan for blood pressure, exercise, nutrition, sleep, medication review, and formal cognitive evaluation.</p>
+
+        <h2>How to review with your clinician</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Bring the MCI Screen baseline and pattern-check summary to the visit</li>
+          <li>Request homocysteine, B12, folate, B6 level testing before starting</li>
+          <li>Discuss MTHFR status and whether methylated forms are appropriate</li>
+          <li>Review medications that may affect B vitamin status (metformin, PPIs, etc.)</li>
+          <li>Ask about dosing based on lab results and monitoring schedule</li>
+        </ul>
+
+        <h2>Quality verification checklist</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Confirm active methylated forms: methylfolate (5-MTHF), methylcobalamin, P-5-P</li>
+          <li>Verify no cyanocobalamin or synthetic folic acid</li>
+          <li>Check potency verified per batch; allergen tested (gluten, soy, dairy, shellfish)</li>
+          <li>Confirm heavy metals below USP {String.fromCharCode(60)}232{String.fromCharCode(62)}/{String.fromCharCode(60)}233{String.fromCharCode(62)} limits; non-GMO</li>
+          <li>Verify GMP manufacturing; stability data available</li>
+        </ul>
       </div>
 
       <div className="mt-16">

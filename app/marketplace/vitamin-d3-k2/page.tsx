@@ -35,7 +35,7 @@ export default function VitaminD3K2Page() {
         <ul className="list-disc pl-6 space-y-2 text-black">
           <li>Vitamin D3 (cholecalciferol) + K2 (MK-7 menaquinone-7) in clinical ratio</li>
           <li>Potency verified per batch; carrier oil (MCT/olive) oxidation tested</li>
-          <li>Heavy metals below USP <232>/<233> limits; microbial limits met</li>
+          <li>Heavy metals below USP {`\u003C232\u003E/\u003C233\u003E`} limits; microbial limits met</li>
           <li>Allergen tested; non-GMO; no unnecessary fillers</li>
           <li>GMP manufactured; stability data supports label claim through expiry</li>
         </ul>
@@ -63,6 +63,24 @@ export default function VitaminD3K2Page() {
 
         <h2>What this does and does not mean</h2>
         <p>Research can inform wellness decisions, but it does not establish disease-related benefits for this product. Discuss supplement use with a qualified healthcare professional as part of a broader plan for blood pressure, exercise, nutrition, sleep, medication review, and formal cognitive evaluation.</p>
+
+        <h2>How to review with your clinician</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Bring the MCI Screen baseline and pattern-check summary to the visit</li>
+          <li>Request 25(OH)D blood level testing before starting supplementation</li>
+          <li>Discuss calcium status, kidney function, and parathyroid health</li>
+          <li>Review medications affecting vitamin D metabolism (steroids, weight-loss drugs, etc.)</li>
+          <li>Ask about D3/K2 ratio, dosing based on labs, and re-testing schedule</li>
+        </ul>
+
+        <h2>Quality verification checklist</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Confirm D3 (cholecalciferol) + K2 (MK-7 menaquinone-7) in clinical ratio</li>
+          <li>Verify potency per batch; carrier oil oxidation tested</li>
+          <li>Check heavy metals below USP 232/233 limits; microbial limits met</li>
+          <li>Confirm allergen tested; non-GMO; no unnecessary fillers</li>
+          <li>Verify GMP manufacturing; stability data supports label claim through expiry</li>
+        </ul>
       </div>
 
       <div className="mt-16">

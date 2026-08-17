@@ -50,6 +50,23 @@ export default function CiticolinePage() {
         <p>Citicoline is studied in cognitive-aging and vascular cognitive impairment contexts. VascuMind frames it as support for healthy brain energy and cognitive wellness, not as a disease-directed therapy.</p>
         <h2>Protocol role</h2>
         <p>Citicoline is the “brain energy” component of the Cerebrovascular Support stack and should be considered only after screening/benchmarking and clinician discussion.</p>
+
+        <h2>How to review with your clinician</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Bring the MCI Screen baseline and pattern-check summary to the visit</li>
+          <li>Discuss vascular risk factors: stroke/TIA history, hypertension, diabetes, PAD, small-vessel disease</li>
+          <li>Review current medications for interactions (especially anticholinergics, blood thinners)</li>
+          <li>Ask about citicoline evidence in vascular-origin cognitive impairment contexts</li>
+          <li>Request guidance on dosing, duration, and monitoring if appropriate for your situation</li>
+        </ul>
+
+        <h2>Quality verification checklist</h2>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>Confirm branded/characterized citicoline source (e.g., Cognizin®)</li>
+          <li>Verify batch COA: identity, potency, heavy metals, microbial limits</li>
+          <li>Check GMP manufacturing documentation and stability data</li>
+          <li>Confirm third-party testing for each production lot</li>
+        </ul>
       </div>
 
       <div className="mt-16"><CompactMCIScreenCTA /></div>

@@ -17,9 +17,9 @@ const pains = [
 ];
 
 const tiers = [
-  { name: "Pilot", license: "$35k–$50k", perTest: "$35–$50/test", use: "Single-study feasibility, one indication, defined site cohort" },
-  { name: "Standard", license: "$75k", perTest: "$50–$75/test", use: "Active trial program with recruitment, screening, and monitoring workflow" },
-  { name: "Enterprise", license: "Custom", perTest: "Custom", use: "Multi-study, multi-region, or trial-network deployment" },
+  { name: "Pilot", license: "Custom pricing", perTest: "Per-test pricing available", use: "Single-study feasibility, one indication, defined site cohort" },
+  { name: "Standard", license: "Custom pricing", perTest: "Per-test pricing available", use: "Active trial program with recruitment, screening, and monitoring workflow" },
+  { name: "Enterprise", license: "Custom pricing", perTest: "Custom", use: "Multi-study, multi-region, or trial-network deployment" },
 ];
 
 const workflow = [
@@ -84,19 +84,34 @@ export default function CROLicensingPage() {
 
       <section className="mb-16">
         <div className="section-label mb-3">Pricing architecture</div>
-        <h2 className="text-4xl font-semibold mb-6">Anchor at parity or premium to legacy cognitive tools.</h2>
+        <h2 className="text-4xl font-semibold mb-6">Flexible, value-aligned licensing tailored to study scope.</h2>
         <p className="text-xl mb-6">
-          Benchmark: MoCA CRO licensing is understood at approximately {croBenchmarks.mocaLicense} plus {croBenchmarks.mocaPerTest}. VascuMind should price at parity or premium when paired with stronger cognitive-screening science, ischemic-pattern fit, implementation support, and campaign analytics. Final sponsor-facing pricing should be reviewed deal-by-deal.
+          We structure licensing around study complexity, volume, and the level of implementation support needed. Specific pricing is discussed deal-by-deal after understanding your indication, sites, cohort size, and analytics requirements. Our benchmark: parity or premium to legacy cognitive tools when paired with vascular differentiation, ischemic-pattern fit, and campaign analytics.
         </p>
         <div className="grid md:grid-cols-3 gap-6">
           {tiers.map((tier) => (
             <div key={tier.name} className="border border-black rounded-3xl p-8">
               <h3 className="text-3xl font-semibold mb-4">{tier.name}</h3>
-              <div className="text-xl font-semibold">License: {tier.license}</div>
-              <div className="text-xl font-semibold mb-4">Usage: {tier.perTest}</div>
+              <div className="text-xl font-semibold text-black/70 mb-2">{tier.license}</div>
+              <div className="text-xl font-semibold text-black/70 mb-4">{tier.perTest}</div>
               <p>{tier.use}</p>
+              <div className="mt-4 pt-4 border-t border-black/20">
+                <a href="#packet" className="text-sm font-semibold underline">Discuss this tier &rarr;</a>
+              </div>
             </div>
           ))}
+        </div>
+        
+        {/* Pricing philosophy note */}
+        <div className="mt-10 p-6 border-2 border-black rounded-3xl bg-white">
+          <h3 className="text-xl font-semibold mb-3">Why custom pricing?</h3>
+          <ul className="list-disc pl-6 space-y-2 text-black">
+            <li>Study scope varies: single indication vs. multi-study programs, regional vs. global</li>
+            <li>Implementation depth: self-serve configuration vs. full managed deployment</li>
+            <li>Analytics needs: basic conversion tracking vs. source-level cohort analytics</li>
+            <li>Volume commitments: pilot feasibility vs. guaranteed enrollment targets</li>
+            <li>All discussions include: implementation timeline, support SLA, and renewal terms</li>
+          </ul>
         </div>
       </section>
 

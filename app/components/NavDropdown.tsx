@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function NavDropdown({
   summary,
@@ -9,22 +9,30 @@ export default function NavDropdown({
   summary: string;
   children: React.ReactNode;
 }) {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div
       className="nav-dropdown"
-      onMouseEnter={(e) => {
-        const d = e.currentTarget.querySelector('details');
-        if (d) (d as HTMLDetailsElement).open = true;
-      }}
-      onMouseLeave={(e) => {
-        const d = e.currentTarget.querySelector('details');
-        if (d) (d as HTMLDetailsElement).open = false;
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(false)}
+      onFocus={() => setIsOpen(true)}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) {
+          setIsOpen(false);
+        }
       }}
     >
-      <details className="nav-dropdown-inner">
-        <summary>{summary}</summary>
-        <div className="nav-dropdown-menu">{children}</div>
-      </details>
+      <button
+        type="button"
+        className="nav-dropdown-trigger"
+        aria-expanded={isOpen}
+        aria-haspopup="menu"
+        onClick={() => setIsOpen((open) => !open)}
+      >
+        {summary}
+      </button>
+      <div className="nav-dropdown-menu" role="menu">{children}</div>
     </div>
   );
 }

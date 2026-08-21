@@ -301,24 +301,33 @@ h1, h2, h3, h4, h5, h6 {
 .nav-dropdown {
   position: relative;
 }
-.nav-dropdown summary {
-  cursor: pointer;
-  list-style: none;
-  font-weight: 700;
+.nav-dropdown-trigger {
+  appearance: none;
+  background: transparent;
+  border: 0;
+  border-radius: 0.5rem;
   color: #000000;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  line-height: inherit;
+  padding: 0;
 }
-.nav-dropdown summary::-webkit-details-marker { display: none; }
-.nav-dropdown summary::after {
+.nav-dropdown-trigger::after {
   content: "⌄";
   margin-left: 0.35rem;
   font-size: 0.9rem;
+}
+.nav-dropdown-trigger:focus-visible {
+  outline: 3px solid #0B5FFF;
+  outline-offset: 4px;
 }
 .nav-dropdown-menu {
   position: absolute;
   top: calc(100% + 0.75rem);
   left: 0;
   min-width: 280px;
-  display: grid;
+  display: none;
   gap: 0.15rem;
   padding: 1rem;
   background: #FFFFFF;
@@ -326,6 +335,10 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0 0 1.25rem 1.25rem;
   box-shadow: 0 16px 32px rgba(0,0,0,0.14);
   z-index: 60;
+}
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+  display: grid;
 }
 .nav-dropdown-menu a {
   color: #000000;

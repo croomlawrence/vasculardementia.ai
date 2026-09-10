@@ -1,3 +1,10 @@
+import {
+  emailValidationError,
+  isHouseGrokCrmConfigured,
+  requestHost,
+  writeHouseGrokLead,
+} from "@/lib/houseGrokCrm";
+
 type LeadPayload = {
   leadType?: string;
   name?: string;
@@ -20,6 +27,17 @@ type LeadPayload = {
   stripePaymentIntent?: string;
   checkoutStatus?: string;
   sourcePath?: string;
+  source_site?: string;
+  segment_hypothesis?: string;
+  entry_page?: string;
+  utm_source?: string;
+  utm_medium?: string;
+  utm_campaign?: string;
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
+  audience?: string;
+  referrer?: string;
 };
 
 type CustomerRegistration = LeadPayload & {
@@ -324,21 +342,43 @@ function crmResponseMessage(crm: CrmResult) {
 
 export async function POST(request: Request) {
   const payload = (await request.json().catch(() => null)) as LeadPayload | null;
-  if (!payload?.email || !payload?.name || !payload?.leadType) {
-    return Response.json({ error: "Name, email, and lead type are required." }, { status: 400 });
+  if (!payload || emailValidationError(payload.email)) {
+    return Response.json({ ok: false, error: "email_required" }, { status: 400 });
   }
-  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(payload.email)) {
-    return Response.json({ error: "Enter a valid email address." }, { status: 400 });
+  if (!payload.name || !payload.leadType) {
+    return Response.json({ ok: false, error: "name_and_lead_type_required" }, { status: 400 });
   }
 
+  const houseGrok = await writeHouseGrokLead({
+    body: payload,
+    host: requestHost(request),
+    referer: request.headers.get("referer") || payload.referrer || "",
+    searchParams: new URL(request.url).searchParams,
+  });
+
   const registration = createRegistration(payload);
-  console.log("VascuMind customer registration", JSON.stringify(registration));
+  console.log("VascuMind customer registration", JSON.stringify({
+    registrationId: registration.registrationId,
+    leadId: houseGrok.leadId,
+    houseGrokStored: houseGrok.write.stored,
+  }));
+
+  if (!houseGrok.write.stored) {
+    return Response.json({
+      ok: false,
+      error: isHouseGrokCrmConfigured() ? "crm_write_failed" : "crm_not_configured",
+      lead_id: houseGrok.leadId,
+      message: "Received, but House Grok CRM storage needs operator attention.",
+    }, { status: 503 });
+  }
+
   const crm = await sendToGoogleNativeCrm(registration);
 
   return Response.json({
     ok: true,
+    lead_id: houseGrok.leadId,
     registrationId: registration.registrationId,
-    crm,
+    crm: { ...crm, houseGrok: houseGrok.write },
     message: crmResponseMessage(crm),
   });
 }

@@ -16,22 +16,42 @@ HubSpot can be added later only when pipeline volume, email sequencing, SMS, or 
 
 ```text
 VascuMind form
-  → /api/lead
-  → Google Apps Script webhook
-  → Google Sheet tabs
-  → optional email notification
+  → /api/guide-lead  (free guide)
+  → /api/lead        (LeadForm)
+  → /api/submit-lead (trial consent)
+  → House Grok CRM Sheet, tab Leads (required)
+  → optional legacy VascuMind CRM / Apps Script
   → Hermes daily/weekly review
-  → Obsidian distilled notes and follow-ups
 ```
+
+House Grok spreadsheet:
+
+```text
+https://docs.google.com/spreadsheets/d/12SmO6oWmVeTY4wB2Ti1YIoOyWKt3TUXDrF8izPuIaPk
+```
+
+`POST /api/guide-lead` is the baselinecognitivetest-compatible contract: `{name,email,phone,path}` plus optional `utm_*`, `entry_page`, `source_site`, and `segment_hypothesis`. Email is required. Empty body returns `{ok:false,error:"email_required"}`.
 
 ## Environment variables
 
-Set these in Vercel:
+Required on Vercel for House Grok Leads writes. Share the Sheet as Editor with the service-account email or appends will fail.
+
+```text
+GOOGLE_SHEETS_ID=12SmO6oWmVeTY4wB2Ti1YIoOyWKt3TUXDrF8izPuIaPk
+GOOGLE_SERVICE_ACCOUNT_EMAIL=<service-account email>
+GOOGLE_PRIVATE_KEY=<PEM with escaped \n newlines>
+```
+
+Optional legacy VascuMind CRM / notify (not a substitute for House Grok):
 
 ```text
 GOOGLE_LEADS_WEBHOOK_URL=https://script.google.com/macros/s/.../exec
 GOOGLE_LEADS_WEBHOOK_SECRET=<random shared secret>
 VASCUMIND_LEAD_NOTIFY_EMAIL=<Croom notification email>
+GOOGLE_OAUTH_CLIENT_ID=
+GOOGLE_OAUTH_CLIENT_SECRET=
+GOOGLE_OAUTH_REFRESH_TOKEN=
+GOOGLE_SHEETS_CRM_ID=1fmw8ZoTeNFh2onLEbEfq3hXudVQDmXH72IilQXvY_yg
 ```
 
 `GOOGLE_LEADS_WEBHOOK_SECRET` should match `SHARED_SECRET` in the Google Apps Script file. Do not commit real values.

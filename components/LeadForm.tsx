@@ -62,7 +62,14 @@ export default function LeadForm({ leadType, title, submitLabel, includeTrialFie
         body: JSON.stringify({ leadType, ...attribution, ...context, ...data }),
       });
       const result = await response.json();
-      if (!response.ok) throw new Error(result.error || "Submission failed");
+      if (!response.ok) {
+        const errorCode = String(result.error || "");
+        if (errorCode === "email_required") throw new Error("Enter a valid email address.");
+        if (errorCode === "crm_not_configured" || errorCode === "crm_write_failed") {
+          throw new Error(result.message || "Submission could not be stored. Please try again.");
+        }
+        throw new Error(result.message || result.error || "Submission failed");
+      }
       trackVascuMindEvent(eventForLeadType(leadType), {
         eventData: {
           leadType,

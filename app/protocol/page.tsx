@@ -19,9 +19,9 @@ const pathwaySteps = [
   },
   {
     label: "Step 2 · Memory screen",
-    title: 'Create an objective cognitive benchmark',
+    title: 'Create a memory screen',
     body:
-      'If your pattern suggests a vascular link, the next step is an objective memory baseline using the MCI Screen for clinician discussion and repeat tracking.',
+      'If your pattern suggests a vascular link, the next step is a memory screen for clinician discussion and repeat tracking.',
     why:
       'Why it matters: A structured baseline gives families concrete information to discuss with a healthcare provider. It is a screen, not a diagnosis.',
     href: '/memory-screen',

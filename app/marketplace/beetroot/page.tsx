@@ -33,7 +33,7 @@ export default function OrganicBeetrootPowderPage() {
       <div className="border border-black rounded-2xl p-6 mb-12 bg-white">
         <h3 className="text-xl font-semibold mb-3">Quality & sourcing standards</h3>
         <ul className="list-disc pl-6 space-y-2 text-black">
-          <li>Standardized dietary nitrate content (≥1.5% or equivalent per serving)</li>
+          <li>Standardized dietary nitrate content listed on the label</li>
           <li>Organic certification with batch traceability</li>
           <li>Microbial limits (yeast, mold, coliforms) within pharmacopeial standards</li>
           <li>Heavy metals (Pb, Cd, As, Hg) tested below USP limits</li>
@@ -75,7 +75,7 @@ export default function OrganicBeetrootPowderPage() {
 
         <h2>Quality verification checklist</h2>
         <ul className="list-disc pl-6 space-y-2">
-          <li>Confirm standardized dietary nitrate content (≥1.5% or equivalent)</li>
+          <li>Confirm the label lists standardized dietary nitrate content</li>
           <li>Verify organic certification with batch traceability</li>
           <li>Check microbial limits: yeast, mold, coliforms within pharmacopeial standards</li>
           <li>Confirm heavy metals (Pb, Cd, As, Hg) below USP limits</li>

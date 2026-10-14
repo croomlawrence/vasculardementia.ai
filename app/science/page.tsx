@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 
 const claimRules = [
   ['Safe public framing', 'screening, benchmarking, tracking, clinician discussion support, educational pattern check'],
-  ['Requires source documentation', 'accuracy statistics, normative-database size, reimbursement precedent, clinic deployment count'],
-  ['Avoid without review', 'diagnoses, treats, prevents, reverses, guarantees, or replaces clinician evaluation'],
+  ['Requires source documentation', 'normative-database size, reimbursement precedent, clinic deployment count'],
+  ['Avoid without review', 'disease claims, outcome promises, or replacing a clinician'],
 ];
 
 export default function SciencePage() {
@@ -27,7 +27,7 @@ export default function SciencePage() {
           <h2 className="text-3xl font-bold mb-4">The MCI Screen: cognitive screening, benchmarking, and tracking</h2>
           <p className="text-black">The MCI Screen is referenced by VascuMind as a structured cognitive screening, benchmarking, and tracking tool sourced from MCI Screen / EMBIC materials. It is not a diagnosis or a substitute for clinical evaluation.</p>
           <ul className="list-disc pl-6 space-y-2 my-6 text-black">
-            <li><strong className="text-black">Published-validation context:</strong> MCI Screen materials describe published validation for detecting memory changes versus normal aging. Any exact accuracy claim should be paired with source documentation, population context, and review.</li>
+            <li><strong className="text-black">Published-validation context:</strong> MCI Screen materials describe published validation for detecting memory changes versus normal aging. Pair any performance number with the source paper, who was studied, and a clinician review.</li>
             <li><strong className="text-black">Structured baseline:</strong> The screen creates a repeatable cognitive benchmark for discussion and tracking.</li>
             <li><strong className="text-black">Clinician framing:</strong> Results should be reviewed with a qualified healthcare professional and never used to change medications, supplements, or care plans independently.</li>
           </ul>

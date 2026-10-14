@@ -3,30 +3,30 @@ import Link from 'next/link';
 import EmailCapture from '@/components/EmailCapture';
 
 export const metadata: Metadata = {
-  title: "5 Ways to Support Healthy Brain Circulation | VascuMind",
-  description: "Discover five actionable, evidence-based lifestyle changes you can make to support blood flow to your brain for better cognitive health.",
+  title: "5 Daily Habits for Brain Circulation | VascuMind",
+  description: "Five lifestyle changes you can make to support blood flow to your brain.",
 };
 
 export default function BrainCirculationPage() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-20">
       <div className="prose prose-xl mx-auto">
-        <h1>5 Lifestyle Changes to Support Healthy Brain Circulation</h1>
+        <h1>5 Daily Habits for Brain Circulation</h1>
         
         <p>Supporting your cognitive health isn't just about brain games and puzzles. One of the most powerful things you can do is focus on your circulatory health. A healthy blood flow ensures your brain gets the oxygen and nutrients it needs to thrive.</p>
         
-        <p>The best part? The steps to support brain circulation are things you can start doing today. Here are five evidence-based lifestyle changes to get you started.</p>
+        <p>You can start today. These steps for brain circulation are things you can do now. Here are five lifestyle changes to get you started.</p>
 
         <h2>1. Embrace a Brain-Healthy Diet</h2>
         <p>What's good for the heart is truly good for the brain. Focus on a diet rich in fruits, vegetables, whole grains, and healthy fats, like the Mediterranean or DASH diets. Key foods include:</p>
         <ul>
-          <li><strong>Leafy Greens:</strong> Spinach and kale are packed with nitrates, which can help improve blood flow.</li>
+          <li><strong>Leafy Greens:</strong> Spinach and kale contain nitrates, which play a part in blood flow.</li>
           <li><strong>Fatty Fish:</strong> Salmon and mackerel are rich in Omega-3 fatty acids, which are crucial for blood vessel health.</li>
           <li><strong>Berries:</strong> Blueberries and strawberries contain flavonoids, antioxidants that can support healthy circulation.</li>
         </ul>
 
         <h2>2. Get Moving (Even a Little Helps)</h2>
-        <p>Regular physical activity is like a workout for your entire circulatory system. Aerobic exercise, like brisk walking, swimming, or cycling, strengthens your heart, improves blood pressure, and helps keep your blood vessels flexible.</p>
+        <p>Regular physical activity is like a workout for your entire circulatory system. Aerobic exercise, like brisk walking, swimming, or cycling, strengthens your heart, can go along with healthy blood pressure, and helps keep your blood vessels flexible.</p>
         <p>You don't have to run a marathon. Aim for at least 30 minutes of moderate activity most days of the week. Even short, 10-minute walks can make a difference.</p>
 
         <h2>3. Manage Your Blood Pressure</h2>

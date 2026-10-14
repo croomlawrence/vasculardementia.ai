@@ -8,13 +8,13 @@ export const metadata: Metadata = {
 
 const researchAreas = [
   {
-    title: "Improving Blood Flow & Circulation",
-    description: "This is one of the most active areas of research. Scientists are studying various drugs, supplements, and lifestyle interventions that may help improve blood flow to the brain, protecting it from damage and supporting its natural functions.",
+    title: "Blood Flow & Circulation",
+    description: "Scientists are studying drugs, supplements, and lifestyle steps related to blood flow to the brain.",
     href: "https://clinicaltrials.gov/search?cond=Vascular%20Dementia&term=blood%20flow&recrs=a",
   },
   {
     title: "Non-Drug & Rehabilitation Therapies",
-    description: "This category of research explores how different types of therapy can help. This includes cognitive rehabilitation to improve memory and thinking skills, physical therapy to improve balance and strength, and even music or art therapy.",
+    description: "This category of research explores how different types of therapy can help. This includes cognitive rehabilitation for memory and thinking skills, physical therapy for balance and strength, and even music or art therapy.",
     href: "https://clinicaltrials.gov/search?cond=Vascular%20Dementia&term=rehabilitation&recrs=a",
   },
     {
@@ -23,13 +23,13 @@ const researchAreas = [
     href: "https://clinicaltrials.gov/search?cond=Vascular%20Dementia&term=app%20OR%20digital&recrs=a",
   },
   {
-    title: "New Diagnostic & Imaging Tools",
-    description: "A major goal of research is to find better ways to detect vascular cognitive changes as early as possible. This involves developing new brain imaging techniques, identifying blood-based biomarkers, and creating more sensitive cognitive tests.",
-    href: "https://clinicaltrials.gov/search?cond=Vascular%20Dementia&term=diagnostic%20OR%20imaging&recrs=a",
+    title: "New Imaging Tools",
+    description: "A major goal of research is to find earlier ways to see vascular cognitive changes. This involves developing new brain imaging techniques, identifying blood-based biomarkers, and creating more sensitive cognitive tests.",
+    href: "https://clinicaltrials.gov/search?cond=Vascular%20Dementia&term=imaging&recrs=a",
   },
   {
     title: "Drug & Supplement Studies",
-    description: "This is the most well-known type of clinical trial, where researchers test the safety and effectiveness of new medications or nutritional supplements to see if they can slow progression or improve symptoms.",
+    description: "In this common type of clinical trial, researchers test the safety of new medications or nutritional supplements and whether symptoms change.",
     href: "https://clinicaltrials.gov/search?cond=Vascular%20Dementia&f_intrv=Drug%20OR%20Dietary%20Supplement&recrs=a",
   }
 ];
@@ -39,7 +39,7 @@ export default function AreasOfStudyPage() {
     <main className="max-w-4xl mx-auto px-6 py-20">
       <div className="text-center mb-12">
         <h1 className="text-5xl font-semibold tracking-tight mb-4">Major Areas of Vascular Cognitive Research</h1>
-        <p className="text-xl text-black max-w-3xl mx-auto">Learn about the different approaches scientists are taking to better understand, diagnose, and manage vascular cognitive health.</p>
+        <p className="text-xl text-black max-w-3xl mx-auto">Learn about the different approaches scientists are taking to understand and follow vascular cognitive health.</p>
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">

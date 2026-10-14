@@ -3,27 +3,27 @@ import Link from 'next/link';
 import EmailCapture from '@/components/EmailCapture';
 
 export const metadata: Metadata = {
-  title: "What to Do After an MCI Diagnosis: A 5-Step Plan | VascuMind",
-  description: "A diagnosis of Mild Cognitive Impairment (MCI) can be overwhelming. Here is a 5-step plan to help you take control and move forward with hope.",
+  title: "What to Do After You Learn You Have MCI: A 5-Step Plan | VascuMind",
+  description: "Learning you have Mild Cognitive Impairment (MCI) can feel like a lot. Here is a 5-step plan for what to do next.",
 };
 
 export default function AfterMciDiagnosisPage() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-20">
       <div className="prose prose-xl mx-auto">
-        <h1>What to Do After an MCI Diagnosis: A 5-Step Plan</h1>
+        <h1>What to Do After You Learn You Have MCI: A 5-Step Plan</h1>
         
-        <p>A diagnosis of Mild Cognitive Impairment (MCI) can feel unsettling and raise many questions about the future. It's normal to feel concerned, but it's important to remember that MCI is not dementia. It is an early warning sign, and receiving a diagnosis is actually a powerful opportunity to take proactive steps to protect your brain health.</p>
+        <p>Learning you have Mild Cognitive Impairment (MCI) can feel unsettling and raise many questions about the future. It's normal to feel concerned. MCI is not dementia. It can be an early warning sign, and a time to take practical steps for your brain health with your doctor.</p>
         
         <p>Here is a 5-step plan to help you move forward with confidence and clarity.</p>
 
         <h2>Step 1: Confirm and Baseline</h2>
-        <p>The first step is to understand what evaluation was used and whether you have a clear baseline for future comparison. If your diagnosis was based on a brief in-office questionnaire, ask your clinician whether a more structured cognitive benchmark would be useful.</p>
+        <p>The first step is to understand what evaluation was used and whether you have a clear baseline for future comparison. If the first check was a brief in-office questionnaire, ask your clinician whether a memory screen would be useful.</p>
         <p>The <strong>MCI Screen</strong> is presented by VascuMind as a cognitive screening, benchmarking, and tracking tool. It can support clinician discussion and repeat tracking, but it is not a standalone diagnosis or substitute for clinical evaluation.</p>
         <p><strong><Link href="/resources/how-is-mci-diagnosed">Learn more about the different types of cognitive tests available</Link>.</strong></p>
 
-        <h2>Step 2: Investigate Reversible Causes</h2>
-        <p>Not all cognitive decline is set in stone. In some cases, MCI symptoms can be caused or worsened by treatable underlying conditions. Work with your doctor to investigate:</p>
+        <h2>Step 2: Look at other causes</h2>
+        <p>Some memory changes have other causes a doctor may be able to address. Work with your doctor to look at:</p>
         <ul>
           <li><strong>Vitamin Deficiencies:</strong> Especially Vitamin B12.</li>
           <li><strong>Thyroid Issues:</strong> An underactive or overactive thyroid can impact cognition.</li>

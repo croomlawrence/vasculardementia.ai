@@ -23,7 +23,7 @@ export default function MCIScreenCTA() {
               <li><strong>Start:</strong> complete a brief memory screen.</li>
               <li><strong>Discuss:</strong> bring results and vascular risk questions to your clinician.</li>
               <li><strong>Track:</strong> repeat over time when clinically appropriate.</li>
-              <li><strong>Context:</strong> cognitive screening works best alongside medical history, risk-factor review, and clinician guidance.</li>
+              <li><strong>Context:</strong> cognitive screening fits alongside medical history, risk-factor review, and clinician guidance.</li>
             </ul>
           </div>
 

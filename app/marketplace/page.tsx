@@ -172,7 +172,7 @@ export default function Marketplace() {
               <ul className="list-disc pl-6 space-y-2 text-black">
                 <li>Always consult a qualified clinician before starting any supplement</li>
                 <li>Critical if you take medications (blood thinners, BP meds, etc.)</li>
-                <li>Review vascular risk factors, stroke history, and current treatment plan</li>
+                <li>Review vascular risk factors, stroke history, and the care plan your doctor already set</li>
               </ul>
             </div>
           </div>

@@ -19,7 +19,7 @@ export default function PreScreenerPage() {
       <div className="bg-white rounded-3xl border shadow-lg p-8">
         {step === 1 && (
           <div>
-            <h2 className="text-2xl font-semibold mb-6">Have you or the person you care for received a formal diagnosis of Mild Cognitive Impairment (MCI) or dementia from a qualified doctor?</h2>
+            <h2 className="text-2xl font-semibold mb-6">Has a qualified doctor told you, or the person you care for, that you have Mild Cognitive Impairment (MCI) or dementia?</h2>
             <div className="flex flex-col gap-4">
               <button onClick={() => setStep(2)} className="btn-secondary w-full py-3 text-lg">Yes</button>
               <button onClick={() => setStep('fail')} className="btn-secondary w-full py-3 text-lg">No</button>

@@ -68,7 +68,7 @@ export default function HighPotencyOmega3Page() {
         <ul className="list-disc pl-6 space-y-2">
           <li>Bring the MCI Screen baseline and pattern-check summary to the visit</li>
           <li>Disclose all medications, especially blood thinners, anticoagulants, antiplatelets</li>
-          <li>Discuss vascular risk factors and current cardiovascular treatment plan</li>
+          <li>Discuss vascular risk factors and the heart care plan your doctor already set</li>
           <li>Ask about EPA/DHA ratio, dose, and form (triglyceride vs. ethyl ester)</li>
           <li>Request guidance on monitoring (lipid panel, bleeding risk, INR if applicable)</li>
         </ul>

@@ -20,7 +20,7 @@ export default function HeartBrainConnectionPage() {
         <h2>Your Brain's Superhighway</h2>
         <p>Think of your brain as a bustling city. It needs a constant, massive supply of energy, oxygen, and nutrients to manage everything from your thoughts and memories to your breathing and balance. This critical supply is delivered by a complex network of blood vessels—a superhighway that your heart tirelessly maintains.</p>
         
-        <p>While your brain is only about 2% of your body weight, it demands a staggering 20% of your body's total blood and oxygen supply. When this superhighway is clear and running smoothly, your brain has everything it needs to function at its peak.</p>
+        <p>Your brain needs a steady supply of blood, oxygen, and nutrients. When this superhighway is clear, your brain gets what it needs to do its work.</p>
 
         <h2>What Happens When There are Traffic Jams?</h2>
         <p>Just like a real highway, this network can develop problems. Factors like high blood pressure, high cholesterol, diabetes, and smoking can damage the delicate lining of these blood vessels, making them stiff and narrow. This creates "traffic jams," reducing the flow of blood to vital areas of the brain.</p>
@@ -35,7 +35,7 @@ export default function HeartBrainConnectionPage() {
 
         <h2>You Have More Influence Than You Think</h2>
         <p>The good news is that you have the power to support this connection. By focusing on your cardiovascular health, you are also investing directly in your long-term cognitive wellness.</p>
-        <p>Things that are good for your heart are fantastic for your brain. This includes a healthy diet, regular exercise, and managing your blood pressure and cholesterol. <strong>Learn about <Link href="/resources/improve-brain-circulation">5 Lifestyle Changes to Support Healthy Brain Circulation</Link>.</strong></p>
+        <p>Things that are good for your heart are fantastic for your brain. This includes a healthy diet, regular exercise, and managing your blood pressure and cholesterol. <strong>Learn about <Link href="/resources/improve-brain-circulation">5 Daily Habits for Brain Circulation</Link>.</strong></p>
 
         <h2>Where Do You Start?</h2>
         <p>Understanding the health of your vascular system is the first step. Tools like the Hachinski Score can help you and your doctor assess the potential role of vascular factors in your cognitive symptoms.</p>

@@ -40,7 +40,7 @@ export default function CompliancePage() {
           <ul className="space-y-3 text-xl">
             <li>✅ /memory-screen — top MCI Screen disclaimer</li>
             <li>✅ /marketplace + all product pages — top MCI Screen disclaimer plus FDA supplement disclaimer</li>
-            <li>✅ /clinical-trial-matching — consent and non-diagnostic language</li>
+            <li>✅ /clinical-trial-matching — consent and educational-only language</li>
             <li>✅ /transparency — COA language limited to quality documentation</li>
             <li>✅ Global layout + Disclaimer component — required text centralized</li>
           </ul>

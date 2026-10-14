@@ -27,7 +27,7 @@ const pathwaySteps = [
     why:
       'Why it matters: A structured baseline gives families concrete information to discuss with a healthcare provider. It is a screen, not a diagnosis.',
     href: '/memory-screen',
-    cta: 'Get Your Baseline',
+    cta: 'Start the memory screen',
   },
   {
     label: 'Step 3 · Clinician Discussion + Optional Pathways',

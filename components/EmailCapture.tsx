@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function EmailCapture() {
   return (
-    <div className="bg-gray-100 rounded-3xl p-8 mt-16 text-center">
+    <div className="guide-panel">
       <h3 className="text-3xl font-semibold mb-4">Get Your Free Guide</h3>
       <p className="text-xl text-black mb-6">
         Download our free PDF guide: "The 5 Key Questions to Ask Your Doctor About Brain Health & Circulation" to help you prepare for your next appointment.

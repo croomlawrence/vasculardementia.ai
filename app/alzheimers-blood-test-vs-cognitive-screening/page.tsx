@@ -116,7 +116,7 @@ export default function AlzheimersBloodTestVsCognitiveScreeningPage() {
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link href="/hachinski" className="btn-primary text-center">Check My Vascular Memory Pattern</Link>
-          <Link href="/memory-screen" className="btn-secondary text-center">Create a {memoryScreenPrice} Memory Baseline</Link>
+          <Link href="/memory-screen" className="btn-secondary text-center">Start the memory screen</Link>
         </div>
       </section>
     </main>

@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const trustBadges = [
-  ["Free first step", "Vascular memory check"],
-  ["Educational only", "Not a diagnosis"],
-  ["Clinician-ready", "Better questions"],
-  ["Baseline next", "$99 Memory Baseline"],
+  ["Memory screen", "A baseline to discuss"],
+  ["Free guide", "Questions for your doctor"],
+  ["For learning", "Not a diagnosis"],
+  ["Free check", "Vascular memory clues"],
 ];
 
 const pathway = ["Concern", "Ischemic clues", "Memory baseline", "Questions", "Options"];
@@ -33,28 +33,28 @@ const imageMap = {
 
 const journeyCards = [
   {
-    eyebrow: "Free first step",
-    title: "Vascular Memory Check",
-    copy: "Answer plain-language questions about sudden changes, stepwise decline, stroke/TIA history, and vascular risk factors that may point toward vascular or blood-flow-related concerns.",
-    href: "/hachinski",
-    cta: "Start free check",
-    visual: "check",
-  },
-  {
-    eyebrow: "$99 baseline",
-    title: "Memory Baseline",
-    copy: "Create a structured MCI Screen benchmark for clinician discussion and repeat tracking. It is a screen, not a diagnosis.",
+    eyebrow: "Memory screen",
+    title: "Start the memory screen",
+    copy: "Use the MCI Screen as a memory baseline for clinician discussion and repeat tracking. It is a screen and benchmark, not a diagnosis.",
     href: "/memory-screen",
-    cta: "Create memory baseline",
+    cta: "Start the memory screen",
     visual: "baseline",
   },
   {
-    eyebrow: "Visit prep",
-    title: "Clinician Questions",
-    copy: "Turn family observations into better questions about blood flow, stroke/TIA history, vascular risk factors, medications, sleep, mood, imaging, and follow-up.",
-    href: "/protocol",
-    cta: "See the protocol",
+    eyebrow: "Free guide",
+    title: "Questions for your doctor",
+    copy: "Get a free guide with 5 questions to help you get ready for a visit about memory and circulation.",
+    href: "/resources/5-questions-guide",
+    cta: "Get the free guide",
     visual: "questions",
+  },
+  {
+    eyebrow: "Free check",
+    title: "Vascular Memory Check",
+    copy: "Answer plain-language questions about sudden changes, stepwise decline, stroke/TIA history, and vascular risk factors that may point toward vascular or blood-flow-related concerns.",
+    href: "/hachinski",
+    cta: "Start the free check",
+    visual: "check",
   },
 ];
 
@@ -100,9 +100,9 @@ export function HeroVisualStack() {
       <Link href="/memory-screen" className="hero-product-card">
         <div>
           <div className="hero-product-logo">VascuMind <span>Baseline</span></div>
-          <h2>$99 Memory Baseline</h2>
+          <h2>Memory screen</h2>
           <p>Create a structured memory benchmark to discuss with a clinician and compare over time.</p>
-          <strong>Create my baseline</strong>
+          <strong>Start the memory screen</strong>
         </div>
         <div className="hero-product-visual product-mini-visual product-mini-baseline" aria-hidden="true"><span /><span /><span /></div>
       </Link>
@@ -192,8 +192,8 @@ export function PathwayLine({ cta = true }: { cta?: boolean }) {
         ))}
       </div>
       {cta && (
-        <Link href="/hachinski" className="btn-primary inline-flex justify-center text-center mt-8">
-          Start with the Check
+        <Link href="/memory-screen" className="btn-primary inline-flex justify-center text-center mt-8">
+          Start the memory screen
         </Link>
       )}
     </div>
@@ -202,7 +202,7 @@ export function PathwayLine({ cta = true }: { cta?: boolean }) {
 
 export function ResultPreviewCard({ dark = false }: { dark?: boolean }) {
   return (
-    <div className={`result-preview-card ${dark ? "result-preview-dark" : ""}`} aria-label="Example of non-diagnostic vascular-pattern summary preview">
+    <div className={`result-preview-card ${dark ? "result-preview-dark" : ""}`} aria-label="Example summary for learning only">
       <div className="preview-topline">
         <span>Memory signal summary</span>
         <strong>Educational only</strong>

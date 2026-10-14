@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from 'next/link';
 import TrackedLink from '@/components/TrackedLink';
-import { memoryScreenPrice } from '@/lib/business';
 
 export const metadata: Metadata = {
   title: "Help for Vascular-Pattern Memory Changes & Caregivers | VascuMind",
@@ -17,10 +16,10 @@ const journeyCards = [
     cta: 'Check My Vascular Memory Pattern',
   },
   {
-    title: `${memoryScreenPrice} Memory Baseline`,
+    title: 'Memory screen',
     copy: 'A structured MCI Screen benchmark for clinician discussion and repeat tracking. Screening and benchmarking only, not a diagnosis.',
     href: '/memory-screen',
-    cta: 'Create Memory Baseline',
+    cta: 'Start the memory screen',
   },
   {
     title: 'Clinician Conversation Guide',

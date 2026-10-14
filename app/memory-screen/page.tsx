@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { MCIScreenDisclaimer } from '@/app/components/ComplianceNotices';
 import LeadForm from "@/components/LeadForm";
 import TrackedLink from "@/components/TrackedLink";
-import { memoryScreenCheckoutUrl, memoryScreenPrice } from "@/lib/business";
+import { memoryScreenCheckoutEnabled, memoryScreenCheckoutUrl, memoryScreenPrice } from "@/lib/business";
 import { HumanMomentCard, PathwayLine, ResultPreviewCard } from "@/app/components/BrandVisuals";
 
 export const metadata: Metadata = {
@@ -54,22 +54,31 @@ export default function MemoryScreenPage() {
         </div>
         <aside className="space-y-6 sticky top-24">
           <ResultPreviewCard />
-          <div className="border-4 border-black rounded-3xl p-6 text-center bg-white">
-          <div className="text-sm uppercase tracking-widest mb-2">Starting at</div>
-          <div className="text-6xl font-semibold mb-4">{memoryScreenPrice}</div>
-          <TrackedLink
-            href={memoryScreenCheckoutUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            eventName="checkout_started"
-            eventData={{ product: "memory-screen", price: memoryScreenPrice, location: "hero-card" }}
-            className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold w-full"
-          >
-            Create My {memoryScreenPrice} Memory Baseline
-          </TrackedLink>
-          <p className="text-sm text-black mt-3">Contact information used for this request only • no identifiable information shared without permission • educational only • not a diagnosis</p>
-          <a href="#follow-up" className="inline-block mt-4 underline font-semibold">Questions before starting?</a>
-          </div>
+          {memoryScreenCheckoutEnabled ? (
+            <div className="border border-black rounded-3xl p-6 text-center bg-white">
+              <div className="text-sm uppercase tracking-widest mb-2">Starting at</div>
+              <div className="text-6xl font-semibold mb-4">{memoryScreenPrice}</div>
+              <TrackedLink
+                href={memoryScreenCheckoutUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                eventName="checkout_started"
+                eventData={{ product: "memory-screen", price: memoryScreenPrice, location: "hero-card" }}
+                className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold w-full"
+              >
+                Create My {memoryScreenPrice} Memory Baseline
+              </TrackedLink>
+              <p className="text-sm text-black mt-3">Contact information used for this request only • no identifiable information shared without permission • educational only • not a diagnosis</p>
+              <a href="#follow-up" className="inline-block mt-4 underline font-semibold">Questions before starting?</a>
+            </div>
+          ) : (
+            <div className="card text-center bg-white">
+              <h2 className="text-3xl mb-3">Questions before you start?</h2>
+              <p className="mb-6">Ask a question about the memory screen, or get the free guide of doctor-visit questions.</p>
+              <a href="#follow-up" className="btn-primary w-full">Ask a question</a>
+              <a href="/resources/5-questions-guide" className="btn-secondary w-full mt-3">Get the free guide</a>
+            </div>
+          )}
         </aside>
       </section>
 

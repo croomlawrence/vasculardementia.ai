@@ -62,7 +62,7 @@ export default function MemoryChangesAfterStrokeOrTiaPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/hachinski" className="btn-primary text-center">Start the Free Pattern Check</Link>
-            <Link href="/memory-screen" className="btn-secondary text-center">Create a {memoryScreenPrice} Memory Baseline</Link>
+            <Link href="/memory-screen" className="btn-secondary text-center">Start the memory screen</Link>
           </div>
         </div>
         <aside className="border-4 border-black rounded-3xl p-6 bg-background-light">

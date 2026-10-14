@@ -17,7 +17,7 @@ export default function VCHGuidePage() {
         <p>This guide will walk you through everything you need to know about this critical aspect of your well-being.</p>
 
         <h2>The Core Principle: The Heart-Brain Connection</h2>
-        <p>Your brain is a powerhouse. While it makes up only a small fraction of your body weight, it consumes about 20% of your body's oxygen and energy. This fuel is delivered through a massive network of blood vessels.</p>
+        <p>Your brain needs a large share of your body's oxygen and energy. This fuel is delivered through a massive network of blood vessels.</p>
         <p>A healthy vascular system means a clear, efficient delivery route for your brain. When this system is compromised, it can lead to a range of cognitive issues. This is the essence of the **<Link href="/resources/heart-brain-connection">heart-brain connection</Link>**. </p>
         
         <h2>What Does "Vascular Cognitive Impairment" Mean?</h2>

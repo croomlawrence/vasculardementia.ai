@@ -4,7 +4,8 @@ export default function PrivacyPage() {
       <h1 className="text-5xl font-semibold tracking-tight mb-6">Privacy Notice</h1>
       <div className="green-divider w-16 mb-8"></div>
       <div className="space-y-6 text-xl text-black">
-        <p>VascuMind is designed to collect the minimum information needed to respond to inquiries, route business leads, and improve the educational website experience.</p>
+        <p>VascuMind is designed to collect the minimum information needed to respond to inquiries, route business leads, and operate the educational website.</p>
+        <p>We do not share your information with sponsors unless you check the box to allow it.</p>
         <p>Do not submit emergency symptoms or sensitive medical records through website forms. If symptoms are sudden or severe, call emergency services immediately.</p>
         <p>Information submitted through forms may be used to contact you about memory screening, clinical-trial matching, CRO licensing, or related VascuMind services. CRM routing is intended for business operations and follow-up.</p>
         <p>Clinical-trial matching requires explicit opt-in consent. VascuMind should not share direct identifiers with a CRO, sponsor, or trial partner without additional explicit consent and privacy review.</p>

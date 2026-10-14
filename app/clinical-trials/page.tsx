@@ -12,7 +12,7 @@ export default function ClinicalTrialsPage() {
       <div className="text-center">
         <h1 className="text-5xl font-semibold tracking-tight mb-6">Could You Help Advance the Science of Brain Health?</h1>
         <p className="text-xl text-black mb-10 max-w-3xl mx-auto">
-          Clinical trials are research studies that explore whether a new medicine or treatment is safe and effective. They are a vital part of developing new therapies, and participants are the heroes who make it all possible.
+          Clinical trials are research studies that explore whether a new study medicine is safe. They are a vital part of developing new therapies, and participants are the heroes who make it all possible.
         </p>
       </div>
 
@@ -23,7 +23,7 @@ export default function ClinicalTrialsPage() {
             <ol>
                 <li><strong>Screening:</strong> First, a research team determines whether you meet the specific criteria for a study.</li>
                 <li><strong>Informed Consent:</strong> If you are a potential match, you will receive detailed information about the study, including all potential risks and benefits. You decide if you want to proceed.</li>
-                <li><strong>Participation:</strong> If you consent, you will follow the study's protocol, which may involve regular visits, specific treatments, and monitoring by a dedicated medical team.</li>
+                <li><strong>Participation:</strong> If you consent, you will follow the study's protocol, which may involve regular visits, study activities, and monitoring by a dedicated medical team.</li>
                 <li><strong>Contribution:</strong> By participating, you are making an invaluable contribution to medical science and helping future generations.</li>
             </ol>
             <p><strong>Your safety is the highest priority at every stage.</strong></p>

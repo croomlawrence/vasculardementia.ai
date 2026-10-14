@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { memoryScreenPrice } from "@/lib/business";
-
 export const metadata: Metadata = {
   title: "Memory Changes After Stroke or TIA | Vascular Cognitive Pattern Check",
   description:
@@ -62,7 +60,7 @@ export default function MemoryChangesAfterStrokeOrTiaPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/hachinski" className="btn-primary text-center">Start the Free Pattern Check</Link>
-            <Link href="/memory-screen" className="btn-secondary text-center">Create a {memoryScreenPrice} Memory Baseline</Link>
+            <Link href="/memory-screen" className="btn-secondary text-center">Start the memory screen</Link>
           </div>
         </div>
         <aside className="border-4 border-black rounded-3xl p-6 bg-background-light">
@@ -103,7 +101,7 @@ export default function MemoryChangesAfterStrokeOrTiaPage() {
 
       <section className="bg-black text-white rounded-3xl p-8 md:p-12 text-center">
         <h2 className="text-4xl font-semibold text-white mb-4">Start with the free ischemic pattern check.</h2>
-        <p className="text-xl text-white max-w-3xl mx-auto mb-8">If the pattern is worth documenting, the next step is a structured {memoryScreenPrice} memory baseline for clinician discussion and repeat tracking.</p>
+        <p className="text-xl text-white max-w-3xl mx-auto mb-8">If the pattern is worth documenting, the next step is a structured memory baseline for clinician discussion and repeat tracking.</p>
         <Link href="/hachinski" className="bg-white text-black border-2 border-white hover:bg-black hover:text-white inline-block px-8 py-4 rounded-full text-lg font-semibold">Start Free Pattern Check</Link>
       </section>
     </main>

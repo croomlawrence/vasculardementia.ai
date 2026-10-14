@@ -53,13 +53,16 @@ export default function LeadForm({ leadType, title, submitLabel, includeTrialFie
     setMessage("");
     const form = event.currentTarget;
     const data = Object.fromEntries(new FormData(form).entries());
+    delete data.sponsor_contact_opt_in;
+    const sponsorBox = form.elements.namedItem("sponsor_contact_opt_in");
+    const sponsor_contact_opt_in = sponsorBox instanceof HTMLInputElement && sponsorBox.checked;
     const attribution = browserContext();
     trackVascuMindEvent("lead_form_submit_attempt", { eventData: { leadType, formTitle: title } });
     try {
       const response = await fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ leadType, ...attribution, ...context, ...data }),
+        body: JSON.stringify({ leadType, ...attribution, ...context, ...data, sponsor_contact_opt_in }),
       });
       const result = await response.json();
       if (!response.ok) throw new Error(result.error || "Submission failed");
@@ -176,6 +179,10 @@ export default function LeadForm({ leadType, title, submitLabel, includeTrialFie
       <label className="flex items-start gap-3">
         <input name="consent" type="checkbox" required className="mt-2 h-5 w-5" />
         <span>I understand this website is educational only and does not provide medical advice, diagnosis, treatment, emergency triage, or clinical guidance. I consent to being contacted about this request.</span>
+      </label>
+      <label className="flex items-start gap-3">
+        <input name="sponsor_contact_opt_in" type="checkbox" className="mt-2 h-5 w-5" />
+        <span>Yes, our sponsors may contact me about studies or services. This is optional and does not affect your screen.</span>
       </label>
       <button type="submit" disabled={status === "submitting"} className="bg-black text-white px-8 py-4 rounded-full text-lg font-semibold border border-black hover:bg-white hover:text-black disabled:opacity-70">
         {status === "submitting" ? "Submitting..." : submitLabel}

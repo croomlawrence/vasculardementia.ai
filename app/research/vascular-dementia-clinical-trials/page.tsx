@@ -85,7 +85,7 @@ export default function VascularDementiaResearchPage() {
         </p>
         <ul className="list-disc pl-6 text-black space-y-1">
           <li>Blood pressure and other vascular risk factors</li>
-          <li>Stroke/TIA history and secondary prevention questions</li>
+          <li>Stroke/TIA history and questions about another stroke</li>
           <li>Diabetes, cholesterol, smoking, sleep, mood, and medication review</li>
           <li>Physical activity, rehabilitation, nutrition, and cognitive tracking</li>
           <li>Whether research options are appropriate to ask about</li>

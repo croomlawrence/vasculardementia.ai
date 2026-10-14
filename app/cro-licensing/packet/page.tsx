@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { croBenchmarks } from "@/lib/business";
 
 const sections = [
   {
@@ -12,7 +11,7 @@ const sections = [
   },
   {
     title: "Commercial model",
-    body: `MoCA benchmark: approximately ${croBenchmarks.mocaLicense} plus ${croBenchmarks.mocaPerTest}. VascuMind should anchor at parity or premium when supported by evidence and implementation scope.`
+    body: "Licensing terms are set with the study team."
   },
   {
     title: "Pilot structure",
@@ -49,12 +48,12 @@ export default function CROLicensingPacketPage() {
                 <th className="py-3 pr-4">Tier</th>
                 <th className="py-3 pr-4">License</th>
                 <th className="py-3 pr-4">Per-test</th>
-                <th className="py-3 pr-4">Best fit</th>
+                <th className="py-3 pr-4">Use</th>
               </tr>
             </thead>
             <tbody>
-              <tr className="border-b border-black"><td className="py-3 pr-4 font-semibold">Pilot</td><td className="py-3 pr-4">$35k–$50k</td><td className="py-3 pr-4">$35–$50</td><td className="py-3 pr-4">Single-study feasibility</td></tr>
-              <tr className="border-b border-black"><td className="py-3 pr-4 font-semibold">Standard</td><td className="py-3 pr-4">$75k</td><td className="py-3 pr-4">$50–$75</td><td className="py-3 pr-4">Active trial program</td></tr>
+              <tr className="border-b border-black"><td className="py-3 pr-4 font-semibold">Pilot</td><td className="py-3 pr-4">Discussed per study</td><td className="py-3 pr-4">Discussed per study</td><td className="py-3 pr-4">Single-study feasibility</td></tr>
+              <tr className="border-b border-black"><td className="py-3 pr-4 font-semibold">Standard</td><td className="py-3 pr-4">Discussed per study</td><td className="py-3 pr-4">Discussed per study</td><td className="py-3 pr-4">Active trial program</td></tr>
               <tr><td className="py-3 pr-4 font-semibold">Enterprise</td><td className="py-3 pr-4">Custom</td><td className="py-3 pr-4">Custom</td><td className="py-3 pr-4">Multi-study or multi-region deployment</td></tr>
             </tbody>
           </table>

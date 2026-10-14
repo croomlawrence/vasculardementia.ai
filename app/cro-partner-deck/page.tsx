@@ -5,7 +5,7 @@ const slides = [
   ["VascuMind pipeline", "A focused funnel educates users, routes them through screening and benchmarking, and captures consented trial-interest leads with vascular context."],
   ["Recruitment value", "A pre-screened, vascular-specific pipeline can reduce broad recruitment, site burden, and low-fit screening volume."],
   ["Data posture", "Share only consented data. Use de-identification or limited datasets where appropriate. Do not transfer direct identifiers without explicit consent and privacy review."],
-  ["Commercial model", "Pilot/license pricing can anchor against the MoCA benchmark: approximately $35,000 license plus $35/test, with premium justified by vascular fit and workflow value."],
+  ["Commercial model", "Licensing terms are discussed with the study team."],
 ];
 
 export default function CroPartnerDeckPage() {

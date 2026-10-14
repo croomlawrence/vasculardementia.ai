@@ -23,6 +23,7 @@ const routes = [
   "/marketplace",
   "/research/clinical-evidence",
   "/research/vascular-dementia-clinical-trials",
+  "/news",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

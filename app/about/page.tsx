@@ -67,8 +67,8 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
-            <Link href="/hachinski" className="btn-primary text-center">Check My Vascular Memory Pattern</Link>
-            <Link href="/memory-screen" className="btn-secondary text-center">Create a $99 Memory Baseline</Link>
+            <Link href="/memory-screen" className="btn-primary text-center">Start the memory screen</Link>
+            <Link href="/resources/5-questions-guide" className="btn-secondary text-center">Get the free guide</Link>
           </div>
         </div>
       </section>

@@ -185,7 +185,7 @@ export default function HachinskiPage() {
         <h2 className="text-3xl font-semibold mb-4">Clinician conversation checklist</h2>
         <p className="text-black mb-4">Bring your pattern-check result and ask whether formal cognitive screening, medication review, vascular risk-factor management, rehabilitation, sleep/mood review, or imaging may be appropriate.</p>
         <TrackedLink href="/memory-screen" eventName="mci_cta_clicked" eventData={{ sourcePath: "/hachinski", location: "clinician-checklist", score: totalScore, answeredCount, riskBand: interpretation.label }} className="font-semibold underline">
-          Create the $99 memory baseline →
+          Start the memory screen →
         </TrackedLink>
       </section>
 

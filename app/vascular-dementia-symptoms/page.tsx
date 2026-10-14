@@ -26,7 +26,7 @@ export default function VascularDementiaSymptomsPage() {
       </div>
       <section className="border-4 border-black rounded-3xl p-8 text-center bg-background-light">
         <h2 className="text-4xl font-semibold mb-4">Start with the free vascular memory check.</h2>
-        <p className="text-xl mb-6">Then decide whether a $99 memory baseline would help your clinician discussion.</p>
+        <p className="text-xl mb-6">Then decide whether a memory baseline would help your clinician discussion.</p>
         <Link href="/hachinski" className="btn-primary inline-block">Check My Vascular Memory Pattern</Link>
       </section>
     </main>

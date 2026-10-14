@@ -4,22 +4,25 @@ name: VascuMind
 description: High-contrast, caregiver-first design system for vascular cognitive screening and wellness. Black/white foundation with deep emerald accent. Strict WCAG AA+ compliance for adults 65+ and caregivers.
 colors:
   primary: "#0B0B0B"
-  background: "#FFFFFF"
+  background: "#F6F4EF"
+  surface: "#FFFFFF"
   accent: "#0B4D3C"
-  accentHover: "#10B981"
-  neutral: "#F5F5F5"
+  accentHover: "#08382C"
+  line: "#3F564C"
+  forest: "#102824"
+  neutral: "#E7F2EC"
 typography:
   heading:
-    fontFamily: "Geist"
+    fontFamily: "Newsreader"
     fontSize: "3.25rem"
-    fontWeight: "700"
-    lineHeight: "1.05"
-    letterSpacing: "-0.04em"
+    fontWeight: "600"
+    lineHeight: "1.08"
+    letterSpacing: "-0.03em"
   body:
     fontFamily: "Geist"
     fontSize: "1.125rem"
     fontWeight: "450"
-    lineHeight: "1.75"
+    lineHeight: "1.7"
     letterSpacing: "-0.01em"
 rounded:
   sm: "8px"
@@ -50,33 +53,37 @@ VascuMind is built for caregivers and older adults. Every decision prioritizes *
 
 ## Colors
 
-- **Primary (#0B0B0B)** — All headings and body text. Pure black for maximum contrast.
-- **Background (#FFFFFF)** — All page backgrounds.
-- **Accent (#0B4D3C)** — Primary CTA color. Deep, trustworthy emerald. Hover shifts to vibrant #10B981 only for interactive states.
-- **Neutral (#F5F5F5)** — Subtle card backgrounds or dividers only. Never used for readable text.
+- **Primary (#0B0B0B)** — All headings and body text. Near-black for maximum contrast.
+- **Background (#F6F4EF)** — Warm page background.
+- **Surface (#FFFFFF)** — Cards and the header.
+- **Accent (#0B4D3C)** — Primary CTA color. Deep emerald. Hover shifts to #08382C. White text on this green clears WCAG AAA.
+- **Line (#3F564C)** — 1px borders and form outlines. Dark enough for a 3:1 UI boundary on white.
+- **Forest (#102824)** — Dark bands. White text only.
+- **Neutral (#E7F2EC)** — Soft section fills. Never used for readable text.
 
 All color combinations have been chosen to exceed WCAG AAA contrast ratios where possible.
 
 ## Typography
 
-- **Heading** — Geist Sans, 3.25rem, 700 weight, tight leading. Used for all H1/H2.
-- **Body** — Geist Sans, 1.125rem (18px minimum), 450 weight, generous 1.75 line height. No text smaller than 18px on public pages.
+- **Heading** — Newsreader, 600 weight, tight leading. Used for H1/H2.
+- **Body** — Geist Sans, 1.125rem (18px minimum), generous line height. No text smaller than 18px on public pages.
 
 ## Layout & Spacing
 
-Generous white space (80px section padding) and clear left-aligned hierarchy. Cards use 32px internal padding and full black borders for definition.
+Generous white space (80px section padding) and clear left-aligned hierarchy. Cards use 32px internal padding, a 1px deep-sage border, and a soft shadow.
 
 ## Components
 
-- **Primary Button** — Deep emerald background, white text, rounded-md, 600 weight. Hover uses brighter emerald.
-- **Card** — White with black border, generous padding, used for protocol steps, product tiles, and disclaimers.
+- **Primary Button** — Deep emerald background, white text, 14px radius, 700 weight. Hover uses a darker emerald. Minimum height 48px.
+- **Card** — White with a 1px #3F564C border, generous padding, used for protocol steps, product tiles, and disclaimers.
 
 ## Do's and Don'ts
 
 **Do**
 - Use pure black text on white.
 - Place the full MCI Screen + FDA disclaimer (via `<Disclaimer />` component) on every page.
-- Use emerald only for CTAs and section labels.
+- Use emerald for CTAs, links, and section labels.
+- Keep the buy button for the memory screen hidden until checkout works. The primary actions are “Start the memory screen” and “Get the free guide.”
 - Keep body text ≥18px.
 
 **Don't**

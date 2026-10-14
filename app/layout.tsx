@@ -1,15 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Newsreader } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
 import Disclaimer from "./components/Disclaimer";
 import MarketingPixels from "./components/MarketingPixels";
-import NavDropdown from "./components/NavDropdown";
+import SiteHeader from "./components/SiteHeader";
 import Script from "next/script";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"], display: "swap" });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"], display: "swap" });
+const display = Newsreader({
+  variable: "--font-display",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["500", "600"],
+});
 
 const siteUrl = "https://www.vascumind.com";
 
@@ -20,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | VascuMind",
   },
   description:
-    "Start with a free 3-minute vascular memory check for memory changes after stroke, TIA, blood pressure, diabetes, PAD, or other vascular risk factors, then create a $99 memory baseline for clinician discussion.",
+    "Start the memory screen or get a free guide of questions for a doctor visit. For families noticing memory changes after stroke, TIA, blood pressure, diabetes, or heart disease. For learning only. Not a diagnosis.",
   alternates: { canonical: siteUrl },
   openGraph: {
     type: "website",
@@ -28,25 +34,26 @@ export const metadata: Metadata = {
     siteName: "VascuMind",
     title: "VascuMind | Could Blood Flow Be Affecting Your Memory?",
     description:
-      "A clearer first step for families worried memory changes may relate to blood flow, stroke, TIA, or vascular risk factors. Educational only; not a diagnosis.",
+      "Start the memory screen or get a free guide of questions for a doctor visit. For learning only. Not a diagnosis.",
   },
   twitter: {
     card: "summary_large_image",
     title: "VascuMind | Could Blood Flow Be Affecting Your Memory?",
     description:
-      "Start with a free 3-minute vascular memory check, then create a structured memory baseline for clinician discussion.",
+      "Start the memory screen or get a free guide of questions for a doctor visit. For learning only. Not a diagnosis.",
   },
 };
 
 const caregiverLinks = [
   ["Start Here", "/what-we-offer"],
   ["Free Vascular Memory Check", "/hachinski"],
-  ["$99 Memory Baseline", "/memory-screen"],
+  ["Memory screen", "/memory-screen"],
+  ["Free guide", "/resources/5-questions-guide"],
   ["Stroke/TIA Memory", "/memory-changes-after-stroke-or-tia"],
   ["Blood Test vs Memory Screen", "/alzheimers-blood-test-vs-cognitive-screening"],
   ["Caregiver Guide", "/caregiver-guide-memory-after-stroke"],
   ["Wellness Support", "/marketplace"],
-];
+] as const;
 
 const organizationLinks = [
   ["Clinical Trial Matching", "/clinical-trial-matching"],
@@ -54,7 +61,7 @@ const organizationLinks = [
   ["For Research Partners", "/cro-licensing"],
   ["Licensing Packet", "/cro-licensing/packet"],
   ["Science & Validation", "/science"],
-];
+] as const;
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const orgSchema = {
@@ -66,7 +73,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   };
 
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} ${display.variable} h-full antialiased`}>
       <Script id="google-tag-manager">
         {`
           (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -81,77 +88,51 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         height="0" width="0" style={{display:"none",visibility:"hidden"}}></iframe></noscript>
         <MarketingPixels />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }} />
-        <nav className="site-nav border-b bg-white sticky top-0 z-40">
-          <div className="max-w-6xl mx-auto px-6 min-h-16 py-3 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-            <div className="flex flex-col lg:flex-row lg:items-center gap-4 lg:gap-10">
-              <Link href="/" className="font-semibold text-xl">VascuMind®</Link>
-              <div className="flex flex-wrap gap-3 lg:gap-6 text-base items-center">
-                <NavDropdown summary="For Caregivers">
-                  {caregiverLinks.map(([label, href]) => (
-                    <Link key={href} href={href}>{label}</Link>
-                  ))}
-                </NavDropdown>
-                <NavDropdown summary="For Organizations">
-                  {organizationLinks.map(([label, href]) => (
-                    <Link key={href} href={href}>{label}</Link>
-                  ))}
-                </NavDropdown>
-                <Link href="/about" className="hover:underline font-semibold">About</Link>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/hachinski" className="bg-black text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-white hover:text-black transition border border-black text-center">
-                Free Check
-              </Link>
-              <Link href="/memory-screen" className="bg-white text-black px-5 py-2 rounded-full text-sm font-semibold hover:bg-black hover:text-white transition border border-black text-center">
-                Memory Baseline
-              </Link>
-            </div>
-          </div>
-        </nav>
-        {children}
+        <SiteHeader caregiverLinks={caregiverLinks} organizationLinks={organizationLinks} />
+        <div id="site-main">{children}</div>
         <Disclaimer />
         <Analytics />
-        <footer className="bg-black text-white py-12 mt-auto">
+        <footer className="site-footer">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="grid md:grid-cols-4 gap-8 mb-10">
+            <div className="grid md:grid-cols-4 gap-10 mb-12">
               <div>
-                <div className="font-semibold text-xl mb-3 text-white">VascuMind®</div>
-                <p className="text-sm text-white">Educational tools for vascular memory changes, post-stroke cognitive concerns, and caregiver navigation.</p>
+                <div className="font-semibold text-xl mb-3">VascuMind®</div>
+                <p>Tools for learning about memory changes, blood flow, and questions to bring to a clinician.</p>
               </div>
               <div>
-                <div className="font-semibold mb-3 text-sm tracking-widest text-white">FOR CAREGIVERS</div>
-                <div className="space-y-2 text-base">
-                  <Link href="/" className="block hover:underline">Home</Link>
+                <div className="footer-label">For caregivers</div>
+                <div className="space-y-2">
+                  <Link href="/" className="block">Home</Link>
                   {caregiverLinks.map(([label, href]) => (
-                    <Link key={href} href={href} className="block hover:underline">{label}</Link>
+                    <Link key={href} href={href} className="block">{label}</Link>
                   ))}
                 </div>
               </div>
               <div>
-                <div className="font-semibold mb-3 text-sm tracking-widest text-white">FOR ORGANIZATIONS</div>
-                <div className="space-y-2 text-base">
+                <div className="footer-label">For organizations</div>
+                <div className="space-y-2">
                   {organizationLinks.map(([label, href]) => (
-                    <Link key={href} href={href} className="block hover:underline">{label}</Link>
+                    <Link key={href} href={href} className="block">{label}</Link>
                   ))}
-                  <Link href="/hsa-fsa" className="block hover:underline">HSA/FSA Status</Link>
+                  <Link href="/hsa-fsa" className="block">HSA/FSA Status</Link>
                 </div>
               </div>
               <div>
-                <div className="font-semibold mb-3 text-sm tracking-widest text-white">COMPANY & LEGAL</div>
-                <div className="space-y-2 text-base">
-                  <div>© VascuMind 2026</div>
-                  <Link href="/about" className="block hover:underline">About VascuMind</Link>
-                  <Link href="/privacy" className="block hover:underline">Privacy</Link>
-                  <Link href="/terms" className="block hover:underline">Terms</Link>
-                  <Link href="/affiliate-disclosure" className="block hover:underline">Affiliate Disclosure</Link>
-                  <Link href="/compliance" className="block hover:underline">Compliance</Link>
-                  <div>This site is educational only and does not constitute medical advice.</div>
+                <div className="footer-label">Company and legal</div>
+                <div className="space-y-2">
+                  <Link href="/news" className="block">News</Link>
+                  <Link href="/about" className="block">About VascuMind</Link>
+                  <Link href="/privacy" className="block">Privacy</Link>
+                  <Link href="/terms" className="block">Terms</Link>
+                  <Link href="/affiliate-disclosure" className="block">Affiliate Disclosure</Link>
+                  <Link href="/compliance" className="block">Compliance</Link>
+                  <p>This site is for learning only and is not medical advice.</p>
+                  <p>We do not share your information with sponsors unless you check the box to allow it.</p>
                 </div>
               </div>
             </div>
-            <div className="border-t border-white pt-6 text-base text-center text-white">
-              VascuMind® is not a substitute for professional medical care. Call emergency services for sudden or severe neurologic symptoms.
+            <div className="border-t border-white/40 pt-6 text-center">
+              <p>© VascuMind 2026. VascuMind® is not a substitute for professional medical care. Call emergency services for sudden or severe neurologic symptoms.</p>
             </div>
           </div>
         </footer>

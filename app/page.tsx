@@ -1,41 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { memoryScreenPrice } from '@/lib/business';
+import TrackedLink from '@/components/TrackedLink';
 import { HeroPortrait, HumanMomentCard, PathwayLine, ProductJourneyCards, ResultPreviewCard, StoryPanels, TrustBadgeRow, VascularPathwayArt } from '@/app/components/BrandVisuals';
 
 export const metadata: Metadata = {
   title: 'Could Blood Flow Be Affecting Your Memory? | VascuMind',
   description:
-    'Worried memory changes may be a signal of blood-flow or vascular disease risk after stroke, TIA, blood pressure, diabetes, PAD, heart disease, or circulation issues? Start with a free 3-minute vascular memory check, then create a $99 memory baseline for clinician discussion.',
+    'Start the memory screen or get a free guide of questions for a doctor visit. For families noticing memory changes after stroke, TIA, blood pressure, diabetes, or heart disease. For learning only. Not a diagnosis.',
   alternates: { canonical: '/' },
 };
-
-const pathwaySteps = [
-  {
-    label: 'Step 1 · Free Vascular Memory Check',
-    title: 'Organize the vascular clues in your history',
-    copy:
-      'Answer simple questions based on vascular-pattern features clinicians have long used to organize cognitive concerns: sudden onset, stepwise change, stroke/TIA history, and vascular risk factors. Educational only, not a diagnosis.',
-    href: '/hachinski',
-    cta: 'Check My Vascular Memory Pattern',
-  },
-  {
-    label: `Step 2 · ${memoryScreenPrice} Memory Baseline`,
-    title: 'Create a structured benchmark',
-    copy:
-      'Use the MCI Screen as a memory baseline for clinician discussion and repeat tracking. It is a screen and benchmark, not a diagnosis.',
-    href: '/memory-screen',
-    cta: 'Create Memory Baseline',
-  },
-  {
-    label: 'Step 3 · Next Questions',
-    title: 'Bring a clearer plan to the visit',
-    copy:
-      'Use plain-language prompts for clinician conversations about vascular risk factors, medications, sleep, mood, imaging, follow-up testing, wellness support, or research options when appropriate.',
-    href: '/protocol',
-    cta: 'See the Protocol',
-  },
-];
 
 const audiences = [
   ['After stroke or TIA', 'Memory, attention, processing speed, or confusion can change after vascular events.'],
@@ -51,7 +24,7 @@ const comparisonRows = [
     doesNot: 'Does not diagnose dementia or replace medical evaluation.',
   },
   {
-    option: 'Memory Baseline',
+    option: 'Memory screen',
     helps: 'Creates a structured benchmark of cognitive performance for discussion and repeat tracking.',
     doesNot: 'Does not explain the medical cause by itself.',
   },
@@ -74,25 +47,37 @@ const clinicianQuestions = [
 export default function VascuMindHome() {
   return (
     <main>
-      <section className="brand-hero py-20 md:py-28 relative">
-        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-stretch">
-          <div className="relative z-10 flex flex-col justify-center">
-            <div className="section-label mb-4">Free vascular memory check</div>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 leading-tight">
+      <section className="home-hero py-16 md:py-28">
+        <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
+          <div>
+            <p className="section-label mb-5">Memory and blood flow</p>
+            <h1 className="text-5xl md:text-7xl mb-6">
               Could Blood Flow Be Affecting Your Memory?
             </h1>
-            <p className="text-2xl text-black mb-6 max-w-3xl">
-              Take the free 3-minute vascular memory check. See whether your symptoms and health history show patterns sometimes associated with vascular contributions to cognitive change. Get a summary to discuss with your clinician.
+            <p className="text-xl md:text-2xl mb-5 max-w-2xl">
+              Some families notice memory changes after a stroke, a TIA, high blood pressure, diabetes, or heart disease. You can start the memory screen. Or you can get a free guide of questions for your doctor.
             </p>
-            <p className="text-lg text-black mb-6 max-w-3xl">
-              Memory is not a blood test and VascuMind does not diagnose disease. But memory can function like an important biomarker-style signal: something observable and trackable that may help families ask better questions about blood flow, vascular disease, and vascular risk.
-            </p>
-            <p className="text-base text-black mb-8">
+            <p className="text-lg mb-8 max-w-2xl">
               Educational only. Not a diagnosis. Sudden facial drooping, one-sided weakness, speech trouble, severe dizziness, confusion, or vision loss may require emergency care.
             </p>
-            <Link href="/hachinski" className="btn-primary inline-block w-fit">
-              Check My Vascular Memory Pattern
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-3 mb-5">
+              <TrackedLink
+                href="/memory-screen"
+                eventName="cta_memory_screen_click"
+                eventData={{ sourcePath: '/', ctaLabel: 'Start the memory screen', location: 'hero' }}
+                className="btn-primary"
+              >
+                Start the memory screen
+              </TrackedLink>
+              <Link href="/resources/5-questions-guide" className="btn-secondary">
+                Get the free guide
+              </Link>
+            </div>
+            <p>
+              <Link href="/hachinski" className="text-link">
+                Or take the free vascular memory check
+              </Link>
+            </p>
           </div>
           <HeroPortrait />
         </div>
@@ -104,93 +89,96 @@ export default function VascuMindHome() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 md:py-28 bg-white">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="max-w-3xl mb-10">
-            <div className="section-label mb-4">Choose your first step</div>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-black">A consumer-health path that feels simple, not scary.</h2>
-            <p className="text-xl text-black">Like the best modern health brands, VascuMind turns concern into a clear next action: start free, organize the pattern, and only then decide whether a memory baseline makes sense.</p>
+          <div className="max-w-3xl mb-12">
+            <p className="section-label mb-4">Choose a first step</p>
+            <h2 className="text-4xl md:text-5xl mb-4">Three simple ways to start.</h2>
+            <p className="text-xl">
+              Start the memory screen, get the free guide, or take the free vascular memory check. Each one is for learning and for talking with a clinician.
+            </p>
           </div>
           <ProductJourneyCards />
         </div>
       </section>
 
-      <section className="py-20 brand-section-ivory">
+      <section className="py-20 md:py-28 brand-section-ivory">
         <div className="max-w-6xl mx-auto px-6">
           <StoryPanels />
         </div>
       </section>
 
-      <section className="py-20 brand-section-mint">
+      <section className="py-20 md:py-28 brand-section-mint">
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[0.95fr_1.05fr] gap-10 items-center">
           <HumanMomentCard variant="clinic" />
           <div>
-            <div className="section-label mb-4">Built for safer conversations</div>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-5 text-black">Not self-diagnosis. Better preparation.</h2>
-            <p className="text-xl text-black mb-6">VascuMind should feel warm and easy to start, but the guardrails stay explicit: educational only, not a diagnosis, and designed to support discussion with qualified clinicians.</p>
+            <p className="section-label mb-4">For the next visit</p>
+            <h2 className="text-4xl md:text-5xl mb-5">Get ready to talk with a clinician.</h2>
+            <p className="text-xl mb-6">
+              VascuMind is for learning. It is not a diagnosis. It is here to help you bring clearer questions to a qualified clinician.
+            </p>
             <ResultPreviewCard />
           </div>
         </div>
       </section>
 
-      <section className="py-20 brand-section-ivory">
+      <section className="py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="max-w-3xl mb-10">
-            <div className="section-label mb-4">Who this is for</div>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-black">A clearer start for families noticing vascular-pattern memory changes.</h2>
-            <p className="text-xl text-black">The first job is not to diagnose yourself. It is to organize the pattern, create a baseline when appropriate, and bring clearer questions to qualified clinicians.</p>
+          <div className="max-w-3xl mb-12">
+            <p className="section-label mb-4">Who this is for</p>
+            <h2 className="text-4xl md:text-5xl mb-4">A clearer start for families noticing vascular-pattern memory changes.</h2>
+            <p className="text-xl">The first job is to organize what you noticed, then bring clearer questions to a qualified clinician.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {audiences.map(([title, copy]) => (
               <div key={title} className="card bg-white">
-                <h3 className="text-2xl font-bold mb-3 text-black">{title}</h3>
-                <p className="text-black">{copy}</p>
+                <h3 className="text-2xl mb-3">{title}</h3>
+                <p>{copy}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 py-24">
-        <div className="text-center mb-14">
-          <div className="section-label mb-4">Which first step makes sense?</div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-5">Ischemic pattern check, memory screen, or Alzheimer’s blood test?</h2>
-          <p className="text-xl text-black max-w-4xl mx-auto">
-            Families hear about many kinds of brain-health testing. They are not the same. VascuMind helps you understand where a vascular memory check and memory baseline fit before your next clinician conversation.
+      <section className="max-w-6xl mx-auto px-6 py-20 md:py-28">
+        <div className="max-w-3xl mb-12">
+          <p className="section-label mb-4">Which first step makes sense?</p>
+          <h2 className="text-4xl md:text-5xl mb-5">Memory check, memory screen, or an Alzheimer’s blood test?</h2>
+          <p className="text-xl">
+            Families hear about many kinds of brain-health testing. They are not the same. This table shows what each one can and cannot do.
           </p>
         </div>
-        <div className="overflow-hidden border-2 border-black rounded-3xl bg-white">
-          <div className="grid md:grid-cols-3 bg-black text-white font-bold text-lg">
+        <div className="overflow-hidden border border-black rounded-3xl bg-white">
+          <div className="grid md:grid-cols-3 bg-black text-white font-bold">
             <div className="p-5 text-white">Option</div>
             <div className="p-5 text-white border-t md:border-t-0 md:border-l border-white">What it helps with</div>
             <div className="p-5 text-white border-t md:border-t-0 md:border-l border-white">What it does not do</div>
           </div>
           {comparisonRows.map((row) => (
-            <div key={row.option} className="grid md:grid-cols-3 border-t-2 border-black">
-              <div className="p-5 font-bold text-2xl text-black">{row.option}</div>
-              <div className="p-5 text-black border-t md:border-t-0 md:border-l border-black">{row.helps}</div>
-              <div className="p-5 text-black border-t md:border-t-0 md:border-l border-black">{row.doesNot}</div>
+            <div key={row.option} className="grid md:grid-cols-3 border-t border-black">
+              <div className="p-5 font-bold text-2xl">{row.option}</div>
+              <div className="p-5 border-t md:border-t-0 md:border-l border-black">{row.helps}</div>
+              <div className="p-5 border-t md:border-t-0 md:border-l border-black">{row.doesNot}</div>
             </div>
           ))}
         </div>
-        <div className="text-center mt-8">
-          <Link href="/hachinski" className="btn-primary inline-block">Check My Vascular Memory Pattern</Link>
-        </div>
       </section>
 
-      <section className="brand-section-mint py-20">
+      <section className="brand-section-mint py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-[0.9fr_1.1fr] gap-10 items-start">
           <div>
-            <div className="section-label mb-4">Sudden or stepwise change</div>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-5 text-black">Did the change happen suddenly or in steps?</h2>
-            <p className="text-xl text-black mb-6">
+            <p className="section-label mb-4">Sudden or stepwise change</p>
+            <h2 className="text-4xl md:text-5xl mb-5">Did the change happen suddenly or in steps?</h2>
+            <p className="text-xl mb-6">
               Some families notice memory or thinking changes that seem to appear suddenly, worsen after a stroke or TIA, or decline in steps rather than gradually. That does not confirm the cause, but it is a pattern worth organizing before a clinician visit.
             </p>
-            <Link href="/hachinski" className="btn-green inline-block px-8 py-4 rounded-full text-lg font-semibold">Check Your Vascular Memory Pattern</Link>
+            <Link href="/hachinski" className="btn-secondary">
+              Take the free vascular memory check
+            </Link>
           </div>
           <div className="card bg-white">
-            <h3 className="text-3xl font-bold mb-4 text-black">Questions to bring to the next visit</h3>
-            <ul className="list-disc pl-6 space-y-3 text-black">
+            <h3 className="text-3xl mb-4">Questions to bring to the next visit</h3>
+            <ul className="list-disc pl-6 space-y-3">
               {clinicianQuestions.map((question) => (
                 <li key={question}>{question}</li>
               ))}
@@ -199,34 +187,15 @@ export default function VascuMindHome() {
         </div>
       </section>
 
-      <section className="max-w-6xl mx-auto px-6 py-24">
-        <div className="text-center mb-14">
-          <div className="section-label mb-4">How it works</div>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Concern → pattern → baseline → better questions.</h2>
-        </div>
-        <div className="grid lg:grid-cols-[0.95fr_1.05fr] gap-10 items-center mb-12">
-          <PathwayLine cta={false} />
-          <div className="grid gap-5">
-            {pathwaySteps.map((step, index) => (
-              <div key={step.title} className="card flex flex-col text-left min-h-full bg-white">
-                <div className="text-5xl font-bold mb-4">{index + 1}</div>
-                <div className="section-label mb-3">{step.label}</div>
-                <h3 className="text-2xl font-bold mb-3 text-black">{step.title}</h3>
-                <p className="text-black mb-6 flex-1">{step.copy}</p>
-                <Link href={step.href} className="btn-primary inline-flex justify-center text-center w-full sm:w-auto whitespace-normal leading-snug">
-                  {step.cta}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
+      <section className="max-w-6xl mx-auto px-6 py-20 md:py-24">
+        <PathwayLine cta={false} />
       </section>
 
-      <section className="bg-black text-white py-20">
+      <section className="bg-black text-white py-20 md:py-28">
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-10 items-center">
           <div>
-            <div className="section-label section-label-on-dark mb-4">The heart-brain connection</div>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white">Memory is one of the signals families can actually observe.</h2>
+            <p className="section-label section-label-on-dark mb-4">The heart-brain connection</p>
+            <h2 className="text-4xl md:text-5xl mb-6 text-white">Memory is one of the signals families can actually observe.</h2>
             <p className="text-xl text-white">
               Blood flow, vascular disease, and vascular risk factors can affect attention, memory, processing speed, and day-to-day function. VascuMind helps families move from “something feels different” to a documented memory signal, a vascular-pattern summary, and a memory baseline for clinician discussion.
             </p>
@@ -234,26 +203,52 @@ export default function VascuMindHome() {
           <div className="space-y-6">
             <VascularPathwayArt tone="dark" />
             <div className="bg-white text-black rounded-3xl p-8">
-              <h3 className="text-3xl font-bold mb-4">What you can bring to the next visit</h3>
+              <h3 className="text-3xl mb-4">What you can bring to the next visit</h3>
               <ul className="list-disc pl-6 space-y-2">
                 <li>A plain-language vascular-pattern summary</li>
                 <li>Questions about stroke/TIA history and vascular risk factors</li>
-                <li>An optional {memoryScreenPrice} memory baseline for tracking</li>
-                <li>A safer way to discuss wellness support or research options</li>
+                <li>Notes from the memory screen, if you choose to start one</li>
+                <li>The free guide of questions for your doctor</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-24">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-black">Start free. Benchmark only if it makes sense.</h2>
-          <p className="text-xl text-black max-w-3xl mx-auto mb-8">
-            Take the free 3-minute vascular memory check first. If the pattern is worth documenting, the next step is the paid MCI Screen memory baseline.
+      <section className="py-24 md:py-32">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="text-4xl md:text-5xl mb-6">Start the memory screen, or get the free guide.</h2>
+          <p className="text-xl mb-8">
+            The memory screen is a place to begin. The free guide lists questions for a doctor visit. The vascular memory check is still here if you want it.
           </p>
-          <Link href="/hachinski" className="btn-primary inline-block">
-            Check My Vascular Memory Pattern
+          <div className="flex flex-col sm:flex-row justify-center gap-3 mb-5">
+            <TrackedLink
+              href="/memory-screen"
+              eventName="cta_memory_screen_click"
+              eventData={{ sourcePath: '/', ctaLabel: 'Start the memory screen', location: 'closing' }}
+              className="btn-primary"
+            >
+              Start the memory screen
+            </TrackedLink>
+            <Link href="/resources/5-questions-guide" className="btn-secondary">
+              Get the free guide
+            </Link>
+          </div>
+          <p>
+            <Link href="/hachinski" className="text-link">Free vascular memory check</Link>
+          </p>
+        </div>
+      </section>
+
+      <section className="news-band" aria-labelledby="home-news-title">
+        <div className="max-w-3xl mx-auto px-6">
+          <p className="section-label mb-4">News</p>
+          <h2 id="home-news-title" className="text-4xl md:text-5xl mb-4">Company news</h2>
+          <p className="text-xl mb-6">
+            This note is separate from the memory screen. It is not a reason to start the screen.
+          </p>
+          <Link href="/news" className="news-link">
+            Read the news
           </Link>
         </div>
       </section>

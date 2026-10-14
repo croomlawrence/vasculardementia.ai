@@ -10,14 +10,15 @@ function escapeCsv(value: unknown) {
 
 export async function POST(request: Request) {
   try {
-    const { name, email, phone } = await request.json();
+    const { name, email, phone, sponsor_contact_opt_in } = await request.json();
 
     if (!name || !email) {
       return NextResponse.json({ message: 'Name and Email are required.' }, { status: 400 });
     }
 
     const timestamp = new Date().toISOString();
-    const csvRow = `\n${[timestamp, name, email, phone || ''].map(escapeCsv).join(',')}`;
+    const sponsorOptIn = sponsor_contact_opt_in === true ? 'true' : 'false';
+    const csvRow = `\n${[timestamp, name, email, phone || '', sponsorOptIn].map(escapeCsv).join(',')}`;
     const filePath = path.join(process.cwd(), 'cro_leads.csv');
     fs.appendFileSync(filePath, csvRow);
 

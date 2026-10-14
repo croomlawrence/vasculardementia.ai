@@ -7,7 +7,7 @@ import TrackedLink from '@/components/TrackedLink';
 export const metadata: Metadata = {
   title: "Wellness Support for Vascular & Cognitive Health | VascuMind",
   description:
-    "Explore optional wellness-support products for vascular and cognitive wellness with clinician-discussion framing, COA transparency, and supplement disclaimers. No public pricing—quality verified.",
+    "Explore optional wellness-support products for vascular and cognitive wellness with clinician-discussion framing, COA transparency, and supplement disclaimers.",
 };
 
 const coreStack = [
@@ -66,7 +66,7 @@ export default function Marketplace() {
               <span className="text-2xl">🔬</span>
               <h3 className="text-xl font-semibold">Quality & Transparency Commitment</h3>
             </div>
-            <p className="text-black mb-3">We do not display public pricing. Instead, we prioritize verified quality documentation so you and your clinician can make informed decisions.</p>
+            <p className="text-black mb-3">We prioritize verified quality documentation so you and your clinician can make informed decisions.</p>
             <ul className="list-disc pl-6 space-y-1 text-black text-sm">
               <li>Batch-specific Certificates of Analysis (COAs) requested for every product</li>
               <li>Third-party testing verification: identity, potency, heavy metals, microbes, oxidation</li>
@@ -93,7 +93,7 @@ export default function Marketplace() {
           {/* Quality-First Approach Notice */}
           <div className="mb-8 p-4 border border-black rounded-2xl bg-white">
             <p className="text-black font-medium mb-2">Our quality-first approach:</p>
-            <p className="text-black text-sm">Product pages link to partner sites where you can verify current pricing, Certificates of Analysis, and sourcing documentation. We encourage you to review these with your clinician before any purchase decision.</p>
+            <p className="text-black text-sm">Product pages link to partner sites where you can verify Certificates of Analysis and sourcing documentation. We encourage you to review these with your clinician before any purchase decision.</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -122,7 +122,7 @@ export default function Marketplace() {
           {/* Quality-First Approach Notice */}
           <div className="mb-8 p-4 border border-black rounded-2xl bg-white">
             <p className="text-black font-medium mb-2">Our quality-first approach:</p>
-            <p className="text-black text-sm">Each product page provides quality standards, evidence context, and links to verify COAs and sourcing. No public pricing displayed—review with your clinician.</p>
+            <p className="text-black text-sm">Each product page provides quality standards, evidence context, and links to verify COAs and sourcing. Review them with your clinician.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -172,7 +172,7 @@ export default function Marketplace() {
               <ul className="list-disc pl-6 space-y-2 text-black">
                 <li>Always consult a qualified clinician before starting any supplement</li>
                 <li>Critical if you take medications (blood thinners, BP meds, etc.)</li>
-                <li>Review vascular risk factors, stroke history, and current treatment plan</li>
+                <li>Review vascular risk factors, stroke history, and the care plan your doctor already set</li>
               </ul>
             </div>
           </div>

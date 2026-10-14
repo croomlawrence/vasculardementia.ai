@@ -18,12 +18,12 @@ const articles = [
     description: "Understand the key differences between Mild Cognitive Impairment (MCI) and the normal memory lapses that come with age."
   },
   {
-    title: "What to Do After an MCI Diagnosis: A 5-Step Plan",
+    title: "What to Do After You Learn You Have MCI: A 5-Step Plan",
     href: "/resources/what-to-do-after-mci-diagnosis",
-    description: "A diagnosis of MCI can be overwhelming. Here is a 5-step plan to help you take control and move forward with hope."
+    description: "Learning you have MCI can feel like a lot. Here is a 5-step plan for what to do next."
   },
   {
-    title: "How is MCI Diagnosed? A Guide to Cognitive Testing",
+    title: "How Doctors Look at MCI",
     href: "/resources/how-is-mci-diagnosed",
     description: "Learn how clinicians evaluate MCI, from clinical interviews to structured cognitive screening tools like the MCI Screen."
   },
@@ -43,7 +43,7 @@ const articles = [
     description: "Learn how blood flow delivers vital oxygen and nutrients to your brain, and what happens when that flow is compromised."
   },
   {
-    title: "5 Lifestyle Changes to Support Healthy Brain Circulation",
+    title: "5 Daily Habits for Brain Circulation",
     href: "/resources/improve-brain-circulation",
     description: "Discover actionable, evidence-based advice on diet, exercise, and habits that support long-term vascular wellness."
   }

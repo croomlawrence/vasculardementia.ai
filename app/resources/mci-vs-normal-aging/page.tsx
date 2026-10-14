@@ -46,7 +46,7 @@ export default function MciVsAgingPage() {
 
         <h2>How to Get a Clearer Baseline</h2>
         <p>A qualified clinician can help determine what evaluation is appropriate. VascuMind presents the <strong>MCI Screen</strong> as a structured cognitive screening, benchmarking, and tracking tool to support that conversation. It is not a diagnosis or a substitute for clinical evaluation.</p>
-        <p><strong><Link href="/resources/how-is-mci-diagnosed">Learn more about how MCI is diagnosed</Link>.</strong></p>
+        <p><strong><Link href="/resources/how-is-mci-diagnosed">Learn more about how doctors look at MCI</Link>.</strong></p>
 
         <EmailCapture />
 

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Your Guide: 5 Questions for Your Doctor | VascuMind",
   description: "A guide to help you have a more productive conversation with your doctor about cognitive health and circulation.",
-  robots: "noindex, nofollow", // Prevents this page from showing up in Google
+  robots: "noindex, nofollow", // Keeps this page out of Google search results
 };
 
 export default function FiveQuestionsGuide() {
@@ -15,7 +15,7 @@ export default function FiveQuestionsGuide() {
         
         <hr className="my-10" />
 
-        <h2>1. The "What & When" Question: How Can I Best Describe My Symptoms?</h2>
+        <h2>1. The "What & When" Question: How Can I Describe My Symptoms So They Fit?</h2>
         <p>Instead of just saying "I have brain fog," try to be more specific. Your doctor can learn a lot from the details.</p>
         <p><strong>Ask:</strong> "I've noticed some changes in my thinking. I've listed them out here. Based on this pattern, what possibilities should we be considering?"</p>
         <p><em>Jot down your examples before your appointment:</em></p>
@@ -38,7 +38,7 @@ export default function FiveQuestionsGuide() {
         <p>Moving from a subjective feeling to an objective measurement is a critical step. It gives you and your doctor a starting point to track changes over time.</p>
         <p><strong>Ask:</strong> "I would like to get a baseline of my cognitive function. What are the options for doing this? Are there specific screening tools or tests you would recommend?"</p>
 
-        <h2>5. The "Action" Question: What Are My Next Best Steps?</h2>
+        <h2>5. The "Action" Question: What Are My Next Steps?</h2>
         <p>End your appointment with a clear understanding of the plan. This puts you in the driver's seat of your own health journey.</p>
         <p><strong>Ask:</strong> "Based on our conversation today, what are the one or two most important things I should be doing to support my brain health?"</p>
         <p><em>Write down the answer so you can remember it clearly.</em></p>

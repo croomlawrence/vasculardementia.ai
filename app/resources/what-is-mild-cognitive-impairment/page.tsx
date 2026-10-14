@@ -28,13 +28,13 @@ export default function MciPillarPage() {
         <p>The key is that these are not just occasional lapses. They are a consistent change from your previous abilities. <strong><Link href="/resources/mci-vs-normal-aging">Learn more about how MCI differs from normal aging</Link>.</strong></p>
 
         <h2>How is MCI Evaluated? The Importance of a Clear Baseline</h2>
-        <p>Diagnosing MCI is a process. It starts with a conversation with your doctor about your symptoms and medical history. However, to get a clear picture, an objective cognitive test is needed.</p>
+        <p>A doctor looks at MCI in steps. It starts with a conversation about your symptoms and medical history. A memory screen can give you and your doctor a shared starting point.</p>
         <p>Many brief cognitive tools are not designed to capture subtle changes. VascuMind presents the <strong>MCI Screen</strong> as a structured cognitive screening, benchmarking, and tracking tool to support clinician discussion. It is not a diagnosis or a substitute for clinical evaluation.</p>
-        <p><strong><Link href="/resources/how-is-mci-diagnosed">Read our full guide on how MCI is diagnosed</Link>.</strong></p>
+        <p><strong><Link href="/resources/how-is-mci-diagnosed">Read our full guide on how doctors look at MCI</Link>.</strong></p>
 
         <h2>What Causes MCI?</h2>
         <p>MCI can have many different root causes. Sometimes, it can be the earliest stage of Alzheimer's disease. In other cases, it can be caused by vascular issues—problems with blood flow to the brain.</p>
-        <p>Importantly, some causes of MCI are reversible. These can include:</p>
+        <p>Some other causes a doctor may be able to address include:</p>
         <ul>
             <li>Vitamin deficiencies</li>
             <li>Thyroid problems</li>
@@ -43,10 +43,10 @@ export default function MciPillarPage() {
         </ul>
         <p>This is why timely clinician evaluation is important: it gives you and your doctor the chance to investigate contributors that may be worth addressing.</p>
         
-        <h2>You've Received an MCI Diagnosis. What Now?</h2>
-        <p>Receiving an MCI diagnosis can be a starting point for organized follow-up, clinician discussion, and support from family or caregivers.</p>
-        <p>Your journey should include getting a reliable baseline to track your progress, working with your doctor to investigate reversible causes, and implementing powerful lifestyle changes related to diet, exercise, and sleep.</p>
-        <p><strong><Link href="/resources/what-to-do-after-mci-diagnosis">Read our 5-Step Plan for What to Do After an MCI Diagnosis</Link>.</strong></p>
+        <h2>You've been told you have MCI. What now?</h2>
+        <p>Learning you have MCI can be a starting point for organized follow-up, clinician discussion, and support from family or caregivers.</p>
+        <p>Your journey should include getting a reliable baseline to track your progress, working with your doctor to look at other causes, and making lifestyle changes related to diet, exercise, and sleep.</p>
+        <p><strong><Link href="/resources/what-to-do-after-mci-diagnosis">Read our 5-step plan for what to do next</Link>.</strong></p>
 
         <EmailCapture />
 

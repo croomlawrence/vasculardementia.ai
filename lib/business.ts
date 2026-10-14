@@ -7,6 +7,9 @@ export const memoryScreenCheckoutUrl =
   process.env.STRIPE_MEMORY_SCREEN_URL ||
   "https://www.mciscreen.com";
 
+/** Buy buttons stay off until checkout is ready. A payment URL alone does not turn this on. */
+export const memoryScreenCheckoutEnabled = false;
+
 export const memoryScreenPrice = process.env.NEXT_PUBLIC_MEMORY_SCREEN_PRICE || "$99";
 
 export const affiliateLinks = {

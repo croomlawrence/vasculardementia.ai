@@ -7,7 +7,6 @@
   --foreground-secondary: #0B0B0B;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-display);
   --accent-green: #0B4D3C;
   --accent-green-hover: #08382C;
   --accent-green-bright: #0B4D3C;
@@ -485,6 +484,9 @@ summary:focus-visible {
   align-items: center;
   gap: 0.6rem;
 }
+.header-actions a {
+  white-space: nowrap;
+}
 
 .site-footer {
   background: #102824;
@@ -689,7 +691,7 @@ main :is(a).text-link,
   text-underline-offset: 0.16em;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1100px) {
   .menu-toggle { display: inline-flex; align-items: center; justify-content: center; }
   .site-menu {
     display: none;

@@ -27,7 +27,7 @@ export default function NewsPage() {
           <a href={releaseUrl} rel="noopener noreferrer">
             {releaseUrl}
           </a>
-          ). Disclosure: VascuMind&apos;s owner also works with Hemostemix.
+          ). Disclosure: VascuMind&apos;s owner previously worked with Hemostemix.
         </p>
       </article>
     </main>

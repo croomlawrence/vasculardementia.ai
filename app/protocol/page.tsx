@@ -1,11 +1,9 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { memoryScreenPrice } from '@/lib/business';
-
 export const metadata: Metadata = {
   title: 'The VascuMind Protocol | Your Path to Cognitive Clarity',
   description:
-    'Discover the VascuMind Protocol: free Hachinski-style vascular cognitive pattern check, paid MCI Screen memory baseline, and clinician-discussion next steps.',
+    'Discover the VascuMind Protocol: free Hachinski-style vascular cognitive pattern check, MCI Screen memory baseline, and clinician-discussion next steps.',
 };
 
 const pathwaySteps = [
@@ -20,7 +18,7 @@ const pathwaySteps = [
     cta: 'Check My Vascular Memory Pattern',
   },
   {
-    label: `Step 2 · Paid MCI Screen Baseline (${memoryScreenPrice})`,
+    label: "Step 2 · Memory screen",
     title: 'Create an objective cognitive benchmark',
     body:
       'If your pattern suggests a vascular link, the next step is an objective memory baseline using the MCI Screen for clinician discussion and repeat tracking.',

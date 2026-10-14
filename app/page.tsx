@@ -243,7 +243,7 @@ export default function VascuMindHome() {
       <section className="news-band" aria-labelledby="home-news-title">
         <div className="max-w-3xl mx-auto px-6">
           <p className="section-label mb-4">News</p>
-          <h2 id="home-news-title" className="text-4xl md:text-5xl mb-4">News from Hemostemix</h2>
+          <h2 id="home-news-title" className="text-4xl md:text-5xl mb-4">Company news</h2>
           <p className="text-xl mb-6">
             This note is separate from the memory screen. It is not a reason to start the screen.
           </p>

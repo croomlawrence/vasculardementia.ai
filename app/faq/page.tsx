@@ -2,17 +2,13 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'FAQ | VascuMind',
-  description: 'Find answers to frequently asked questions about the VascuMind protocol, the MCI Screen, costs, and data privacy.',
+  description: 'Find answers to frequently asked questions about the VascuMind protocol, the MCI Screen, and data privacy.',
 };
 
 const faqs = [
   {
     question: "Is this a diagnosis?",
     answer: "No. The VascuMind Protocol is an educational and informational screening tool. It is not a substitute for a diagnosis or medical advice from a qualified healthcare provider. Its purpose is to provide you with a high-quality, organized baseline to facilitate a better conversation with your doctor.",
-  },
-  {
-    question: "Why does the MCI Screen cost $99?",
-    answer: "The $99 fee covers the cost of a live, 12-minute session with a trained, US-based proctor who administers the test over the phone. This controlled, one-on-one process is what ensures the test is objective and scientifically valid, unlike free, automated web quizzes. It also includes your personalized report and baseline score.",
   },
   {
     question: "Do you sell my data?",
@@ -24,7 +20,7 @@ const faqs = [
   },
   {
     question: "Is VascuMind covered by insurance?",
-    answer: "The $99 fee for the MCI Screen is HSA/FSA eligible. We provide a receipt for you to submit for reimbursement. We do not directly bill insurance at this time.",
+    answer: "We do not directly bill insurance at this time.",
   },
 ];
 

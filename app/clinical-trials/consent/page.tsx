@@ -14,6 +14,7 @@ export default function ConsentFormPage() {
     const name = formData.get('name');
     const email = formData.get('email');
     const phone = formData.get('phone');
+    const sponsor_contact_opt_in = formData.get('sponsor_contact_opt_in') === 'on';
 
     try {
       const response = await fetch('/api/submit-lead', {
@@ -21,7 +22,7 @@ export default function ConsentFormPage() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, email, phone }),
+        body: JSON.stringify({ name, email, phone, sponsor_contact_opt_in }),
       });
 
       if (response.ok) {
@@ -92,6 +93,19 @@ export default function ConsentFormPage() {
             </div>
             <div className="ml-3 text-lg leading-6">
               <label htmlFor="consent" className="font-medium text-black">I have read, understood, and agree to the consent statement above.</label>
+            </div>
+          </div>
+          <div className="relative flex items-start mt-6">
+            <div className="flex h-6 items-center">
+              <input
+                id="sponsor_contact_opt_in"
+                name="sponsor_contact_opt_in"
+                type="checkbox"
+                className="h-6 w-6 rounded border-black text-black focus:ring-black"
+              />
+            </div>
+            <div className="ml-3 text-lg leading-6">
+              <label htmlFor="sponsor_contact_opt_in" className="font-medium text-black">Yes, our sponsors may contact me about studies or services. This is optional and does not affect your screen.</label>
             </div>
           </div>
         </div>

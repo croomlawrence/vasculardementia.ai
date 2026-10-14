@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { memoryScreenPrice } from "@/lib/business";
-
 export const metadata: Metadata = {
   title: "Alzheimer’s Blood Test vs Cognitive Screening | VascuMind",
   description:
@@ -98,7 +96,7 @@ export default function AlzheimersBloodTestVsCognitiveScreeningPage() {
             VascuMind is a first step for families worried that memory changes may have a vascular pattern: stroke or TIA history, sudden onset, stepwise change, or vascular risk factors.
           </p>
           <p className="text-xl text-black">
-            The free check organizes the pattern. The {memoryScreenPrice} MCI Screen pathway can create a structured memory baseline for clinician discussion and repeat tracking.
+            The free check organizes the pattern. The MCI Screen pathway can create a structured memory baseline for clinician discussion and repeat tracking.
           </p>
         </div>
         <div className="border-2 border-black rounded-3xl p-8 md:p-10">

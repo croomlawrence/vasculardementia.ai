@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import LeadForm from "@/components/LeadForm";
-import { croBenchmarks } from "@/lib/business";
 import { ResultPreviewCard, VascularPathwayArt } from "@/app/components/BrandVisuals";
 
 export const metadata: Metadata = {
@@ -17,9 +16,9 @@ const pains = [
 ];
 
 const tiers = [
-  { name: "Pilot", license: "Custom pricing", perTest: "Per-test pricing available", use: "Single-study feasibility, one indication, defined site cohort" },
-  { name: "Standard", license: "Custom pricing", perTest: "Per-test pricing available", use: "Active trial program with recruitment, screening, and monitoring workflow" },
-  { name: "Enterprise", license: "Custom pricing", perTest: "Custom", use: "Multi-study, multi-region, or trial-network deployment" },
+  { name: "Pilot", license: "Discussed per study", perTest: "Discussed per study", use: "Single-study feasibility, one indication, defined site cohort" },
+  { name: "Standard", license: "Discussed per study", perTest: "Discussed per study", use: "Active trial program with recruitment, screening, and monitoring workflow" },
+  { name: "Enterprise", license: "Discussed per study", perTest: "Discussed per study", use: "Multi-study, multi-region, or trial-network deployment" },
 ];
 
 const workflow = [
@@ -83,10 +82,10 @@ export default function CROLicensingPage() {
       </section>
 
       <section className="mb-16">
-        <div className="section-label mb-3">Pricing architecture</div>
-        <h2 className="text-4xl font-semibold mb-6">Flexible, value-aligned licensing tailored to study scope.</h2>
+        <div className="section-label mb-3">Licensing</div>
+        <h2 className="text-4xl font-semibold mb-6">Licensing is tailored to study scope.</h2>
         <p className="text-xl mb-6">
-          We structure licensing around study complexity, volume, and the level of implementation support needed. Specific pricing is discussed deal-by-deal after understanding your indication, sites, cohort size, and analytics requirements. Our benchmark: parity or premium to legacy cognitive tools when paired with vascular differentiation, ischemic-pattern fit, and campaign analytics.
+          Terms depend on study complexity, volume, and the level of implementation support needed. They are discussed after we learn the indication, sites, cohort size, and analytics needs.
         </p>
         <div className="grid md:grid-cols-3 gap-6">
           {tiers.map((tier) => (
@@ -102,14 +101,13 @@ export default function CROLicensingPage() {
           ))}
         </div>
         
-        {/* Pricing philosophy note */}
         <div className="mt-10 p-6 border-2 border-black rounded-3xl bg-white">
-          <h3 className="text-xl font-semibold mb-3">Why custom pricing?</h3>
+          <h3 className="text-xl font-semibold mb-3">Why terms vary</h3>
           <ul className="list-disc pl-6 space-y-2 text-black">
             <li>Study scope varies: single indication vs. multi-study programs, regional vs. global</li>
             <li>Implementation depth: self-serve configuration vs. full managed deployment</li>
             <li>Analytics needs: basic conversion tracking vs. source-level cohort analytics</li>
-            <li>Volume commitments: pilot feasibility vs. guaranteed enrollment targets</li>
+            <li>Volume commitments: a small pilot versus a larger program</li>
             <li>All discussions include: implementation timeline, support SLA, and renewal terms</li>
           </ul>
         </div>

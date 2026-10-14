@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { memoryScreenPrice } from "@/lib/business";
 import { HumanMomentCard, PathwayLine } from "@/app/components/BrandVisuals";
 import PaidBaselineIntake from "@/app/components/PaidBaselineIntake";
 
 export const metadata: Metadata = {
   title: "After Your Memory Baseline",
-  description: "After the $99 MCI Screen memory baseline, complete intake and use your result for clinician discussion, optional wellness-support review, and consent-aware research follow-up.",
+  description: "After the MCI Screen memory baseline, complete intake and use your result for clinician discussion, optional wellness-support review, and consent-aware research follow-up.",
   alternates: { canonical: "/memory-screen/thank-you" },
   robots: { index: false, follow: false },
 };
@@ -48,7 +47,7 @@ export default function MemoryScreenThankYouPage() {
       <section className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-[1fr_380px] gap-10 items-start mb-12">
           <div className="border-4 border-black rounded-3xl p-8 md:p-12 green-wash">
-            <div className="section-label mb-3">After the {memoryScreenPrice} memory baseline</div>
+            <div className="section-label mb-3">After the memory baseline</div>
             <h1 className="text-5xl md:text-6xl font-semibold tracking-tight mb-6">Your baseline is a starting point for better questions — not a diagnosis.</h1>
             <p className="text-2xl text-black mb-6 max-w-4xl">
               Use your MCI Screen benchmark and vascular-pattern context to guide clinician discussion, repeat tracking, optional wellness-support review, or consent-aware research follow-up.

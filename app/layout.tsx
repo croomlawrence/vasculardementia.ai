@@ -127,6 +127,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
                   <Link href="/affiliate-disclosure" className="block">Affiliate Disclosure</Link>
                   <Link href="/compliance" className="block">Compliance</Link>
                   <p>This site is for learning only and is not medical advice.</p>
+                  <p>We do not share your information with sponsors unless you check the box to allow it.</p>
                 </div>
               </div>
             </div>

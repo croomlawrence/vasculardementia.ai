@@ -4,8 +4,6 @@ import Link from "next/link";
 import { useEffect, useMemo, useSyncExternalStore } from "react";
 import LeadForm from "@/components/LeadForm";
 import { trackVascuMindEvent } from "@/lib/trackVascuMindEvent";
-import { memoryScreenPrice } from "@/lib/business";
-
 type Params = {
   sessionId?: string;
   paymentIntent?: string;
@@ -30,7 +28,6 @@ export default function PaidBaselineIntake({ compact = false }: { compact?: bool
   const context = useMemo(() => ({
     checkoutStage: "post_payment_intake",
     product: "memory-screen",
-    price: memoryScreenPrice,
     stripeSessionId: params.sessionId,
     stripePaymentIntent: params.paymentIntent,
     checkoutStatus: params.checkoutStatus,
@@ -41,7 +38,6 @@ export default function PaidBaselineIntake({ compact = false }: { compact?: bool
     trackVascuMindEvent("post_payment_page_view", {
       eventData: {
         product: "memory-screen",
-        price: memoryScreenPrice,
         hasCheckoutSignal,
         checkoutStatus: params.checkoutStatus,
       },
@@ -52,7 +48,7 @@ export default function PaidBaselineIntake({ compact = false }: { compact?: bool
     <section className={`${compact ? "" : "border-4 border-black rounded-3xl p-6 md:p-8"} bg-white`} id="paid-intake">
       <div className="mb-6">
         <div className="section-label mb-3">Fulfillment intake</div>
-        <h2 className="text-3xl md:text-4xl font-semibold mb-4">Complete the routing details for your {memoryScreenPrice} memory baseline.</h2>
+        <h2 className="text-3xl md:text-4xl font-semibold mb-4">Complete the routing details for your memory baseline.</h2>
         <p className="text-xl text-black mb-4">
           This step helps VascuMind match your payment/request to the right screening workflow and follow-up. Please do not enter sensitive medical records or emergency details here.
         </p>
